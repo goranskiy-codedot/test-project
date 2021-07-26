@@ -144,8 +144,25 @@ p {
   &:last-child {
     margin: 0;
   }
+
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 15px;
+   line-height: 185%;
+   letter-spacing: 0.02em;
+   color:$pallete-grey-900;
 }
 
+h3{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 145%;
+  letter-spacing: 0.02em;
+  color:$pallete-grey-900;
+}
 button,
 input,
 label,
