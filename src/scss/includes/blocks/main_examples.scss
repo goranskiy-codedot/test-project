@@ -1,0 +1,50 @@
+.main-block{
+  display: block;;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 145%;
+    /* identical to box height, or 44px */
+    
+    letter-spacing: 0.02em;
+    &__images{
+      display: flex;
+    }
+
+    &__image1{
+    
+        margin-top: 66px;
+    }
+
+    &__image2{
+    
+        margin-top: 26px;
+        margin-right: 24px;
+    }
+
+    &__image3{
+
+        margin-top: 26px;
+    }
+    &__allExamplesButton{
+        width: 171px;
+        height: 41px;
+        color:$pallete-common-white;
+        background-color:$pallete-primary-main;
+        border:0;
+        transition: 1s;
+        margin-left: 555px;
+        margin-left: 554px;
+
+        margin-top:80px;
+
+       &:hover{
+        color:$pallete-primary-main;
+        background-color:transparent;
+     
+        border:1px solid $pallete-primary-main;
+     
+       }
+    }
+}

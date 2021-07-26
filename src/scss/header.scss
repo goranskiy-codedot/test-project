@@ -41,7 +41,6 @@
     }
     .header_logo{
         margin-right: 97px;
-    
     }
     .main-menu__contacts{
         margin-left: 197px;
@@ -59,7 +58,7 @@
        // margin-right:85px;
 
        &:hover{
-        color: $pallete-primary-main;
+        color:$pallete-primary-main;
         background-color:transparent;
      
         border:1px solid $pallete-primary-main;
