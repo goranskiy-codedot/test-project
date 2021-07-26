@@ -1,0 +1,109 @@
+
+.main-block
+{
+    margin-left: 85px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    display: flex;
+    margin-top: 75px;
+
+ 
+   
+ 
+
+    &__numbers{
+      
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        display: flex;
+    
+     
+    
+      
+       
+    }
+   &__paragraph{
+    font-family: Montserrat;
+    font-style: normal;
+}
+    
+ 
+   &__number1-statement{
+       margin-top: 64px;
+       margin-left:151px;
+       display: flex;
+       position: relative;
+       
+     .main-block__textAfterNumber01{
+        position: absolute;
+        bottom:70px;
+        width: 211px;
+    
+     }
+     
+   }
+   
+
+
+   &__number2-statement{
+    margin-top: 123px;
+    margin-left:151px;
+    display: flex;
+    position: relative;
+
+    .main-block__textAfterNumber02{
+        position: absolute;
+        bottom:10px;
+        font-family: Montserrat;
+        width: 211px;
+
+    }
+}
+   &__number3-statement{
+    margin-top: 50px;
+    margin-left:151px;
+    display: flex;
+
+    .main-block__textAfterNumber03{
+        position: absolute;
+        bottom:50px;
+        width: 211px;
+     }
+}
+   &__number4-statement{
+    margin-top: 87px;
+    margin-left:151px;
+    display: flex;
+
+    .main-block__textAfterNumber04{
+        position: absolute;
+        bottom:50px;
+        width: 211px;
+     }
+}
+
+   &__number{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border: 1px ;
+    color:transparent;
+    mix-blend-mode: multiply;
+    -webkit-text-stroke: 1px $pallete-primary-main;
+
+  
+   }
+  
+
+}
