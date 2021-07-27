@@ -1,10 +1,12 @@
-.main-block{
+.main-block2{
   display: block;;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 145%;
+    margin-top: 87px;
+
     /* identical to box height, or 44px */
     
     letter-spacing: 0.02em;
@@ -13,19 +15,23 @@
     }
 
     &__image1{
-    
-        margin-top: 66px;
+      
+        margin-top: 35px;
     }
 
     &__image2{
-    
+        
+        margin-right: 15px;
         margin-top: 26px;
-        margin-right: 24px;
     }
 
     &__image3{
-
+       
         margin-top: 26px;
+    }
+    &__text{
+        margin-top:10px;
+        
     }
     &__allExamplesButton{
         width: 171px;
@@ -33,11 +39,17 @@
         color:$pallete-common-white;
         background-color:$pallete-primary-main;
         border:0;
-        transition: 1s;
-        margin-left: 555px;
-        margin-left: 554px;
-
+        transition: 1s; 
+        margin-left: 470px;
         margin-top:80px;
+        font-family: Montserrat;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+            
 
        &:hover{
         color:$pallete-primary-main;

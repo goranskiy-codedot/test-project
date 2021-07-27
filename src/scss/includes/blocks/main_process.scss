@@ -1,18 +1,15 @@
 
 .main-block
 {
-    margin-left: 85px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
     line-height: 145%;
     letter-spacing: 0.02em;
-    display: flex;
-    margin-top: 75px;
+    z-index: 1;
 
- 
-   
+
  
 
     &__numbers{
@@ -27,106 +24,106 @@
         z-index: 1;
 
         .main-block__ellipse{
-            position:absolute;
-            bottom: 90px;
-            z-index: 0;
-           left:200px;
+    bottom: 89px;
+    position: absolute;
+    z-index: 0;
+    left: 118px;
         
         }
 
         .main-block__ellipse1{
-            position:absolute;
-            bottom: 25px;
-            z-index: 0;
-            left:425px;
+    bottom: 28px;
+    left: 425px;
+    position: absolute;
+    z-index: 0;
+    left: 371px;
             
         
         }
 
         .main-block__ellipse2{
-            position:absolute;
-            bottom: 100px;
+            bottom: 102px;
+            left: 670px;
+            position: absolute;
             z-index: 0;
-            left:670px;
+            left: 625px;
             
         
         }
 
         
         .main-block__ellipse3{
-            position:absolute;
-            bottom: 60px;
+            bottom: 64px;
+            left: 905px;
+            position: absolute;
             z-index: 0;
-            left:905px;
+            left: 883px;
         }
         }
-   &__paragraph{
+    .paragraph{
     font-family: Montserrat;
     font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    display: flex;
+    margin-top: 76px;
+
 }
     
- 
-   &__number1-statement{
-       margin-top: 64px;
-       margin-left:151px;
-       display: flex;
-       position: relative;
-       z-index: 1;
+
        
      .main-block__textAfterNumber01{
+        
+        bottom: 60px;
         position: absolute;
-        bottom:70px;
         width: 211px;
         z-index: 1;
+        left: 66px;
     
      }
      
-   }
    
 
 
-   &__number2-statement{
-    margin-top: 123px;
-    margin-left:151px;
-    display: flex;
-    position: relative;
-    z-index: 1;
+
 
     .main-block__textAfterNumber02{
-        position: absolute;
-        bottom:10px;
+       
+        bottom: 1px;
         font-family: Montserrat;
-        width: 211px;
+        position: absolute;
+        width: 179px;
         z-index: 1;
+        left: 322px;
 
     }
-}
-   &__number3-statement{
-    margin-top: 50px;
-    margin-left:151px;
-    display: flex;
-    z-index: 1;
+
+
 
     .main-block__textAfterNumber03{
+       
+        bottom: 46px;
         position: absolute;
-        bottom:70px;
-        width: 211px;
+        width: 192px;
         z-index: 1;
+        left: 578px;
      }
-}
-   &__number4-statement{
-    margin-top: 87px;
-    margin-left:151px;
-    display: flex;
-    z-index: 1;
+
+
+
 
     .main-block__textAfterNumber04{
+        
+        bottom: 37px;
         position: absolute;
-        bottom:50px;
         width: 211px;
         z-index: 1;
+        left: 834px;
+        width: 174px;
      }
-}
+
 
    &__number{
     font-family: Montserrat;
@@ -140,9 +137,34 @@
     color:transparent;
     mix-blend-mode: multiply;
     -webkit-text-stroke: 1px $pallete-primary-main;
+    font-stretch:ultra-expanded;
+    z-index: 1;
 
   
    }
   
+
+   .number1_statement{
+    margin-top: 35px;
+    margin-left: 67px;
+    z-index: 1;
+   }
+
+   .number2_statement{
+    margin-left: 179px;
+    margin-top: 94px;
+    z-index: 1;
+   }
+   .number3_statement{
+    margin-left: 165px;
+    margin-top: 21px;
+    z-index: 1;
+}
+   
+   .number4_statement{
+    margin-left: 164px;
+    margin-top: 58px;
+    z-index: 1;
+   }
 
 }
