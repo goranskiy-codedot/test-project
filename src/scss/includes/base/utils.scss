@@ -23,12 +23,17 @@
 
 .container {
   width: 100%;
-  max-width: 1230px;
+  max-width: 1130px;
   margin: 0 auto;
   padding: 0 24px;
 
   @include desktop {
-    padding: 0 15px;
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: $desktop-extra) 
+  {
+    padding: 0 0px;
   }
 }
 
