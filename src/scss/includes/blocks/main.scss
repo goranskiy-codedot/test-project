@@ -10,8 +10,19 @@
     margin-right: 202px;
     justify-content: center;
     margin-top: 56px;
+    @media screen and (max-width: $desktop-extra) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      margin-top:8px;
+      margin-left:20px;
+      margin-right: 91px;
+   }
 
-  
+ 
 
     &__text{
         font-family: Montserrat;
@@ -21,6 +32,30 @@
         line-height: 185%;
         letter-spacing: 0.02em;
         width: 380px;
+
+        @media screen and (max-width: $desktop-extra) {
+         font-family: Montserrat;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 15px;
+         line-height: 185%;
+         letter-spacing: 0.02em;
+         margin-top:35px;
+         width: 362px;
+         
+      }
+      @media screen and (max-width: $mobile) {
+         font-family: Montserrat;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 13px;
+         line-height: 185%;
+         /* or 24px */
+         width: 300px;
+         letter-spacing: 0.02em;
+         margin-top: 26px;
+      }
+    
 
         
      }
@@ -50,6 +85,18 @@
          border:1px solid $pallete-primary-main;
       
         }
+
+        @media screen and (max-width: $desktop-extra) {
+         font-family: Montserrat;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 10px;
+         line-height: 12px;
+         letter-spacing: 0.02em;
+         width: 129px;
+         height: 33px;
+         
+      }
  }
  &__button2{
     // font:inherit;
@@ -75,22 +122,41 @@
      color:$pallete-common-white;
      background-color:$pallete-primary-main;
      border:0;
-    
-  
     }
+
+    @media screen and (max-width: $desktop-extra) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+      width: 129px;
+      height: 33px;
+      
+   }
  }
   &__image{
-     
-   
    object-fit: cover;
+  
   }
   &__buttons{
     margin-top:51px;
+    @media screen and (max-width: $desktop-extra) {
+      margin-top:35px;
+   }
+   @media screen and (max-width: $mobile) {
+      margin-top: 23px;
+   }
   }
 
   &__form{
       margin-top:14px;
       margin-top: 40px;
+      @media screen and (max-width: $mobile) {
+         margin-top:19px;
+         margin-left: 73px;
+      }
   }
 
   &__header{
@@ -102,13 +168,45 @@
    /* identical to box height, or 44px */
    
    letter-spacing: 0.02em;
+
+   @media screen and (max-width: $desktop-extra) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+   }
+
+   @media screen and (max-width: $mobile) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 145%;
+      /* identical to box height, or 22px */
+   
+      letter-spacing: 0.02em;
+       }
   }
 
   .image{
    
    margin-left: 192px;
     
-   
+   @media screen and (max-width: $desktop-extra) {
+      height: 289px;
+      margin-left: 36px;
+      width: 289px;
+      margin-top: 23px;
+    }
+
+    @media screen and (max-width: $mobile) {
+     display: none;
+    }
   }
+
+
+
 }
 
