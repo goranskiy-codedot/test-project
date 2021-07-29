@@ -1,0 +1,313 @@
+
+.main-block
+{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    z-index: 1;
+
+
+ 
+
+    &__numbers{
+      
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        @media screen and (max-width: $desktop-extra) {
+        width: 90%;
+        height: max-content;
+        overflow-y: overlay;
+        &::-webkit-scrollbar {
+          width: 0px;
+          height: 0px;
+        }
+    
+        }
+
+        .main-block__ellipse{
+    bottom: 89px;
+    position: absolute;
+    z-index: 0;
+    left: 118px;
+    @media screen and (max-width: $desktop-extra) {
+        bottom: 60px;
+        height: 85px;
+        left: 58px;
+        width: 85px;
+        
+      }
+        
+        }
+
+        .main-block__ellipse1{
+    bottom: 28px;
+    left: 425px;
+    position: absolute;
+    z-index: 0;
+    left: 371px;
+    @media screen and (max-width: $desktop-extra) {
+        bottom: 8px;
+        height: 85px;
+        left: 312px;
+        width: 85px;
+      }
+            
+        
+        }
+
+        .main-block__ellipse2{
+            bottom: 102px;
+            left: 670px;
+            position: absolute;
+            z-index: 0;
+            left: 625px;
+            @media screen and (max-width: $desktop-extra) {
+                bottom: 63px;
+                height: 85px;
+                left: 568px;
+                width: 85px;
+              }
+            
+        
+        }
+
+        
+        .main-block__ellipse3{
+            bottom: 64px;
+            left: 905px;
+            position: absolute;
+            z-index: 0;
+            left: 883px;
+            @media screen and (max-width: $desktop-extra) {
+                width: 85px;
+                height: 85px;
+                bottom: 64px;
+                left: 905px;
+              }
+        }
+        }
+    .paragraph{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    display: flex;
+    margin-top: 76px;
+
+    @media screen and (max-width: $desktop-extra) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 145%;
+        letter-spacing: 0.02em; 
+        margin-top: 107px;
+        margin-left: 19px;
+
+
+      }
+
+}
+    
+
+       
+     .main-block__textAfterNumber01{
+        
+        bottom: 60px;
+        position: absolute;
+        width: 211px;
+        z-index: 1;
+        left: 66px;
+        @media screen and (max-width: $desktop-extra) {
+            bottom: 18px;
+            left: 23px;
+            z-index: 1;
+          }
+    
+     }
+     
+   
+
+
+
+
+    .main-block__textAfterNumber02{
+       
+        bottom: 1px;
+        font-family: Montserrat;
+        position: absolute;
+        width: 179px;
+        z-index: 1;
+        left: 322px;
+        @media screen and (max-width: $desktop-extra) {
+            bottom:0px;
+            top: 154px;
+            left: 279px;
+            z-index: 1;
+          }
+
+    }
+
+
+
+    .main-block__textAfterNumber03{
+       
+        bottom: 46px;
+        position: absolute;
+        width: 192px;
+        z-index: 1;
+        left: 578px;
+        @media screen and (max-width: $desktop-extra) {
+            bottom:0px;
+            left: 535px;
+            top: 98px;
+            z-index: 1;
+          }
+     }
+
+
+
+
+    .main-block__textAfterNumber04{
+        
+        bottom: 37px;
+        position: absolute;
+        width: 211px;
+        z-index: 1;
+        left: 834px;
+        width: 174px;
+     }
+
+
+   &__number{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border: 1px ;
+    color:transparent;
+    mix-blend-mode: multiply;
+    -webkit-text-stroke: 1px $pallete-primary-main;
+    font-stretch:ultra-expanded;
+    z-index: 1;
+    @media screen and (max-width: $desktop-extra) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+
+      }
+
+  
+   }
+  
+
+   .number1_statement{
+    margin-top: 35px;
+    margin-left: 67px;
+    z-index: 1;
+
+    @media screen and (max-width: $desktop-extra) {
+        margin-top: 39px;
+        margin-left: 23px;
+        z-index: 1;
+      }
+   }
+
+   .number2_statement{
+    margin-left: 179px;
+    margin-top: 94px;
+    z-index: 1;
+    @media screen and (max-width: $desktop-extra) {
+        margin-left: 202px;
+        margin-top: 86px;
+        z-index: 1;
+      }
+   }
+   .number3_statement{
+    margin-left: 165px;
+    margin-top: 21px;
+    z-index: 1;
+    @media screen and (max-width: $desktop-extra) {
+        margin-left: 190px;
+        margin-top: 30px;
+        z-index: 1;
+      }
+}
+   
+   .number4_statement{
+    margin-left: 164px;
+    margin-top: 58px;
+    z-index: 1;
+   }
+  
+   .numbers__slider{
+    margin-top: 65px;
+    margin-left: 19px;
+    margin-right: 19px;
+    display: flex;
+    justify-content: space-between;
+    @include desktop{display: none;}
+   
+   }
+   .slider-button__left{
+    background-color: transparent;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    border: 1px solid $pallete-grey-10;
+
+    &:hover{
+      color:$pallete-primary-main;
+      background-color:transparent;
+      border:1px solid $pallete-primary-main;
+     }
+
+ }
+
+ .slider-button__right{
+   background-color: transparent;
+   border-radius: 50%;
+   width: 38px;
+   height: 38px;
+   box-sizing: border-box;
+   border: 1px solid $pallete-grey-10;
+
+   &:hover{
+    color:$pallete-primary-main;
+    background-color:transparent;
+    border:1px solid $pallete-primary-main;
+   }
+
+  
+ }
+ .slider__scrollbar{
+  width: 600px;
+ }
+ .scrollbar{
+   width:300px;
+   width: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+   
+ }
+}
+
