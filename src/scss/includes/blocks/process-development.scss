@@ -1,0 +1,129 @@
+.process-development{
+    &__section{
+
+    }
+    &__header{
+        .header{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            width:192px;
+            padding-top: 65px;
+            padding-left: 3px;
+        }
+
+    }
+    &__stages{
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: overlay;
+        padding-top: 23px;
+        
+        .stage-1{
+            height: 50%;
+            padding-left: 69px;
+            width: max-content;
+       
+        }
+        
+        .stage-2{
+            padding-left:130px;
+            height: 50%;
+            width: max-content;
+          
+        }
+        .stage-3{
+            padding-left:130px;
+            height: 50%;
+            width: max-content;
+           
+        }
+        .stage-4{
+            padding-left:130px;
+            height: 50%;
+            width: max-content;
+            
+        }
+        .stage__number{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            border: 1px ;
+            color:transparent;
+            mix-blend-mode: multiply;
+            -webkit-text-stroke: 1px $pallete-primary-main;
+            font-stretch:ultra-expanded;
+            z-index: 1;
+        }
+    }
+    .process-development__stages::-webkit-scrollbar {
+        width: 0;
+      }
+     p{
+         margin-block-start: 0px;
+         margin-block-end: 0px;
+     }
+     .stage__text{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 185%;
+        letter-spacing: 0.02em;
+        width: 210px;
+        padding-top: 10px;
+     }
+     .stages__slider{
+         display: flex;
+         padding-top: 24px;
+         width: 100%;
+         justify-content: space-between;
+         #left{
+              
+          float: left;
+          }
+          #right{
+           float: right;
+          }
+         .slider__button{
+            background-color: transparent;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            border:1px solid $pallete-grey-10;
+        
+            &:hover{
+              color:$pallete-primary-main;
+              border:1px solid $pallete-primary-main;
+            }
+       
+         }
+         
+         .scrollbar{
+             display: flex;
+             width: 194px;
+             align-items: center;
+        
+         .scrollbar__track{
+         width: 50%;
+         height: 2px;
+         background-color: $pallete-grey-10;
+
+         }
+         .scrollbar__thumb{
+         width: 50%;
+         height: 2px;
+         background-color: $pallete-grey-900;
+     
+         }
+   
+     }
+     }
+}
