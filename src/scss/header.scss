@@ -14,8 +14,8 @@
         .menu__burger{
             width: 50%;
             .burger{
-            padding-left: 130px;
-            padding-top: 17px;
+                padding-top: 17px;
+                float: right;
             &__line{
                 background-color: $pallete-grey-900;
                 width: 20px;
