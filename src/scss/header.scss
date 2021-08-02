@@ -6,21 +6,42 @@
             width: 50%;
             padding-left: 1px;
             padding-top: 1px;
+            z-index: 1001;
+            @include tablet{
+                padding-left: 14px;
+                padding-top: 5px;
+            }
             .logo{ 
+                display: block;
+               z-index: 1001;
                width: 46px;
                padding-right: 1px;
+               //filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(104deg) brightness(103%) contrast(103%);
+               fill:$pallete-common-white;
             }
+            // .logo__link:focus{
+            //     #logo{
+            //         fill:$pallete-common-white;
+            //     }
+            // }
+            
+
             @include tablet{
                 padding-left: 13px;
                 padding-top: 15px;
+                width: max-content;
             }
         }
         .menu__burger{
             width: 50%;
+            z-index: 1003;
             .burger{
+                z-index: 1003;
                 padding-top: 17px;
                 float: right;
+               
             &__line{
+                z-index: 1003;
                 background-color: $pallete-grey-900;
                 width: 20px;
                 height: 2px;
@@ -28,15 +49,43 @@
                 &:nth-child(2){
                     width: 29px;
                     margin-left: -9px;
+                    animation: line_2_anim 1s ease-in-out;
+                }
+                &:nth-child(3){
+                    animation: line_3_anim 1s ease-in-out;
                 }
                 &:first-child{
                     margin-top:0px;
+                    animation: line_1_anim 1s ease-in-out;
                 } 
             }
+            @keyframes line_1_anim {
+                0%{transform: translateY(0);  }
+                50%{transform: translateY(2*3px); }
+                100%{transform: translateY(2*3px) rotate(45deg); background-color: $pallete-common-white;   }
+                }
+                @keyframes line_3_anim {
+                    0%{transform: translateY(0);  }
+                    50%{transform: translateY(-2*3px) ; }
+                    100%{transform: translateY(-2*3px) rotate(135deg);  background-color: $pallete-common-white; }
+                    }
+                    @keyframes line_2_anim {
+                        0%{transform: translateX(0);  }
+                        50%{transform: translateX(-2*3px) ; }
+                        100%{transform: translateX(-2*3px); opacity: 0;  }
+                        }
+            
            &__link{
+            z-index: 1003;
             cursor: pointer;
+            display: block;
+     
            }
+           
         }
+          
+            
+
         @include tablet{
            display: none;
         }
@@ -58,9 +107,19 @@
             transition: transform 0.2s ease;
             align-items: center;
             color: $pallete-common-white;
-            padding-bottom: 164px;
+            padding-bottom: 218px;
             padding-top: 85px;
+            &:target{
+                transform: translateY(0);
+            }
+
             @include tablet{
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: 0.02em;
                 display: flex;
                 transform: none;
                 transition: none;
@@ -71,32 +130,11 @@
                 padding-bottom: 0px;
                 justify-content: none;
                 height: 30px;
+                position: relative;
+                flex-flow: initial;
              
             }
-            .close{
-                cursor: pointer;
-                position: absolute;
-                right: 8px;
-                top: 30px;
-
-                &__line{
-                    background-color: $pallete-common-white;
-                }
-                #line_1{
-                    transform: rotate(45deg);
-                    height: 2px;
-                    width: 19px;
-                    position: absolute;
-                }
-                #line_2{
-                    transform: rotate(135deg);
-                    height: 2px;
-                    width: 19px;
-                }
-            }
-            &:target{
-                transform: translateY(0);
-            }
+           
             li a{
                 font-family: Montserrat;
                 font-style: normal;
@@ -105,6 +143,9 @@
                 line-height: 18px;
                 letter-spacing: 0.02em;
                 color: $pallete-common-white;
+                padding-bottom: 1.25rem;
+                padding: 1.25rem 0;
+                display: block;
                 @include tablet{
                  color:$pallete-grey-900;
                  font-family: Montserrat;
@@ -119,7 +160,18 @@
                 width: 100%;
                 text-align: center;
                 display: block;
+                @include tablet
+                {
+                   width: max-content;
+                }
               
+            }
+            #number{
+                display: none;
+                @include tablet
+                {
+                   display: flex; 
+                }
             }
            .menu__button{
                position: fixed;
@@ -127,6 +179,17 @@
                bottom:0px;
                height: 59px;
                color: $pallete-common-white;
+               @include tablet{
+                position: relative;
+                width: 129px;
+                font-family: Montserrat;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: 0.02em;
+             }
            }
            &__logo{
                position: fixed;
@@ -135,4 +198,5 @@
            }
         }
     }
+
 }
