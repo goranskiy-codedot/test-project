@@ -25,7 +25,8 @@
   width: 100%;
   max-width: 1230px;
   margin: 0 auto;
-  padding: 0 10px;
+  // padding: 0 10px;
+  padding: calc(0 + env(safe-area-inset-top)) calc(10px + env(safe-area-inset-right));
 
   @include desktop {
     padding: 0 15px;
