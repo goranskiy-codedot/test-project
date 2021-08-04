@@ -21,11 +21,22 @@
         overflow-y: hidden;
         overflow-x: overlay;
         padding-top: 23px;
-        
+        height: 158px;
         .stage-1{
             height: 50%;
             padding-left: 69px;
             width: max-content;
+            position: relative;
+            z-index: 1;
+            &__ellipse{
+                width: 85px;
+                height: 85px;
+                display: flex;
+                left: 104px;
+                position: absolute;
+                top: 24px;
+                z-index: -1;
+            }
        
         }
         
@@ -33,18 +44,50 @@
             padding-left:130px;
             height: 50%;
             width: max-content;
+            position: relative;
+            z-index: 1;
+            &__ellipse{
+                width: 85px;
+                height: 85px;
+                display: flex;
+                left: 160px;
+                position: absolute;
+                top: 24px;
+                z-index: -1;
+            }
           
         }
         .stage-3{
             padding-left:130px;
             height: 50%;
             width: max-content;
+            position: relative;
+            &__ellipse{
+                width: 85px;
+                height: 85px;
+                display: flex;
+                left: 160px;
+                position: absolute;
+                top: 24px;
+                z-index: -1;
+            }
            
         }
         .stage-4{
             padding-left:130px;
             height: 50%;
             width: max-content;
+            position: relative;
+            z-index: 1;
+            &__ellipse{
+                width: 85px;
+                height: 85px;
+                display: flex;
+                left: 160px;
+                position: absolute;
+                top: 24px;
+                z-index: -1;
+            }
             
         }
         .stage__number{
@@ -79,6 +122,7 @@
         letter-spacing: 0.02em;
         width: 210px;
         padding-top: 10px;
+        z-index: 1;
      }
      .stages__slider{
          display: flex;
