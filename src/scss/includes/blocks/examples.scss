@@ -1,62 +1,150 @@
-.examples{
-    &__header{
-        padding-top: 59px;
-       .header{
+.examples {
+  .container{
+    padding:0 19px;
+    @include desktop{
+
+    }
+  }
+  &__header {
+    padding-top: 59px;
+    @include tablet{
+      padding-top: 75px;
+    }
+    @include desktop{
+      padding-top: 82px;
+      padding-left: 42px;
+    }
+    .header {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      @include tablet{
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 145%;
         letter-spacing: 0.02em;
+      }
+      @include desktop{
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 30px;
+          line-height: 145%;
+          letter-spacing: 0.02em;
+          
 
-       }
+      }
     }
-    &__images{
-        object-fit: cover;
-        padding-top: 21px;
-        width: 100%;
+  }
+  &__images {
+    object-fit: cover;
+    padding-top: 21px;
+    width: 100%;
+    @include tablet{
+     padding-top: 39px;
     }
-    &__image-1{
-     background: url(../../../img/shapes_mobile/shape_grey.png) no-repeat;
-     height: 235px;
-     width: 100%;
-     background-size: 100%;
-     
+    @include desktop{
+      padding-left: 85px;
+      padding-top: 41px;
     }
-    &__image-2{
-        background: url(../../../img/shapes_mobile/shape_white.png) no-repeat;
-        height: 235px;
-        width: 100%;
-        background-size: 100%;
-    }
-    &__image-3{
-        background: url(../../../img/shapes_mobile/shape_grey.png) no-repeat;
-        height: 235px;
-        width: 100%;
-        background-size: 100%;
-    }
-    &__button{
-        display: flex;
-        justify-content: center;
-        padding-top: 41px;
-        .button{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 10px;
-            line-height: 12px;
-            letter-spacing: 0.02em;
-            text-align: center;
-            width: 129px;
-            height: 33px;
-            background-color: $pallete-primary-main;
-            color:$pallete-common-white;
-            &:hover{
-                background-color: transparent;
-                border:1px solid $pallete-primary-main;
-                color:$pallete-primary-main;
-            }
 
-        }
+    .container{
+      padding: 0 0;
+      @include desktop{
+
+      }
     }
+  }
+  .bottom__images{
+    @include desktop{
+    display: flex;
+    padding-top: 27px;
+    }
+  }
+  &__image-1 {
+    background: url(../../../img/shapes_mobile/shape_grey.png) no-repeat;
+    height: 235px;
+    width: 100%;
+    background-size: 100%;
+    @include tablet{
+      height: 462px;
+    }
+    @include desktop{
+      background: url(../../../img/shapes_desktop/shape1.png) no-repeat;
+      height: 560px;
+    }
+  }
+  &__image-2 {
+    background: url(../../../img/shapes_mobile/shape_white.png) no-repeat;
+    height: 235px;
+    width: 100%;
+    background-size: 100%;
+    @include tablet{
+      height: 462px;
+    }
+    @include desktop{
+      background: url(../../../img/shapes_desktop/shape2.png) no-repeat;
+      width: 613px;
+      height: 497px;
+    }
+  }
+  &__image-3 {
+    background: url(../../../img/shapes_mobile/shape_grey.png) no-repeat;
+    height: 235px;
+    width: 100%;
+    background-size: 100%;
+    @include tablet{
+      height: 462px;
+    }
+    @include desktop{
+      background: url(../../../img/shapes_desktop/shape3.png) no-repeat;
+      margin-left: 23px;
+      width: 473px;
+      height: 497px;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 41px;
+    @include tablet{
+      padding-top: 51px;
+    }
+    @include desktop{
+      padding-top: 81px;
+    }
+    .button {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+      text-align: center;
+      width: 129px;
+      height: 33px;
+      background-color: $pallete-primary-main;
+      color: $pallete-common-white;
+      @include desktop{
+        width: 171px;
+        height: 41px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+      }
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $pallete-primary-main;
+        color: $pallete-primary-main;
+      }
+    }
+  }
 }
