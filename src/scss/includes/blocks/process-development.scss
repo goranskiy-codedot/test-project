@@ -1,173 +1,319 @@
-.process-development{
-    &__section{
+.process-development {
+  &__section {
+  }
 
-    }
-    &__header{
-        .header{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            width:192px;
-            padding-top: 65px;
-            padding-left: 3px;
-        }
+  &__header {
+    .header {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      width: 192px;
+      padding-top: 65px;
+      padding-left: 3px;
 
-    }
-    &__stages{
-        display: flex;
-        overflow-y: hidden;
-        overflow-x: overlay;
-        padding-top: 23px;
-        height: 158px;
-        .stage-1{
-            height: 50%;
-            padding-left: 69px;
-            width: max-content;
-            position: relative;
-            z-index: 1;
-            &__ellipse{
-                width: 85px;
-                height: 85px;
-                display: flex;
-                left: 104px;
-                position: absolute;
-                top: 24px;
-                z-index: -1;
-            }
-       
-        }
-        
-        .stage-2{
-            padding-left:130px;
-            height: 50%;
-            width: max-content;
-            position: relative;
-            z-index: 1;
-            &__ellipse{
-                width: 85px;
-                height: 85px;
-                display: flex;
-                left: 160px;
-                position: absolute;
-                top: 24px;
-                z-index: -1;
-            }
-          
-        }
-        .stage-3{
-            padding-left:130px;
-            height: 50%;
-            width: max-content;
-            position: relative;
-            &__ellipse{
-                width: 85px;
-                height: 85px;
-                display: flex;
-                left: 160px;
-                position: absolute;
-                top: 24px;
-                z-index: -1;
-            }
-           
-        }
-        .stage-4{
-            padding-left:130px;
-            height: 50%;
-            width: max-content;
-            position: relative;
-            z-index: 1;
-            &__ellipse{
-                width: 85px;
-                height: 85px;
-                display: flex;
-                left: 160px;
-                position: absolute;
-                top: 24px;
-                z-index: -1;
-            }
-            
-        }
-        .stage__number{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 900;
-            font-size: 50px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            border: 1px ;
-            color:transparent;
-            mix-blend-mode: multiply;
-            -webkit-text-stroke: 1px $pallete-primary-main;
-            font-stretch:ultra-expanded;
-            z-index: 1;
-        }
-    }
-    .process-development__stages::-webkit-scrollbar {
-        width: 0;
-      }
-     p{
-         margin-block-start: 0px;
-         margin-block-end: 0px;
-     }
-     .stage__text{
+      @include tablet {
         font-family: Montserrat;
         font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 185%;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 145%;
         letter-spacing: 0.02em;
-        width: 210px;
-        padding-top: 10px;
-        z-index: 1;
-     }
-     .stages__slider{
-         display: flex;
-         padding-top: 24px;
-         width: 100%;
-         justify-content: space-between;
-         #left{
-              
-          float: left;
-          }
-          #right{
-           float: right;
-          }
-         .slider__button{
-            background-color: transparent;
-            border-radius: 50%;
-            width: 38px;
-            height: 38px;
-            border:1px solid $pallete-grey-10;
-        
-            &:hover{
-              color:$pallete-primary-main;
-              border:1px solid $pallete-primary-main;
-            }
-       
-         }
-         
-         .scrollbar{
-             display: flex;
-             width: 194px;
-             align-items: center;
-        
-         .scrollbar__track{
-         width: 50%;
-         height: 2px;
-         background-color: $pallete-grey-10;
+        width: max-content;
+        padding-left: 9px;
+        padding-top: 127px;
+      }
 
-         }
-         .scrollbar__thumb{
-         width: 50%;
-         height: 2px;
-         background-color: $pallete-grey-900;
-     
-         }
-   
-     }
-     }
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        padding-left: 45px;
+        padding-top: 146px;
+      }
+    }
+  }
+
+  &__stages {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: overlay;
+    padding-top: 23px;
+    height: 158px;
+    .container{
+        display: flex;
+        padding: 0 0;
+    }
+
+    @include tablet {
+      padding-top: 34px;
+      height: 220px;
+    }
+
+    @include desktop {
+      padding-top: 27px;
+      height: 249px;
+    
+    }
+    .stage-1 {
+      height: 100%;
+      padding-left: 69px;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+      @include tablet {
+        padding-top: 9px;
+      }
+      @include desktop {
+        padding-left: 153px;
+        padding-top: 12px;
+      }
+      &__ellipse {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        left: 104px;
+        position: absolute;
+        top: 24px;
+        z-index: -1;
+        @include tablet {
+          top: 35px;
+          
+        }
+        @include desktop{
+            width: 113px;
+            height: 113px;
+            top: 42px;
+            left: 202px;
+        }
+      }
+    }
+
+    .stage-2 {
+      padding-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+
+      @include tablet {
+        padding-left: 46px;
+        padding-top: 56px;
+      }
+      @include desktop {
+        padding-left: 45px;
+        padding-top: 71px;
+      }
+      &__ellipse {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        left: 160px;
+        position: absolute;
+        top: 24px;
+        z-index: -1;
+        @include tablet {
+          left: 78px;
+          top: 85px;
+        }
+        @include desktop{
+            width: 113px;
+            height: 113px;
+            left: 93px;
+            top: 100px;
+        }
+      }
+      #text-2 {
+        @include tablet {
+          width: 167px;
+        }
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+    .stage-3 {
+      padding-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+
+      &__ellipse {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        left: 160px;
+        position: absolute;
+        top: 24px;
+        z-index: -1;
+
+        @include tablet {
+          left: 124px;
+          top: 28px;
+        }
+        @include desktop{
+            width: 113px;
+            height: 113px;
+            left: 136px;
+            top: 28px;
+        }
+      }
+      @include tablet {
+        padding-left: 89px;
+      }
+      #text-3 {
+        width: 193px;
+      }
+    }
+    .stage-4 {
+      padding-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+      padding-right: 69px;
+      @include tablet {
+        padding-left: 89px;
+        padding-top: 10px;
+        padding-right: 69px;
+      }
+      @include desktop {
+        padding-left: 63px;
+        padding-top: 36px;
+      }
+      #text-4 {
+        width: 150px;
+      }
+      &__ellipse {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        left: 160px;
+        position: absolute;
+        top: 24px;
+        z-index: -1;
+        @include tablet {
+          top: 31px;
+          left: 136px;
+        }
+        @include desktop{
+            width: 113px;
+            height: 113px;
+            left: 109px;
+            top: 64px;
+        }
+      }
+    }
+    .stage__number {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      border: 1px;
+      color: transparent;
+      mix-blend-mode: multiply;
+      -webkit-text-stroke: 1px $pallete-primary-main;
+      font-stretch: ultra-expanded;
+      z-index: 1;
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .process-development__stages::-webkit-scrollbar {
+    width: 0;
+  }
+  p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+  }
+  .stage__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 185%;
+    letter-spacing: 0.02em;
+    width: 210px;
+    padding-top: 10px;
+    z-index: 1;
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 185%;
+      letter-spacing: 0.02em;
+      padding-top: 0px;
+    }
+  }
+  .stages__slider {
+    display: flex;
+    padding-top: 24px;
+    width: 100%;
+    @include tablet {
+      padding-top: 58px;
+    }
+    @include desktop {
+      display: none;
+    }
+    justify-content: space-between;
+    #left {
+      float: left;
+    }
+    #right {
+      float: right;
+    }
+    .slider__button {
+      background-color: transparent;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      border: 1px solid $pallete-grey-10;
+
+      &:hover {
+        color: $pallete-primary-main;
+        border: 1px solid $pallete-primary-main;
+      }
+    }
+
+    .scrollbar {
+      display: flex;
+      width: 194px;
+      align-items: center;
+      @include tablet {
+        width: 600px;
+      }
+
+      .scrollbar__track {
+        width: 50%;
+        height: 2px;
+        background-color: $pallete-grey-10;
+      }
+      .scrollbar__thumb {
+        width: 50%;
+        height: 2px;
+        background-color: $pallete-grey-900;
+      }
+    }
+  }
 }

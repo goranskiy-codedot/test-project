@@ -134,12 +134,13 @@ textarea {
 a {
   cursor: pointer;
   text-decoration: none;
-  &:hover,:active,:focus{
+  &:hover,
+  :active,
+  :focus {
     text-decoration: none !important;
     outline: none !important;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-   
-}
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 
   &:not([href]) {
     cursor: initial;
@@ -163,23 +164,22 @@ strong {
   font-weight: 600;
 }
 
-button{
+button {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   letter-spacing: 0.02em;
-  background-color:$pallete-secondary-main;
+  background-color: $pallete-secondary-main;
   border: $pallete-secondary-main;
-  &:hover{
-      color:$pallete-common-white;
-      background-color:transparent;
-      border:1px solid $pallete-secondary-main;
-     }
-  
+  &:hover {
+    color: $pallete-common-white;
+    background-color: transparent;
+    border: 1px solid $pallete-secondary-main;
+  }
 }
-h1{
+h1 {
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -187,7 +187,7 @@ h1{
   line-height: 145%;
   letter-spacing: 0.02em;
 }
-p{
+p {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -195,4 +195,3 @@ p{
   line-height: 185%;
   letter-spacing: 0.02em;
 }
-

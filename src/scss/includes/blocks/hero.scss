@@ -1,46 +1,158 @@
-.hero{
-    &__section{
-        padding-top: 24px;
+.hero {
+  .container {
+    @include tablet {
+      padding: 0 19px;
     }
-    &__header{
+    @include desktop {
+      padding: 0 62px;
+    }
+  }
+  &__section {
+    padding-top: 24px;
 
+    @include tablet {
+      padding-top: 43px;
     }
-    &__text{
-        padding-top: 13px;
+    @include desktop {
+      padding-top: 110px;
     }
-    &__buttons{
-        padding-top:26px;
-        display: flex;
-      .hero__button{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 10px;
-            line-height: 12px;
-            letter-spacing: 0.02em;
-            width: 129px;
-            height: 33px;
-            background-color: $pallete-primary-main;
-            border:1px solid $pallete-primary-main;
-            color:$pallete-common-white;
-            &:hover{
-                color:$pallete-primary-main;
-                background-color:transparent;
-                border:1px solid $pallete-primary-main;
-               }
-             }
-        #button-2{
-            background-color: transparent;
-            border:1px solid $pallete-primary-main;
-            color:$pallete-primary-main;
-            &:hover{
-                color:$pallete-common-white;
-                background-color:$pallete-primary-main;
-                border:1px solid $pallete-primary-main;
-               }
-        }
-        .button-1__block, .button-2__block{
-            width: 50%;
-        }
+  }
+  &__blocks {
+    display: flex;
+  }
+  &__block-1 {
+    width: 100%;
+    @include tablet {
+      width: 50%;
     }
+  }
+  &__block-2 {
+    width: 0%;
+    @include tablet {
+      width: 50%;
+      overflow: hidden;
+    }
+  }
+  &__image {
+    display: none;
+    @include tablet {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .image {
+      height: 289px;
+      object-fit: cover;
+      position: absolute;
+      top: 100px;
+      right: 60px;
+      @include desktop {
+        height: 416px;
+        right: 206px;
+        top: 151px;
+      }
+    }
+  }
+  &__header {
+    width: max-content;
+    .header {
+      @include tablet {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+      }
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+  &__text {
+    padding-top: 13px;
+    @include tablet {
+      padding-top: 19px;
+    }
+    @include desktop {
+      padding-top: 6px;
+    }
+    .text {
+      @include tablet {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 185%;
+        letter-spacing: 0.02em;
+      }
+      @include desktop {
+        width: 380px;
+      }
+    }
+  }
+  &__buttons {
+    padding-top: 26px;
+    display: flex;
+    @include tablet {
+      padding-top: 37px;
+    }
+    @include desktop {
+      padding-top: 58px;
+    }
+    .hero__button {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+      width: 129px;
+      height: 33px;
+      background-color: $pallete-primary-main;
+      border: 1px solid $pallete-primary-main;
+      color: $pallete-common-white;
+      &:hover {
+        color: $pallete-primary-main;
+        background-color: transparent;
+        border: 1px solid $pallete-primary-main;
+      }
+      @include desktop {
+        width: 171px;
+        height: 41px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+      }
+    }
+    #button-2 {
+      background-color: transparent;
+      border: 1px solid $pallete-primary-main;
+      color: $pallete-primary-main;
+      &:hover {
+        color: $pallete-common-white;
+        background-color: $pallete-primary-main;
+        border: 1px solid $pallete-primary-main;
+      }
+    }
+    .button-1__block,
+    .button-2__block {
+      width: 50%;
+      @include tablet {
+        width: 41%;
+      }
+      @include desktop {
+        width: 34%;
+      }
+    }
+  }
 }
