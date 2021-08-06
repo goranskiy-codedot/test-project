@@ -1,5 +1,5 @@
 .process-development {
-  &__section {
+  &__wrapper {
   }
 
   &__header {
@@ -39,7 +39,7 @@
     }
   }
 
-  &__stages {
+  &__steps{
     display: flex;
     overflow-y: hidden;
     overflow-x: overlay;
@@ -128,7 +128,7 @@
             top: 100px;
         }
       }
-      #text-2 {
+      text {
         @include tablet {
           width: 167px;
         }
@@ -171,7 +171,7 @@
       @include tablet {
         padding-left: 89px;
       }
-      #text-3 {
+      text {
         width: 193px;
       }
     }
@@ -191,7 +191,7 @@
         padding-left: 63px;
         padding-top: 36px;
       }
-      #text-4 {
+      text {
         width: 150px;
       }
       &__ellipse {
@@ -239,7 +239,7 @@
       }
     }
   }
-  .process-development__stages::-webkit-scrollbar {
+  .process-development__steps::-webkit-scrollbar {
     width: 0;
   }
   p {
