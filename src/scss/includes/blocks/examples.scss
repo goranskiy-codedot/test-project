@@ -1,8 +1,10 @@
 .examples {
   .container{
-    padding:0 19px;
+    @include tablet{
+      padding:0 19px;
+    }
     @include desktop{
-
+      padding:0 19px;
     }
   }
   &__header {
