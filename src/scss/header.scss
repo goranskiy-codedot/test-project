@@ -18,7 +18,7 @@
   padding: 20px;
 }
 
-#body:not(:target) .logo__link {
+#body:not(:target) .logo {
   background-color: $pallete-common-white;
   @include tablet {
     background-color: $pallete-grey-900;
@@ -81,7 +81,7 @@
       width: max-content;
       z-index: 1001;
       background-size: 46px 30px;
-      .logo__link {
+      .logo {
         display: block;
         z-index: 1001;
         height: 62px;
@@ -189,6 +189,8 @@
         width: 100%;
         padding-top: 42px;
         overflow: auto;
+        &:nth-child(5) {
+        }
         @include tablet {
           display: flex;
           height: max-content;
