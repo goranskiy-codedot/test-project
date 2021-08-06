@@ -1,0 +1,59 @@
+.benefits{
+    .container{
+
+    }
+    &__wrapper{
+
+    }
+    &__header{
+        padding-top: 68px;
+        .header{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+        }
+    }
+    .expirience{
+        padding-top:29px;
+        &__image{
+
+        }
+        &__text{
+            padding-top: 19px;
+            width: 192px;
+        }
+    }
+    .team{
+        padding-top:50px;
+        &__image{
+
+        }
+        &__text{
+            padding-top: 19px;
+            width: 224px;
+        }
+    }
+    .consultation{
+        padding-top:50px;
+        &__image{
+
+        }
+        &__text{
+            padding-top: 19px;
+            width: 192px;
+        }
+    }
+    .treatment{
+        padding-top:50px;
+        &__image{
+
+        }
+        &__text{
+            padding-top: 19px;
+            width: 192px;
+        }
+    }
+}
