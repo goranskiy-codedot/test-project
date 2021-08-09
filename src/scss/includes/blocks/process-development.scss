@@ -1,6 +1,5 @@
 .process-development {
-  &__wrapper {
-  }
+
 
   &__header {
     .header {
@@ -23,7 +22,7 @@
         letter-spacing: 0.02em;
         width: max-content;
         padding-left: 9px;
-        padding-top: 127px;
+        padding-top: 90px;
       }
 
       @include desktop {
@@ -34,7 +33,7 @@
         line-height: 145%;
         letter-spacing: 0.02em;
         padding-left: 45px;
-        padding-top: 146px;
+        padding-top: 52px;
       }
     }
   }
@@ -60,7 +59,7 @@
       height: 249px;
     
     }
-    .stage-1 {
+    .stage:nth-child(1) {
       height: 100%;
       padding-left: 69px;
       width: max-content;
@@ -73,7 +72,7 @@
         padding-left: 153px;
         padding-top: 12px;
       }
-      &__ellipse {
+      .stage__ellipse {
         width: 85px;
         height: 85px;
         display: flex;
@@ -94,7 +93,7 @@
       }
     }
 
-    .stage-2 {
+    .stage:nth-child(2) {
       padding-left: 130px;
       height: 100%;
       width: max-content;
@@ -109,7 +108,7 @@
         padding-left: 45px;
         padding-top: 71px;
       }
-      &__ellipse {
+      .stage__ellipse {
         width: 85px;
         height: 85px;
         display: flex;
@@ -142,13 +141,13 @@
         }
       }
     }
-    .stage-3 {
+    .stage:nth-child(3) {
       padding-left: 130px;
       height: 100%;
       width: max-content;
       position: relative;
 
-      &__ellipse {
+      .stage__ellipse {
         width: 85px;
         height: 85px;
         display: flex;
@@ -175,7 +174,7 @@
         width: 193px;
       }
     }
-    .stage-4 {
+    .stage:nth-child(4) {
       padding-left: 130px;
       height: 100%;
       width: max-content;
@@ -194,7 +193,7 @@
       text {
         width: 150px;
       }
-      &__ellipse {
+      .stage__ellipse {
         width: 85px;
         height: 85px;
         display: flex;
@@ -277,10 +276,10 @@
       display: none;
     }
     justify-content: space-between;
-    #left {
+    .left__button {
       float: left;
     }
-    #right {
+    .right__button {
       float: right;
     }
     .slider__button {

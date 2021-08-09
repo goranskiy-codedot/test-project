@@ -87,22 +87,25 @@
         height: 62px;
         width: 65px;
         background-color: $pallete-grey-900;
-        -webkit-mask-image: url(../img/logo.svg);
+        -webkit-mask-image: url(../uploads/logo.svg);
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 65px 49px;
         @include desktop {
-          -webkit-mask-image: url(../img/logo.svg);
-          -webkit-mask-position: 0px 15px;
+          -webkit-mask-position: center;
           -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: 157px 64px;
-          width: 111px;
-          height: 70px;
+          width: 61px;
         }
       }
       @include tablet {
         padding-left: 4px;
         padding-top: 15px;
+        width: max-content;
+      }
+      @include desktop{
+        padding-left: 54px;
+        padding-top: 32px;
         width: max-content;
       }
     }
@@ -294,6 +297,11 @@
         margin-top: 17px;
         margin-left: 0px;
         background-color: $pallete-primary-main;
+        &:hover{
+          color:$pallete-primary-main;
+          background-color: transparent;
+          border: 1px solid $pallete-primary-main;
+        }
       }
       @include desktop {
         background-color: $pallete-primary-main;
@@ -306,6 +314,12 @@
         line-height: 16px;
         letter-spacing: 0.02em;
         margin-right: 25px;
+        &:hover{
+          color:$pallete-primary-main;
+          background-color: transparent;
+          border: 1px solid $pallete-primary-main;
+
+        }
       }
     }
     &__logo {
