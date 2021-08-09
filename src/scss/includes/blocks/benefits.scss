@@ -38,12 +38,14 @@
         }
     }
     .text{
+        @include tablet{
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 185%;
         letter-spacing: 0.02em;
+        }
     }
     .benefits__wrapper{
         @include tablet{
@@ -95,7 +97,7 @@
         }
     }
     .team{
-        padding-top:50px;
+        padding-top:53px;
         @include tablet{
             padding-top: 29px;
             padding-left: 96px;
