@@ -45,7 +45,7 @@
       padding-left: 0px;
       padding-right: 0px;
     }
-    .lite {
+    .pack {
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
@@ -237,6 +237,197 @@
       }
     }
     .standart {
+      width: 244px;
+      height: 386px;
+      border: 1px solid $pallete-grey-10;
+      @include desktop{
+          width: 370px;
+          height: 552px;
+      }
+      &__header {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        @include desktop{
+            padding-bottom: 33px;
+            padding-top: 33px;
+        }
+        .header {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 145%;
+          letter-spacing: 0.02em;
+          @include desktop{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+      &__price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .hint {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 145%;
+          letter-spacing: 0.02em;
+          color: $pallete-grey-10;
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          padding-top: 14px;
+          padding-right: 5px;
+          @include desktop{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            
+          }
+        }
+        .price {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 145%;
+          letter-spacing: 0.02em;
+          color: $pallete-grey-900;
+          padding-right: 12px;
+          padding-top: 7px;
+          @include desktop{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 145%;
+            letter-spacing: 0.02em;
+            padding-right: 12px;
+            padding-top: 11px;
+          }
+        }
+      }
+      .hint {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 185%;
+        letter-spacing: 0.02em;
+        color: $pallete-grey-10;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        @include desktop{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 185%;
+            letter-spacing: 0.02em;
+        }
+      }
+      &__button {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 21px;
+        @include desktop{
+            padding-top: 41px;
+        }
+        .button {
+          width: 129px;
+          height: 33px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 12px;
+          letter-spacing: 0.02em;
+          color: $pallete-primary-main;
+          background-color: transparent;
+          border: 1px solid $pallete-primary-main;
+          &:hover {
+            border: 1px solid $pallete-primary-main;
+            background-color: $pallete-primary-main;
+            color: $pallete-common-white;
+          }
+          @include desktop{
+              width: 171px;
+              height: 41px;
+          }
+        }
+      }
+      .line {
+        width: 206px;
+        margin-top: 31px;
+        @include desktop{
+            width: 306px;
+            margin-top: 41px;
+        }
+      }
+      &__benefits {
+        padding-top: 7px;
+        @include desktop{
+            padding-top: 20px;
+        }
+        .benefits {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
+          padding-left: 41px;
+          @include desktop{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 185%;
+            letter-spacing: 0.02em;
+            margin-block-start: 10px;
+            margin-block-end: 10px;
+            padding-left: 64px;
+          }
+          &::before {
+            content: "";
+            width: 10px;
+            height: 6px;
+            display: block;
+            transform: rotate(-45deg);
+            border-bottom: 2px solid $pallete-secondary-main;
+            border-left: 2px solid $pallete-secondary-main;
+            margin-left: -23px;
+            margin-top: 4px;
+            position: absolute;
+            @include desktop{
+                height: 9px;
+                margin-left: -33px;
+                margin-top: 9px;
+                width: 14px;
+            }
+          }
+        }
+      }
+    }
+    .hover{
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-primary-main;
@@ -443,6 +634,8 @@
           }
         }
       }
+    
+
     }
     .pro {
       width: 244px;

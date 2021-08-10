@@ -1,84 +1,269 @@
-.form{
-    padding-top: 77px;
+.form {
+  padding-top: 77px;
+  @include tablet {
+    padding-top: 89px;
+  }
+  @include desktop {
+    padding-top: 140px;
+  }
 
-    .container{
-
+  .container {
+    @include desktop {
+      display: flex;
     }
-    &__header{
-        text-align: center;
-        padding-top: 52px;
-        .header{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            color: $pallete-common-white;
+  }
+  &__header {
+    text-align: center;
+    padding-top: 52px;
+    @include tablet {
+      padding-top: 81px;
+    }
+    .form__image {
+        display: none;
+        @include desktop {
+            display: block;
+            padding-top: 18px;
+            height: max-content;
+            width: max-content;
+          .image {
+            object-fit: cover;
+            margin-left: -9px;
+          }
         }
-        .form__header-hint{
-            padding-top: 1px;
-        
-            .hint{
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 13px;
-                line-height: 185%;
-                letter-spacing: 0.02em;
-                color: $pallete-common-white;
-            }
-
-        }
-      
-        
-
-    }
-    .form__section{
-        background-color: $pallete-primary-main;
-    }
-    &__inputs{
-        padding-top: 20px;
-        .label{
-        color:$pallete-common-white;
-        padding-top: 15px;
-        &:first-child{
-            padding-top: 0px;
-        }
-    }
-    .submit{
+      }
+    .header {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      color: $pallete-common-white;
+      @include tablet {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
+        font-size: 20px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+      }
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        padding-top: 28px;
+        padding-right: 34px;
+      }
+ 
+    }
+    .form__header-hint {
+      padding-top: 1px;
+
+      .hint {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 185%;
+        letter-spacing: 0.02em;
+        color: $pallete-common-white;
+        padding-top: 9px;
+        @include tablet {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 185%;
+          text-align: center;
+          letter-spacing: 0.02em;
+          padding-top: 6px;
+        }
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
+          width: 364px;
+          padding-left: 111px;
+          text-align: initial;
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+  &__submit {
+    text-align: center;
+    .checkbox {
+      display: none;
+    }
+    @include tablet {
+      text-align: initial;
+      display: flex;
+      .checkbox {
+        display: initial;
+        padding-top: 75px;
+        padding-left: 38px;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover,
+        :active,
+        :focus {
+          text-decoration: none !important;
+          outline: none !important;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+      }
+      .checkbox__label {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        color: $pallete-grey-10;
+      }
+      .form__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+      .form__checkbox + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+      }
+      .form__checkbox + label::before {
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid $pallete-common-white;
+        margin-right: 1.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+      .form__checkbox:checked + label::before {
+        background-image: url("../../../uploads/checkbox__ico.svg");
+      }
+    }
+  }
+  .form__section {
+    background-color: $pallete-primary-main;
+    height: 653px;
+    @include tablet {
+      height: 721px;
+    }
+    @include desktop{
+            height: 611px;
+    }
+  }
+  &__inputs {
+    padding-top: 32px;
+    @include tablet {
+      padding-top: 82px;
+      padding-left: 111px;
+    }
+    @include desktop{
+        padding-left: 42px;
+        padding-top: 117px;
+    }
+    .label {
+      color: $pallete-common-white;
+      padding-top: 15px;
+      @include tablet {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        display: block;
+        padding-top: 19px;
+      }
+      &:first-child {
+        padding-top: 0px;
+      }
+    }
+
+    .submit {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.02em;
+      background-color: $pallete-secondary-main;
+      border: $pallete-secondary-main;
+      width: 301px;
+      height: 33px;
+      color: $pallete-common-white;
+      margin-top: 46px;
+      @include tablet {
+        width: 171px;
+        height: 41px;
+        margin-top: 63px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+      }
+      &:hover {
+        color: $pallete-common-white;
+        background-color: transparent;
+        border: 1px solid $pallete-secondary-main;
+      }
+    }
+    .inputs__center {
+      padding-top: 17px;
+      .input__email {
+        padding-top: 13px;
+      }
+      @include tablet {
+        display: flex;
+        padding-top: 19px;
+        .input {
+          width: 236px;
+          padding-top: 9px;
+        }
+        .input__email {
+          padding-left: 51px;
+          padding-top: 0px;
+        }
+      }
+    }
+    .input {
+      border: none;
+      border-bottom: 1px solid $pallete-common-white;
+      width: 100%;
+      @include tablet {
+        width: 523px;
+        padding-top: 10px;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
         font-size: 10px;
         line-height: 12px;
-        letter-spacing: 0.02em;
-        background-color: $pallete-secondary-main;
-        border: $pallete-secondary-main;
-        width: 301px;
-        height: 33px;
-        color:$pallete-common-white;
-        margin-top: 46px;
-        &:hover {
-          color: $pallete-common-white;
-          background-color: transparent;
-          border: 1px solid $pallete-secondary-main;
+        @include tablet {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 15px;
         }
-     
+      }
     }
-    .input{
-        border: none;
-        border-bottom: 1px solid $pallete-common-white;
-        width: 100%;
-     
-        &::placeholder{
-            color: rgba(255, 255, 255, 0.3);
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 10px;
-            line-height: 12px;
-        }
-    }
-    }
+  }
 }
