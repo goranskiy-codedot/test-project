@@ -1,20 +1,20 @@
 .examples {
-  .container{
-    @include tablet{
-      padding:0 19px;
+  .container {
+    @include tablet {
+      padding: 0 19px;
     }
-    @include desktop{
-      padding:0 19px;
+    @include desktop {
+      padding: 0 19px;
     }
   }
   &__header {
-    padding-top: 59px;
-    @include tablet{
-      padding-top: 75px;
+    margin-top: 72px;
+    @include tablet {
+      margin-top: 93px;
     }
-    @include desktop{
-      padding-top: 82px;
-      padding-left: 42px;
+    @include desktop {
+      margin-top: 81px;
+      margin-left: 41px;
     }
     .header {
       font-family: Montserrat;
@@ -23,7 +23,7 @@
       font-size: 15px;
       line-height: 145%;
       letter-spacing: 0.02em;
-      @include tablet{
+      @include tablet {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -31,15 +31,13 @@
         line-height: 145%;
         letter-spacing: 0.02em;
       }
-      @include desktop{
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 30px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          
-
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
       }
     }
   }
@@ -50,10 +48,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    @include tablet{
-     padding-top: 39px;
+    @include tablet {
+      padding-top: 39px;
     }
-    @include desktop{
+    @include desktop {
       padding-left: 85px;
       padding-top: 41px;
       align-items: initial;
@@ -61,17 +59,16 @@
       text-align: initial;
     }
 
-    .container{
+    .container {
       padding: 0 0;
-      @include desktop{
-
+      @include desktop {
       }
     }
   }
-  .bottom__images{
-    @include desktop{
-    display: flex;
-    padding-top: 27px;
+  .bottom__images {
+    @include desktop {
+      display: flex;
+      padding-top: 27px;
     }
   }
   .examples__image {
@@ -89,15 +86,14 @@
     width: 100%;
     height: 234px;
     object-fit: cover;
-    @include tablet{
+    @include tablet {
       width: 100%;
       height: 462px;
     }
-    @include desktop{
+    @include desktop {
       width: 1110px;
       height: 561px;
     }
-
   }
   .bottom__image:nth-child(1) {
     // background: url(../../../img/shapes_mobile/shape_white.png) no-repeat;
@@ -115,11 +111,11 @@
     width: 100%;
     height: 234px;
     object-fit: cover;
-    @include tablet{
+    @include tablet {
       width: 100%;
       height: 462px;
     }
-    @include desktop{
+    @include desktop {
       width: 613px;
       height: 497px;
       margin-right: 25px;
@@ -142,11 +138,11 @@
     width: 100%;
     height: 234px;
     object-fit: cover;
-    @include tablet{
+    @include tablet {
       width: 100%;
       height: 462px;
     }
-    @include desktop{
+    @include desktop {
       width: 473px;
       height: 497px;
     }
@@ -155,10 +151,10 @@
     display: flex;
     justify-content: center;
     padding-top: 41px;
-    @include tablet{
+    @include tablet {
       padding-top: 51px;
     }
-    @include desktop{
+    @include desktop {
       padding-top: 81px;
     }
     .button {
@@ -173,7 +169,7 @@
       height: 33px;
       background-color: $pallete-primary-main;
       color: $pallete-common-white;
-      @include desktop{
+      @include desktop {
         width: 171px;
         height: 41px;
         font-family: Montserrat;

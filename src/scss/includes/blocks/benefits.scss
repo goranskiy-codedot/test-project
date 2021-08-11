@@ -1,159 +1,152 @@
-.benefits{
-  
-    .container{
-        @include tablet{
-            padding: 0 19px;
-        }
-        @include desktop{
-            padding: 0 60px;
-        }
+.benefits {
+  .container {
+    @include tablet {
+      padding: 0 19px;
     }
-    &__header{
-        padding-top: 68px;
-        .header{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            @include tablet{
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 145%;
-                letter-spacing: 0.02em;      
-                padding-top: 15px;
-            }
-            @include desktop{
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 30px;
-                line-height: 145%;
-                letter-spacing: 0.02em;
-                padding-top: 44px;
-            }
-        }
+    @include desktop {
+      padding: 0 60px;
     }
-    .text{
-        @include tablet{
+  }
+  &__header {
+    padding-top: 68px;
+    .header {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      @include tablet {
         font-family: Montserrat;
         font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 185%;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 145%;
         letter-spacing: 0.02em;
-        }
+        padding-top: 15px;
+      }
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        padding-top: 44px;
+      }
     }
-    .benefits__wrapper{
-        @include tablet{
-        display: block;
-        align-items: center;
-        justify-content: center;
-        }
-        @include desktop{
-            display: flex;
-            justify-content: initial;
-        }
+  }
+  .text {
+    @include tablet {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 185%;
+      letter-spacing: 0.02em;
     }
-    .benefits__bottom{
-        @include tablet{
+  }
+  .benefits__wrapper {
+    @include tablet {
+      display: block;
+      align-items: center;
+      justify-content: center;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: initial;
+    }
+  }
+  .benefits__bottom {
+    @include tablet {
       display: flex;
 
       padding-left: 80px;
       padding-top: 14px;
-  
-        }
-        @include desktop{
-            padding-left: 117px;
-        }
     }
-    .benefits__top{
-        @include tablet{
-        display: flex;
-        padding-top: 29px;
-        padding-left: 79px;
-    
-        }
-        @include desktop{
-            padding-left: 0px;
-            padding-top: 33px;
-        }
+    @include desktop {
+      padding-left: 117px;
+    }
+  }
+  .benefits__top {
+    @include tablet {
+      display: flex;
+      padding-top: 29px;
+      padding-left: 79px;
+    }
+    @include desktop {
+      padding-left: 0px;
+      padding-top: 33px;
+    }
+  }
+  .expirience {
+    padding-top: 29px;
+    &__image {
+    }
+    &__text {
+      padding-top: 19px;
+      width: 192px;
+      @include tablet {
+        padding-top: 25px;
+        width: 222px;
       }
-    .expirience{
-        padding-top:29px;
-        &__image{
-
-        }
-        &__text{
-            padding-top: 19px;
-            width: 192px;
-            @include tablet{
-                padding-top: 25px;
-                width: 222px;
-            }
-        }
     }
-    .team{
-        padding-top:53px;
-        @include tablet{
-            padding-top: 29px;
-            padding-left: 96px;
-        }
-        @include desktop{
-            padding-left: 57px;
-            padding-top: 26px;
-        }
-        &__image{
-
-        }
-        &__text{
-            padding-top: 19px;
-            width: 224px;
-            @include tablet{
-                padding-top: 26px;
-                width: 161px;
-            }
-        }
+  }
+  .team {
+    padding-top: 53px;
+    @include tablet {
+      padding-top: 29px;
+      padding-left: 96px;
     }
-    .consultation{
-        padding-top:50px;
-        @include desktop{
-            padding-top: 25px;
-        }
-        &__image{
-
-        }
-        &__text{
-            padding-top: 19px;
-            width: 192px;
-            @include tablet{
-                width: 215px;
-                padding-top: 24px;
-            }
-        }
+    @include desktop {
+      padding-left: 57px;
+      padding-top: 26px;
     }
-    .treatment{
-        padding-top:50px;
-        @include tablet{
-            padding-top: 50px;
-            padding-left: 102px;
-        }
-        @include desktop{
-            padding-left: 66px;
-            padding-top: 17px;
-        }
-        &__image{
-
-        }
-        &__text{
-            padding-top: 19px;
-            width: 192px;
-            @include tablet{
-                padding-top: 25px;
-            }
-        }
+    &__image {
     }
+    &__text {
+      padding-top: 19px;
+      width: 224px;
+      @include tablet {
+        padding-top: 26px;
+        width: 161px;
+      }
+    }
+  }
+  .consultation {
+    padding-top: 50px;
+    @include desktop {
+      padding-top: 25px;
+    }
+    &__image {
+    }
+    &__text {
+      padding-top: 19px;
+      width: 192px;
+      @include tablet {
+        width: 215px;
+        padding-top: 24px;
+      }
+    }
+  }
+  .treatment {
+    padding-top: 50px;
+    @include tablet {
+      padding-top: 50px;
+      padding-left: 102px;
+    }
+    @include desktop {
+      padding-left: 66px;
+      padding-top: 17px;
+    }
+    &__image {
+    }
+    &__text {
+      padding-top: 19px;
+      width: 192px;
+      @include tablet {
+        padding-top: 25px;
+      }
+    }
+  }
 }

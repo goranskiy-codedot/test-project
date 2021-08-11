@@ -1,7 +1,15 @@
 .process-development {
-
-
   &__header {
+    margin-top: 77px;
+    margin-left: 3px;
+    @include tablet {
+      margin-top: 88px;
+      margin-left: 10px;
+    }
+    @include desktop {
+      margin-left: 45px;
+      margin-top: 52px;
+    }
     .header {
       font-family: Montserrat;
       font-style: normal;
@@ -10,121 +18,112 @@
       line-height: 145%;
       letter-spacing: 0.02em;
       width: 192px;
-      padding-top: 65px;
-      padding-left: 3px;
 
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
         width: max-content;
-        padding-left: 9px;
-        padding-top: 90px;
       }
 
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-left: 45px;
-        padding-top: 52px;
       }
     }
   }
 
-  &__steps{
+  &__steps {
     display: flex;
     overflow-y: hidden;
     overflow-x: overlay;
-    padding-top: 23px;
+    margin-top: 32px;
+    margin-left: 10px;
     height: 158px;
-    .container{
-        display: flex;
-        padding: 0 0;
+    scrollbar-width: none;
+    .container {
+      display: flex;
+      padding: 0 0;
     }
 
     @include tablet {
-      padding-top: 34px;
+      margin-top: 49px;
       height: 220px;
     }
 
     @include desktop {
-      padding-top: 27px;
+      margin-top: 52px;
       height: 249px;
-    
     }
+    .ellipse {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      display: flex;
+      position: absolute;
+      z-index: -1;
+      background: $pallete-common-white-10;
+      @include tablet {
+      }
+      @include desktop {
+        width: 113px;
+        height: 113px;
+      }
+    }
+
     .stage:nth-child(1) {
       height: 100%;
-      padding-left: 69px;
+      margin-left: 69px;
       width: max-content;
       position: relative;
       z-index: 1;
+
       @include tablet {
-        padding-top: 9px;
+        margin-top: 9px;
       }
       @include desktop {
-        padding-left: 153px;
-        padding-top: 12px;
+        margin-left: 122px;
+        margin-top: 14px;
       }
       .stage__ellipse {
-        width: 85px;
-        height: 85px;
-        display: flex;
-        left: 104px;
-        position: absolute;
-        top: 24px;
-        z-index: -1;
+        left: 35px;
+        top: 26px;
         @include tablet {
           top: 35px;
-          
         }
-        @include desktop{
-            width: 113px;
-            height: 113px;
-            top: 42px;
-            left: 202px;
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 43px;
+          top: 28px;
         }
       }
     }
 
     .stage:nth-child(2) {
-      padding-left: 130px;
+      margin-left: 130px;
       height: 100%;
       width: max-content;
       position: relative;
       z-index: 1;
 
       @include tablet {
-        padding-left: 46px;
-        padding-top: 56px;
+        margin-left: 46px;
+        margin-top: 56px;
       }
       @include desktop {
-        padding-left: 45px;
-        padding-top: 71px;
+        margin-left: 45px;
+        margin-top: 71px;
       }
       .stage__ellipse {
-        width: 85px;
-        height: 85px;
-        display: flex;
-        left: 160px;
-        position: absolute;
+        left: 35px;
         top: 24px;
-        z-index: -1;
         @include tablet {
-          left: 78px;
-          top: 85px;
+          left: 32px;
+          top: 29px;
         }
-        @include desktop{
-            width: 113px;
-            height: 113px;
-            left: 93px;
-            top: 100px;
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 41px;
+          top: 31px;
         }
       }
       text {
@@ -142,74 +141,64 @@
       }
     }
     .stage:nth-child(3) {
-      padding-left: 130px;
+      margin-left: 130px;
       height: 100%;
       width: max-content;
       position: relative;
 
       .stage__ellipse {
-        width: 85px;
-        height: 85px;
-        display: flex;
-        left: 160px;
-        position: absolute;
+        left: 35px;
         top: 24px;
-        z-index: -1;
 
         @include tablet {
-          left: 124px;
           top: 28px;
+          left: 37px;
         }
-        @include desktop{
-            width: 113px;
-            height: 113px;
-            left: 136px;
-            top: 28px;
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 40px;
+          top: 28px;
         }
       }
       @include tablet {
-        padding-left: 89px;
+        margin-left: 47px;
       }
       text {
         width: 193px;
       }
     }
     .stage:nth-child(4) {
-      padding-left: 130px;
+      margin-left: 130px;
       height: 100%;
       width: max-content;
       position: relative;
       z-index: 1;
-      padding-right: 69px;
+      margin-right: 69px;
       @include tablet {
-        padding-left: 89px;
-        padding-top: 10px;
-        padding-right: 69px;
+        margin-left: 89px;
+        margin-top: 10px;
       }
       @include desktop {
-        padding-left: 63px;
-        padding-top: 36px;
+        margin-left: 46px;
+        margin-top: 37px;
+        margin-right: 122px;
       }
       text {
         width: 150px;
       }
       .stage__ellipse {
-        width: 85px;
-        height: 85px;
-        display: flex;
-        left: 160px;
-        position: absolute;
+        left: 35px;
         top: 24px;
-        z-index: -1;
         @include tablet {
           top: 31px;
-          left: 136px;
+          left: 30px;
         }
-        @include desktop{
-            width: 113px;
-            height: 113px;
-            left: 109px;
-            top: 64px;
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 38px;
+          top: 29px;
         }
       }
     }
@@ -228,13 +217,7 @@
       font-stretch: ultra-expanded;
       z-index: 1;
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 900;
         font-size: 70px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
       }
     }
   }
@@ -256,21 +239,15 @@
     padding-top: 10px;
     z-index: 1;
     @include desktop {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 185%;
-      letter-spacing: 0.02em;
       padding-top: 0px;
     }
   }
   .stages__slider {
     display: flex;
-    padding-top: 24px;
+    margin-top: 2px;
     width: 100%;
     @include tablet {
-      padding-top: 58px;
+      margin-top: 25px;
     }
     @include desktop {
       display: none;

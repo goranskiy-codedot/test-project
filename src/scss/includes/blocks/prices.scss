@@ -22,7 +22,7 @@
         padding-top: 85px;
         padding-bottom: 35px;
       }
-      @include desktop{
+      @include desktop {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -49,9 +49,9 @@
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
-      @include desktop{
-          width: 370px;
-          height: 552px;
+      @include desktop {
+        width: 370px;
+        height: 552px;
       }
       &__header {
         text-align: center;
@@ -59,9 +59,9 @@
         justify-content: center;
         padding-top: 19px;
         padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
+        @include desktop {
+          padding-bottom: 33px;
+          padding-top: 33px;
         }
         .header {
           font-family: Montserrat;
@@ -70,7 +70,7 @@
           font-size: 10px;
           line-height: 145%;
           letter-spacing: 0.02em;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -98,14 +98,13 @@
           margin-block-end: 0em;
           padding-top: 14px;
           padding-right: 5px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
             line-height: 145%;
             letter-spacing: 0.02em;
-            
           }
         }
         .price {
@@ -118,7 +117,7 @@
           color: $pallete-grey-900;
           padding-right: 12px;
           padding-top: 7px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -143,13 +142,13 @@
         color: $pallete-grey-10;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
         }
       }
       &__button {
@@ -157,8 +156,8 @@
         justify-content: center;
         align-items: center;
         padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
+        @include desktop {
+          padding-top: 41px;
         }
         .button {
           width: 129px;
@@ -177,24 +176,24 @@
             background-color: $pallete-primary-main;
             color: $pallete-common-white;
           }
-          @include desktop{
-              width: 171px;
-              height: 41px;
+          @include desktop {
+            width: 171px;
+            height: 41px;
           }
         }
       }
       .line {
         width: 206px;
         margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
+        @include desktop {
+          width: 306px;
+          margin-top: 41px;
         }
       }
       &__benefits {
         padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
+        @include desktop {
+          padding-top: 20px;
         }
         .benefits {
           font-family: Montserrat;
@@ -204,7 +203,7 @@
           line-height: 185%;
           letter-spacing: 0.02em;
           padding-left: 41px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -226,11 +225,11 @@
             margin-left: -23px;
             margin-top: 4px;
             position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
+            @include desktop {
+              height: 9px;
+              margin-left: -33px;
+              margin-top: 9px;
+              width: 14px;
             }
           }
         }
@@ -240,9 +239,9 @@
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
-      @include desktop{
-          width: 370px;
-          height: 552px;
+      @include desktop {
+        width: 370px;
+        height: 552px;
       }
       &__header {
         text-align: center;
@@ -250,9 +249,9 @@
         justify-content: center;
         padding-top: 19px;
         padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
+        @include desktop {
+          padding-bottom: 33px;
+          padding-top: 33px;
         }
         .header {
           font-family: Montserrat;
@@ -261,7 +260,7 @@
           font-size: 10px;
           line-height: 145%;
           letter-spacing: 0.02em;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -289,14 +288,13 @@
           margin-block-end: 0em;
           padding-top: 14px;
           padding-right: 5px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
             line-height: 145%;
             letter-spacing: 0.02em;
-            
           }
         }
         .price {
@@ -309,7 +307,7 @@
           color: $pallete-grey-900;
           padding-right: 12px;
           padding-top: 7px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -334,13 +332,13 @@
         color: $pallete-grey-10;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
         }
       }
       &__button {
@@ -348,8 +346,8 @@
         justify-content: center;
         align-items: center;
         padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
+        @include desktop {
+          padding-top: 41px;
         }
         .button {
           width: 129px;
@@ -368,24 +366,24 @@
             background-color: $pallete-primary-main;
             color: $pallete-common-white;
           }
-          @include desktop{
-              width: 171px;
-              height: 41px;
+          @include desktop {
+            width: 171px;
+            height: 41px;
           }
         }
       }
       .line {
         width: 206px;
         margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
+        @include desktop {
+          width: 306px;
+          margin-top: 41px;
         }
       }
       &__benefits {
         padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
+        @include desktop {
+          padding-top: 20px;
         }
         .benefits {
           font-family: Montserrat;
@@ -395,7 +393,7 @@
           line-height: 185%;
           letter-spacing: 0.02em;
           padding-left: 41px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -417,25 +415,25 @@
             margin-left: -23px;
             margin-top: 4px;
             position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
+            @include desktop {
+              height: 9px;
+              margin-left: -33px;
+              margin-top: 9px;
+              width: 14px;
             }
           }
         }
       }
     }
-    .hover{
+    .hover {
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-primary-main;
       position: relative;
-      @include desktop{
+      @include desktop {
         width: 370px;
         height: 552px;
-    }
+      }
       .polygon {
         background-image: url(../../../img/other/rectangle.svg);
         height: 26px;
@@ -443,12 +441,12 @@
         position: absolute;
         right: 18px;
         top: -1px;
-        @include desktop{
-            height: 43px;
-            width: 27px;
-            background-image: url(../../../img/other/rectangle-big.svg);
-            position: absolute;
-            right: 31px;
+        @include desktop {
+          height: 43px;
+          width: 27px;
+          background-image: url(../../../img/other/rectangle-big.svg);
+          position: absolute;
+          right: 31px;
         }
       }
 
@@ -458,9 +456,9 @@
         justify-content: center;
         padding-top: 19px;
         padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
+        @include desktop {
+          padding-bottom: 33px;
+          padding-top: 33px;
         }
         .header {
           font-family: Montserrat;
@@ -469,7 +467,7 @@
           font-size: 10px;
           line-height: 145%;
           letter-spacing: 0.02em;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -497,14 +495,13 @@
           margin-block-end: 0em;
           padding-top: 14px;
           padding-right: 5px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
             line-height: 145%;
             letter-spacing: 0.02em;
-            
           }
         }
         .price {
@@ -517,7 +514,7 @@
           color: $pallete-grey-900;
           padding-right: 12px;
           padding-top: 7px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -542,22 +539,22 @@
         color: $pallete-grey-10;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-        } 
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
+        }
       }
       &__button {
         text-align: center;
         justify-content: center;
         align-items: center;
         padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
+        @include desktop {
+          padding-top: 41px;
         }
         .button {
           width: 129px;
@@ -576,24 +573,24 @@
             background-color: $pallete-primary-main;
             color: $pallete-common-white;
           }
-          @include desktop{
+          @include desktop {
             width: 171px;
             height: 41px;
-        }
+          }
         }
       }
       .line {
         width: 206px;
         margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
+        @include desktop {
+          width: 306px;
+          margin-top: 41px;
         }
       }
       &__benefits {
         padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
+        @include desktop {
+          padding-top: 20px;
         }
         .benefits {
           font-family: Montserrat;
@@ -603,7 +600,7 @@
           line-height: 185%;
           letter-spacing: 0.02em;
           padding-left: 41px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -625,35 +622,33 @@
             margin-left: -23px;
             margin-top: 4px;
             position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
+            @include desktop {
+              height: 9px;
+              margin-left: -33px;
+              margin-top: 9px;
+              width: 14px;
             }
           }
         }
       }
-    
-
     }
     .pro {
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
-      @include desktop{
+      @include desktop {
         width: 370px;
         height: 552px;
-    }
+      }
       &__header {
         text-align: center;
         align-items: center;
         justify-content: center;
         padding-top: 19px;
         padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
+        @include desktop {
+          padding-bottom: 33px;
+          padding-top: 33px;
         }
         .header {
           font-family: Montserrat;
@@ -662,7 +657,7 @@
           font-size: 10px;
           line-height: 145%;
           letter-spacing: 0.02em;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -690,14 +685,13 @@
           margin-block-end: 0em;
           padding-top: 14px;
           padding-right: 5px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
             font-size: 15px;
             line-height: 145%;
             letter-spacing: 0.02em;
-            
           }
         }
         .price {
@@ -710,7 +704,7 @@
           color: $pallete-grey-900;
           padding-right: 12px;
           padding-top: 7px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: bold;
@@ -735,13 +729,13 @@
         color: $pallete-grey-10;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
         }
       }
       &__button {
@@ -749,8 +743,8 @@
         justify-content: center;
         align-items: center;
         padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
+        @include desktop {
+          padding-top: 41px;
         }
         .button {
           width: 129px;
@@ -769,24 +763,24 @@
             background-color: $pallete-primary-main;
             color: $pallete-common-white;
           }
-          @include desktop{
+          @include desktop {
             width: 171px;
             height: 41px;
-        }
+          }
         }
       }
       .line {
         width: 206px;
         margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
+        @include desktop {
+          width: 306px;
+          margin-top: 41px;
         }
       }
       &__benefits {
         padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
+        @include desktop {
+          padding-top: 20px;
         }
         .benefits {
           font-family: Montserrat;
@@ -796,7 +790,7 @@
           line-height: 185%;
           letter-spacing: 0.02em;
           padding-left: 41px;
-          @include desktop{
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -814,19 +808,19 @@
             font-size: 10px;
             line-height: 185%;
             letter-spacing: 0.02em;
-            @include desktop{
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 15px;
-                line-height: 185%;
-                letter-spacing: 0.02em;
+            @include desktop {
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 15px;
+              line-height: 185%;
+              letter-spacing: 0.02em;
             }
           }
           &:nth-child(4) {
             width: 233px;
-            @include desktop{
-                width: 290px;
+            @include desktop {
+              width: 290px;
             }
           }
           &::before {
@@ -840,11 +834,11 @@
             margin-left: -23px;
             margin-top: 4px;
             position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
+            @include desktop {
+              height: 9px;
+              margin-left: -33px;
+              margin-top: 9px;
+              width: 14px;
             }
           }
         }
