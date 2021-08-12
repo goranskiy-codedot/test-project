@@ -1,14 +1,26 @@
 .process-development {
+  .container{
+@include desktop{
+  padding: 0 60px;
+}
+  }
+  @include tablet{
+    padding-top: 79px;
+  }
+  @include desktop{
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
   &__header {
-    margin-top: 77px;
-    margin-left: 3px;
+    // margin-top: 77px;
+    // margin-left: 3px;
     @include tablet {
-      margin-top: 88px;
-      margin-left: 10px;
+      // margin-top: 88px;
+      // margin-left: 10px;
     }
     @include desktop {
-      margin-left: 45px;
-      margin-top: 52px;
+      // margin-left: 39px;
+      // margin-top: 52px;
     }
     .header {
       font-family: Montserrat;
@@ -67,7 +79,6 @@
         height: 113px;
       }
     }
-
     .stage:nth-child(1) {
       height: 100%;
       margin-left: 69px;
@@ -95,8 +106,44 @@
           top: 28px;
         }
       }
+      .text{
+        // max-width: 210px;
+        // width: 100%;
+      }
     }
 
+    .stage:nth-child(5n) {
+      height: 100%;
+      margin-left: 69px;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+
+      @include tablet {
+        margin-top: 9px;
+      }
+      @include desktop {
+        margin-left: 45px;
+        margin-top: 14px;
+      }
+      .stage__ellipse {
+        left: 35px;
+        top: 26px;
+        @include tablet {
+          top: 35px;
+        }
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 43px;
+          top: 28px;
+        }
+      }
+      .text{
+        // max-width: 210px;
+        // width: 100%;
+      }
+    }
     .stage:nth-child(2) {
       margin-left: 130px;
       height: 100%;
@@ -128,7 +175,53 @@
       }
       text {
         @include tablet {
-          width: 167px;
+          // max-width: 167px;
+          // width: 100%;
+        }
+        @include desktop {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 185%;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+
+    .stage:nth-child(6n) {
+      margin-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+
+      @include tablet {
+        margin-left: 46px;
+        margin-top: 56px;
+      }
+      @include desktop {
+        margin-left: 45px;
+        margin-top: 71px;
+      }
+      .stage__ellipse {
+        left: 35px;
+        top: 24px;
+        @include tablet {
+          left: 32px;
+          top: 29px;
+        }
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 41px;
+          top: 31px;
+        }
+      }
+      text {
+        @include tablet {
+          max-width: 167px;
+          width: 100%;
         }
         @include desktop {
           font-family: Montserrat;
@@ -165,7 +258,37 @@
         margin-left: 47px;
       }
       text {
-        width: 193px;
+        // max-width: 193px;
+        // width: 100%;
+      }
+    }
+    .stage:nth-child(7n) {
+      margin-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+
+      .stage__ellipse {
+        left: 35px;
+        top: 24px;
+
+        @include tablet {
+          top: 28px;
+          left: 37px;
+        }
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 40px;
+          top: 28px;
+        }
+      }
+      @include tablet {
+        margin-left: 47px;
+      }
+      text {
+        max-width: 193px;
+        width: 100%;
       }
     }
     .stage:nth-child(4) {
@@ -174,7 +297,6 @@
       width: max-content;
       position: relative;
       z-index: 1;
-      margin-right: 69px;
       @include tablet {
         margin-left: 89px;
         margin-top: 10px;
@@ -182,10 +304,10 @@
       @include desktop {
         margin-left: 46px;
         margin-top: 37px;
-        margin-right: 122px;
       }
       text {
-        width: 150px;
+        // max-width: 150px;
+        // width: 100%;
       }
       .stage__ellipse {
         left: 35px;
@@ -200,6 +322,46 @@
           left: 38px;
           top: 29px;
         }
+      }
+    }
+    .stage:nth-child(8n) {
+      margin-left: 130px;
+      height: 100%;
+      width: max-content;
+      position: relative;
+      z-index: 1;
+      @include tablet {
+        margin-left: 89px;
+        margin-top: 10px;
+      }
+      @include desktop {
+        margin-left: 46px;
+        margin-top: 37px;
+      }
+      text {
+        // max-width: 150px;
+        // width: 100%;
+      }
+      .stage__ellipse {
+        left: 35px;
+        top: 24px;
+        @include tablet {
+          top: 31px;
+          left: 30px;
+        }
+        @include desktop {
+          width: 113px;
+          height: 113px;
+          left: 38px;
+          top: 29px;
+        }
+      }
+    }
+    .stage:last-child{
+      margin-right: 69px;
+      @include desktop {
+
+        margin-right: 122px;
       }
     }
     .stage__number {

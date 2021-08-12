@@ -1,5 +1,5 @@
 .form {
-  padding-top: 77px;
+  
   @include tablet {
     padding-top: 89px;
   }
@@ -14,15 +14,15 @@
   }
   &__header {
     text-align: center;
-    padding-top: 52px;
+    margin-top: 52px;
     @include tablet {
-      padding-top: 81px;
+      margin-top: 109px;
     }
     .form__image {
       display: none;
       @include desktop {
         display: block;
-        padding-top: 18px;
+        margin-top: 18px;
         height: max-content;
         width: max-content;
         .image {
@@ -39,6 +39,7 @@
       line-height: 145%;
       letter-spacing: 0.02em;
       color: $pallete-common-white;
+
       @include tablet {
         font-family: Montserrat;
         font-style: normal;
@@ -54,8 +55,8 @@
         font-size: 30px;
         line-height: 145%;
         letter-spacing: 0.02em;
-        padding-top: 28px;
-        padding-right: 34px;
+        margin-right: 34px;
+        padding-left: 0px;
       }
     }
     .form__header-hint {
@@ -69,28 +70,20 @@
         line-height: 185%;
         letter-spacing: 0.02em;
         color: $pallete-common-white;
-        padding-top: 9px;
+        // padding-top: 9px;
         @include tablet {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
           font-size: 15px;
-          line-height: 185%;
           text-align: center;
-          letter-spacing: 0.02em;
           padding-top: 6px;
         }
         @include desktop {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 185%;
-          letter-spacing: 0.02em;
-          width: 364px;
-          padding-left: 111px;
           text-align: initial;
           padding-top: 0px;
+          margin-left: 110px;
+          padding-top: 0;
+          text-align: initial;
+          max-width: 345px;
+          width: 100%;
         }
       }
     }
@@ -105,8 +98,8 @@
       display: flex;
       .checkbox {
         display: initial;
-        padding-top: 75px;
-        padding-left: 38px;
+        margin-top: 75px;
+        margin-left: 38px;
         cursor: pointer;
         text-decoration: none;
         &:hover,
@@ -165,14 +158,14 @@
     }
   }
   &__inputs {
-    padding-top: 32px;
+    margin-top: 32px;
     @include tablet {
-      padding-top: 82px;
-      padding-left: 111px;
+      margin-top: 82px;
+      margin-left: 111px;
     }
     @include desktop {
-      padding-left: 42px;
-      padding-top: 117px;
+      margin-left: 42px;
+      margin-top: 117px;
     }
     .label {
       color: $pallete-common-white;
@@ -222,20 +215,20 @@
       }
     }
     .inputs__center {
-      padding-top: 17px;
+      margin-top: 17px;
       .input__email {
-        padding-top: 13px;
+        margin-top: 13px;
       }
       @include tablet {
         display: flex;
-        padding-top: 19px;
+        margin-top: 19px;
         .input {
           width: 236px;
-          padding-top: 9px;
+          margin-top: 9px;
         }
         .input__email {
-          padding-left: 51px;
-          padding-top: 0px;
+          margin-left: 51px;
+          margin-top:0px;
         }
       }
     }
@@ -245,7 +238,7 @@
       width: 100%;
       @include tablet {
         width: 523px;
-        padding-top: 10px;
+        padding-top: 7px;
       }
 
       &::placeholder {

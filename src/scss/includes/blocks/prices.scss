@@ -1,4 +1,8 @@
 .prices__section {
+  @include desktop{
+    padding-bottom: 41px;
+    padding-top: 41px;
+  }
   &__header {
     text-align: center;
     align-items: center;
@@ -10,27 +14,17 @@
       font-size: 15px;
       line-height: 145%;
       letter-spacing: 0.02em;
-      padding-top: 70px;
-      padding-bottom: 28px;
+      // padding-top: 70px;
+      // padding-bottom: 28px;
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-top: 85px;
-        padding-bottom: 35px;
+        // padding-top: 85px;
+        // padding-bottom: 35px;
       }
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-bottom: 41px;
-        padding-top: 72px;
+        // padding-bottom: 41px;
+        // padding-top: 72px;
       }
     }
   }
@@ -45,6 +39,9 @@
       padding-left: 0px;
       padding-right: 0px;
     }
+    @include desktop{
+      margin-top: 65px;
+    }
     .pack {
       width: 244px;
       height: 386px;
@@ -55,13 +52,11 @@
       }
       &__header {
         text-align: center;
-        align-items: center;
-        justify-content: center;
         padding-top: 19px;
         padding-bottom: 19px;
         @include desktop {
-          padding-bottom: 33px;
-          padding-top: 33px;
+            padding-bottom: 33px;
+            padding-top: 33px;
         }
         .header {
           font-family: Montserrat;
@@ -434,21 +429,53 @@
         width: 370px;
         height: 552px;
       }
-      .polygon {
-        background-image: url(../../../img/other/rectangle.svg);
-        height: 26px;
+      &::before{
+        content: '';
         width: 17px;
+        height: 26px;
+        background-color: $pallete-primary-main;
+        display: inline-block;
         position: absolute;
         right: 18px;
-        top: -1px;
-        @include desktop {
-          height: 43px;
-          width: 27px;
-          background-image: url(../../../img/other/rectangle-big.svg);
-          position: absolute;
-          right: 31px;
+        @include desktop{
+        width: 27px;
+        height: 43px;
+        right: 31px;
+        }
+    
+      }
+      &::after{
+        background-color:$pallete-common-white-20;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        position: absolute;
+        right: 20px;
+        top: 19px;
+        transform: rotate(45deg);
+        width: 14px;
+        @include desktop{
+        height: 20px;
+        width: 20px;
+        top: 33px;
+        right: 34px;
         }
       }
+      // .polygon {
+      //   background-image: url(../../../img/other/rectangle.svg);
+      //   height: 26px;
+      //   width: 17px;
+      //   position: absolute;
+      //   right: 18px;
+      //   top: -1px;
+      //   @include desktop {
+      //     height: 43px;
+      //     width: 27px;
+      //     background-image: url(../../../img/other/rectangle-big.svg);
+      //     position: absolute;
+      //     right: 31px;
+      //   }
+      // }
 
       &__header {
         text-align: center;

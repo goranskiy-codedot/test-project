@@ -1,20 +1,22 @@
 .examples {
+  padding-top: 31px;
+  padding-bottom: 31px;
   .container {
     @include tablet {
       padding: 0 19px;
     }
     @include desktop {
-      padding: 0 19px;
+      padding: 0 60px;
     }
   }
   &__header {
-    margin-top: 72px;
+    // margin-top: 72px;
     @include tablet {
-      margin-top: 93px;
+      // margin-top: 93px;
     }
     @include desktop {
-      margin-top: 81px;
-      margin-left: 41px;
+      // margin-top: 81px;
+      // margin-left: 34px;
     }
     .header {
       font-family: Montserrat;
@@ -53,6 +55,7 @@
     }
     @include desktop {
       padding-left: 85px;
+      padding-right: 85px;
       padding-top: 41px;
       align-items: initial;
       justify-content: initial;
@@ -150,12 +153,12 @@
   &__button {
     display: flex;
     justify-content: center;
-    padding-top: 41px;
+    margin-top: 41px;
     @include tablet {
-      padding-top: 51px;
+      margin-top: 51px;
     }
     @include desktop {
-      padding-top: 81px;
+      margin-top: 79px;
     }
     .button {
       font-family: Montserrat;
@@ -172,12 +175,8 @@
       @include desktop {
         width: 171px;
         height: 41px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 13px;
         line-height: 16px;
-        letter-spacing: 0.02em;
       }
       &:hover {
         background-color: transparent;
