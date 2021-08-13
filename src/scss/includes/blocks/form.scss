@@ -1,10 +1,10 @@
 .form {
-  
+  padding-top: 56px;
   @include tablet {
-    padding-top: 89px;
+    padding-top: 65px;
   }
   @include desktop {
-    padding-top: 140px;
+    padding-top: 75px;
   }
 
   .container {
@@ -14,9 +14,14 @@
   }
   &__header {
     text-align: center;
-    margin-top: 52px;
+    padding-top: 78px;
+    //  margin-top: 52px;
     @include tablet {
-      margin-top: 109px;
+      // margin-top: 109px;
+      padding-top: 97px;
+    }
+    @include desktop {
+      padding-top: 134px;
     }
     .form__image {
       display: none;
@@ -32,6 +37,8 @@
       }
     }
     .header {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
@@ -61,6 +68,12 @@
     }
     .form__header-hint {
       padding-top: 1px;
+      margin-top: 22px;
+      margin-bottom: 22px;
+      @include tablet {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
 
       .hint {
         font-family: Montserrat;
@@ -74,7 +87,7 @@
         @include tablet {
           font-size: 15px;
           text-align: center;
-          padding-top: 6px;
+          margin-top: 23px;
         }
         @include desktop {
           text-align: initial;
@@ -158,9 +171,9 @@
     }
   }
   &__inputs {
-    margin-top: 32px;
+    margin-top: 44px;
     @include tablet {
-      margin-top: 82px;
+      margin-top: 97px;
       margin-left: 111px;
     }
     @include desktop {
@@ -215,9 +228,9 @@
       }
     }
     .inputs__center {
-      margin-top: 17px;
+      margin-top: 30px;
       .input__email {
-        margin-top: 13px;
+        margin-top: 26px;
       }
       @include tablet {
         display: flex;
@@ -228,7 +241,7 @@
         }
         .input__email {
           margin-left: 51px;
-          margin-top:0px;
+          margin-top: 0px;
         }
       }
     }

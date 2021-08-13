@@ -1,5 +1,6 @@
 .hero {
-
+  padding-top: 24px;
+  padding-bottom: 24px;
   @include tablet{
     padding-bottom: 10px;
     padding-top: 10px;
@@ -35,12 +36,13 @@
   &__content {
     display: block;
     width: 100%;
+    margin-top: 12px;
     @include tablet {
       width: 50%;
-      margin-top: 18px;
+      margin-top: 35px;
     }
     @include desktop{
-      margin-top: 45px;
+      margin-top: 69px;
     }
   }
 
@@ -90,7 +92,8 @@
 
   &__header {
     width: max-content;
-
+    //  max-width: 181px;
+    //  width: 100%;
     .header {
       @include tablet {
         font-family: Montserrat;
@@ -99,6 +102,7 @@
         font-size: 20px;
         line-height: 145%;
         letter-spacing: 0.02em;
+        max-width: 241px;
       }
 
       @include desktop {
@@ -110,6 +114,7 @@
         letter-spacing: 0.02em;
         padding-bottom: 0px;
         // margin-top: 44px;
+        max-width: 361px;
       }
     }
   }
