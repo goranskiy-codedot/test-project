@@ -1,13 +1,13 @@
 .prices__section {
-  padding-top: 63px;
-    padding-bottom: 63px;
+  padding-bottom: 84px;
+  padding-top: 84px;
   @include tablet{
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 101px;
+    padding-top: 101px;
   }
   @include desktop{
-    padding-bottom: 69px;
-    padding-top: 69px;
+    padding-bottom: 98px;
+    padding-top: 98px;
   }
   &__header {
     text-align: center;

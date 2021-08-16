@@ -85,6 +85,10 @@
     @include desktop {
       align-items: center;
       padding: 31px 0;
+      max-width: 1230px;
+      width: 100%;
+      justify-content: initial;
+      gap: 77px;
     }
     .menu__logo {
       width: max-content;
@@ -193,9 +197,13 @@
       }
       @include desktop {
         // margin-top: 15px;
-        justify-content: initial;
-        display: initial;
-        margin-left: 53px;
+        // justify-content: initial;
+        // display: initial;
+        // margin-left: 53px;
+        max-width: 944px;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
       }
       .navbar__block {
           height: 100%;
@@ -209,6 +217,7 @@
           padding-right: 0px;
           overflow: hidden;
           margin-left: 24px;
+          gap: 47px;
           // width: max-content;
           // margin-left: 12px;
           // margin-bottom: 26px;
@@ -216,6 +225,12 @@
         }
         @include desktop {
           // margin-left: 45px;
+          margin-left: 0px;
+          display: flex;
+          max-width: 944px;
+          width: 100%;
+          justify-content: space-between;      
+          gap: 175px;
         }
 
         .items__container{
@@ -273,7 +288,7 @@
     .navbar__number__container {
       align-items: center;
       display: flex;
-      margin-left: auto;
+      // margin-left: auto;
       justify-content: space-around;
       position: absolute;
       bottom: 0;
@@ -287,7 +302,7 @@
       @include desktop{
         max-width: 387px;
       width: 100%;
-      justify-content: space-around;
+      justify-content: space-between;
 
       }
     }
