@@ -87,8 +87,7 @@
       padding: 31px 0;
       max-width: 1230px;
       width: 100%;
-      justify-content: initial;
-      gap: 77px;
+      justify-content: space-between;
     }
     .menu__logo {
       width: max-content;
@@ -230,7 +229,11 @@
           max-width: 944px;
           width: 100%;
           justify-content: space-between;      
-          gap: 175px;
+         
+          gap: 0px;
+        }
+        @include media-min(1235px) {
+          gap: 128px;
         }
 
         .items__container{
@@ -241,6 +244,7 @@
             margin-bottom: 0px;
             display: flex;
           }
+          
         }
       }
       &:target {
@@ -330,6 +334,7 @@
         font-weight: bold;
         font-size: 13px;
         line-height: 16px;
+        padding: .9rem 1.4rem;
         &:visited {
           color: $pallete-grey-900;
         }
