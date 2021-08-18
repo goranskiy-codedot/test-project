@@ -14,7 +14,7 @@
       padding: 0 19px;
     }
   @include desktop{
-  padding: 0 60px;
+    padding: 0px 85px;
   }
   }
   &__header {
@@ -34,18 +34,21 @@
       width: 100%;
       margin-block-start: 0em;
       margin-block-end: 0em;
-
+      width: 100%;
+      max-width: 192px;
       @include tablet {
         font-size: 20px;
         width: max-content;
         // max-width: 442px;
         width: 100%;
+        max-width: none;
       }
 
       @include desktop {
         font-size: 30px;
         // max-width: 662px;
         width: 100%;
+        max-width: none;
       }
     }
   }
@@ -55,17 +58,22 @@
     overflow-y: hidden;
     overflow-x: overlay;
     margin-top: 32px;
-    margin-left: 10px;
+    // margin-left: 10px;
     height: 158px;
     scrollbar-width: none;
 
     .container {
       display: flex;
-      padding: 0 0;
+      padding: 0 79px;
+      gap: 45px;
+      @include tablet{
+        padding: 0 25px;
+      }
       @include desktop{
-        padding: 0 102px;
+        padding: 0px 154px;
         overflow-x: overlay;
         overflow-y: hidden;
+        gap: 45px;
         &::-webkit-scrollbar{
           width: 0px;
         }
@@ -102,18 +110,18 @@
       width: max-content;
       position: relative;
       z-index: 1;
-      padding-left: 22px;
-      padding-right: 22px;
+      // padding-left: 22px;
+      // padding-right: 22px;
       @include tablet {
         margin-top: 9px;
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
       }
       @include desktop {
         // margin-left: 122px;
         margin-top: 14px;
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
       }
       .stage__ellipse {
         left: 35px;
@@ -139,19 +147,19 @@
       width: max-content;
       position: relative;
       z-index: 1;
-      padding-left: 22px;
-      padding-right: 22px;
+      // padding-left: 22px;
+      // padding-right: 22px;
       @include tablet {
 
         margin-top: 56px;
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
       }
       @include desktop {
 
         margin-top: 71px;
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
       }
       .stage__ellipse {
         left: 35px;
@@ -185,8 +193,8 @@
       height: 100%;
       width: max-content;
       position: relative;
-      padding-left: 22px;
-      padding-right: 22px;
+      // padding-left: 22px;
+      // padding-right: 22px;
 
       .stage__ellipse {
         left: 35px;
@@ -204,8 +212,8 @@
         }
       }
       @include tablet {
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
       }
     }
     .stage:nth-child(4),.stage:nth-child(8n) {
@@ -213,16 +221,16 @@
       width: max-content;
       position: relative;
       z-index: 1;
-      padding-left: 22px;
-      padding-right: 22px;
+      // padding-left: 22px;
+      // padding-right: 22px;
       @include tablet {
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
         margin-top: 10px;
       }
       @include desktop {
-        padding-left: 22px;
-        padding-right: 22px;
+        // padding-left: 22px;
+        // padding-right: 22px;
         margin-top: 37px;
       }
       .stage__ellipse {

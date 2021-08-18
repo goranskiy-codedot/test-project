@@ -4,7 +4,7 @@
       padding: 0 19px;
     }
     @include desktop {
-      padding: 0 60px;
+      padding: 0 86px;
     }
   }
   &__header {
@@ -161,15 +161,14 @@
 }
 
 .section {
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   @include tablet {
-    padding-bottom: 0px;
-    padding-top: 0px;
-
+    padding-bottom: 36px;
+    padding-top: 36px;
   }
   @include desktop {
-    padding-bottom: 38px;
-    padding-top: 38px;
+    padding-bottom: 69px;
+    padding-top: 69px;
   }
 }
