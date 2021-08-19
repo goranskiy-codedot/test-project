@@ -14,7 +14,7 @@
       padding: 0 19px;
     }
     @include desktop {
-      padding: 0px 86px;
+      padding: 0px 35px;
     }
   }
   &__header {
@@ -35,7 +35,7 @@
       line-height: 145%;
       letter-spacing: 0.02em;
       width: 100%;
-      max-width: 132px;
+      // max-width: 132px;
       @include tablet {
         font-family: Montserrat;
         font-style: normal;
@@ -43,7 +43,7 @@
         font-size: 20px;
         line-height: 145%;
         letter-spacing: 0.02em;
-        max-width: 175px;
+        // max-width: 175px;
       }
       @include desktop {
         font-family: Montserrat;
@@ -52,7 +52,7 @@
         font-size: 30px;
         line-height: 145%;
         letter-spacing: 0.02em;
-        max-width: 262px;
+        // max-width: 262px;
         
       }
     }

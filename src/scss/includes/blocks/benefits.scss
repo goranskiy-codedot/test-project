@@ -4,7 +4,7 @@
       padding: 0 19px;
     }
     @include desktop {
-      padding: 0 86px;
+      padding: 0 35px;
     }
   }
   &__header {
@@ -49,31 +49,20 @@
   .benefits__wrapper {
     margin-top: 40px;
     padding-top: 1px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     @include tablet {
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // padding-top: 0px;
-      // flex-wrap: wrap;
-      // margin-left: 77px;
-      // margin-top: 73px;
       margin-left: 79px;
       margin-top: 75px;
-      display: grid;
       grid-template-rows: 1fr;
       grid-template-columns: 1fr 1fr;
     }
     @include desktop {
-      display: flex;
-      justify-content: initial;
-      flex-wrap: initial;
       margin-top: 82px;
       margin-left: 0px;
-      // display: grid;
-      // margin-left: 0;
-      // margin-top: 79px;
-      // grid-template-rows: 1fr;
-      // grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
     }
   }
   .benefit__text{
@@ -82,10 +71,9 @@
   }
   .benefit:first-child {
     @include tablet {
-      flex-basis: 48%;
+
     }
     @include desktop {
-      flex-basis: 50%;
     }
     .benefit__text {
       margin-top: 19px;
@@ -100,11 +88,9 @@
   .benefit:nth-child(2) {
     margin-top: 50px;
     @include tablet {
-      flex-basis: 51%;
       margin-top: 0;
     }
     @include desktop {
-      flex-basis: 50%;
     }
     .benefit__text {
       margin-top: 19px;
@@ -122,12 +108,10 @@
   .benefit:nth-child(3) {
     margin-top: 50px;
     @include tablet {
-      flex-basis: 48%;
       margin-top: 93px;
     }
     @include desktop {
       margin-top: 0px;
-      flex-basis: 50%;
     }
     .benefit__text{
       margin-top: 19px;
@@ -143,7 +127,6 @@
     margin-top: 50px;
     @include tablet {
       margin-top: 93px;
-      flex-basis: 51%;
     }
     @include desktop {
       margin-top: 0px;

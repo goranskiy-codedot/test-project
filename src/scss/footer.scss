@@ -5,6 +5,12 @@
   height: 713px;
 
   .container {
+    @include tablet{
+      padding: 0 20px;
+    }
+    @include desktop{
+      padding: 0 35px;
+    }
   }
   &__header {
     padding-top: 0px;
@@ -56,9 +62,12 @@
   }
   .footer__wrapper{
     @include tablet{
-      display: flex;
+      display: grid;
+      grid-template-columns: 0.72fr 1fr;
+    margin-top: 49px;
     }
   }
+
   .header {
     font-family: Montserrat;
     font-style: normal;
@@ -77,7 +86,7 @@
     letter-spacing: 0.02em;
     margin-block-start: 0em;
     margin-block-end: 0em;
-    padding-top: 10px;
+    // padding-top: 10px;
     cursor: pointer;
     text-decoration: none;
     color: $pallete-common-white;
@@ -109,16 +118,29 @@
     
   }
   .socials{
-    margin-top: 13px;
-     img:first-child, img:nth-child(2){
-      margin-right: 15px;
+    margin-top: 6px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 115px;
+     a{
+      padding-top: 0px;
+     }
+     .image__link{
+       width: 19px;
+       height: 19px;
      }
     
   }
   .portfolios{
     margin-top: 55px;
     &__link{
-      padding: 0 3px;
+      padding: 13px 5.5px;
+      &:first-child{
+        padding: 13px 0px;
+      }
+    }
+    @include tablet{
+    margin-top: 64px;
     }
   }
   .footer__legal{
@@ -148,9 +170,22 @@
   flex-flow: row-reverse;
   justify-content: space-between;
   margin-top: 38px;
+  @include tablet{
+    display: flex;
+   flex-flow: initial;
+    justify-content: space-between;
+    margin-top: 25px;
+    max-width: 336px;
+
+  }
+  @include desktop{
+
+  }
 }
 li{
   padding-top: 5px;
   padding-bottom: 5px;
+ 
 }
+
 }

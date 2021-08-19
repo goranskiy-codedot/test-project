@@ -15,6 +15,7 @@
     }
     @include desktop {
       display: flex;
+      padding: 0;
     }
   }
   &__header {
@@ -285,7 +286,7 @@
       }
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.3);
+        // color: rgba(255, 255, 255, 0.3);
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
@@ -302,6 +303,8 @@
       }
 
     }
+    
   }
+  input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.3);}
 
 }

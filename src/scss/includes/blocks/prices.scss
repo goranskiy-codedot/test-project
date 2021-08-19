@@ -16,15 +16,15 @@
       font-weight: 500;
       font-size: 15px;
       line-height: 145%;
-      max-width: 45px;
+      // max-width: 45px;
       width: 100%;
       @include tablet {
         font-size: 20px;
-        max-width: 60px;
+        // max-width: 60px;
       }
       @include desktop {
         font-size: 30px;
-        max-width: 90px;
+        // max-width: 90px;
       }
     }
   }
@@ -48,23 +48,26 @@
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
+  padding: 16px;
       @include desktop {
         width: 370px;
         height: 552px;
+        padding: 34px 28px; 
       }
       &__wrapper {
         border-bottom: 2px solid$pallete-grey-10;
-        padding: 0 0 31px 0;
-        margin: 21px;
+        margin: 0 0 31px 0;
+        // margin: 21px;
 
         @include tablet {
-          margin: 19px;
-          padding: 0 0 30px;
+          // margin: 19px;
+          margin: 0 0 25px;
         }
         @include desktop {
           border-bottom: 2px solid$pallete-grey-10;
-          padding: 0 0 38px 0;
-          margin: 32px;
+          margin: 0 0 38px 0;
+          // margin: 32px;
+        
         }
       }
       &__header {
@@ -102,7 +105,7 @@
           margin-top: 21px;
         }
         @include desktop {
-          margin-top: 38px;
+          margin-top: 36px;
         }
 
         .hint {
@@ -172,15 +175,22 @@
           font-size: 12px;
           line-height: 185%;
           letter-spacing: 0.02em;
+          
         }
       }
       &__button {
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding-top: 21px;
+        // padding-top: 21px;
+        @include tablet{
+          margin-bottom: 30px;
+    margin-top: 23px;
+        }
         @include desktop {
-          padding-top: 41px;
+          // padding-top: 36px;
+          margin-bottom: 40px;
+          margin-top: 40px;
         }
         .button {
           width: 129px;
@@ -229,8 +239,11 @@
           // @include tablet{
           // padding: 1px 27px;
           // }
+          @include tablet{
+            padding: 0px 11px;
+          }
           @include desktop {
-            padding: 1px 41px;
+               padding: 0px 13px;
           }
         }
         .benefits {
@@ -290,12 +303,13 @@
         }
       }
     }
-    .currency{
-        .grivna{
+   
+    .grivna{
+        .currency{
           opacity: 1;
         }
     }
-    .grivna{
+    .currency{
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
@@ -333,10 +347,12 @@
         display: inline-block;
         position: absolute;
         right: 18px;
+        top: 0;
         @include desktop {
           width: 27px;
           height: 43px;
           right: 31px;
+         
         }
       }
       &::after {
@@ -455,15 +471,18 @@
           font-size: 12px;
           line-height: 185%;
           letter-spacing: 0.02em;
+          // margin-bottom: 41px;
         }
       }
       .pack__button {
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding-top: 21px;
+        // padding-top: 21px;
         @include desktop {
-          padding-top: 41px;
+          // padding-top: 41px;
+          margin-top: 40px;
+          
         }
         .button {
           width: 129px;
