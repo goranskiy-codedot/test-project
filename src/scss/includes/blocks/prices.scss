@@ -48,7 +48,7 @@
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
-  padding: 16px;
+      padding: 19px;
       @include desktop {
         width: 370px;
         height: 552px;
@@ -56,7 +56,7 @@
       }
       &__wrapper {
         border-bottom: 2px solid$pallete-grey-10;
-        margin: 0 0 31px 0;
+        margin: 0 0 25px;
         // margin: 21px;
 
         @include tablet {
@@ -183,6 +183,8 @@
         justify-content: center;
         align-items: center;
         // padding-top: 21px;
+        margin-top: 20px;
+        margin-bottom: 30px;
         @include tablet{
           margin-bottom: 30px;
     margin-top: 23px;
@@ -235,7 +237,7 @@
           // padding-top: 20px;
         }
         .list__benefits {
-          padding: 1px 26px;
+          padding: 1px 7px;
           // @include tablet{
           // padding: 1px 27px;
           // }
@@ -479,6 +481,11 @@
         justify-content: center;
         align-items: center;
         // padding-top: 21px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include tablet{
+
+        }
         @include desktop {
           // padding-top: 41px;
           margin-top: 40px;

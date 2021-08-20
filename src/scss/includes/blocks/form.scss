@@ -20,7 +20,11 @@
   }
   &__header {
     text-align: center;
-    padding-top: 78px;
+   
+
+    padding-top: 79px;
+
+
     //  margin-top: 52px;
     @include tablet {
       // margin-top: 109px;
@@ -38,7 +42,8 @@
         max-width: 527px;
         .image {
           object-fit: cover;
-          margin-left: -9px;
+          margin-left: -15px;
+          margin-top: 4px;
           width: 100%;
           height: auto;
         }
@@ -62,6 +67,7 @@
         font-size: 20px;
         line-height: 145%;
         letter-spacing: 0.02em;
+        margin-bottom: 22px;
       }
       @include desktop {
         font-family: Montserrat;
@@ -72,6 +78,7 @@
         letter-spacing: 0.02em;
         margin-right: 34px;
         padding-left: 0px;
+        margin-bottom: 23px;
       }
     }
     .form__header-hint {
@@ -95,16 +102,16 @@
         @include tablet {
           font-size: 15px;
           text-align: center;
-          margin-top: 23px;
+          // margin-top: 23px;
         }
         @include desktop {
           text-align: initial;
           padding-top: 0px;
-          margin-left: 110px;
           padding-top: 0;
           text-align: initial;
-          max-width: 345px;
-          width: 100%;
+          width: 345px;
+          margin-left: 100px;
+     
         }
       }
     }
@@ -190,8 +197,8 @@
       margin-left: 80px;
     }
     @include desktop {
-      margin-left: 42px;
       margin-top: 132px;
+      margin-left: 40px;
     }
     .label {
       color: $pallete-common-white;
@@ -277,7 +284,22 @@
       width: 100%;
       color: $pallete-common-white;
       padding-bottom: 8px;
-    padding-top: 8px;
+      padding-top: 8px;
+      &::placeholder{
+        color: red;
+      }
+    //   input .input::-webkit-input-placeholder { /* WebKit browsers */
+    //     color:    red;
+    // }
+    // .input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    //     color:    red;
+    // }
+    // .input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    //     color:    red;
+    // }
+    // .input::-ms-input-placeholder { /* Internet Explorer 10+ */
+    //     color:    red;
+    // }
       @include tablet {
         width: 523px;
         padding-top: 12px;
@@ -285,7 +307,8 @@
    
       }
 
-      &::placeholder {
+      input.input::placeholder
+        {
         // color: rgba(255, 255, 255, 0.3);
         font-family: Montserrat;
         font-style: normal;
@@ -301,10 +324,8 @@
           vertical-align: middle;
         }
       }
-
     }
     
   }
-  input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.3);}
-
+ 
 }

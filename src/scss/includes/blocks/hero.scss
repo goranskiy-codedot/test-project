@@ -69,26 +69,27 @@
     @include tablet {
       display: flex;
       max-height: 287px;
-      max-width: 355px;
+      width: 100%;
       overflow: hidden;
+      justify-content: center;
+      height: auto;
+      max-width: 289px;
     }
     @include desktop {
       max-height: 416px;
-      max-width: 451px;
-      width: 100%;
-      height: auto;
+      max-width: 416px;
     }
 
     .image {
-      object-fit: contain; 
+      height: 100%;
+      object-fit: contain;
       width: 100%;
-      height: auto;
     }
   }
 
   &__content {
     .header {
-      margin-top: 12px;
+      margin-top: 9px;
       @include tablet {
         font-family: Montserrat;
         font-style: normal;
