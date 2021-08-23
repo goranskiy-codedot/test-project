@@ -48,11 +48,11 @@
       width: 244px;
       height: 386px;
       border: 1px solid $pallete-grey-10;
-      padding: 19px;
+      padding: 20px; 
       @include desktop {
         width: 370px;
         height: 552px;
-        padding: 34px 28px; 
+        padding: 34px 30px; 
       }
       &__wrapper {
         border-bottom: 2px solid$pallete-grey-10;
@@ -61,7 +61,7 @@
 
         @include tablet {
           // margin: 19px;
-          margin: 0 0 25px;
+          margin: 0 0 28px;
         }
         @include desktop {
           border-bottom: 2px solid$pallete-grey-10;
@@ -187,7 +187,7 @@
         margin-bottom: 30px;
         @include tablet{
           margin-bottom: 30px;
-    margin-top: 23px;
+          margin-top: 19px;
         }
         @include desktop {
           // padding-top: 36px;
@@ -241,11 +241,14 @@
           // @include tablet{
           // padding: 1px 27px;
           // }
+          padding-right: 0px;
           @include tablet{
             padding: 0px 11px;
+            padding-right: 0px;
           }
           @include desktop {
-               padding: 0px 13px;
+            padding: 0px 0 0px 11px;
+               padding-right: 0px;
           }
         }
         .benefits {
@@ -484,11 +487,13 @@
         margin-top: 20px;
         margin-bottom: 30px;
         @include tablet{
-
+          margin-bottom: 30px;
+          margin-top: 19px;
         }
         @include desktop {
           // padding-top: 41px;
           margin-top: 40px;
+          margin-bottom: 40px;
           
         }
         .button {

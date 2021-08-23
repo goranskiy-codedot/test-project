@@ -37,7 +37,7 @@
         padding-left: 0px;
         padding-top: 0px;
       }
-      .logo {
+      .footer__logo {
         display: block;
         z-index: 1001;
         height: 62px;
@@ -114,7 +114,7 @@
     color: $pallete-common-white;
     &:hover,
     :active,
-    :focus , {
+    :focus  {
       text-decoration: none !important;
       outline: none !important;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -147,16 +147,18 @@
      a{
       padding-top: 0px;
      }
-     .image__link{
+     &__item-icon{
        width: 19px;
        height: 19px;
        display: block;
-       background-color: $pallete-common-white;
-       -webkit-mask-position: center;
-       -webkit-mask-repeat: no-repeat;
-       -webkit-mask-size: 19px 19px;
+      //  stroke: $pallete-common-white;
+       fill: $pallete-common-white;
+      //  -webkit-mask-position: center;
+      //  -webkit-mask-repeat: no-repeat;
+      //  -webkit-mask-size: 19px 19px;
        &:hover{
-        background-color: $pallete-secondary-main;
+        // stroke: $pallete-secondary-main;
+        fill: $pallete-secondary-main;
        }
      }
     
@@ -165,21 +167,14 @@
     display: flex;
     margin-top: 53px;
     gap: 13px;
-    &__link{
-      width: 39px;
-       height: 40px;
+    &__item-icon{
+      width: 13px;
+      height: 13px;
        display: block;
-       background-color: $pallete-common-white;
-       -webkit-mask-position: center;
-       -webkit-mask-repeat: no-repeat;
-       -webkit-mask-size: 39px 40px;
-       &:hover{
-        background-color: $pallete-secondary-main;
-       }
-      padding: 13px 5.5px;
-      &:first-child{
-        padding: 13px 0px;
-      }
+       fill: $pallete-common-white;
+       top: 12px;
+       left: 13px;
+       position: absolute;
     }
     @include tablet{
     margin-top: 64px;
@@ -189,6 +184,19 @@
       margin-top: 0;
       position: absolute;
       top: 167px;
+    }
+    .ellipse{
+      border: 1px solid $pallete-common-white;
+      border-radius: 50%;
+      width: 39px;
+      height: 39px;
+      position: relative;
+      &:hover{
+        border-color: $pallete-secondary-main;
+        .portfolios__item-icon{
+          fill: $pallete-secondary-main;
+        }
+      }
     }
   }
   .footer__legal{

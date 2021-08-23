@@ -1,6 +1,5 @@
 .form {
-
-    padding-top: 45px;
+  padding-top: 45px;
 
   @include tablet {
     padding-top: 51px;
@@ -10,8 +9,8 @@
   }
 
   .container {
-    @include tablet{
-    padding: 0 41px;
+    @include tablet {
+      padding: 0 41px;
     }
     @include desktop {
       display: flex;
@@ -20,10 +19,8 @@
   }
   &__header {
     text-align: center;
-   
 
     padding-top: 79px;
-
 
     //  margin-top: 52px;
     @include tablet {
@@ -111,7 +108,6 @@
           text-align: initial;
           width: 345px;
           margin-left: 100px;
-     
         }
       }
     }
@@ -172,12 +168,12 @@
       }
       .checkbox input:checked + .checkbox__text:before {
         background-image: url("../../../uploads/checkbox__ico.svg");
-       }
-     .form__checkbox{
+      }
+      .form__checkbox {
         display: inline-flex;
         align-items: center;
         user-select: none;
-       }
+      }
     }
   }
   .form__section {
@@ -215,11 +211,11 @@
 
         padding-top: 37px;
       }
-   
+
       &:first-child {
         padding-top: 0px;
       }
-      @include desktop{
+      @include desktop {
         padding-top: 35px;
       }
     }
@@ -256,7 +252,7 @@
     }
     .inputs__center {
       margin-top: 30px;
-   
+
       .input__email {
         margin-top: 26px;
       }
@@ -271,9 +267,9 @@
           margin-top: 0px;
         }
       }
-      @include desktop{
+      @include desktop {
         margin-top: 34px;
-        .input{
+        .input {
           margin-top: 3px;
         }
       }
@@ -285,31 +281,14 @@
       color: $pallete-common-white;
       padding-bottom: 8px;
       padding-top: 8px;
-      &::placeholder{
-        color: red;
-      }
-    //   input .input::-webkit-input-placeholder { /* WebKit browsers */
-    //     color:    red;
-    // }
-    // .input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    //     color:    red;
-    // }
-    // .input::-moz-placeholder { /* Mozilla Firefox 19+ */
-    //     color:    red;
-    // }
-    // .input::-ms-input-placeholder { /* Internet Explorer 10+ */
-    //     color:    red;
-    // }
+      @include placeholder-color(rgba(255, 255, 255, 0.3))
       @include tablet {
         width: 523px;
         padding-top: 12px;
         padding-bottom: 12px;
-   
       }
 
-      input.input::placeholder
-        {
-        // color: rgba(255, 255, 255, 0.3);
+      input.input::placeholder {
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
@@ -325,7 +304,5 @@
         }
       }
     }
-    
   }
- 
 }

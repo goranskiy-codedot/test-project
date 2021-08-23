@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 32px;
+  padding-top: 32px;
   @include tablet{
     padding-bottom: 10px;
     padding-top: 10px;
@@ -73,15 +73,16 @@
       overflow: hidden;
       justify-content: center;
       height: auto;
-      max-width: 289px;
+      max-height: 289px;
+      max-width: 357px;
     }
     @include desktop {
       max-height: 416px;
-      max-width: 416px;
+      max-width: 451px;
     }
 
     .image {
-      height: 100%;
+      height: auto;
       object-fit: contain;
       width: 100%;
     }
@@ -89,7 +90,6 @@
 
   &__content {
     .header {
-      margin-top: 9px;
       @include tablet {
         font-family: Montserrat;
         font-style: normal;
@@ -111,6 +111,9 @@
         max-width: 380px;
         width: 100%;
         margin-top: 69px;
+      }
+      @include media(769px,952px){
+        font-size: 29px;
       }
     }
   }
@@ -145,15 +148,18 @@
   }
 
   &__content-buttons {
-    margin-top: 26px;
+    margin-top: 32px;
     display: flex;
     gap: 20px;
     @include tablet {
-      margin-top: 37px;
+      margin-top: 44px;
     }
 
     @include desktop {
-      margin-top: 58px;
+      margin-top: 69px;
+    }
+    @include media(769px,952px){
+     gap:5px;
     }
 
     .content__button {
@@ -163,8 +169,8 @@
       font-size: 10px;
       line-height: 12px;
       letter-spacing: 0.02em;
-      min-width: 129px;
-      min-height: 33px;
+      // min-width: 129px;
+      // min-height: 33px;
       background-color: $pallete-primary-main;
       border: 1px solid $pallete-primary-main;
       color: $pallete-common-white;
@@ -173,16 +179,23 @@
         background-color: transparent;
         border: 1px solid $pallete-primary-main;
       }
-
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 19px;
+      padding-right: 19px;
       @include desktop {
-        min-width: 171px;
-        min-height: 41px;
+        // min-width: 171px;
+        // min-height: 41px;
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
         font-size: 13px;
         line-height: 16px;
         letter-spacing: 0.02em;
+        padding-left: 26px;
+        padding-right: 26px;
+        padding-top: 12px;
+        padding-bottom: 12px;
       }
     }
 
@@ -194,6 +207,13 @@
         color: $pallete-common-white;
         background-color: $pallete-primary-main;
         border: 1px solid $pallete-primary-main;
+      }        
+      padding-left: 48px;
+      padding-right: 48px;
+ 
+      @include desktop{
+        padding-left: 65px;
+        padding-right: 65px;
       }
     }
   }

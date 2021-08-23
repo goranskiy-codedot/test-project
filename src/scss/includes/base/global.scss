@@ -115,7 +115,7 @@ textarea {
     outline: none;
   }
 
-  @include placeholder-color(rgba($color-black, 0.5));
+  @include placeholder-color(rgba(#f00, 1));
 
   &.not-valid {
     border-color: #f00;

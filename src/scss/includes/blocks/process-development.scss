@@ -63,7 +63,7 @@
     overflow-x: overlay;
     margin-top: 32px;
     // margin-left: 10px;
-    height: 158px;
+    // height: 158px;
     scrollbar-width: none;
 
     .container {
@@ -86,12 +86,14 @@
 
     @include tablet {
       margin-top: 49px;
-      height: 220px;
+      // height: 220px;
+      padding-bottom: 28px;
     }
 
     @include desktop {
       margin-top: 52px;
-      height: 249px;
+      // height: 249px;
+      padding-bottom: 22px;
     }
     .ellipse {
       width: 85px;
@@ -296,7 +298,7 @@
   }
   .stages__slider {
     display: flex;
-    margin-top: 2px;
+    // margin-top: 2px;
     width: 100%;
     @include tablet {
       margin-top: 25px;
