@@ -1,6 +1,6 @@
 .examples {
-  padding-bottom: 21px;
-  padding-top: 21px;
+  padding-bottom: 17px;
+  padding-top: 17px;
   @include tablet{
     padding-bottom: 40px;
     padding-top: 40px;
@@ -74,6 +74,7 @@
       align-items: initial;
       justify-content: initial;
       text-align: initial;
+      margin-bottom: 37px;
       // display: grid;
       // grid-template-columns: 497px;
       // grid-template-rows: 560px 497px;
@@ -141,12 +142,12 @@
   &__button {
     display: flex;
     justify-content: center;
-    margin-top: 44px;
+    // margin-top: 44px;
     @include tablet {
-      margin-top: 50px;
+      // margin-top: 50px;
     }
     @include desktop {
-      margin-top: 36px;
+      // margin-top: 36px;
     }
     
 

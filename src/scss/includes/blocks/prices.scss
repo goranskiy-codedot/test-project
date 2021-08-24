@@ -1,31 +1,27 @@
 .prices__section {
-  padding-bottom: 62px;
-  padding-top: 62px;
+  padding-bottom: 65px;
+  padding-top: 65px;
   @include desktop {
     padding-bottom: 68px;
     padding-top: 68px;
   }
-  &__header {
+  .header {
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    .header {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 145%;
-      // max-width: 45px;
-      width: 100%;
-      @include tablet {
-        font-size: 20px;
-        // max-width: 60px;
-      }
-      @include desktop {
-        font-size: 30px;
-        // max-width: 90px;
-      }
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 145%;
+    // max-width: 45px;
+    width: 100%;
+    @include tablet {
+      font-size: 20px;
+      // max-width: 60px;
+    }
+    @include desktop {
+      font-size: 30px;
+      margin-bottom: 65px;
+      // max-width: 90px;
     }
   }
   .prices {
@@ -34,15 +30,15 @@
     padding-right: 27px;
     width: max-content;
     margin: 0 auto;
-    margin-top: 38px;
+    // margin-top: 38px;
     @include tablet {
       display: flex;
       padding-left: 0px;
       padding-right: 0px;
-      margin-top: 52px;
+      // margin-top: 52px;
     }
     @include desktop {
-      margin-top: 65px;
+      // margin-top: 65px;
     }
     .pack {
       width: 244px;
@@ -92,6 +88,7 @@
             font-size: 15px;
             line-height: 145%;
             letter-spacing: 0.02em;
+            
           }
         }
       }

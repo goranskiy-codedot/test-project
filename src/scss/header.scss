@@ -29,16 +29,17 @@
 #body:not(:target) {
   #navbar {
     transform: translateX(100%);
-    transition: transform 0.2s ease;
+    transition: transform .3s ease;
     @include tablet{
       transform: none;
+      transition: unset;
     }
   }
 }
 #body:target {
   #navbar {
     transform: translateX(0%);
-    transition: transform 0.2s ease;
+    transition: transform .3s ease;
     @include tablet{
       transform: none;
     }
@@ -110,19 +111,18 @@
     .menu__logo {
       // width: max-content;
       z-index: 1001;
-      background-size: 46px 30px;
       .logo {
         display: block;
         z-index: 1001;
         height: 65px;
         width: 65px;
         background-color: $pallete-grey-900;
-        -webkit-mask-image: url(../uploads/logo.svg);
+        // -webkit-mask-image: url(../uploads/logo.svg);
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 49px 49px;
         @include desktop {
-          -webkit-mask-size: 65px 65px;
+          -webkit-mask-size:65px;
         }
       }
       // @include tablet {
@@ -249,11 +249,11 @@
         }
 
         .items__container {
-          margin-top: 42px;
-          margin-bottom: 42px;
+          padding-top: 42px;
+          padding-bottom: 42px;
           @include tablet {
-            margin-top: 0px;
-            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             display: flex;
             align-items: center;
           }

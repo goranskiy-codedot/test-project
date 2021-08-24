@@ -1,11 +1,11 @@
 .hero {
-  padding-bottom: 32px;
-  padding-top: 32px;
-  @include tablet{
+  padding-bottom: 22px;
+  padding-top: 22px;
+  @include tablet {
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  @include desktop{
+  @include desktop {
     padding-top: 26px;
     padding-bottom: 26px;
   }
@@ -39,10 +39,8 @@
 
     @include tablet {
       width: 50%;
-
     }
-    @include desktop{
-
+    @include desktop {
     }
   }
 
@@ -64,8 +62,8 @@
 
   .content-image {
     display: none;
-  //  transition:2s  ease-in-out ;
-  
+    //  transition:2s  ease-in-out ;
+
     @include tablet {
       display: flex;
       max-height: 287px;
@@ -90,34 +88,57 @@
 
   &__content {
     .header {
+      
+    margin-bottom: 13px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 44px;
+    letter-spacing: 0.02em;
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
         font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
         max-width: 241px;
-        margin-top: 35px;
+        margin-bottom: 27px;
+        margin-top: 29px;    
       }
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
         font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
+
         padding-bottom: 0px;
         max-width: 380px;
         width: 100%;
         margin-top: 69px;
+        margin-bottom: 30px;
       }
-      @include media(769px,952px){
+      @include media(769px, 952px) {
         font-size: 29px;
       }
     }
   }
+  .text {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 24px;
+    
+    @include tablet {
 
+      font-size: 15px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      max-width: 374px;
+
+      margin-bottom: 33px;
+    }
+    @include desktop {
+      max-width: 380px;
+      width: 100%;
+      margin-bottom: 54px;
+
+    }
+  }
   .content-text {
     margin-top: 25px;
 
@@ -128,38 +149,19 @@
     @include desktop {
       margin-top: 31px;
     }
-
-    .text {
-      @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        width: 374px;
-      }
-
-      @include desktop {
-        max-width: 380px;
-        width: 100%;
-      }
-    }
   }
 
   &__content-buttons {
-    margin-top: 32px;
+    // margin-top: 32px;
     display: flex;
     gap: 20px;
-    @include tablet {
-      margin-top: 44px;
-    }
-
+    align-items: center;
+    height: 33px;
     @include desktop {
-      margin-top: 69px;
+      height: 41px;
     }
-    @include media(769px,952px){
-     gap:5px;
+    @include media(769px, 952px) {
+      gap: 5px;
     }
 
     .content__button {
@@ -207,11 +209,11 @@
         color: $pallete-common-white;
         background-color: $pallete-primary-main;
         border: 1px solid $pallete-primary-main;
-      }        
+      }
       padding-left: 48px;
       padding-right: 48px;
- 
-      @include desktop{
+
+      @include desktop {
         padding-left: 65px;
         padding-right: 65px;
       }

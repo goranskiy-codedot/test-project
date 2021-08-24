@@ -1,24 +1,23 @@
 .process-development {
-  padding-top: 52px;
-  padding-bottom: 52px;
-  @include tablet{
+  padding-bottom: 55px;
+  padding-top: 55px;
+  @include tablet {
     // padding-bottom: 96px;
     padding-top: 99px;
   }
-  @include desktop{
+  @include desktop {
     padding-bottom: 52px;
     padding-top: 52px;
   }
-  .container{
-    @include tablet{
+  .container {
+    @include tablet {
       padding: 0 19px;
     }
-  @include desktop{
-    padding: 0 35px;
-  }
+    @include desktop {
+      padding: 0 35px;
+    }
   }
   &__header {
-
     // @include tablet {
     // }
     // @include desktop {
@@ -36,7 +35,7 @@
       margin-block-end: 0em;
       width: 100%;
       max-width: 192px;
-      @include mobile{
+      @include mobile {
         width: 100%;
         max-width: none;
       }
@@ -64,21 +63,22 @@
     margin-top: 32px;
     // margin-left: 10px;
     // height: 158px;
+    margin-bottom: 26px;
     scrollbar-width: none;
 
     .container {
       display: flex;
       padding: 0 79px;
       gap: 45px;
-      @include tablet{
+      @include tablet {
         padding: 0 25px;
       }
-      @include desktop{
+      @include desktop {
         padding: 0 102px;
         overflow-x: overlay;
         overflow-y: hidden;
         gap: 45px;
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
           width: 0px;
         }
       }
@@ -86,14 +86,13 @@
 
     @include tablet {
       margin-top: 49px;
-      // height: 220px;
-      padding-bottom: 28px;
+      margin-bottom: 51px;
     }
 
     @include desktop {
       margin-top: 52px;
       // height: 249px;
-      padding-bottom: 22px;
+      margin-bottom: 22px;
     }
     .ellipse {
       width: 85px;
@@ -110,7 +109,9 @@
         height: 113px;
       }
     }
-    .stage:nth-child(1),  .stage:nth-child(5n){
+    
+    .stage:nth-child(1),
+    .stage:nth-child(5n) {
       height: 100%;
       // margin-left: 69px;
       // width: max-content;
@@ -143,12 +144,10 @@
           top: 28px;
         }
       }
-
     }
 
-
-    .stage:nth-child(2),.stage:nth-child(6n) {
-
+    .stage:nth-child(2),
+    .stage:nth-child(6n) {
       height: 100%;
       // width: max-content;
       position: relative;
@@ -156,13 +155,11 @@
       // padding-left: 22px;
       // padding-right: 22px;
       @include tablet {
-
         margin-top: 56px;
         // padding-left: 22px;
         // padding-right: 22px;
       }
       @include desktop {
-
         margin-top: 71px;
         // padding-left: 22px;
         // padding-right: 22px;
@@ -181,9 +178,8 @@
           top: 31px;
         }
       }
-      text {
+      .text {
         @include tablet {
-
         }
         @include desktop {
           font-family: Montserrat;
@@ -193,15 +189,25 @@
           line-height: 185%;
           letter-spacing: 0.02em;
         }
+        &:nth-child(3){
+          width: 218px;
+        }
       }
     }
-    .stage:nth-child(3),.stage:nth-child(7n) {
+    .stage:nth-child(3),
+    .stage:nth-child(7n) {
       height: 100%;
       // width: max-content;
       position: relative;
+      width: 211px;
       // padding-left: 22px;
       // padding-right: 22px;
-
+       .text{
+         max-width: 218px;
+         @include tablet{
+          max-width: 193px;
+         }
+       }
       .stage__ellipse {
         left: 35px;
         top: 24px;
@@ -217,12 +223,10 @@
           top: 28px;
         }
       }
-      @include tablet {
-        // padding-left: 22px;
-        // padding-right: 22px;
-      }
+     
     }
-    .stage:nth-child(4),.stage:nth-child(8n) {
+    .stage:nth-child(4),
+    .stage:nth-child(8n) {
       height: 100%;
       // width: max-content;
       position: relative;
@@ -254,7 +258,7 @@
         }
       }
     }
-   
+
     .stage__number {
       font-family: Montserrat;
       font-style: normal;
@@ -290,8 +294,9 @@
     font-size: 15px;
     line-height: 185%;
     letter-spacing: 0.02em;
-    width: 210px;
+    max-width: 210px;
     z-index: 1;
+   
     @include desktop {
       padding-top: 0px;
     }
@@ -309,9 +314,23 @@
     justify-content: space-between;
     .left__button {
       float: left;
+      .arrow__left {
+        border: 4px solid transparent;
+        border-right: 5px solid #1c1d28;
+        float: inherit;
+        height: 6px;
+        width: 14px;
+      }
     }
     .right__button {
       float: right;
+      .arrow__right {
+        border: 4px solid transparent;
+        border-left: 5px solid #1c1d28;
+        float: inherit;
+        height: 6px;
+        width: 14px;
+      }
     }
     .slider__button {
       background-color: transparent;
@@ -323,6 +342,12 @@
       &:hover {
         color: $pallete-primary-main;
         border: 1px solid $pallete-primary-main;
+        .arrow__left{
+          border-right:5px solid $pallete-primary-main;
+        }
+        .arrow__right{
+          border-left:5px solid $pallete-primary-main;
+        }
       }
     }
 
