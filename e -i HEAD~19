@@ -1,0 +1,43 @@
+[33m1eb9c73[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/footer[m[33m, [m[1;31morigin/feature/footer[m[33m)[m 24.08.2021. Внесены правки.
+[33me010cd7[m 23.08.2021. Внесены правки.
+[33me5479e8[m 20.08.2021 Внесены правки
+[33mfc15ddd[m 19.08.2021. Внесены правки
+[33m8c389d4[m 18.08.2021. Внесены правки.
+[33mfdb4b53[m 18.08.2021. Внесены правки
+[33m6a8b967[m 17.08.2021. Внесены правки.
+[33mab9294e[m 16.08.2021. Внесены правки.
+[33md6c5a4d[m 13.08.2021. Внесены правки во все секции.
+[33m7ff3464[m 12.08.2021. Внесены правки.
+[33mf3dc1c4[m 11.08.2021. Внесены правки во все секции.
+[33m9d93e07[m 10.08.2021. Начата секция footer
+[33m70989ef[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m Merge pull request #19 from goranskiy-codedot/feature/form
+[33mb4eb364[m[33m ([m[1;31morigin/feature/form[m[33m, [m[1;32mfeature/form[m[33m)[m 10.08.2021. Сделана секция form.
+[33ma1c9811[m Merge pull request #18 from goranskiy-codedot/feature/form
+[33mee212e7[m 09.08.2021. Начата разработка секции form.
+[33m4d47316[m Merge pull request #17 from goranskiy-codedot/feature/benefits
+[33m70fb5d3[m[33m ([m[1;31morigin/feature/benefits[m[33m, [m[1;32mfeature/benefits[m[33m)[m 09.08.2021. Сделаны основные доработки по всем секциям. Сделана секция benefits.
+[33m969bf26[m 06.08.2021. Сделал секцию benefits. Иду праздновать свадьбу.
+[33m384f6b1[m[33m ([m[1;31morigin/prices[m[33m, [m[1;32mprices[m[33m)[m 06.08.2021. Сделал секцию prices.
+[33m48c98b8[m 06.08.2021.Начата разработка секции prices.
+[33m926ca9b[m Merge pull request #15 from goranskiy-codedot/feature/header
+[33maf9dfbf[m[33m ([m[1;31morigin/feature/header[m[33m, [m[1;32mfeature/header[m[33m)[m 06.08.2021.Подправлены некоторые названия классов.
+[33m7b56492[m Merge pull request #14 from goranskiy-codedot/feature/header
+[33me3c5f70[m 05.08.2021. Сделал адаптивность для всех секций.
+[33m4063ea3[m Начата работа над адаптивностью для header.
+[33ma6367d0[m Merge pull request #13 from goranskiy-codedot/feature/examples
+[33m27da394[m[33m ([m[1;31morigin/feature/examples[m[33m, [m[1;32mfeature/examples[m[33m)[m 04.08.2021. Доработан header и hero.
+[33mdc0bbb3[m Merge pull request #12 from goranskiy-codedot/feature/examples
+[33m9204d3f[m 03.08.2021. Сделал анимации меню, доработан header.
+[33m0fc109e[m 02.08.2021. Начата разработка анимации для burger.
+[33mdf25c31[m 30.07.2021. Начата работа с адаптивностью.
+[33m7de7e06[m Merge pull request #11 from goranskiy-codedot/feature/examples
+[33mf9910fa[m 30.07.2021. Сделал секцию examples.
+[33mfe3ffa3[m Merge pull request #10 from goranskiy-codedot/feature/process-development
+[33m6518ef5[m[33m ([m[1;31morigin/feature/process-development[m[33m, [m[1;32mfeature/process-development[m[33m)[m 30.07.2021. Сделал секцию process-development.
+[33m94b1641[m Merge pull request #9 from goranskiy-codedot/feature/hero
+[33meeb3afb[m[33m ([m[1;31morigin/feature/hero[m[33m, [m[1;32mfeature/hero[m[33m)[m 30.07.2021. Сделал секцию hero.
+[33m5d9873b[m Merge pull request #8 from goranskiy-codedot/feature/header
+[33mf09e1c0[m 30.07.2021. Сделана секция header и меню.
+[33mb20b8b9[m Merge pull request #7 from goranskiy-codedot/feature/header
+[33md9bc20b[m 29.07.2021. Добавлен header, начата разработка меню.
+[33mf9b853c[m[33m ([m[1;32mmaster[m[33m)[m Initial commit
