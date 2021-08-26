@@ -15,6 +15,7 @@
     @include desktop {
       display: flex;
       padding: 0;
+      gap: 30px;
     }
   }
   &__header {
@@ -28,21 +29,23 @@
       padding-top: 97px;
     }
     @include desktop {
-      margin-top: 134px;
+      // margin-top: 134px;
       padding-top: 0px;
+      text-align: -webkit-center;
     }
     .form__image {
       display: none;
       @include desktop {
-        display: block;
+        display: flex;
         margin-top: 18px;
         max-width: 527px;
+        height: auto;
+        width: 100%;
+        max-height: 342px;
         .image {
-          object-fit: cover;
-          margin-left: -15px;
-          margin-top: 4px;
-          width: 100%;
           height: auto;
+          object-fit: contain;
+          width: 100%;
         }
       }
     }
@@ -53,62 +56,47 @@
       font-style: normal;
       font-weight: 500;
       font-size: 15px;
-      line-height: 145%;
+      line-height: 22px;
       letter-spacing: 0.02em;
       color: $pallete-common-white;
 
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
+        line-height: 29px;
         margin-bottom: 22px;
       }
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        margin-right: 34px;
+        line-height: 44px;
         padding-left: 0px;
         margin-bottom: 23px;
+        max-width: 280px;
+        margin-right: 48px;
       }
     }
-    .form__header-hint {
-      padding-top: 1px;
-      margin-top: 22px;
-      margin-bottom: 22px;
+    .hint {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $pallete-common-white;
+      // padding-top: 9px;
       @include tablet {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        font-size: 15px;
+        line-height: 28px;
+        text-align: center;
+        // margin-top: 23px;
       }
-
-      .hint {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        color: $pallete-common-white;
-        // padding-top: 9px;
-        @include tablet {
-          font-size: 15px;
-          text-align: center;
-          // margin-top: 23px;
-        }
-        @include desktop {
-          text-align: initial;
-          padding-top: 0px;
-          padding-top: 0;
-          text-align: initial;
-          width: 345px;
-          margin-left: 100px;
-        }
+      @include desktop {
+        text-align: initial;
+        padding-top: 0px;
+        padding-top: 0;
+        text-align: initial;
+        width: 345px;
+        // margin-left: 100px;
+        margin-left: 18px;
       }
     }
   }
@@ -139,7 +127,7 @@
         font-style: normal;
         font-weight: normal;
         font-size: 10px;
-        line-height: 145%;
+        line-height: 15px;
         letter-spacing: 0.02em;
         color: $pallete-grey-10;
       }
@@ -184,39 +172,43 @@
     }
     @include desktop {
       height: 611px;
+      display: flex;
+      align-items: flex-end;
     }
   }
   &__inputs {
-    margin-top: 44px;
+    // margin-top: 44px;
     @include tablet {
-      margin-top: 97px;
-      margin-left: 80px;
+      // margin-top: 97px;
+      // margin-left: 80px;
     }
     @include desktop {
-      margin-top: 132px;
-      margin-left: 40px;
+      max-width: 523px;
+      width: 100%;
     }
     .label {
       color: $pallete-common-white;
       margin-block-start: 0px;
       margin-block-end: 0px;
-      padding-top: 27px;
+      // padding-top: 27px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 15px;
         line-height: 18px;
         display: block;
 
-        padding-top: 37px;
+        // padding-top: 37px;
+      }
+      @include desktop{
+        margin-bottom: 11px;
       }
 
       &:first-child {
         padding-top: 0px;
-      }
-      @include desktop {
-        padding-top: 35px;
       }
     }
 
@@ -251,36 +243,40 @@
       }
     }
     .inputs__center {
-      margin-top: 30px;
+      // margin-top: 30px;
 
       .input__email {
-        margin-top: 26px;
+        // margin-top: 26px;
+        max-width: 236px;
+        width: 100%;
+      }
+      .input__tel{
+        max-width: 236px;
+        width: 100%;
       }
       @include tablet {
         display: flex;
-        margin-top: 36px;
+        justify-content: space-between;
+        // margin-top: 36px;
+        
         .input {
-          width: 236px;
+          max-width: 236px;
+          width: 100%;
         }
         .input__email {
-          margin-left: 51px;
+          // margin-left: 51px;
           margin-top: 0px;
         }
       }
-      @include desktop {
-        margin-top: 34px;
-        .input {
-          margin-top: 3px;
-        }
-      }
     }
-    .input__message{
+    .input__message {
       margin-bottom: 45px;
-      @include tablet{
+      @include tablet {
         margin-bottom: 61px;
       }
-      @include desktop{
+      @include desktop {
         margin-bottom: 65px;
+
       }
     }
     .input {
@@ -288,16 +284,20 @@
       border-bottom: 1px solid $pallete-common-white;
       width: 100%;
       color: $pallete-common-white;
-      padding-bottom: 8px;
-      padding-top: 8px;
+      // padding-bottom: 8px;
+      // padding-top: 8px;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
       @include tablet {
-        width: 523px;
-        padding-top: 12px;
+        max-width: 523px;
+        // padding-top: 12px;
+        margin-bottom: 35px;
         padding-bottom: 12px;
       }
-   
-      input.input::placeholder {
+      &:nth-child(4){
+        padding-bottom: 0px;
+      }
+
+      .input::placeholder {
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
@@ -310,8 +310,18 @@
           font-size: 12px;
           line-height: 15px;
           vertical-align: middle;
+        
         }
       }
+    }
+    .textarea{
+      border: none;
+      border-bottom: 1px solid $pallete-common-white;
+      width: 100%;
+      color: $pallete-common-white;
+      padding: 0px;
+      margin-bottom: 57px;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
     }
   }
 }

@@ -6,8 +6,8 @@
     padding-top: 37px;
   }
   @include desktop {
-    padding-bottom: 29px;
-    padding-top: 29px;
+    padding-bottom: 25px;
+    padding-top: 28px;
   }
   .container {
     @include tablet {
@@ -32,7 +32,7 @@
       font-style: normal;
       font-weight: 500;
       font-size: 15px;
-      line-height: 145%;
+      line-height: 22px;
       letter-spacing: 0.02em;
       width: 100%;
       margin-bottom: 33px;
@@ -42,7 +42,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
-        line-height: 145%;
+        line-height: 29px;
         letter-spacing: 0.02em;
         margin-bottom: 57px;
         // max-width: 175px;
@@ -52,7 +52,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 30px;
-        line-height: 145%;
+        line-height: 44px;
         letter-spacing: 0.02em;
         // max-width: 262px;
         margin-bottom: 66px;
@@ -66,10 +66,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 37px;
     @include tablet {
       // margin-top: 57px;
-      margin-bottom: 48px;
+      margin-bottom: 46px;
     }
     @include desktop {
       padding-left: 85px;
@@ -78,7 +78,8 @@
       align-items: initial;
       justify-content: initial;
       text-align: initial;
-      margin-bottom: 35px;
+      margin-bottom: 80px;
+
 
       // display: grid;
       // grid-template-columns: 497px;
@@ -91,30 +92,15 @@
       @include desktop {
         grid-gap: 22px;
         display: grid;
-        grid: repeat(2, 541px) / 613px 473px;
+        grid: repeat(2,246px)/613px 473px;
         justify-content: center;
         row-gap: 47px;
       }
     }
   }
 
-  .examples__image:nth-child(1) {
-    width: 100%;
-    height: 234px;
-    object-fit: cover;
-    @include tablet {
-      width: 100%;
-      height: 462px;
-    }
-    @include desktop {
-      width: 1230px;
-      height: 561px;
-      grid-area: 1 / 1 / span 2 / span 2;
-    }
-  }
-  .examples__image:nth-child(3n + 4),
-  .examples__image:nth-child(7n), 
-  .examples__image:nth-child(7n+3){
+
+  .examples__image:nth-child(1),.examples__image:nth-child(3n + 1) {
     width: 100%;
     height: 234px;
     object-fit: cover;
@@ -128,26 +114,22 @@
       grid-area: auto / 1 / span 2 / span 2;
     }
   }
-  .examples__image:nth-child(2) {
-    width: 100%;
-    height: 234px;
-    object-fit: cover;
-    @include tablet {
-      width: 100%;
-      height: 462px;
-    }
-    @include desktop {
-      max-width: 613px;
-      height: 497px;
-      width: 100%;
-      // margin-right: 25px;
-      grid-area: 2 / 1 / span 1 / span 1;
-    }
-  }
-  .examples__image:nth-child(3n + 3),
-  .examples__image:nth-child(8n),
-  .examples__image:nth-child(8n + 3)
-   {
+
+  // .examples__image:nth-child(7n + 3){
+  //   width: 100%;
+  //   height: 234px;
+  //   object-fit: cover;
+  //   @include tablet {
+  //     width: 100%;
+  //     height: 462px;
+  //   }
+  //   @include desktop {
+  //     width: 1230px;
+  //     height: 561px;
+  //     grid-area: auto / 1 / span 2 / span 2;
+  //   }
+  // }
+  .examples__image:nth-child(2),.examples__image:nth-child(3n + 2) {
     width: 100%;
     height: 234px;
     object-fit: cover;
@@ -163,24 +145,9 @@
       grid-area: auto / 1 / span 1 / span 1;
     }
   }
-  .examples__image:nth-child(3),
-  .examples__image:nth-child(9n),
-  .examples__image:nth-child(9n + 3) {
-    width: 100%;
-    height: 234px;
-    object-fit: cover;
-    @include tablet {
-      width: 100%;
-      height: 462px;
-    }
-    @include desktop {
-      width: 473px;
-      height: 497px;
-      grid-area: 2 / 2 / span 1 / span 1;
-    }
-  }
+
   //, .examples__image:nth-child(9n)
-  .examples__image:nth-child(3n + 2) {
+  .examples__image:nth-child(3),.examples__image:nth-child(3n + 3) {
     width: 100%;
     height: 234px;
     object-fit: cover;
@@ -194,6 +161,7 @@
       grid-area: auto / 2 / span 1 / span 1;
     }
   }
+
   &__button {
     display: flex;
     justify-content: center;

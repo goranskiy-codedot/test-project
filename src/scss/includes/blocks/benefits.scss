@@ -14,14 +14,14 @@
       font-style: normal;
       font-weight: 500;
       font-size: 15px;
-      line-height: 145%;
+      line-height: 22px;
       letter-spacing: 0.02em;
       @include tablet {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
-        line-height: 145%;
+        line-height: 29px;
         letter-spacing: 0.02em;
         // padding-top: 15px;
       }
@@ -30,20 +30,22 @@
         font-style: normal;
         font-weight: 500;
         font-size: 30px;
-        line-height: 145%;
+        line-height: 44px;
         letter-spacing: 0.02em;
         // padding-top: 44px;
       }
     }
   }
   .text {
-    @include tablet {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 15px;
-      line-height: 185%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
       letter-spacing: 0.02em;
+    @include tablet {
+      line-height: 28px;
+      font-size: 15px;
     }
   }
   .benefits__wrapper {
@@ -52,17 +54,22 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    align-items: baseline;
+    row-gap: 51px;
     @include tablet {
       margin-left: 79px;
       margin-top: 75px;
       grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.95fr 1fr;
+      row-gap: 82px;
     }
     @include desktop {
       margin-top: 82px;
       margin-left: 0px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
+      gap: 7px;  
+
     }
   }
   .benefit__text{
@@ -83,10 +90,13 @@
         margin-top: 25px;
         max-width: 222px;
       }
+      @include desktop{
+        margin-top: 23px;
+      }
     }
   }
   .benefit:nth-child(2) {
-    margin-top: 50px;
+    // margin-top: 50px;
     @include tablet {
       margin-top: 0;
     }
@@ -102,17 +112,20 @@
       }
       @include desktop {
         max-width: 261px;
+        margin-top: 22px;
       }
     }
   }
   .benefit:nth-child(3) {
-    margin-top: 50px;
+    // margin-top: 50px;
     @include tablet {
-      margin-top: 93px;
+      // margin-top: 93px;
     }
     @include desktop {
       margin-top: 0px;
+      
     }
+ 
     .benefit__text{
       margin-top: 19px;
       max-width: 192px;
@@ -121,16 +134,28 @@
         max-width: 215px;
         margin-top: 24px;
       }
+      @include desktop{
+        margin-top: 26px;
+
+      }
     }
   }
   .benefit:nth-child(4) {
-    margin-top: 50px;
+    // margin-top: 50px;
     @include tablet {
-      margin-top: 93px;
+      // margin-top: 93px;
     }
     @include desktop {
       margin-top: 0px;
       flex-basis: 50%;
+    }
+    .image{
+      @include tablet{
+        margin-top: 6px;
+      }
+      @include desktop{
+        margin-top: 0px;
+      }
     }
     .benefit__text{
       margin-top: 19px;
@@ -138,6 +163,9 @@
       width: 100%;
       @include tablet {
         margin-top: 25px;
+      }
+      @include desktop{
+        margin-top: 21px;
       }
     }
   }
