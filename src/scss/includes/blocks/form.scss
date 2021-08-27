@@ -16,6 +16,8 @@
       display: flex;
       padding: 0;
       gap: 30px;
+      
+    max-width: 1080px;  
     }
   }
   &__header {
@@ -32,6 +34,7 @@
       // margin-top: 134px;
       padding-top: 0px;
       text-align: -webkit-center;
+      width: 40%;
     }
     .form__image {
       display: none;
@@ -166,14 +169,15 @@
   }
   .form__section {
     background-color: $pallete-primary-main;
-    height: 653px;
+    min-height: 653px;
     @include tablet {
-      height: 721px;
+      min-height: 721px;
     }
     @include desktop {
-      height: 611px;
+      align-items: center;
       display: flex;
-      align-items: flex-end;
+      min-height: 611px;
+      height: 100%;
     }
   }
   &__inputs {
@@ -184,7 +188,7 @@
     }
     @include desktop {
       max-width: 523px;
-      width: 100%;
+      width: 60%;
     }
     .label {
       color: $pallete-common-white;

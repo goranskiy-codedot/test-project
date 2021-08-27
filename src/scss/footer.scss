@@ -1,12 +1,13 @@
 .footer {
   background-color: $pallete-grey-900;
   color: $pallete-common-white;
+  min-height: 713px;
   padding-top: 13px;
-  height: 713px;
   position: relative;
+  height: 100%;
 @include desktop{
   display: -webkit-box;
-  height: 387px;
+  min-height: 387px;
 }
   .container {
     padding: 0 9px;
