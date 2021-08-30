@@ -156,6 +156,8 @@
     gap: 20px;
     align-items: center;
     height: 33px;
+    max-width: 380px;
+    flex-wrap: wrap;
     @include desktop {
       height: 41px;
     }

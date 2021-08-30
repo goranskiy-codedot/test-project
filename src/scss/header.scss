@@ -102,11 +102,14 @@
     align-items: center;
     @include tablet {
       padding: 13px 0;
+      gap: 25px;
     }
     @include desktop {
       padding: 30px 0;
       max-width: 1110px;
       width: 100%;
+      gap: 45px;
+      
     }
     .menu__logo {
       // width: max-content;
@@ -231,7 +234,7 @@
           display: flex;
           padding-right: 0px;
           overflow: hidden;
-          gap: 47px;
+          // gap: 47px;
           justify-content: space-between;
           max-width: 642px;
           width: 100%;
@@ -245,7 +248,7 @@
           gap: 0px;
         }
         @include media-min(1235px) {
-          gap: 128px;
+          // gap: 128px;
         }
 
         .items__container {
@@ -335,13 +338,6 @@
         max-width: 244px;
        }
     }
-    .number {
-      display: none;
-      @include tablet {
-        display: initial;
-        padding: 12.5px 0px;
-      }
-    }
     .num {
       font-family: Montserrat;
       font-style: normal;
@@ -350,11 +346,13 @@
       line-height: 18px;
       letter-spacing: 0.02em;
       color: inherit;
+      display: none;
       @include tablet {
         font-weight: bold;
         font-size: 10px;
         line-height: 12px;
         padding: 12.5px 22.4px;
+        display: block;
         &:visited {
           color: $pallete-grey-900;
         }

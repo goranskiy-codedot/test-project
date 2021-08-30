@@ -10,14 +10,14 @@
 
   .container {
     @include tablet {
-      padding: 0 41px;
+      padding: 0 122px;
     }
     @include desktop {
       display: flex;
       padding: 0;
-      gap: 30px;
-      
-    max-width: 1080px;  
+      gap: 75px;
+      align-items: center;
+      max-width: 1080px;
     }
   }
   &__header {
@@ -62,7 +62,7 @@
       line-height: 22px;
       letter-spacing: 0.02em;
       color: $pallete-common-white;
-
+      margin-bottom: 21px;
       @include tablet {
         font-size: 20px;
         line-height: 29px;
@@ -85,12 +85,16 @@
       line-height: 24px;
       letter-spacing: 0.02em;
       color: $pallete-common-white;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
       // padding-top: 9px;
+      margin-bottom: 49px;
       @include tablet {
         font-size: 15px;
         line-height: 28px;
         text-align: center;
         // margin-top: 23px;
+        margin-bottom: 98px;
       }
       @include desktop {
         text-align: initial;
@@ -105,16 +109,19 @@
   }
   &__submit {
     text-align: center;
+    gap: 37px;
+    align-items: baseline;
     .checkbox {
       display: none;
     }
     @include tablet {
       text-align: initial;
       display: flex;
+      margin-top: 57px;
       .checkbox {
         display: initial;
-        margin-top: 13px;
-        margin-left: 38px;
+        // margin-top: 13px;
+        // margin-left: 38px;
         cursor: pointer;
         text-decoration: none;
         &:hover,
@@ -139,11 +146,11 @@
         z-index: -1;
         opacity: 0;
       }
-      .checkbox__text {
+      .checkbox__label {
         position: relative;
         cursor: pointer;
       }
-      .checkbox__text:before {
+      .checkbox__label:before {
         content: "";
         display: inline-block;
         width: 17px;
@@ -157,9 +164,28 @@
         background-size: 50% 50%;
         vertical-align: middle;
       }
-      .checkbox input:checked + .checkbox__text:before {
-        background-image: url("../../../uploads/checkbox__ico.svg");
+      .checkbox__label:after{
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        content: "";
+        display: block;
+        height: 5px;
+        margin-top: 4px;
+        opacity: 1;
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 10px;
+        top: -1px;
+        left: 4px;
       }
+      .checkbox input:checked
+       { 
+        .checkbox__label:after {
+           opacity: 0;
+           position: absolute;
+           top:1px;
+           }
+    }
       .form__checkbox {
         display: inline-flex;
         align-items: center;
@@ -185,10 +211,14 @@
     @include tablet {
       // margin-top: 97px;
       // margin-left: 80px;
+
+      max-width: 523px;
     }
     @include desktop {
-      max-width: 523px;
       width: 60%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
     .label {
       color: $pallete-common-white;
@@ -200,15 +230,13 @@
       font-weight: 500;
       font-size: 13px;
       line-height: 16px;
+      // margin-bottom: 11px;
+      display: block;
       @include tablet {
         font-size: 15px;
         line-height: 18px;
-        display: block;
 
         // padding-top: 37px;
-      }
-      @include desktop{
-        margin-bottom: 11px;
       }
 
       &:first-child {
@@ -246,43 +274,7 @@
         border: 1px solid $pallete-secondary-main;
       }
     }
-    .inputs__center {
-      // margin-top: 30px;
 
-      .input__email {
-        // margin-top: 26px;
-        max-width: 236px;
-        width: 100%;
-      }
-      .input__tel{
-        max-width: 236px;
-        width: 100%;
-      }
-      @include tablet {
-        display: flex;
-        justify-content: space-between;
-        // margin-top: 36px;
-        
-        .input {
-          max-width: 236px;
-          width: 100%;
-        }
-        .input__email {
-          // margin-left: 51px;
-          margin-top: 0px;
-        }
-      }
-    }
-    .input__message {
-      margin-bottom: 45px;
-      @include tablet {
-        margin-bottom: 61px;
-      }
-      @include desktop {
-        margin-bottom: 65px;
-
-      }
-    }
     .input {
       border: none;
       border-bottom: 1px solid $pallete-common-white;
@@ -290,42 +282,77 @@
       color: $pallete-common-white;
       // padding-bottom: 8px;
       // padding-top: 8px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-indent: 0px;
+      transition: text-indent 1s;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
+      @include placeholder-style(Montserrat, normal, normal, 10px, 12px);
+      &:focus {
+        @include placeholder-animation(600px, 0.3s);
+      }
+      &:not(:focus){
+        @include placeholder-animation(0px, 0.3s);
+      }
+    
+      transition: text-indent 3s;
       @include tablet {
         max-width: 523px;
         // padding-top: 12px;
-        margin-bottom: 35px;
-        padding-bottom: 12px;
-      }
-      &:nth-child(4){
-        padding-bottom: 0px;
-      }
-
-      .input::placeholder {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 12px;
-        @include tablet {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 12px;
-          line-height: 15px;
-          vertical-align: middle;
-        
-        }
+        // margin-bottom: 35px;
+        @include placeholder-style(Montserrat, normal, normal, 12px, 15px);
       }
     }
-    .textarea{
+    .input__name {
+      min-width: 236px;
+      margin-bottom: 35px;
+    }
+    .input__message {
+      min-width: 236px;
+      // margin-bottom: 57px;
+    }
+    .input__email {
+      min-width: 236px;
+      margin-bottom: 35px;
+    }
+    .input__tel {
+      min-width: 236px;
+      margin-bottom: 35px;
+    }
+    .nowrap {
+      width: 100%;
+      @include tablet {
+        max-width: 236px;
+        width: 45%;
+      }
+    }
+    .inputs__center {
+      display: initial;
+      @include tablet {
+        display: flex;
+        gap: 50px;
+      }
+    }
+    .textarea {
       border: none;
       border-bottom: 1px solid $pallete-common-white;
       width: 100%;
       color: $pallete-common-white;
       padding: 0px;
-      margin-bottom: 57px;
+      text-indent: 0px;
+      transition: text-indent 1s;
+      padding-top:12px;
+      // margin-bottom: 57px;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus){
+        @include textarea-animation(0px, 0.3s);
+      }
+      @include tablet {
+        max-width: 523px;
+      }
     }
   }
 }

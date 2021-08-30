@@ -17,15 +17,7 @@
       padding: 0px 35px;
     }
   }
-  &__header {
-    // margin-top: 72px;
-    @include tablet {
-      // margin-top: 93px;
-    }
-    @include desktop {
-      // margin-top: 81px;
-      // margin-left: 34px;
-    }
+
 
     .header {
       font-family: Montserrat;
@@ -58,7 +50,7 @@
         margin-bottom: 66px;
       }
     }
-  }
+  
   &__images {
     object-fit: cover;
     // margin-top: 33px;
@@ -66,10 +58,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 37px;
+    margin-bottom: 43px;
     @include tablet {
       // margin-top: 57px;
-      margin-bottom: 46px;
+      margin-bottom: 50px;
     }
     @include desktop {
       padding-left: 85px;
@@ -162,17 +154,7 @@
     }
   }
 
-  &__button {
-    display: flex;
-    justify-content: center;
-    // margin-top: 44px;
-    @include tablet {
-      // margin-top: 50px;
-    }
-    @include desktop {
-      // margin-top: 36px;
-    }
-  }
+
   .button__link {
     padding: 13px;
     border: 1px solid $pallete-primary-main;
@@ -188,6 +170,9 @@
     background-color: $pallete-primary-main;
     color: $pallete-common-white;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     @include tablet {
     }
     @include desktop {

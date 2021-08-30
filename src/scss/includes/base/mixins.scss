@@ -14,16 +14,66 @@
   }
 
   &:focus::placeholder {
-    color: transparent !important;
+    // color: transparent !important;
   }
   &:focus::-moz-placeholder {
-    color: transparent !important;
+    // color: transparent !important;
   }
   &:focus::-webkit-input-placeholder {
-    color: transparent !important;
+    // color: transparent !important;
   }
 }
-
+@mixin placeholder-style($font-family, $font-style, $font-weight, $font-size, $line-height) {
+  &::-moz-placeholder {
+    font-family: $font-family !important;
+    font-style: $font-style !important;
+    font-weight: $font-weight !important;
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+  }
+  &::-webkit-input-placeholder {
+    font-family: $font-family !important;
+    font-style: $font-style !important;
+    font-weight: $font-weight !important;
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+  }
+  &::placeholder {
+    font-family: $font-family !important;
+    font-style: $font-style !important;
+    font-weight: $font-weight !important;
+    font-size: $font-size !important;
+    line-height: $line-height !important;
+  }
+}
+@mixin placeholder-animation($text-ident, $transition-duration) {
+  &::-moz-placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration !important;
+  }
+  &::-webkit-input-placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration !important;
+  }
+  &::placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration  !important;
+  }
+}
+@mixin textarea-animation($text-ident, $transition-duration) {
+  &::-moz-placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration  !important;
+  }
+  &::-webkit-input-placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration  !important;
+  }
+  &::placeholder {
+    text-indent: $text-ident !important;
+    transition: text-indent $transition-duration !important;
+  }
+}
 // Media queries
 @mixin media($min, $max) {
   @media (min-width: $min) and (max-width: $max) {
