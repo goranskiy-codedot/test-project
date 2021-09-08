@@ -108,7 +108,7 @@
       padding: 30px 0;
       max-width: 1110px;
       width: 100%;
-      gap: 45px;
+      gap: 22px;
       
     }
     .menu__logo {
@@ -383,6 +383,19 @@
       padding: 19px;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      background-color: $pallete-secondary-main;
+      border: $pallete-secondary-main;
+      &:hover {
+        color: $pallete-common-white;
+        background-color: transparent;
+        border: 1px solid $pallete-secondary-main;
+      }
       @include tablet {
         width: initial;
         position: initial;

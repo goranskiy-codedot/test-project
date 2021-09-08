@@ -114,13 +114,15 @@
     text-align: center;
     gap: 37px;
     align-items: baseline;
+    grid-area: 6/1/span 1/span 2;
+    margin-top: 16px;
     .checkbox {
       display: none;
     }
     @include tablet {
       text-align: initial;
       display: flex;
-      margin-top: 57px;
+      // margin-top: 57px;
       .checkbox {
         display: initial;
         // margin-top: 13px;
@@ -210,11 +212,15 @@
     }
   }
   &__inputs {
+    // margin-bottom: 36px;
     // margin-top: 44px;
     @include tablet {
       // margin-top: 97px;
       // margin-left: 80px;
-
+      display: grid; 
+      grid-template-rows: repeat(6,59px);
+     grid-template-columns: repeat(2,261px);
+     column-gap: 24px;
       max-width: 523px;
     }
     @include desktop {
@@ -222,6 +228,10 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      display: grid; 
+      grid-template-rows: repeat(6,59px);
+     grid-template-columns: repeat(2,261px);
+     column-gap: 24px;
     }
     .label {
       color: $pallete-common-white;
@@ -247,38 +257,7 @@
       }
     }
 
-    .submit {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
-      letter-spacing: 0.02em;
-      background-color: $pallete-secondary-main;
-      border: $pallete-secondary-main;
-      width: 301px;
-      height: 33px;
-      padding: 10px;
-      color: $pallete-common-white;
-      // margin-top: 46px;
-      @include tablet {
-        width: 171px;
-        height: 41px;
-        padding: 12px;
-        // margin-top: 63px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-      }
-      &:hover {
-        color: $pallete-common-white;
-        background-color: transparent;
-        border: 1px solid $pallete-secondary-main;
-      }
-    }
+   
 
     .input {
       border: none;
@@ -287,8 +266,8 @@
       color: $pallete-common-white;
       // padding-bottom: 8px;
       // padding-top: 8px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-bottom: 10px;
+      padding-top: 10px;
       text-indent: 0px;
       transition: text-indent 1s;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
@@ -303,6 +282,8 @@
       transition: text-indent 3s;
       @include tablet {
         max-width: 523px;
+        padding-bottom: 12px;
+        padding-top: 12px;
         // padding-top: 12px;
         // margin-bottom: 35px;
         @include placeholder-style(Montserrat, normal, normal, 12px, 15px);
@@ -310,19 +291,29 @@
     }
     .input__name {
       min-width: 236px;
-      margin-bottom: 35px;
+      // margin-bottom: 35px;
+      grid-area: 1/1/span 1/span 2;
     }
     .input__message {
       min-width: 236px;
       // margin-bottom: 57px;
+      grid-area: 4/1/span 1/span 2;   
+       margin-top: 10px;
     }
     .input__email {
       min-width: 236px;
-      margin-bottom: 35px;
+      // margin-bottom: 30px;
+      grid-area: 2/2/span 1/span 1;
+      margin-top: 36px;
     }
     .input__tel {
       min-width: 236px;
-      margin-bottom: 35px;
+      // margin-bottom: 30px;
+      margin-top: 36px;
+      grid-area: 2/1/span 1/span 2;
+      @include tablet{
+        // margin-bottom: 35px;
+      }
     }
     .nowrap {
       width: 100%;
@@ -333,9 +324,13 @@
     }
     .inputs__center {
       display: initial;
+
       @include tablet {
         display: flex;
         gap: 50px;
+      }
+      @include tablet{
+        column-gap: 23px;
       }
     }
     .textarea {
@@ -358,6 +353,40 @@
       @include tablet {
         max-width: 523px;
       }
+    }
+  }
+  .submit {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.02em;
+    background-color: $pallete-secondary-main;
+    border: $pallete-secondary-main;
+    width: 301px;
+    height: 33px;
+    padding: 10px;
+    color: $pallete-common-white;
+    margin-top: 36px;
+    // margin-top: 46px;
+    @include tablet {
+      width: 171px;
+      height: 41px;
+      padding: 12px;
+      // margin-top: 63px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      margin-top: 0px;
+    }
+    &:hover {
+      color: $pallete-common-white;
+      background-color: transparent;
+      border: 1px solid $pallete-secondary-main;
     }
   }
 }
