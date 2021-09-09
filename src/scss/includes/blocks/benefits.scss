@@ -7,50 +7,34 @@
       padding: 0 35px;
     }
   }
-  &__header {
+ 
     // padding-top: 68px;
-    .header {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 22px;
-      letter-spacing: 0.02em;
-      @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 29px;
-        letter-spacing: 0.02em;
-        // padding-top: 15px;
+    h2 {
+      margin-bottom: 39px;
+      @include tablet{
+        margin-bottom: 72px;
       }
-      @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 44px;
-        letter-spacing: 0.02em;
-        // padding-top: 44px;
+      @include desktop{
+        margin-bottom: 83px;
+      }
       }
     }
-  }
-  .text {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-      font-size: 13px;
-      line-height: 24px;
-      letter-spacing: 0.02em;
-    @include tablet {
-      line-height: 28px;
-      font-size: 15px;
-    }
-  }
+  
+  // .text {
+  //   font-family: Montserrat;
+  //   font-style: normal;
+  //   font-weight: normal;
+  //     font-size: 13px;
+  //     line-height: 24px;
+  //     letter-spacing: 0.02em;
+  //   @include tablet {
+  //     line-height: 28px;
+  //     font-size: 15px;
+  //   }
+  // }
   .benefits__wrapper {
-    margin-top: 40px;
-    padding-top: 1px;
+    // margin-top: 40px;
+    // padding-top: 1px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -58,13 +42,13 @@
     row-gap: 51px;
     @include tablet {
       margin-left: 79px;
-      margin-top: 75px;
+      // margin-top: 75px;
       grid-template-rows: 1fr;
       grid-template-columns: 0.95fr 1fr;
       row-gap: 82px;
     }
     @include desktop {
-      margin-top: 82px;
+      // margin-top: 82px;
       margin-left: 0px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
@@ -72,17 +56,13 @@
 
     }
   }
-  .benefit__text{
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-  }
   .benefit:first-child {
     @include tablet {
 
     }
     @include desktop {
     }
-    .benefit__text {
+    p {
       margin-top: 19px;
       max-width: 192px;
       width: 100%;
@@ -102,7 +82,7 @@
     }
     @include desktop {
     }
-    .benefit__text {
+   p {
       margin-top: 19px;
       max-width: 224px;
       width: 100%;
@@ -126,7 +106,7 @@
       
     }
  
-    .benefit__text{
+    p{
       margin-top: 19px;
       max-width: 192px;
       width: 100%;
@@ -157,7 +137,7 @@
         margin-top: 0px;
       }
     }
-    .benefit__text{
+    p{
       margin-top: 19px;
       max-width: 192px;
       width: 100%;
@@ -169,7 +149,7 @@
       }
     }
   }
-}
+
 
 .section {
   padding-bottom: 15px;

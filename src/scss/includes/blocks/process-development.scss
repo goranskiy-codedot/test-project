@@ -22,19 +22,11 @@
     // }
     // @include desktop {
     // }
-    .header {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 19px;
-      letter-spacing: 0.02em;
-      // max-width: 192px;
-      width: 100%;
-      margin-block-start: 0em;
-      margin-block-end: 0em;
+    h2 {
       width: 64%;
       margin-bottom: 27px;
+      font-size: 13px;
+      line-height: 19px;
       @include tablet {
         font-size: 20px;
         // width: max-content;
@@ -47,7 +39,6 @@
 
       @include desktop {
         font-size: 30px;
-        // max-width: 662px;
         width: 100%;
         max-width: none;
         line-height: 44px;
@@ -63,10 +54,10 @@
     // margin-top: 32px;
     // margin-left: 10px;
     // height: 158px;
-    margin-bottom: 24px;
+    margin-bottom: 31px;
     scrollbar-width: none;
 
-    .container {
+    .stages {
       display: flex;
       padding: 0 79px;
       gap: 45px;
@@ -284,18 +275,9 @@
   .process-development__steps::-webkit-scrollbar {
     width: 0;
   }
+
   p {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-  }
-  .stage__text {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
-    width: 217px;
+    width: 196px;
     z-index: 1;
    @include tablet{
      width: 210px;

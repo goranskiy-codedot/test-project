@@ -6,7 +6,7 @@
     transform: translateY(2 * 3px);
   }
   100% {
-    transform: translateY(2 * 3px) rotate(45deg);
+    transform: translateY(2 * 3px) rotate(-90deg);
     background-color: $pallete-common-white;
   }
 }
@@ -18,32 +18,52 @@
     transform: translateY(-2 * 3px);
   }
   100% {
-    transform: translateY(-2 * 3px) rotate(-45deg);
+    transform: translateY(-2 * 3px);
     background-color: $pallete-common-white;
+    opacity: 0;
   }
 }
+// @keyframes line_2_anim {
+//   0% {
+//     transform: translateX(0);
+//     width: 29px;
+//     margin-left: -9px;
+//   }
+//   50% {
+//     transform: translateX(0);
+//     width: 20px;
+//     margin-left: 0px;
+//   }
+//   100% {
+//     transform: translateX(0);
+//     // opacity: 0;
+//     width: 20px;
+//     margin-left: 0px;
+//   }
+// }
+
 @keyframes line_2_anim {
   0% {
-    transform: translateX(0);
+    transform: translateY(0);
     width: 29px;
-    margin-left: -9px;
+        margin-left: -9px;
   }
   50% {
-    transform: translateX(0);
+    transform: translateY(-2 * 3px);
     width: 20px;
-    margin-left: 0px;
+        margin-left: 0px;
   }
   100% {
-    transform: translateX(0);
-    opacity: 0;
+    transform: translateY(-2 * 3px) rotate(45deg);
+    background-color: $pallete-common-white;
     width: 20px;
-    margin-left: 0px;
+        margin-left: 0px;
   }
 }
 
 @keyframes line_1_anim_closing {
   0% {
-    transform: translateY(2 * 3px) rotate(-45deg);
+    transform: translateY(2 * 3px) rotate(-90deg);
   }
   50% {
     transform: translateY(2 * 3px);
@@ -55,7 +75,7 @@
 }
 @keyframes line_3_anim_closing {
   0% {
-    transform: translateY(-2 * 3px) rotate(45deg);
+    transform: translateY(-2 * 3px) ;
   }
   50% {
     transform: translateY(-2 * 3px);
@@ -63,24 +83,38 @@
   100% {
     transform: translateY(0);
     background-color: $pallete-grey-900;
+    opacity: 1;
   }
 }
+// @keyframes line_2_anim_closing {
+//   0% {
+//     transform: translateY(2 * 3px) rotate(-45deg);
+//   }
+//   50% {
+//     transform: translateY(2 * 3px);
+//   }
+//   100% {
+//     transform: translateY(0);
+//     background-color: $pallete-grey-900;
+//   }
+// }
+
 @keyframes line_2_anim_closing {
   0% {
     transform: translateX(0);
-    opacity: 0;
+    // opacity: 0;
     width: 20px;
     margin-left: 0px;
   }
   50% {
     transform: translateX(0);
-    opacity: 0.5;
+    // opacity: 0.5;
     width: 20px;
     margin-left: 0px;
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
+    // opacity: 1;
     width: 29px;
     margin-left: -9px;
   }

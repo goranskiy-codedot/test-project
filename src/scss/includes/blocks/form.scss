@@ -55,26 +55,14 @@
         }
       }
     }
-    .header {
-      margin-block-start: 0em;
-      margin-block-end: 0em;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 22px;
-      letter-spacing: 0.02em;
+    h2 {
       color: $pallete-common-white;
       margin-bottom: 21px;
       @include tablet {
-        font-size: 20px;
-        line-height: 29px;
+      
         margin-bottom: 22px;
       }
       @include desktop {
-        font-size: 30px;
-        line-height: 44px;
-        padding-left: 0px;
         margin-bottom: 23px;
         max-width: 280px;
         margin-right: 48px;
@@ -114,14 +102,22 @@
     text-align: center;
     gap: 37px;
     align-items: baseline;
-    grid-area: 6/1/span 1/span 2;
-    margin-top: 16px;
+    grid-area: 5/1/span 1/span 2;
+    @include tablet{
+      grid-area: 4/1/span 1/span 2;   
+    }
+   
+
     .checkbox {
       display: none;
+    }
+    @include desktop{
+      // margin-top: 27px;
     }
     @include tablet {
       text-align: initial;
       display: flex;
+      align-items: end;
       // margin-top: 57px;
       .checkbox {
         display: initial;
@@ -145,17 +141,15 @@
         line-height: 15px;
         letter-spacing: 0.02em;
         color: $pallete-grey-10;
+        position: relative;
+        cursor: pointer;
       }
       .form__checkbox {
         position: absolute;
         z-index: -1;
         opacity: 0;
       }
-      .checkbox__label {
-        position: relative;
-        cursor: pointer;
-      }
-      .checkbox__label:before {
+    .form__checkbox+.checkbox__label::before {
         content: "";
         display: inline-block;
         width: 17px;
@@ -169,29 +163,27 @@
         background-size: 50% 50%;
         vertical-align: middle;
       }
-      .checkbox__label:after{
-        border-bottom: 1px solid #fff;
-        border-left: 1px solid #fff;
+      .checkbox__label::after{
         content: "";
         display: block;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
         height: 5px;
         margin-top: 4px;
         opacity: 1;
         position: absolute;
         transform: rotate(-45deg);
         width: 10px;
-        top: -1px;
+        top: 0px;
         left: 4px;
       }
-      .checkbox input:checked
-       { 
-        .checkbox__label:after {
+      .checkbox input:checked + .checkbox__label::after {
            opacity: 0;
            position: absolute;
            top:1px;
            }
-    }
-      .form__checkbox {
+    
+      .form__checkbox+.checkbox__label {
         display: inline-flex;
         align-items: center;
         user-select: none;
@@ -214,24 +206,30 @@
   &__inputs {
     // margin-bottom: 36px;
     // margin-top: 44px;
+    display: grid;
+    grid-template-rows: repeat(5,59px);
+    row-gap: 26px;
+    grid-template-columns: repeat(1,300px);
     @include tablet {
       // margin-top: 97px;
       // margin-left: 80px;
       display: grid; 
-      grid-template-rows: repeat(6,59px);
+      grid-template-rows: repeat(4,59px);
      grid-template-columns: repeat(2,261px);
-     column-gap: 24px;
       max-width: 523px;
+      column-gap: 24px;
+      row-gap: 35px;
     }
     @include desktop {
-      width: 60%;
+
       display: flex;
+      display: grid;
       flex-direction: column;
       flex-wrap: wrap;
-      display: grid; 
-      grid-template-rows: repeat(6,59px);
-     grid-template-columns: repeat(2,261px);
-     column-gap: 24px;
+      grid-template-columns: repeat(2,261px);
+      grid-template-rows: repeat(4,59px);
+      width: 60%;
+      max-height: 345px;
     }
     .label {
       color: $pallete-common-white;
@@ -293,26 +291,44 @@
       min-width: 236px;
       // margin-bottom: 35px;
       grid-area: 1/1/span 1/span 2;
+      @include tablet{
+
+      }
+      @include desktop{
+
+      }
     }
     .input__message {
       min-width: 236px;
       // margin-bottom: 57px;
       grid-area: 4/1/span 1/span 2;   
-       margin-top: 10px;
+      @include tablet{
+        grid-area: 3/1/span 1/span 2;   
+      }
+      @include desktop{
+        
+      }
+   
     }
     .input__email {
       min-width: 236px;
       // margin-bottom: 30px;
-      grid-area: 2/2/span 1/span 1;
-      margin-top: 36px;
+      grid-area: 3/1/span 1/span 2;
+      @include tablet{
+        grid-area: 2/2/span 1/span 1;
+      }
+      @include desktop{
+        
+      }
     }
     .input__tel {
       min-width: 236px;
-      // margin-bottom: 30px;
-      margin-top: 36px;
       grid-area: 2/1/span 1/span 2;
       @include tablet{
-        // margin-bottom: 35px;
+
+      }
+      @include desktop{
+        
       }
     }
     .nowrap {
@@ -322,17 +338,17 @@
         width: 45%;
       }
     }
-    .inputs__center {
-      display: initial;
+    // .inputs__center {
+    //   display: initial;
 
-      @include tablet {
-        display: flex;
-        gap: 50px;
-      }
-      @include tablet{
-        column-gap: 23px;
-      }
-    }
+    //   @include tablet {
+    //     display: flex;
+    //     gap: 50px;
+    //   }
+    //   @include tablet{
+    //     column-gap: 23px;
+    //   }
+    // }
     .textarea {
       border: none;
       border-bottom: 1px solid $pallete-common-white;
@@ -355,33 +371,20 @@
       }
     }
   }
-  .submit {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.02em;
+  .button {
     background-color: $pallete-secondary-main;
     border: $pallete-secondary-main;
     width: 301px;
     height: 33px;
-    padding: 10px;
     color: $pallete-common-white;
-    margin-top: 36px;
+    // margin-top: px;
     // margin-top: 46px;
     @include tablet {
       width: 171px;
       height: 41px;
       padding: 12px;
       // margin-top: 63px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      margin-top: 0px;
+      // margin-top: 0px;
     }
     &:hover {
       color: $pallete-common-white;

@@ -35,18 +35,23 @@
       width: max-content;
       z-index: 1001;
       background-size: 46px 30px;
-      padding-left: 3px;
-      padding-top: 17px;
+      // padding-left: 3px;
+      // padding-top: 17px;
       height: max-content;
       margin-bottom: 26px;
+      margin-top: 19px;
       @include tablet{
+        // margin-bottom: 70px;
+ 
         margin-bottom: 70px;
+
       }
       @include desktop {
-        padding-top: 67px;
-        margin-left: 84px;
+        // padding-top: 67px;
+        // margin-left: 84px;
         padding-left: 0px;
-  
+        margin-top: 0px;
+
       }
       .footer__logo {
         display: block;
@@ -98,9 +103,11 @@
       // grid-template-rows: repeat(auto-fit,42px);
       margin-bottom: 0px;
       // margin-top: 74px;
-      display: flex;
-      gap: 81px;
+
+      // gap: 81px;
       margin-bottom: 27px;
+         display: block;
+     
     }
     @include desktop {
       // grid-template-columns: 0.6fr 1fr;
@@ -108,12 +115,28 @@
       // margin-top: 44px;
       // margin-bottom: 36px;
       // margin-top: 66px;
+      display: flex;
       column-gap: 101px;
       margin-top: 67px;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
   }
+ .footer__links{
+  display: flex;
+  flex-wrap: wrap;
+  // gap: 81px;
+  column-gap: 47px;
+  @include tablet{
+    display: flex;
+    column-gap: 80px;
+  }
+  @include desktop{
+    column-gap: 100px;
+  }
+ }
 
-  .header {
+  h2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -246,12 +269,9 @@
       display: flex;
       flex-flow: row-reverse;
     justify-content: space-between;
+    align-items: baseline;
     }
-    @include desktop{
-    display: flex; 
-    flex-flow: row-reverse; 
-    justify-content: space-between;
-  }
+
     .legal {
       display: flex; 
       justify-content: space-between; 
@@ -260,7 +280,8 @@
         gap: 30px;
       }
       @include desktop{
-      gap: 24px;
+
+      gap: 43px;
       }
     }
     @include tablet {
@@ -317,6 +338,7 @@
       display: block;
       // margin-top: 25px;
       margin-bottom: 0px;
+      order: 1;
       // grid-area: 2/5/span 6/auto;
     }
       .content__text {
@@ -338,17 +360,17 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  .contacts__container{
-    display: flex;
-    gap: 46px;
-    display: flex;
-    flex-flow: row-reverse;
-    @include tablet{
-      flex-flow: unset;
-      gap: 79px;
-    }
-    @include desktop{
-      gap: 100px;
-    }
-  }
+  // .contacts__container{
+  //   display: flex;
+  //   gap: 46px;
+  //   display: flex;
+  //   flex-flow: row-reverse;
+  //   @include tablet{
+  //     flex-flow: unset;
+  //     gap: 79px;
+  //   }
+  //   @include desktop{
+  //     gap: 100px;
+  //   }
+  // }
 }

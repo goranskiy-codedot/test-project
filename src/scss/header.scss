@@ -1,4 +1,4 @@
-#body:target  {
+#body:target {
   overflow: hidden;
   @include tablet {
     overflow: auto;
@@ -29,8 +29,8 @@
 #body:not(:target) {
   #navbar {
     transform: translateX(100%);
-    transition: transform .3s ease;
-    @include tablet{
+    transition: transform 0.3s ease;
+    @include tablet {
       transform: none;
       transition: unset;
     }
@@ -39,8 +39,8 @@
 #body:target {
   #navbar {
     transform: translateX(0%);
-    transition: transform .3s ease;
-    @include tablet{
+    transition: transform 0.3s ease;
+    @include tablet {
       transform: none;
     }
   }
@@ -55,31 +55,29 @@
 }
 
 #body:target .burger__line {
-  &:nth-child(2) {
-    animation: line_2_anim 0.2s ease-in-out forwards;
+  animation: line_2_anim 2.2s ease-in-out forwards;
+  animation-iteration-count: 1;
+
+  &::after {
+    animation: line_3_anim 2.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
-  &:nth-child(3) {
-    animation: line_3_anim 0.2s ease-in-out forwards;
-    animation-iteration-count: 1;
-  }
-  &:first-child {
-    animation: line_1_anim 0.2s ease-in-out forwards;
+  &::before {
+    animation: line_1_anim 2.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
 }
 
 #body:not(:target) .burger__line {
-  &:nth-child(2) {
-    animation: line_2_anim_closing 0.2s ease-in-out forwards;
+  animation: line_2_anim_closing 2.2s ease-in-out forwards;
+  animation-iteration-count: 1;
+
+  &::after {
+    animation: line_3_anim_closing 2.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
-  &:nth-child(3) {
-    animation: line_3_anim_closing 0.2s ease-in-out forwards;
-    animation-iteration-count: 1;
-  }
-  &:first-child {
-    animation: line_1_anim_closing 0.2s ease-in-out forwards;
+  &::before {
+    animation: line_1_anim_closing 2.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
 }
@@ -108,8 +106,7 @@
       padding: 30px 0;
       max-width: 1110px;
       width: 100%;
-      gap: 22px;
-      
+      gap: 15px;
     }
     .menu__logo {
       // width: max-content;
@@ -125,7 +122,7 @@
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 49px 49px;
         @include desktop {
-          -webkit-mask-size:65px;
+          -webkit-mask-size: 65px;
         }
       }
       // @include tablet {
@@ -159,13 +156,34 @@
           width: 20px;
           height: 2px;
           margin-top: 4px;
-          &:nth-child(2) {
-            width: 29px;
-            margin-left: -9px;
-          }
-          &:first-child {
-            margin-top: 0px;
-          }
+          margin-bottom: 4px;
+          width: 29px;
+          margin-left: -9px;
+          /* margin-bottom: 4px; */
+          /* margin-top: 4px; */
+        }
+
+        .burger__line::before {
+          content: "";
+          display: block;
+          background-color: $pallete-grey-900;
+          width: 20px;
+          height: 2px;
+          position: absolute;
+          top: -6px;
+          right: 0px;
+          z-index: 1010;
+        }
+        .burger__line::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $pallete-grey-900;
+          width: 20px;
+          height: 2px;
+          top: 7px;
+          right: 0px;
+          z-index: 1010;
         }
         &__link {
           z-index: 1003;
@@ -288,7 +306,7 @@
         a:first-child {
           padding-top: 0;
         }
-   
+
         @include tablet {
           color: $pallete-grey-900;
           font-size: 10px;
@@ -296,23 +314,22 @@
           padding: 12.5px 12.8px;
           // width: max-content;
         }
-    
-    
-         @include desktop {
+
+        @include desktop {
           color: $pallete-grey-900;
           font-size: 13px;
           line-height: 16px;
           padding: 12.5px 22.4px;
         }
-        @include media(769px,992px) {
+        @include media(769px, 992px) {
           color: $pallete-grey-900;
           font-size: 10px;
           line-height: 12px;
           padding: 12.5px 12.8px;
-         }
-         @include media(640px,697px){
+        }
+        @include media(640px, 697px) {
           padding: 12.5px 4.8px;
-         }
+        }
       }
     }
     .navbar__number__container {
@@ -331,12 +348,12 @@
       @include desktop {
         max-width: 364px;
       }
-      @include media(769px,992px) {
-      max-width: 306px;
-       }
-       @include media(640px,727px){
+      @include media(769px, 992px) {
+        max-width: 306px;
+      }
+      @include media(640px, 727px) {
         max-width: 244px;
-       }
+      }
     }
     .num {
       font-family: Montserrat;
@@ -364,16 +381,16 @@
           color: $pallete-grey-900;
         }
       }
-      @include media(769px,992px) {
+      @include media(769px, 992px) {
         font-weight: bold;
         font-size: 10px;
         line-height: 12px;
         padding: 12.5px 15px;
-       }
-       @include media(640px,727px){
+      }
+      @include media(640px, 727px) {
         padding-left: 4px;
         padding-right: 4px;
-       }
+      }
     }
 
     .menu__button {
@@ -383,14 +400,10 @@
       padding: 19px;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 18px;
-      letter-spacing: 0.02em;
       background-color: $pallete-secondary-main;
       border: $pallete-secondary-main;
+      font-size: 15px;
+
       &:hover {
         color: $pallete-common-white;
         background-color: transparent;
@@ -400,9 +413,6 @@
         width: initial;
         position: initial;
         min-width: 129px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
         font-size: 10px;
         line-height: 12px;
         padding: 0px;
@@ -417,16 +427,10 @@
           border: 1px solid $pallete-primary-main;
         }
       }
-      @include media(769px,992px) {
+      @include media(769px, 992px) {
         width: initial;
         position: initial;
         min-width: 129px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
-        padding: 0px;
         min-height: 33px;
         // margin-bottom: 32px;
         margin-left: 0px;
@@ -437,7 +441,7 @@
           background-color: transparent;
           border: 1px solid $pallete-primary-main;
         }
-       }
+      }
       @include desktop {
         min-width: 171px;
         min-height: 41px;
