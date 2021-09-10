@@ -55,29 +55,29 @@
 }
 
 #body:target .burger__line {
-  animation: line_2_anim 2.2s ease-in-out forwards;
+  animation: line_2_anim 0.2s ease-in-out forwards;
   animation-iteration-count: 1;
 
   &::after {
-    animation: line_3_anim 2.2s ease-in-out forwards;
+    animation: line_3_anim 0.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
   &::before {
-    animation: line_1_anim 2.2s ease-in-out forwards;
+    animation: line_1_anim 0.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
 }
 
 #body:not(:target) .burger__line {
-  animation: line_2_anim_closing 2.2s ease-in-out forwards;
+  animation: line_2_anim_closing 0.2s ease-in-out forwards;
   animation-iteration-count: 1;
 
   &::after {
-    animation: line_3_anim_closing 2.2s ease-in-out forwards;
+    animation: line_3_anim_closing 0.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
   &::before {
-    animation: line_1_anim_closing 2.2s ease-in-out forwards;
+    animation: line_1_anim_closing 0.2s ease-in-out forwards;
     animation-iteration-count: 1;
   }
 }
@@ -142,7 +142,7 @@
 
       .close__button {
         display: block;
-        position: fixed;
+        position: absolute;
         z-index: 1;
         background-color: transparent;
         top: 0px;
@@ -303,9 +303,6 @@
         padding-bottom: 20px;
         padding: 20px;
         display: block;
-        a:first-child {
-          padding-top: 0;
-        }
 
         @include tablet {
           color: $pallete-grey-900;
@@ -397,12 +394,14 @@
       width: 100%;
       color: $pallete-common-white;
       margin-top: auto;
-      padding: 19px;
+      padding: 20px;
+      height: auto;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
       background-color: $pallete-secondary-main;
       border: $pallete-secondary-main;
       font-size: 15px;
+      line-height: 18px;
 
       &:hover {
         color: $pallete-common-white;
