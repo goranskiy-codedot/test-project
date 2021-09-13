@@ -1,220 +1,295 @@
 .prices__section {
-  &__header {
+  padding-bottom: 66px;
+  padding-top: 62px;
+  @include desktop {
+    padding-bottom: 68px;
+    padding-top: 72px;
+  }
+  h2 {
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    .header {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 145%;
-      letter-spacing: 0.02em;
-      padding-top: 70px;
-      padding-bottom: 28px;
-      @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-top: 85px;
-        padding-bottom: 35px;
-      }
-      @include desktop{
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-bottom: 41px;
-        padding-top: 72px;
-      }
+    width: 100%;
+    margin-bottom: 38px;
+    @include tablet {
+      // max-width: 60px;
+      margin-bottom: 52px;
+    }
+    @include desktop {
+      margin-bottom: 65px;
+
     }
   }
   .prices {
+    // justify-content: center;
+    // padding-left: 29px;
+    // padding-right: 27px;
+    // width: max-content;
+    margin: 0 auto;   
+    padding-right: 0;
+
     justify-content: center;
-    padding-left: 29px;
-    padding-right: 27px;
-    width: max-content;
-    margin: 0 auto;
     @include tablet {
-      display: flex;
       padding-left: 0px;
       padding-right: 0px;
+      // margin-top: 52px;
+      display: grid;
+   justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,32%);
+    }
+    @include desktop {
+
     }
     .pack {
-      width: 244px;
-      height: 386px;
+      max-width: 244px;
+      // min-height: 386px;
       border: 1px solid $pallete-grey-10;
-      @include desktop{
-          width: 370px;
-          height: 552px;
+      padding: 18px;
+      height: 100%;
+      padding:19px 19px 34px;
+      min-height: 386px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      @include tablet{
+        padding:19px 19px 34px;
+        
       }
-      &__header {
+ 
+      @include desktop {
+        // min-height: 552px;
+        padding: 34px 32px 48px;
+        max-width: 370px;
+        width: 100%;
+      }
+ 
+      @include media(641px,740px){
+        // min-height: 443px;
+        height: 100%;
+     }
+      @include media(769px,1118px){
+        // min-height: 653px;
+        height: 100%;
+     }
+      &__wrapper {
+        border-bottom: 2px solid$pallete-grey-10;
+        margin: 0 0 25px;
+        // margin: 21px;
         text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
+        @include tablet {
+          // margin: 19px;
+          margin: 0 0 26px;
         }
-        .header {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-          }
+        @include desktop {
+          border-bottom: 2px solid$pallete-grey-10;
+          margin: 0 0 39px 0;
+          // margin: 32px;
         }
       }
+      &__header{
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 15px;
+letter-spacing: 0.02em;
+margin-block-end: 0em;
+margin-block-start: 0em;
+margin-bottom: 25px;
+@include desktop{
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 42px;
+  
+}
+      }
+
       &__price {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
 
-        .hint {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-10;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          padding-top: 14px;
-          padding-right: 5px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            
-          }
+        align-items: baseline;
+        justify-content: center;
+        position: relative;
+        // margin-top: 22px;
+        gap: 5px;
+        // margin-right: 17px;
+        max-width: 320px;
+        @include tablet {
+          // margin-top: 21px;
         }
+        @include desktop {
+          // margin-top: 43px;
+          gap: 10px;
+        }
+        .grivna::before {
+          content: "₴";
+        }
+        .hint__bottom{
+         
+        }
+        
+
         .price {
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
           font-size: 20px;
-          line-height: 145%;
+          line-height: 29px;
           letter-spacing: 0.02em;
           color: $pallete-grey-900;
-          padding-right: 12px;
-          padding-top: 7px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
+          // padding-right: 12px;
+          // padding-top: 7px;
+          // margin-top: 4px;
+          // margin-right: 15px;
+          @include desktop {
             font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            padding-right: 12px;
-            padding-top: 11px;
+            line-height: 44px;
+            // margin-top: 10px;
+            // margin-right: 0px;
           }
         }
       }
-      .hint {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+      .hint__bottom {
+        display: block;
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
         font-size: 10px;
-        line-height: 185%;
+        line-height: 19px;
         letter-spacing: 0.02em;
         color: $pallete-grey-10;
         margin-block-start: 0em;
         margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
+        margin-bottom: 22px;
+        @include tablet{
+          margin-bottom: 20px;
+        }
+        @include desktop {
+          font-size: 12px;
+          line-height: 22px;
+          margin-bottom: 40px;
+     
+        }
+      }
+      .hint {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        color: $pallete-grey-10;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        @include desktop {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+      .button {
+          margin-bottom: 29px;
+          border: 1px solid $pallete-primary-main;
+          color: $pallete-primary-main;
+          background-color: transparent;
+
+        @include tablet{
+          margin-bottom: 29px;
+          border: 1px solid $pallete-primary-main;
+          color: $pallete-primary-main;
+          background-color: transparent;
+          
+        }
+        @include desktop {
+          border: 1px solid $pallete-grey-900;
+          color: $pallete-grey-900;
+          background-color: transparent;
+          padding: 12px;
+          margin-bottom: 40px;
         }
       }
       &__button {
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
+        // padding-top: 21px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @include tablet {
+          margin-bottom: 30px;
+          margin-top: 19px;
         }
-        .button {
-          width: 129px;
-          height: 33px;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 12px;
-          letter-spacing: 0.02em;
-          color: $pallete-primary-main;
-          background-color: transparent;
-          border: 1px solid $pallete-primary-main;
-          &:hover {
-            border: 1px solid $pallete-primary-main;
-            background-color: $pallete-primary-main;
-            color: $pallete-common-white;
-          }
-          @include desktop{
-              width: 171px;
-              height: 41px;
-          }
+        @include desktop {
+          // padding-top: 36px;
+          margin-bottom: 40px;
+          margin-top: 40px;
         }
+      
       }
       .line {
         width: 206px;
         margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
+        @include desktop {
+          width: 306px;
+          margin-top: 41px;
         }
       }
+ 
+   
       &__benefits {
-        padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
+        .list__benefits {
+          // padding: 1px 7px;
+          padding-right: 0px;
+          display: grid;
+          row-gap: 9px; 
+          @include tablet {
+            // padding: 0px 13px;
+            padding-right: 0px;
+          }
+          @include desktop {
+            // padding: 0px 0 0px 11px;
+            padding-right: 0px;
+         
+          }
+        
         }
+
         .benefits {
           font-family: Montserrat;
           font-style: normal;
           font-weight: normal;
           font-size: 10px;
-          line-height: 185%;
+          line-height: 19px;
           letter-spacing: 0.02em;
-          padding-left: 41px;
-          @include desktop{
+          // padding-left: 41px;
+          // margin-block-end: 9px;
+          // margin-block-start: 4px;
+          padding-left: 24px;
+          @include tablet {
+            // margin-block-end: 10px;
+            // margin-block-start: 8px;
+            padding-left: 21px;
+          }
+          @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
             font-size: 15px;
-            line-height: 185%;
+            line-height: 28px;
             letter-spacing: 0.02em;
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            padding-left: 64px;
+            // margin-block-start: 8px;
+
+            // margin-block-end: 9px;
+            padding-left: 32px;
           }
+          // &::marker {
+          //   content: url(../../../uploads/check.svg);
+
+          //   position: absolute;
+          //   @include desktop {
+          //   }
+          // }
           &::before {
             content: "";
             width: 10px;
@@ -226,627 +301,100 @@
             margin-left: -23px;
             margin-top: 4px;
             position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
+            @include desktop {
+              height: 9px;
+              margin-left: -31px;
+              margin-top: 9px;
+              width: 14px;
             }
           }
         }
-      }
-    }
-    .standart {
-      width: 244px;
-      height: 386px;
-      border: 1px solid $pallete-grey-10;
-      @include desktop{
-          width: 370px;
-          height: 552px;
-      }
-      &__header {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
-        }
-        .header {
+        .benefit__bold{
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
           font-size: 10px;
-          line-height: 145%;
+          line-height: 19px;
           letter-spacing: 0.02em;
           @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
+          font-size: 15px;
+          line-height: 28px;
           }
+        
         }
       }
-      &__price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+    }
 
-        .hint {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-10;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          padding-top: 14px;
-          padding-right: 5px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            
-          }
-        }
-        .price {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-900;
-          padding-right: 12px;
-          padding-top: 7px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            padding-right: 12px;
-            padding-top: 11px;
-          }
-        }
-      }
-      .hint {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        color: $pallete-grey-10;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-        }
-      }
-      &__button {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
-        }
-        .button {
-          width: 129px;
-          height: 33px;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 12px;
-          letter-spacing: 0.02em;
-          color: $pallete-primary-main;
-          background-color: transparent;
-          border: 1px solid $pallete-primary-main;
-          &:hover {
-            border: 1px solid $pallete-primary-main;
-            background-color: $pallete-primary-main;
-            color: $pallete-common-white;
-          }
-          @include desktop{
-              width: 171px;
-              height: 41px;
-          }
-        }
-      }
-      .line {
-        width: 206px;
-        margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
-        }
-      }
-      &__benefits {
-        padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
-        }
-        .benefits {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 185%;
-          letter-spacing: 0.02em;
-          padding-left: 41px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 15px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            padding-left: 64px;
-          }
-          &::before {
-            content: "";
-            width: 10px;
-            height: 6px;
-            display: block;
-            transform: rotate(-45deg);
-            border-bottom: 2px solid $pallete-secondary-main;
-            border-left: 2px solid $pallete-secondary-main;
-            margin-left: -23px;
-            margin-top: 4px;
-            position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
-            }
-          }
-        }
+    .grivna {
+      .currency {
+        opacity: 1;
       }
     }
-    .hover{
-      width: 244px;
-      height: 386px;
+    // .currency{
+    //   font-family: Montserrat;
+    //   font-style: normal;
+    //   font-weight: bold;
+    //   font-size: 20px;
+    //   line-height: 145%;
+    //   letter-spacing: 0.02em;
+    //   opacity: 0;
+    //   @include desktop{
+    //     font-family: Montserrat;
+    //     font-size: 30px;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     letter-spacing: .02em;
+    //     line-height: 145%;
+    //     margin-top: 10px;
+    //     opacity: 0;
+    //   }
+    // }
+
+    .hover {
       border: 1px solid $pallete-primary-main;
       position: relative;
-      @include desktop{
-        width: 370px;
-        height: 552px;
-    }
-      .polygon {
-        background-image: url(../../../img/other/rectangle.svg);
-        height: 26px;
+      background-color: $pallete-common-white-20;
+   
+      &::before {
+        content: "";
         width: 17px;
+        height: 26px;
+        background-color: $pallete-primary-main;
+        display: inline-block;
         position: absolute;
         right: 18px;
-        top: -1px;
-        @include desktop{
-            height: 43px;
-            width: 27px;
-            background-image: url(../../../img/other/rectangle-big.svg);
-            position: absolute;
-            right: 31px;
+        top: 0;
+        @include desktop {
+          width: 27px;
+          height: 43px;
+          right: 31px;
         }
       }
+      &::after {
+        background-color: inherit;
+        content: "";
+        display: inline-block;
+        height: 14px;
+        position: absolute;
+        right: 20px;
+        top: 19px;
+        transform: rotate(45deg);
+        width: 14px;
 
-      &__header {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
-        }
-        .header {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-          }
+        @include desktop {
+          height: 20px;
+          width: 20px;
+          top: 33px;
+          right: 34px;
         }
       }
-      &__price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        .hint {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-10;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          padding-top: 14px;
-          padding-right: 5px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            
-          }
-        }
-        .price {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-900;
-          padding-right: 12px;
-          padding-top: 7px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            padding-right: 12px;
-            padding-top: 11px;
-          }
-        }
-      }
-      .hint {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        color: $pallete-grey-10;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-        } 
-      }
-      &__button {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
-        }
-        .button {
-          width: 129px;
-          height: 33px;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 12px;
-          letter-spacing: 0.02em;
-          color: $pallete-primary-main;
-          background-color: transparent;
+      .button {
+        color: $pallete-primary-main;
+        border: 1px solid $pallete-primary-main;
+        &:hover {
           border: 1px solid $pallete-primary-main;
-          &:hover {
-            border: 1px solid $pallete-primary-main;
-            background-color: $pallete-primary-main;
-            color: $pallete-common-white;
-          }
-          @include desktop{
-            width: 171px;
-            height: 41px;
-        }
-        }
-      }
-      .line {
-        width: 206px;
-        margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
-        }
-      }
-      &__benefits {
-        padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
-        }
-        .benefits {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 185%;
-          letter-spacing: 0.02em;
-          padding-left: 41px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 15px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            padding-left: 64px;
-          }
-          &::before {
-            content: "";
-            width: 10px;
-            height: 6px;
-            display: block;
-            transform: rotate(-45deg);
-            border-bottom: 2px solid $pallete-secondary-main;
-            border-left: 2px solid $pallete-secondary-main;
-            margin-left: -23px;
-            margin-top: 4px;
-            position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
-            }
-          }
-        }
-      }
-    
-
-    }
-    .pro {
-      width: 244px;
-      height: 386px;
-      border: 1px solid $pallete-grey-10;
-      @include desktop{
-        width: 370px;
-        height: 552px;
-    }
-      &__header {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        @include desktop{
-            padding-bottom: 33px;
-            padding-top: 33px;
-        }
-        .header {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-          }
-        }
-      }
-      &__price {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        .hint {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 10px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-10;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          padding-top: 14px;
-          padding-right: 5px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            
-          }
-        }
-        .price {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 145%;
-          letter-spacing: 0.02em;
-          color: $pallete-grey-900;
-          padding-right: 12px;
-          padding-top: 7px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 145%;
-            letter-spacing: 0.02em;
-            padding-right: 12px;
-            padding-top: 11px;
-          }
-        }
-      }
-      .hint {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        color: $pallete-grey-10;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-        }
-      }
-      &__button {
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding-top: 21px;
-        @include desktop{
-            padding-top: 41px;
-        }
-        .button {
-          width: 129px;
-          height: 33px;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 10px;
-          line-height: 12px;
-          letter-spacing: 0.02em;
-          color: $pallete-primary-main;
-          background-color: transparent;
-          border: 1px solid $pallete-primary-main;
-          &:hover {
-            border: 1px solid $pallete-primary-main;
-            background-color: $pallete-primary-main;
-            color: $pallete-common-white;
-          }
-          @include desktop{
-            width: 171px;
-            height: 41px;
-        }
-        }
-      }
-      .line {
-        width: 206px;
-        margin-top: 31px;
-        @include desktop{
-            width: 306px;
-            margin-top: 41px;
-        }
-      }
-      &__benefits {
-        padding-top: 7px;
-        @include desktop{
-            padding-top: 20px;
-        }
-        .benefits {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 185%;
-          letter-spacing: 0.02em;
-          padding-left: 41px;
-          @include desktop{
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 15px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            padding-left: 64px;
-          }
-          &:nth-child(3) {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 10px;
-            line-height: 185%;
-            letter-spacing: 0.02em;
-            @include desktop{
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 15px;
-                line-height: 185%;
-                letter-spacing: 0.02em;
-            }
-          }
-          &:nth-child(4) {
-            width: 233px;
-            @include desktop{
-                width: 290px;
-            }
-          }
-          &::before {
-            content: "";
-            width: 10px;
-            height: 6px;
-            display: block;
-            transform: rotate(-45deg);
-            border-bottom: 2px solid $pallete-secondary-main;
-            border-left: 2px solid $pallete-secondary-main;
-            margin-left: -23px;
-            margin-top: 4px;
-            position: absolute;
-            @include desktop{
-                height: 9px;
-                margin-left: -33px;
-                margin-top: 9px;
-                width: 14px;
-            }
-          }
+          background-color: $pallete-primary-main;
+          color: $pallete-common-white;
         }
       }
     }

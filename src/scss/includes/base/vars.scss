@@ -1,3 +1,9 @@
+$base-size: 16;
+
+@function pxToRem($size) {
+  @return ($size / $base-size) * 1rem;
+}
+
 // Colors
 $color-black: #1a1a1a;
 $color-red: #f2571f;
@@ -6,9 +12,11 @@ $pallete-secondary-main: #ff5f68;
 $pallete-grey-900: #1c1d28;
 $pallete-common-white: #ffff;
 $pallete-grey-10: #e4e4e4;
+$pallete-common-white-10: #f2fcff;
+$pallete-common-white-20: #f9f8f7;
 
 // Media queries
-$desktop-extra: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+$desktop-extra: pxToRem(1280);
+$desktop: pxToRem(769);
+$tablet: pxToRem(640);
+$mobile: pxToRem(640);

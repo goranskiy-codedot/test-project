@@ -3,31 +3,34 @@
     <div class="container">
         
         <div class="form__header">
-            <h1 class="header">Обсудить проект</h1>
-            <div class="form__header-hint">
+            <h2>Обсудить проект</h2>
+
                 <p class="hint">Крутые проекты начинаются с заполнения этой формы</p>
-            </div>
-            <div class="form__image">
-            <img src="../../uploads/form__image.png" class="image"></div>
-        </div>
+ 
+            <!-- <div class="form__image"> -->
+            <img src="../../uploads/form__image.png" class="form__image"></div>
+        <!-- </div> -->
         <div class="form__inputs">
-            <p class="label">Ваше имя*</p>
-            <input type="text" class="input" placeholder="введите ваше имя">
-            <div class="inputs__center">
-            <div class="input__tel">
-            <p class="label">Телефон*</p>
-            <input type="tel" class="input" placeholder="введите номер телефона"></div>
-            <div class="input__email">
-            <p class="label">Email*</p>
-            <input type="email" class="input" placeholder="введите электронный адрес"></div>
+            <div class="input__name">
+            <label class="label" for="name">Ваше имя*</label>
+            <input type="text" class="input" placeholder="введите ваше имя" id="name">
         </div>
-            <p class="label">Сообщение*</p>
-            <input type="text" class="input" placeholder="введите сообщение">
+    
+        <div class="input__tel nowrap">
+            <label class="label " for="tel">Телефон*</label>
+            <input type="tel" class="input " placeholder="введите номер телефона" id="tel"></div>
+          
+            <div class="input__email nowrap">
+            <label class="label" for="email">Email*</label>
+            <input type="email" class="input " placeholder="введите электронный адрес" id="email"></div>
+        <div class="input__message">
+            <label class="label" for="message">Сообщение*</label>
+            <textarea rows="1" class="textarea textarea__message" placeholder="введите сообщение" id="message"></textarea></div>
             <div class="form__submit">
-                <input type="submit" value="Отправить" class="submit">
+                <button  class="button">Отправить</button>
                 <div class="checkbox">
-                <input type="checkbox" name="" id="checkbox" class="form__checkbox" checked>
-                <label for="checkbox" class="checkbox__label">Согласие на обработку персональных данных</label>
+                <input type="checkbox" id="form__checkbox" class="form__checkbox" checked>
+                <label for="form__checkbox" class="checkbox__label"> Согласие на обработку персональных данных</label>
             </div>
         </div>
         </div>

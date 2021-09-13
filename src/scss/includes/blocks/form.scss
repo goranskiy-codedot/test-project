@@ -1,115 +1,161 @@
 .form {
-  padding-top: 77px;
+  padding-top: 45px;
+
   @include tablet {
-    padding-top: 89px;
+    padding-top: 51px;
   }
   @include desktop {
-    padding-top: 140px;
+    padding-top: 73px;
   }
 
   .container {
+    @include tablet {
+      // padding: 0 122px;
+    }
     @include desktop {
       display: flex;
+      padding: 0;
+      // gap: 75px;
+      max-width: 1080px;
+      justify-content: space-between;
+      position: relative;
+    }
+    @include media-max(992px) {
+      // gap: 128px;
+      align-items: center;
+      display: block;
     }
   }
   &__header {
     text-align: center;
-    padding-top: 52px;
+    margin-bottom: 49px;
+    // padding-top: 79px;
+
+    //  margin-top: 52px;
     @include tablet {
-      padding-top: 81px;
+      // margin-top: 109px;
+      // padding-top: 97px;
+      margin-bottom: 96px;
     }
+    @include desktop {
+      // margin-top: 134px;
+      // padding-top: 0px;
+      text-align: -webkit-center;
+      width: 40%;
+      margin-bottom: 0px;
+    }
+    @include media(640px, 992px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 96px;
+      width: 100%;
+    }
+
     .form__image {
-        display: none;
-        @include desktop {
-            display: block;
-            padding-top: 18px;
-            height: max-content;
-            width: max-content;
-          .image {
-            object-fit: cover;
-            margin-left: -9px;
-          }
-        }
+      display: none;
+      @include desktop {
+        // bottom: -7px;
+        // display: block;
+        // left: 29px;
+        // max-width: 41.5%;
+        // position: absolute;
+        // width: 100%;
+        bottom: -137px;
+        display: block;
+        left: -69px;
+        max-width: 48.5%;
+        position: absolute;
+        width: 100%;
       }
-    .header {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 145%;
-      letter-spacing: 0.02em;
+      @include media-max(992px) {
+        // gap: 128px;
+        display: none;
+      }
+    }
+    h2 {
       color: $pallete-common-white;
+      margin-bottom: 21px;
       @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
+        margin-bottom: 22px;
       }
       @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 145%;
-        letter-spacing: 0.02em;
-        padding-top: 28px;
-        padding-right: 34px;
+        margin-bottom: 23px;
+        max-width: 280px;
+        margin-right: 48px;
       }
- 
     }
-    .form__header-hint {
-      padding-top: 1px;
-
-      .hint {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 185%;
-        letter-spacing: 0.02em;
-        color: $pallete-common-white;
-        padding-top: 9px;
-        @include tablet {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 185%;
-          text-align: center;
-          letter-spacing: 0.02em;
-          padding-top: 6px;
-        }
-        @include desktop {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 185%;
-          letter-spacing: 0.02em;
-          width: 364px;
-          padding-left: 111px;
-          text-align: initial;
-          padding-top: 0px;
-        }
+    .hint {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $pallete-common-white;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      // padding-top: 9px;
+      // margin-bottom: 49px;
+      @include tablet {
+        font-size: 15px;
+        line-height: 28px;
+        text-align: center;
+        // margin-top: 23px;
+        // margin-bottom: 98px;
+      }
+      @include desktop {
+        text-align: initial;
+        padding-top: 0px;
+        padding-top: 0;
+        text-align: initial;
+        width: 345px;
+        // margin-left: 100px;
+        margin-left: 18px;
+      }
+      @include media-max(992px) {
+        width: unset;
+        margin-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: contents;
       }
     }
   }
   &__submit {
     text-align: center;
+    gap: 37px;
+    align-items: baseline;
+    grid-area: 5/1 / span 1 / span 2;
+    padding-top: 13px;
+    @include tablet {
+      grid-area: 4/1 / span 1 / span 2;
+      padding-top: 10px;
+    }
+    @include desktop {
+      height: 69px;
+
+    }
+
     .checkbox {
       display: none;
+    }
+    @include desktop {
+      // margin-top: 27px;
     }
     @include tablet {
       text-align: initial;
       display: flex;
+      align-items: end;
+      // margin-top: 57px;
       .checkbox {
         display: initial;
-        padding-top: 75px;
-        padding-left: 38px;
+        // margin-top: 13px;
+        // margin-left: 38px;
         cursor: pointer;
         text-decoration: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: 30px;
         &:hover,
         :active,
         :focus {
@@ -123,21 +169,18 @@
         font-style: normal;
         font-weight: normal;
         font-size: 10px;
-        line-height: 145%;
+        line-height: 15px;
         letter-spacing: 0.02em;
         color: $pallete-grey-10;
+        position: relative;
+        cursor: pointer;
       }
       .form__checkbox {
         position: absolute;
         z-index: -1;
         opacity: 0;
       }
-      .form__checkbox + label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-      }
-      .form__checkbox + label::before {
+      .form__checkbox + .checkbox__label::before {
         content: "";
         display: inline-block;
         width: 17px;
@@ -149,121 +192,245 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
+        vertical-align: middle;
       }
-      .form__checkbox:checked + label::before {
-        background-image: url("../../../uploads/checkbox__ico.svg");
+      .checkbox__label::after {
+        content: "";
+        display: block;
+        border-bottom: 1px solid #fff;
+        border-left: 1px solid #fff;
+        height: 5px;
+        margin-top: 4px;
+        opacity: 1;
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 10px;
+        top: 0px;
+        left: 4px;
+      }
+      .checkbox input:checked + .checkbox__label::after {
+        opacity: 0;
+        position: absolute;
+        top: 1px;
+      }
+
+      .form__checkbox + .checkbox__label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
       }
     }
   }
   .form__section {
     background-color: $pallete-primary-main;
-    height: 653px;
+    // min-height: 653px;
+    padding-top: 66px;
+    padding-bottom: 47px;
     @include tablet {
-      height: 721px;
+      // min-height: 721px;
+      // padding-top: 96px;
+      // padding-bottom: 96px;
+      padding-bottom: 102px;
+      padding-top: 111px;
     }
-    @include desktop{
-            height: 611px;
+    @include desktop {
+      align-items: center;
+      display: flex;
+      // min-height: 611px;
+      padding-bottom: 134px;
+      padding-top: 129px;
+      height: 100%;
+      position: relative;
     }
   }
   &__inputs {
-    padding-top: 32px;
+    // margin-bottom: 36px;
+    // margin-top: 44px;
+    display: grid;
+    grid-template-rows: repeat(5, 59px);
+    row-gap: 25px;
+    grid-template-columns: repeat(1, 300px);
     @include tablet {
-      padding-top: 82px;
-      padding-left: 111px;
+      // margin-top: 97px;
+      // margin-left: 80px;
+      display: grid;
+      grid-template-rows: repeat(4, 59px);
+      grid-template-columns: repeat(2, 261px);
+      max-width: 523px;
+      column-gap: 24px;
+      row-gap: 35px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    @include desktop{
-        padding-left: 42px;
-        padding-top: 117px;
+    @include desktop {
+      display: flex;
+      display: grid;
+      flex-direction: column;
+      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 261px);
+      grid-template-rows: repeat(4, 59px);
+      width: 60%;
+      max-height: 345px;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 573px;
+    }
+    @include media-max(992px) {
+      margin-left: auto;
+      margin-right: auto;
     }
     .label {
       color: $pallete-common-white;
-      padding-top: 15px;
-      @include tablet {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-        display: block;
-        padding-top: 19px;
-      }
-      &:first-child {
-        padding-top: 0px;
-      }
-    }
-
-    .submit {
+      margin-block-start: 0px;
+      margin-block-end: 0px;
+      // padding-top: 27px;
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
-      letter-spacing: 0.02em;
-      background-color: $pallete-secondary-main;
-      border: $pallete-secondary-main;
-      width: 301px;
-      height: 33px;
-      color: $pallete-common-white;
-      margin-top: 46px;
+      font-size: 13px;
+      line-height: 16px;
+      // margin-bottom: 11px;
+      display: block;
       @include tablet {
-        width: 171px;
-        height: 41px;
-        margin-top: 63px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-      }
-      &:hover {
-        color: $pallete-common-white;
-        background-color: transparent;
-        border: 1px solid $pallete-secondary-main;
+        font-size: 15px;
+        line-height: 18px;
+
+        // padding-top: 37px;
       }
     }
-    .inputs__center {
-      padding-top: 17px;
-      .input__email {
-        padding-top: 13px;
-      }
-      @include tablet {
-        display: flex;
-        padding-top: 19px;
-        .input {
-          width: 236px;
-          padding-top: 9px;
-        }
-        .input__email {
-          padding-left: 51px;
-          padding-top: 0px;
-        }
-      }
-    }
+
     .input {
       border: none;
       border-bottom: 1px solid $pallete-common-white;
       width: 100%;
-      @include tablet {
-        width: 523px;
-        padding-top: 10px;
+      color: $pallete-common-white;
+      // padding-bottom: 8px;
+      // padding-top: 8px;
+      padding-bottom: 9px;
+      padding-top: 9px;
+      text-indent: 0px;
+      transition: text-indent 1s;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      @include placeholder-style(Montserrat, normal, normal, 10px, 12px);
+      &:focus {
+        @include placeholder-animation(600px, 0.3s);
+      }
+      &:not(:focus) {
+        @include placeholder-animation(0px, 0.3s);
       }
 
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.3);
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 12px;
-        @include tablet {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 12px;
-          line-height: 15px;
-        }
+      transition: text-indent 3s;
+      @include tablet {
+        max-width: 523px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        // padding-top: 12px;
+        // margin-bottom: 35px;
+        @include placeholder-style(Montserrat, normal, normal, 12px, 15px);
       }
+    }
+    .input__name {
+      min-width: 236px;
+      // margin-bottom: 35px;
+      grid-area: 1/1 / span 1 / span 2;
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+    .input__message {
+      min-width: 236px;
+      // margin-bottom: 57px;
+      grid-area: 4/1 / span 1 / span 2;
+      @include tablet {
+        grid-area: 3/1 / span 1 / span 2;
+      }
+      @include desktop {
+      }
+    }
+    .input__email {
+      min-width: 236px;
+      // margin-bottom: 30px;
+      grid-area: 3/1 / span 1 / span 2;
+      @include tablet {
+        grid-area: 2/2 / span 1 / span 1;
+      }
+      @include desktop {
+      }
+    }
+    .input__tel {
+      min-width: 236px;
+      grid-area: 2/1 / span 1 / span 2;
+      @include tablet {
+      }
+      @include desktop {
+      }
+    }
+    .nowrap {
+      width: 100%;
+      @include tablet {
+        max-width: 236px;
+        width: 45%;
+      }
+    }
+    // .inputs__center {
+    //   display: initial;
+
+    //   @include tablet {
+    //     display: flex;
+    //     gap: 50px;
+    //   }
+    //   @include tablet{
+    //     column-gap: 23px;
+    //   }
+    // }
+    .textarea {
+      border: none;
+      border-bottom: 1px solid $pallete-common-white;
+      width: 100%;
+      color: $pallete-common-white;
+      padding: 0px;
+      text-indent: 0px;
+      transition: text-indent 1s;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      // margin-bottom: 57px;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
+      }
+      @include tablet {
+        max-width: 523px;
+        padding: 12px 0;
+      }
+      @include desktop {
+        padding-top: 14px;
+        padding-bottom: 11px;
+      }
+    }
+  }
+  .button {
+    background-color: $pallete-secondary-main;
+    border: $pallete-secondary-main;
+    width: 301px;
+    height: 33px;
+    color: $pallete-common-white;
+    // margin-top: px;
+    // margin-top: 46px;
+    @include tablet {
+      width: 171px;
+      height: 41px;
+      padding: 12px;
+      // margin-top: 63px;
+      // margin-top: 0px;
+    }
+    &:hover {
+      color: $pallete-common-white;
+      background-color: #ff3c68;
+      border: 1px solid #ff3c68;
     }
   }
 }
