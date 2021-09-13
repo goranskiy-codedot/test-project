@@ -18,12 +18,12 @@
       // gap: 75px;
       max-width: 1080px;
       justify-content: space-between;
+      position: relative;
     }
     @include media-max(992px) {
       // gap: 128px;
-     align-items: center;
-     display: block;
-
+      align-items: center;
+      display: block;
     }
   }
   &__header {
@@ -35,7 +35,7 @@
     @include tablet {
       // margin-top: 109px;
       // padding-top: 97px;
-   margin-bottom: 100px; 
+      margin-bottom: 96px;
     }
     @include desktop {
       // margin-top: 134px;
@@ -44,34 +44,38 @@
       width: 40%;
       margin-bottom: 0px;
     }
-    @include media(640px,992px) {
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 100px; 
-     width: 100%;
+    @include media(640px, 992px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 96px;
+      width: 100%;
     }
 
     .form__image {
       display: none;
       @include desktop {
-        bottom: -7px;
+        // bottom: -7px;
+        // display: block;
+        // left: 29px;
+        // max-width: 41.5%;
+        // position: absolute;
+        // width: 100%;
+        bottom: -137px;
         display: block;
-        left: 29px;
-        max-width: 41.5%;
+        left: -69px;
+        max-width: 48.5%;
         position: absolute;
         width: 100%;
-        }
-        @include media-max(992px) {
-          // gap: 128px;
-          display: none;
-        }
-      
+      }
+      @include media-max(992px) {
+        // gap: 128px;
+        display: none;
+      }
     }
     h2 {
       color: $pallete-common-white;
       margin-bottom: 21px;
       @include tablet {
-      
         margin-bottom: 22px;
       }
       @include desktop {
@@ -109,32 +113,33 @@
         margin-left: 18px;
       }
       @include media-max(992px) {
-    width: unset;
-    margin-left: 0px;
-      margin-left: auto;
-      margin-right: auto;
-      display: contents;
-       }
+        width: unset;
+        margin-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        display: contents;
+      }
     }
   }
   &__submit {
     text-align: center;
     gap: 37px;
     align-items: baseline;
-    grid-area: 5/1/span 1/span 2;
-    @include tablet{
-      grid-area: 4/1/span 1/span 2;   
+    grid-area: 5/1 / span 1 / span 2;
+    padding-top: 13px;
+    @include tablet {
+      grid-area: 4/1 / span 1 / span 2;
+      padding-top: 10px;
     }
-    @include desktop{
+    @include desktop {
       height: 69px;
-    }
 
-   
+    }
 
     .checkbox {
       display: none;
     }
-    @include desktop{
+    @include desktop {
       // margin-top: 27px;
     }
     @include tablet {
@@ -148,6 +153,9 @@
         // margin-left: 38px;
         cursor: pointer;
         text-decoration: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: 30px;
         &:hover,
         :active,
         :focus {
@@ -172,7 +180,7 @@
         z-index: -1;
         opacity: 0;
       }
-    .form__checkbox+.checkbox__label::before {
+      .form__checkbox + .checkbox__label::before {
         content: "";
         display: inline-block;
         width: 17px;
@@ -186,7 +194,7 @@
         background-size: 50% 50%;
         vertical-align: middle;
       }
-      .checkbox__label::after{
+      .checkbox__label::after {
         content: "";
         display: block;
         border-bottom: 1px solid #fff;
@@ -201,12 +209,12 @@
         left: 4px;
       }
       .checkbox input:checked + .checkbox__label::after {
-           opacity: 0;
-           position: absolute;
-           top:1px;
-           }
-    
-      .form__checkbox+.checkbox__label {
+        opacity: 0;
+        position: absolute;
+        top: 1px;
+      }
+
+      .form__checkbox + .checkbox__label {
         display: inline-flex;
         align-items: center;
         user-select: none;
@@ -220,15 +228,17 @@
     padding-bottom: 47px;
     @include tablet {
       // min-height: 721px;
-      padding-top: 96px;
-      padding-bottom: 96px;
+      // padding-top: 96px;
+      // padding-bottom: 96px;
+      padding-bottom: 102px;
+      padding-top: 111px;
     }
     @include desktop {
       align-items: center;
       display: flex;
       // min-height: 611px;
       padding-bottom: 134px;
-      padding-top: 131px;
+      padding-top: 129px;
       height: 100%;
       position: relative;
     }
@@ -237,40 +247,38 @@
     // margin-bottom: 36px;
     // margin-top: 44px;
     display: grid;
-    grid-template-rows: repeat(5,59px);
+    grid-template-rows: repeat(5, 59px);
     row-gap: 25px;
-    grid-template-columns: repeat(1,300px);
+    grid-template-columns: repeat(1, 300px);
     @include tablet {
       // margin-top: 97px;
       // margin-left: 80px;
-      display: grid; 
-      grid-template-rows: repeat(4,59px);
-     grid-template-columns: repeat(2,261px);
+      display: grid;
+      grid-template-rows: repeat(4, 59px);
+      grid-template-columns: repeat(2, 261px);
       max-width: 523px;
       column-gap: 24px;
       row-gap: 35px;
-          margin-left: auto;
-    margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
     @include desktop {
-
       display: flex;
       display: grid;
       flex-direction: column;
       flex-wrap: wrap;
-      grid-template-columns: repeat(2,261px);
-      grid-template-rows: repeat(4,59px);
+      grid-template-columns: repeat(2, 261px);
+      grid-template-rows: repeat(4, 59px);
       width: 60%;
       max-height: 345px;
       margin-left: 0;
-      margin-right: 0 ;
-    max-width: 573px;
-
+      margin-right: 0;
+      max-width: 573px;
     }
     @include media-max(992px) {
       margin-left: auto;
       margin-right: auto;
-     }
+    }
     .label {
       color: $pallete-common-white;
       margin-block-start: 0px;
@@ -289,11 +297,7 @@
 
         // padding-top: 37px;
       }
-
-
     }
-
-   
 
     .input {
       border: none;
@@ -311,10 +315,10 @@
       &:focus {
         @include placeholder-animation(600px, 0.3s);
       }
-      &:not(:focus){
+      &:not(:focus) {
         @include placeholder-animation(0px, 0.3s);
       }
-    
+
       transition: text-indent 3s;
       @include tablet {
         max-width: 523px;
@@ -328,45 +332,38 @@
     .input__name {
       min-width: 236px;
       // margin-bottom: 35px;
-      grid-area: 1/1/span 1/span 2;
-      @include tablet{
-
+      grid-area: 1/1 / span 1 / span 2;
+      @include tablet {
       }
-      @include desktop{
-
+      @include desktop {
       }
     }
     .input__message {
       min-width: 236px;
       // margin-bottom: 57px;
-      grid-area: 4/1/span 1/span 2;   
-      @include tablet{
-        grid-area: 3/1/span 1/span 2;   
+      grid-area: 4/1 / span 1 / span 2;
+      @include tablet {
+        grid-area: 3/1 / span 1 / span 2;
       }
-      @include desktop{
-        
+      @include desktop {
       }
-   
     }
     .input__email {
       min-width: 236px;
       // margin-bottom: 30px;
-      grid-area: 3/1/span 1/span 2;
-      @include tablet{
-        grid-area: 2/2/span 1/span 1;
+      grid-area: 3/1 / span 1 / span 2;
+      @include tablet {
+        grid-area: 2/2 / span 1 / span 1;
       }
-      @include desktop{
-        
+      @include desktop {
       }
     }
     .input__tel {
       min-width: 236px;
-      grid-area: 2/1/span 1/span 2;
-      @include tablet{
-
+      grid-area: 2/1 / span 1 / span 2;
+      @include tablet {
       }
-      @include desktop{
-        
+      @include desktop {
       }
     }
     .nowrap {
@@ -395,22 +392,23 @@
       padding: 0px;
       text-indent: 0px;
       transition: text-indent 1s;
-      padding-top:8px;
-      padding-bottom:8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
       // margin-bottom: 57px;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
       &:focus {
         @include textarea-animation(-500px, 0.3s);
       }
-      &:not(:focus){
+      &:not(:focus) {
         @include textarea-animation(0px, 0.3s);
       }
       @include tablet {
         max-width: 523px;
+        padding: 12px 0;
       }
-      @include desktop{
-       padding-top: 14px;
-      padding-bottom: 11px;
+      @include desktop {
+        padding-top: 14px;
+        padding-bottom: 11px;
       }
     }
   }
@@ -431,8 +429,8 @@
     }
     &:hover {
       color: $pallete-common-white;
-      background-color: #FF3C68;
-      border: 1px solid #FF3C68;
+      background-color: #ff3c68;
+      border: 1px solid #ff3c68;
     }
   }
 }
