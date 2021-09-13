@@ -235,6 +235,7 @@
     display: flex;
     // margin-top: 53px;
     gap: 13px;
+    height: 39px;
 
     // margin-bottom: 37px;
 
@@ -274,6 +275,7 @@
     }
   }
   .footer__legal {
+    
     @include tablet {
       display: flex;
       flex-flow: row-reverse;
@@ -283,10 +285,12 @@
 
     .legal {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 13px;
+      // margin-bottom: 13px;
+      justify-content: center;
+      gap: 23px;
       @include tablet {
         gap: 30px;
+        justify-content: space-between;
       }
       @include desktop {
         gap: 43px;
@@ -322,8 +326,11 @@
       // margin-top: 13px;
       display: block;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
       @include tablet {
-        margin-top: 0px;
+ 
+        margin: 0px;
       }
     }
     span {
@@ -367,6 +374,8 @@
   li {
     padding-top: 5px;
     padding-bottom: 5px;
+    // margin-top: 5px;
+    // margin-bottom: 5px;
   }
   // .contacts__container{
   //   display: flex;

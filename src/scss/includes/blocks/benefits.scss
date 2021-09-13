@@ -56,100 +56,112 @@
 
     }
   }
-  .benefit:first-child {
-    @include tablet {
+  // .benefit:first-child {
+  //   @include tablet {
 
-    }
-    @include desktop {
-    }
-    p {
-      margin-top: 19px;
-      max-width: 192px;
-      width: 100%;
-      @include tablet {
-        margin-top: 25px;
-        max-width: 222px;
-      }
-      @include desktop{
-        margin-top: 23px;
-      }
-    }
-  }
-  .benefit:nth-child(2) {
-    // margin-top: 50px;
-    @include tablet {
-      margin-top: 0;
-    }
-    @include desktop {
-    }
-   p {
-      margin-top: 19px;
-      max-width: 224px;
-      width: 100%;
-      @include tablet {
-        margin-top: 26px;
-        max-width: 275px;
-      }
-      @include desktop {
-        max-width: 261px;
-        margin-top: 22px;
-      }
-    }
-  }
-  .benefit:nth-child(3) {
-    // margin-top: 50px;
-    @include tablet {
-      // margin-top: 93px;
-    }
-    @include desktop {
-      margin-top: 0px;
+  //   }
+  //   @include desktop {
+  //   }
+  //   p {
+  //     margin-top: 19px;
+  //     max-width: 192px;
+  //     width: 100%;
+  //     @include tablet {
+  //       margin-top: 25px;
+  //       max-width: 222px;
+  //     }
+  //     @include desktop{
+  //       margin-top: 23px;
+  //     }
+  //   }
+  // }
+  // .benefit:nth-child(2) {
+  //   // margin-top: 50px;
+  //   @include tablet {
+  //     margin-top: 0;
+  //   }
+  //   @include desktop {
+  //   }
+  //  p {
+  //     margin-top: 19px;
+  //     max-width: 224px;
+  //     width: 100%;
+  //     @include tablet {
+  //       margin-top: 26px;
+  //       max-width: 275px;
+  //     }
+  //     @include desktop {
+  //       max-width: 261px;
+  //       margin-top: 22px;
+  //     }
+  //   }
+  // }
+  // .benefit:nth-child(3) {
+  //   // margin-top: 50px;
+  //   @include tablet {
+  //     // margin-top: 93px;
+  //   }
+  //   @include desktop {
+  //     margin-top: 0px;
       
-    }
+  //   }
  
-    p{
-      margin-top: 19px;
-      max-width: 192px;
-      width: 100%;
-      @include tablet {
-        max-width: 215px;
-        margin-top: 24px;
-      }
-      @include desktop{
-        margin-top: 26px;
+  //   p{
+  //     margin-top: 19px;
+  //     max-width: 192px;
+  //     width: 100%;
+  //     @include tablet {
+  //       max-width: 215px;
+  //       margin-top: 24px;
+  //     }
+  //     @include desktop{
+  //       margin-top: 26px;
 
-      }
-    }
-  }
-  .benefit:nth-child(4) {
-    // margin-top: 50px;
+  //     }
+  //   }
+  // }
+  // .benefit:nth-child(4) {
+  //   // margin-top: 50px;
+  //   @include tablet {
+  //     // margin-top: 93px;
+  //   }
+  //   @include desktop {
+  //     margin-top: 0px;
+  //     flex-basis: 50%;
+  //   }
+  //   .image{
+  //     @include tablet{
+  //       margin-top: 6px;
+  //     }
+  //     @include desktop{
+  //       margin-top: 0px;
+  //     }
+  //   }
+  //   p{
+  //     margin-top: 19px;
+  //     max-width: 192px;
+  //     width: 100%;
+  //     @include tablet {
+  //       margin-top: 25px;
+  //     }
+  //     @include desktop{
+  //       margin-top: 21px;
+  //     }
+  //   }
+  // }
+
+  .text{
+    margin-top: 20px!important;
+    max-width: 223px;
     @include tablet {
-      // margin-top: 93px;
+
+      margin-top: 25px!important;
+      max-width: 262px;
     }
-    @include desktop {
-      margin-top: 0px;
-      flex-basis: 50%;
-    }
-    .image{
-      @include tablet{
-        margin-top: 6px;
-      }
-      @include desktop{
-        margin-top: 0px;
-      }
-    }
-    p{
-      margin-top: 19px;
-      max-width: 192px;
-      width: 100%;
-      @include tablet {
-        margin-top: 25px;
-      }
-      @include desktop{
-        margin-top: 21px;
-      }
+    @include desktop{
+      max-width: 223px;
     }
   }
-
 
 .section {
 
