@@ -54,20 +54,20 @@
     // margin-top: 32px;
     // margin-left: 10px;
     // height: 158px;
-    margin-bottom: 31px;
+    margin-bottom: 23px;
     scrollbar-width: none;
     margin-left: -25px;
     margin-right: -25px;
 
     .stages {
       display: flex;
-      padding: 0 79px;
+      padding: 0 93px;
       gap: 45px;
       @include tablet {
-        padding: 0 25px;
+        padding: 0 30px;
       }
       @include desktop {
-        padding: 0 102px;
+        padding: 0 93px;
         overflow-x: overlay;
         overflow-y: hidden;
         gap: 45px;
@@ -281,6 +281,7 @@
   p {
     width: 196px;
     z-index: 1;
+    line-height: 28px;
    @include tablet{
      width: 210px;
    }

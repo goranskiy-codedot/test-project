@@ -361,12 +361,14 @@
       letter-spacing: 0.02em;
       color: inherit;
       display: none;
+      
       @include tablet {
         font-weight: bold;
         font-size: 10px;
         line-height: 12px;
         padding: 12.5px 22.4px;
         display: block;
+        white-space: nowrap;
         &:visited {
           color: var(--pallete-grey-900);
         }
