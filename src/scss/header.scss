@@ -21,9 +21,9 @@
 }
 
 #body:target .logo {
-  background-color: $pallete-common-white;
+  background-color: var(--pallete-common-white);
   @include tablet {
-    background-color: $pallete-grey-900;
+    background-color: var(--pallete-grey-900);
   }
 }
 #body:not(:target) {
@@ -116,7 +116,7 @@
         z-index: 1001;
         height: 65px;
         width: 65px;
-        background-color: $pallete-grey-900;
+        background-color: var(--pallete-grey-900);
         // -webkit-mask-image: url(../uploads/logo.svg);
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
@@ -152,7 +152,7 @@
         float: right;
         &__line {
           z-index: 1003;
-          background-color: $pallete-grey-900;
+          background-color: var(--pallete-grey-900);
           width: 20px;
           height: 2px;
           margin-top: 4px;
@@ -166,7 +166,7 @@
         .burger__line::before {
           content: "";
           display: block;
-          background-color: $pallete-grey-900;
+          background-color: var(--pallete-grey-900);
           width: 20px;
           height: 2px;
           position: absolute;
@@ -178,7 +178,7 @@
           content: "";
           display: block;
           position: absolute;
-          background-color: $pallete-grey-900;
+          background-color: var(--pallete-grey-900);
           width: 20px;
           height: 2px;
           top: 7px;
@@ -208,13 +208,13 @@
       height: 100%;
       overflow: auto;
       list-style: none;
-      background: $pallete-primary-main;
+      background: var(--pallete-primary-main);
       flex-direction: column;
       // justify-content: space-evenly;
       transform: translateX(100%);
       transition: transform 0.2s ease;
       align-items: center;
-      color: $pallete-common-white;
+      color: var(--pallete-common-white);
       padding-top: 62px;
       padding-bottom: 42px;
       display: flex;
@@ -224,7 +224,7 @@
         background: transparent;
         transform: none;
         transition: none;
-        color: $pallete-grey-900;
+        color: var(--pallete-grey-900);
         padding-top: 0px;
         flex-direction: initial;
         // justify-content: initial;
@@ -299,13 +299,13 @@
         font-size: 15px;
         line-height: 18px;
         letter-spacing: 0.02em;
-        color: $pallete-common-white;
+        color: var(--pallete-common-white);
         padding-bottom: 20px;
         padding: 20px;
         display: block;
 
         @include tablet {
-          color: $pallete-grey-900;
+          color:var(--pallete-grey-900);
           font-size: 10px;
           line-height: 12px;
           padding: 12.5px 12.8px;
@@ -313,13 +313,13 @@
         }
 
         @include desktop {
-          color: $pallete-grey-900;
+          color: var(--pallete-grey-900);
           font-size: 13px;
           line-height: 16px;
           padding: 12.5px 22.4px;
         }
         @include media(769px, 992px) {
-          color: $pallete-grey-900;
+          color: var(--pallete-grey-900);
           font-size: 10px;
           line-height: 12px;
           padding: 12.5px 12.8px;
@@ -368,14 +368,14 @@
         padding: 12.5px 22.4px;
         display: block;
         &:visited {
-          color: $pallete-grey-900;
+          color: var(--pallete-grey-900);
         }
       }
       @include desktop {
         font-size: 13px;
         line-height: 16px;
         &:visited {
-          color: $pallete-grey-900;
+          color: var(--pallete-grey-900);
         }
       }
       @include media(769px, 992px) {
@@ -392,21 +392,21 @@
 
     .menu__button {
       width: 100%;
-      color: $pallete-common-white;
+      color: var(--pallete-common-white);
       margin-top: auto;
       padding: 20px;
       height: auto;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
-      background-color: $pallete-secondary-main;
-      border: $pallete-secondary-main;
+      background-color: var(--pallete-secondary-main);
+      border: var(--pallete-secondary-main);
       font-size: 15px;
       line-height: 18px;
 
       &:hover {
-        color: $pallete-common-white;
+        color: var(--pallete-common-white);
         background-color: transparent;
-        border: 1px solid $pallete-secondary-main;
+        border: 1px solid var(--pallete-secondary-main);
       }
       @include tablet {
         width: initial;
@@ -418,12 +418,12 @@
         min-height: 33px;
         // margin-bottom: 32px;
         margin-left: 0px;
-        background-color: $pallete-primary-main;
+        background-color: var(--pallete-primary-main);
         margin-top: 0;
         &:hover {
-          color: $pallete-primary-main;
+          color:var(--pallete-primary-main);
           background-color: transparent;
-          border: 1px solid $pallete-primary-main;
+          border: 1px solid var(--pallete-primary-main);
         }
       }
       @include media(769px, 992px) {
@@ -433,12 +433,12 @@
         min-height: 33px;
         // margin-bottom: 32px;
         margin-left: 0px;
-        background-color: $pallete-primary-main;
+        background-color: var(--pallete-primary-main);
         margin-top: 0;
         &:hover {
-          color: $pallete-primary-main;
+          color: var(--pallete-primary-main);
           background-color: transparent;
-          border: 1px solid $pallete-primary-main;
+          border: 1px solid var(--pallete-primary-main);
         }
       }
       @include desktop {

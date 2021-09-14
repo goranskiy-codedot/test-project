@@ -154,13 +154,13 @@
       text-align: center;
       // min-width: 129px;
       // min-height: 33px;
-      background-color: $pallete-primary-main;
-      border: 1px solid $pallete-primary-main;
-      color: $pallete-common-white;
+      background-color: var(--pallete-primary-main);
+      border: 1px solid var(--pallete-primary-main);
+      color: var(--pallete-common-white);
       &:hover {
-        color: $pallete-primary-main;
+        color: var(--pallete-primary-main);
         background-color: transparent;
-        border: 1px solid $pallete-primary-main;
+        border: 1px solid var(--pallete-primary-main);
       }
       @include desktop {
         // min-width: 171px;
@@ -179,12 +179,12 @@
 
     .price__btn {
       background-color: transparent;
-      border: 1px solid $pallete-primary-main;
-      color: $pallete-primary-main;
+      border: 1px solid var(--pallete-primary-main);
+      color: var(--pallete-primary-main);
       &:hover {
-        color: $pallete-common-white;
-        background-color: $pallete-primary-main;
-        border: 1px solid $pallete-primary-main;
+        color: var(--pallete-common-white);
+        background-color: var(--pallete-primary-main);
+        border: 1px solid var(--pallete-primary-main);
       }
       // padding-left: 48px;
       // padding-right: 48px;

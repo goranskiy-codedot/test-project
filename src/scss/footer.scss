@@ -1,6 +1,6 @@
 .footer {
-  background-color: $pallete-grey-900;
-  color: $pallete-common-white;
+  background-color: var(--pallete-grey-900);
+  color:   var(--pallete-common-white);
   // padding-top: 33px;
   padding-bottom: 34px;
   position: relative;
@@ -62,7 +62,7 @@
         z-index: 1001;
         height: 62px;
         width: 65px;
-        background-color: $pallete-common-white;
+        background-color:var(--pallete-common-white);
         -webkit-mask-image: url(../uploads/logo.svg);
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
@@ -168,7 +168,7 @@
     // padding-top: 10px;
     cursor: pointer;
     text-decoration: none;
-    color: $pallete-common-white;
+    color: var(--pallete-common-white);
     padding-bottom: 5px;
     padding-top: 5px;
     &:hover,
@@ -179,7 +179,7 @@
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     &:visited {
-      color: $pallete-common-white;
+      color:var(--pallete-common-white);
     }
     @include tablet {
       line-height: 22px;
@@ -223,13 +223,13 @@
       height: 19px;
       display: block;
       //  stroke: $pallete-common-white;
-      fill: $pallete-common-white;
+      fill:var(--pallete-common-white);
       //  -webkit-mask-position: center;
       //  -webkit-mask-repeat: no-repeat;
       //  -webkit-mask-size: 19px 19px;
       &:hover {
         // stroke: $pallete-secondary-main;
-        fill: $pallete-secondary-main;
+        fill: var(--pallete-secondary-main);
       }
     }
   }
@@ -245,7 +245,7 @@
       width: 13px;
       height: 13px;
       display: block;
-      fill: $pallete-common-white;
+      fill: var(--pallete-common-white);
       top: 12px;
       left: 13px;
       position: absolute;
@@ -262,15 +262,15 @@
       // margin-bottom: 0px;
     }
     .ellipse {
-      border: 1px solid $pallete-common-white;
+      border: 1px solid var(--pallete-common-white);
       border-radius: 50%;
       width: 39px;
       height: 39px;
       position: relative;
       &:hover {
-        border-color: $pallete-secondary-main;
+        border-color: var(--pallete-secondary-main);
         .portfolios__item-icon {
-          fill: $pallete-secondary-main;
+          fill: var(--pallete-secondary-main);
           transition: 0.5s;
         }
       }

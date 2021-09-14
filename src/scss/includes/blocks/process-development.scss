@@ -94,7 +94,7 @@
       display: flex;
       position: absolute;
       z-index: -1;
-      background: $pallete-common-white-10;
+      background: var(--pallete-common-white-10);
       @include tablet {
       }
       @include desktop {
@@ -263,7 +263,7 @@
       border: 1px;
       color: transparent;
       mix-blend-mode: multiply;
-      -webkit-text-stroke: 1px $pallete-primary-main;
+      -webkit-text-stroke: 1px var(--pallete-primary-main);
       font-stretch: ultra-expanded;
       z-index: 1;
       margin-bottom: 10px;
@@ -325,16 +325,16 @@
       border-radius: 50%;
       width: 38px;
       height: 38px;
-      border: 1px solid $pallete-grey-10;
+      border: 1px solid var(--pallete-grey-10);
 
       &:hover {
-        color: $pallete-primary-main;
-        border: 1px solid $pallete-primary-main;
+        color: var(--pallete-primary-main);
+        border: 1px solid var(--pallete-primary-main);
         .arrow__left{
-          border-right:5px solid $pallete-primary-main;
+          border-right:5px solid var(--pallete-primary-main);
         }
         .arrow__right{
-          border-left:5px solid $pallete-primary-main;
+          border-left:5px solid var(--pallete-primary-main);
         }
       }
     }
@@ -362,12 +362,12 @@
       .scrollbar__track {
         width: 50%;
         height: 2px;
-        background-color: $pallete-grey-10;
+        background-color: var(--pallete-grey-10);
       }
       .scrollbar__thumb {
         width: 50%;
         height: 2px;
-        background-color: $pallete-grey-900;
+        background-color: var(--pallete-grey-900);
       }
     }
   }

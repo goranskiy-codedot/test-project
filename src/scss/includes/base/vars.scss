@@ -5,16 +5,17 @@ $base-size: 16;
 }
 
 // Colors
-$color-black: #1a1a1a;
-$color-red: #f2571f;
-$pallete-primary-main: #5551f7;
-$pallete-secondary-main: #ff5f68;
-$pallete-grey-900: #1c1d28;
-$pallete-common-white: #ffff;
-$pallete-grey-10: #e4e4e4;
-$pallete-common-white-10: #f2fcff;
-$pallete-common-white-20: #f9f8f7;
-
+:root{
+--color-black: #1a1a1a;
+--color-red: #f2571f;
+--pallete-primary-main: #5551f7;
+--pallete-secondary-main: #ff5f68;
+--pallete-grey-900: #1c1d28;
+--pallete-common-white: #ffff;
+--pallete-grey-10: #e4e4e4;
+--pallete-common-white-10: #f2fcff;
+--pallete-common-white-20: #f9f8f7;
+}
 // Media queries
 $desktop-extra: pxToRem(1280);
 $desktop: pxToRem(769);

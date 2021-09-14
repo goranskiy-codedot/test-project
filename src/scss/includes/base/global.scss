@@ -11,6 +11,10 @@
     transition-property: background, border, color, left, margin, padding, right, opacity;
   }
 }
+*{
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
 
 html {
   font-size: #{$base-size}px;
@@ -87,7 +91,7 @@ img {
 body {
   min-height: 100vh;
   transition: 0s;
-  color: $color-black;
+  color: var(--color-black);
   background-color: #f9f8f7;
   overscroll-behavior: none;
   scroll-behavior: smooth;
@@ -100,7 +104,7 @@ body {
 
 ::selection {
   color: white;
-  background: $color-red;
+  background: var(--color-red);
 }
 
 input[type="text"],
@@ -187,18 +191,18 @@ strong {
   font-size: 10px;
   line-height: 12px;
   letter-spacing: 0.02em;
-  background-color: $pallete-primary-main;
-  border: $pallete-primary-main;
-  color: $pallete-common-white;
+  background-color: var(--pallete-primary-main);
+  border: var(--pallete-primary-main);
+  color: var(--pallete-common-white);
   width: 129px;
   height: 33px;
   padding: 10px;
   text-align: center;
   cursor: pointer;
   &:hover {
-    color: $pallete-primary-main;
+    color: var(--pallete-primary-main);
     background-color: transparent;
-    border: 1px solid $pallete-primary-main;
+    border: 1px solid var(--pallete-primary-main);
   }
   @include desktop {
     // min-width: 171px;
