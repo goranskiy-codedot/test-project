@@ -8,6 +8,9 @@
     <title><%=title%></title>
     <link rel="stylesheet" href="css/main.min.css" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Bold.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Medium.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Regular.woff2" crossorigin="anonymous">
   </head>
   <body id="body">
     <div class="page-wrapper">
@@ -15,7 +18,7 @@
       <div class="container">
         <div class="header__menu" id="header">
         <div class="menu__logo">
-          <a href="#" class="logo" style="-webkit-mask-image: url(../uploads/logo.svg);">
+          <a href="#" class="logo" aria-label="Logo link" style="-webkit-mask-image: url(../uploads/logo.svg);">
           </a>
         </div> 
         <div class="navbar" id="navbar">
@@ -36,10 +39,10 @@
         </div> 
      
         <div class="menu__burger">
-          <a href="#body" class="close__button"></a> 
+          <a href="#body" class="close__button" aria-label="Close link"></a> 
           
           <div class="burger" >
-            <a href="#navbar" class="burger__link">
+            <a href="#navbar" class="burger__link" aria-label="Burgermenu link">
             <!-- <div class="burger__line"></div> -->
             <div class="burger__line"></div>
             <!-- <div class="burger__line"></div>    -->

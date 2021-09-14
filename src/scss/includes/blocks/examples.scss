@@ -68,8 +68,8 @@
       @include desktop {
         column-gap: 24px;
         display: grid;
-        // grid: repeat(2,246px)/55% auto;
-        grid: repeat(24,20px)/55% auto;
+        grid: repeat(2,246px)/55% auto;
+        // grid: repeat(24,20px)/55% auto;
         justify-content: center;
         row-gap: 26px;
       }
@@ -86,8 +86,8 @@
       min-height: 462px;
     }
     @include desktop {
-      // grid-area: auto / 1 / span 2 / span 2;
-      grid-area: auto/1/span 13/span 2;
+      grid-area: auto / 1 / span 2 / span 2;
+      // grid-area: auto/1/span 13/span 2;
       min-height: unset;
     }
   }
@@ -115,8 +115,8 @@
       min-height: 462px;
     }
     @include desktop {
-      // grid-area: auto / 1 / span 1 / span 1;
-      grid-area: auto/1/span 11/span 1;
+      grid-area: auto / 1 / span 1 / span 1;
+      // grid-area: auto/1/span 11/span 1;
       min-height: unset;
     }
   }
@@ -131,8 +131,8 @@
       min-height: 462px;
     }
     @include desktop {
-      // grid-area: auto / 2 / span 1 / span 1;
-      grid-area: auto/2/span 11/span 1;
+      grid-area: auto / 2 / span 1 / span 1;
+      // grid-area: auto/2/span 11/span 1;
       min-height: unset;
     }
   }
