@@ -1,6 +1,6 @@
 .hero {
   padding-bottom: 22px;
-  padding-top: 22px;
+  padding-top: 32px;
   @include tablet {
     padding-bottom: 10px;
     padding-top: 10px;
@@ -89,7 +89,7 @@
   &__content {
     h1{
       margin-bottom: 26px;
-      margin-top: 10px;  
+      // margin-top: 10px;  
       @include tablet{
         margin-bottom: 36px;
         margin-top: 36px;

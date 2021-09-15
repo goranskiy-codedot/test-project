@@ -53,7 +53,7 @@
       justify-content: initial;
       text-align: initial;
 
-      margin-bottom: 85px;
+      margin-bottom: 52px;
 
 
 
@@ -66,33 +66,48 @@
     .container {
       padding: 0 0;
       @include desktop {
+        // column-gap: 24px;
+        // display: grid;
+        // // grid: repeat(2,246px)/55% auto;
+        // // grid: repeat(24,20px)/55% auto;
+        // justify-content: center;
+        // row-gap: 26px;
+        // grid: repeat(4,246px)/55% 45%;
         column-gap: 24px;
         display: grid;
-        // grid: repeat(2,246px)/55% auto;
-        // grid: repeat(24,20px)/55% auto;
+        grid: repeat(4,auto)/55.5% 42.5%;
         justify-content: center;
         row-gap: 26px;
-        grid: repeat(4,246px)/55% 45%;
       }
     }
   }
 
 
-  .examples__image:nth-child(1),.examples__image:nth-child(3n + 1) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 235px;
+  .image__container:nth-child(1n),.image__container:nth-child(3n + 1) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235px;
     @include tablet{
-      min-height: 462px;
+      // min-height: 462px;
     }
     @include desktop {
-      position: absolute;
-      grid-area: auto / 1 / span 2 / span 2;
-      // grid-area: auto/1/span 13/span 2;
-      min-height: unset;
-      left: 0;
-      top: 0;
+      // position: absolute;
+      // position: relative;
+      // grid-area: auto / 1 / span 2 / span 2;
+      // // grid-area: auto/1/span 13/span 2;
+      // // min-height: unset;
+      // left: 0;
+      // top: 0;
+
+      grid-area: auto/1/span 2/span 2;
+      /* left: 0; */
+      position: relative;
+      /* top: 0; */
+      padding-bottom: 50.5%;
+      /* width: 100%; */
+      height: 0;
+      width: 100%;
     }
   }
 
@@ -110,43 +125,73 @@
   //     grid-area: auto / 1 / span 2 / span 2;
   //   }
   // }
-  .examples__image:nth-child(2),.examples__image:nth-child(3n + 2) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 235px;
+  .image__container:nth-child(2n),.image__container:nth-child(3n + 2) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235px;
     @include tablet{
-      min-height: 462px;
+      // min-height: 462px;
     }
     @include desktop {
-      grid-area: auto / 1 / span 1 / span 1;
-      position: absolute;
-      // grid-area: auto/1/span 11/span 1;
-      min-height: unset;
+      // grid-area: auto / 1 / span 1 / span 1;
+      // position: relative;
+      // // position: absolute;
+      // // grid-area: auto/1/span 11/span 1;
+      // // min-height: unset;
+      // left: 0;
+      // top: 0;
+      grid-area: auto/1/span 1/span 1;
       left: 0;
+      position: relative;
       top: 0;
+      padding-bottom: 80.5%;
+      /* margin-top: 26px; */
+      height: 0;
     }
   }
 
   //, .examples__image:nth-child(9n)
-  .examples__image:nth-child(3),.examples__image:nth-child(3n + 3) {
+  .image__container:nth-child(3n),.image__container:nth-child(3n + 3) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235px;
+    @include tablet{
+      // min-height: 462px;
+    }
+    @include desktop {
+      // grid-area: auto / 2 / span 1 / span 1;
+      // // grid-area: auto/2/span 11/span 1;
+      // // min-height: unset;
+      // // position: absolute;
+      // position:relative;
+      // left: 0;
+      // top: 0;
+      grid-area: auto/2/span 1/span 1;
+      left: 0;
+      position: relative;
+      top: 0;
+      padding-bottom: 105.5%;
+      /* margin-top: 26px; */
+      height: 0;
+    }
+  }
+
+   .examples__image{
     width: 100%;
     height: 100%;
     object-fit: cover;
     min-height: 235px;
-    @include tablet{
+     @include tablet{
       min-height: 462px;
-    }
-    @include desktop {
-      grid-area: auto / 2 / span 1 / span 1;
-      // grid-area: auto/2/span 11/span 1;
-      min-height: unset;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-  }
-
+     }
+     @include desktop{
+    min-height: unset;
+    position: absolute;
+    inset: 0;
+     }
+   }
 
   .button__link {
     margin-left: auto;
