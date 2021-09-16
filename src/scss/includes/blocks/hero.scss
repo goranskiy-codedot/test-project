@@ -1,35 +1,35 @@
 .hero {
-  padding-bottom: 22px;
-  padding-top: 32px;
+  padding-bottom: pxToRem(22);
+  padding-top: pxToRem(32);
   @include tablet {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: pxToRem(10);
+    padding-top: pxToRem(10);
   }
   @include desktop {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: pxToRem(26);
+    padding-bottom: pxToRem(26);
   }
   .container {
     @include tablet {
-      padding: 0 19px;
+      padding: ToRem(0) pxToRem(19);
     }
 
     @include desktop {
-      padding: 0px 35px;
+      padding: pxToRem(0) pxToRem(35);
     }
   }
 
   &__wrapper {
-    // margin-top: 24px;
+    // margin-top: 24pxToRem;
     display: flex;
     width: 100%;
 
     @include tablet {
-      // margin-top: 27px;
+      // margin-top: 27pxToRem;
     }
 
     @include desktop {
-      // margin-top: 64px;
+      // margin-top: 64pxToRem;
     }
   }
 
@@ -40,18 +40,10 @@
     @include tablet {
       width: 50%;
     }
-    @include desktop {
-    }
   }
 
-  &__content-text {
-    @include tablet {
-    }
-    @include desktop {
-    }
-  }
 
-  &__content-image {
+  .hero__image {
     width: 0%;
 
     @include tablet {
@@ -60,23 +52,23 @@
     }
   }
 
-  .content-image {
+  .image__container {
     display: none;
     //  transition:2s  ease-in-out ;
 
     @include tablet {
       display: flex;
-      max-height: 287px;
+      max-height:pxToRem(287);
       width: 100%;
       overflow: hidden;
       justify-content: center;
       height: auto;
-      max-height: 289px;
-      max-width: 357px;
+      max-height: pxToRem(289);
+      max-width: pxToRem(357);
     }
     @include desktop {
-      max-height: 416px;
-      max-width: 451px;
+      max-height: pxToRem(416);
+      max-width: pxToRem(451);
     }
 
     .image {
@@ -88,111 +80,61 @@
 
   &__content {
     h1{
-      margin-bottom: 26px;
-      // margin-top: 10px;  
+      margin-bottom: pxToRem(26);
+      // margin-top: 10pxToRem;  
       @include tablet{
-        margin-bottom: 36px;
-        margin-top: 36px;
+        margin-bottom: pxToRem(36);
+        margin-top: pxToRem(36);
       }
       @include desktop{
-        margin-bottom: 31px;
-        margin-top: 68px;
+        margin-bottom: pxToRem(31);
+        margin-top:pxToRem(68);
       }
-      @include media(769px, 952px) {
-        font-size: 29px;
+      @include media(pxToRem(769), pxToRem(952)) {
+        font-size: pxToRem(29);
       }
     }
   }
   p {
-    margin-bottom: 26px;
+    margin-bottom: pxToRem(25);
     @include tablet {
-      max-width: 374px;
-      margin-bottom: 33px;
+      max-width: pxToRem(374);
+      margin-bottom: pxToRem(33);
     }
     @include desktop {
-      max-width: 380px;
+      max-width: pxToRem(380);
       width: 100%;
-      margin-bottom: 54px;
+      margin-bottom: pxToRem(54);
     }
   }
-  .content-text {
-    margin-top: 25px;
+  
 
-    @include tablet {
-      margin-top: 36px;
-    }
-
-    @include desktop {
-      margin-top: 31px;
-    }
-  }
-
-  &__content-buttons {
-    // margin-top: 32px;
+  .content__buttons {
+    // margin-top: 32pxToRem;
     display: flex;
-    gap: 20px;
+    gap: pxToRem(20);
     align-items: center;
 
-    max-width: 380px;
+    max-width: pxToRem(380);
     flex-wrap: wrap;
     @include desktop {
     }
-    @include media(769px, 952px) {
-      gap: 5px;
+    @include media(pxToRem(769), pxToRem(952)) {
+      gap: pxToRem(5);
     }
 
-    .content__button {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 12px;
-      letter-spacing: 0.02em;
-      width: 129px;
-      padding: 10px;
-      display: block;
-      text-align: center;
-      // min-width: 129px;
-      // min-height: 33px;
-      background-color: var(--pallete-primary-main);
-      border: 1px solid var(--pallete-primary-main);
-      color: var(--pallete-common-white);
-      &:hover {
-        color: var(--pallete-primary-main);
-        background-color: transparent;
-        border: 1px solid var(--pallete-primary-main);
-      }
-      @include desktop {
-        // min-width: 171px;
-        // min-height: 41px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        padding: 12px;
-        width: 171px;
 
-      }
-    }
 
-    .price__btn {
+    .price__button {
       background-color: transparent;
-      border: 1px solid var(--pallete-primary-main);
+      border: pxToRem(1) solid var(--pallete-primary-main);
       color: var(--pallete-primary-main);
       &:hover {
         color: var(--pallete-common-white);
         background-color: var(--pallete-primary-main);
-        border: 1px solid var(--pallete-primary-main);
+        border: pxToRem(1) solid var(--pallete-primary-main);
       }
-      // padding-left: 48px;
-      // padding-right: 48px;
 
-      @include desktop {
-        // padding-left: 65px;
-        // padding-right: 65px;
-      }
     }
   }
 }

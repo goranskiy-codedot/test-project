@@ -1,7 +1,11 @@
 $base-size: 16;
 
-@function pxToRem($size) {
-  @return ($size / $base-size) * 1rem;
+// @function pxToRem($size) {
+//   @return ($size / $base-size) * 1rem;
+// }
+@function pxToRem($size, $postfix: rem) {
+  @return $size / $base-size * 1 + $postfix;
+  @return $size + px
 }
 
 // Colors
@@ -20,4 +24,4 @@ $base-size: 16;
 $desktop-extra: pxToRem(1280);
 $desktop: pxToRem(769);
 $tablet: pxToRem(640);
-$mobile: pxToRem(640);
+$mobile: pxToRem(576);

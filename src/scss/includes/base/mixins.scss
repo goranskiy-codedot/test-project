@@ -46,6 +46,13 @@
     line-height: $line-height !important;
   }
 }
+
+@mixin media($min, $max) {
+  @media (min-width: pxToRem($min, em)) and (max-width: pxToRem($max - 0.1, em)) {
+    @content;
+  }
+}
+
 @mixin placeholder-animation($text-ident, $transition-duration) {
   &::-moz-placeholder {
     text-indent: $text-ident !important;
