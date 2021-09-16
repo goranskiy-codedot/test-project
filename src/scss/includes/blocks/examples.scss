@@ -1,146 +1,205 @@
 .examples {
-  padding-bottom: 17px;
-  padding-top: 17px;
+  padding-bottom: pxToRem(17);
+  padding-top: pxToRem(17);
   @include tablet {
-    padding-bottom: 36px;
-    padding-top: 37px;
+    padding-bottom: pxToRem(36);
+    padding-top: pxToRem(37);
   }
   @include desktop {
-    padding-bottom: 25px;
-    padding-top: 28px;
+    padding-bottom: pxToRem(25);
+    padding-top: pxToRem(28);
   }
   .container {
     @include tablet {
-      padding: 0 19px;
+      padding: pxToRem(0) pxToRem(19);
     }
     @include desktop {
-      padding: 0px 35px;
+      padding: pxToRem(0) pxToRem(35);
     }
   }
 
 
     h2 {
-      margin-bottom: 33px;
-      // max-width: 132px;
+      margin-bottom: pxToRem(33);
+      // max-width: 132pxToRem;
       @include tablet {
-        margin-bottom: 57px;
-        // max-width: 175px;
+        margin-bottom: pxToRem(57);
+        // max-width: 175pxToRem;
       }
       @include desktop {
 
-        // max-width: 262px;
-        margin-bottom: 66px;
+        // max-width: 262pxToRem;
+        margin-bottom: pxToRem(66);
       }
     }
   
   &__images {
     object-fit: cover;
-    // margin-top: 33px;
+    // margin-top: 33pxToRem;
     width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 43px;
+    margin-bottom: pxToRem(40);
     @include tablet {
-      // margin-top: 57px;
-      margin-bottom: 50px;
+      // margin-top: 57pxToRem;
+      margin-bottom: pxToRem(50);
     }
     @include desktop {
-      padding-left: 85px;
-      padding-right: 85px;
-      // margin-top: 65px;
+      padding-left: pxToRem(85);
+      padding-right: pxToRem(85);
+      // margin-top: 65pxToRem;
       align-items: initial;
       justify-content: initial;
       text-align: initial;
 
-      margin-bottom: 85px;
+      margin-bottom: pxToRem(52);
 
 
 
       // display: grid;
-      // grid-template-columns: 497px;
-      // grid-template-rows: 560px 497px;
-      // grid-gap: 24px;
+      // grid-template-columns: 497pxToRem;
+      // grid-template-rows: 560pxToRem 497pxToRem;
+      // grid-gap: 24pxToRem;
     }
 
     .container {
       padding: 0 0;
       @include desktop {
-        column-gap: 24px;
+        // column-gap: 24pxToRem;
+        // display: grid;
+        // // grid: repeat(2,246pxToRem)/55% auto;
+        // // grid: repeat(24,20pxToRem)/55% auto;
+        // justify-content: center;
+        // row-gap: 26pxToRem;
+        // grid: repeat(4,246pxToRem)/55% 45%;
+        column-gap: pxToRem(24);
         display: grid;
-        grid: repeat(2,246px)/55% auto;
-        // grid: repeat(24,20px)/55% auto;
+        grid: repeat(4,auto)/55.5% 42.5%;
         justify-content: center;
-        row-gap: 26px;
+        row-gap: pxToRem(26);
       }
     }
   }
 
 
-  .examples__image:nth-child(1),.examples__image:nth-child(3n + 1) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 235px;
+  .image__container:nth-child(1n),.image__container:nth-child(3n + 1) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235pxToRem;
     @include tablet{
-      min-height: 462px;
+      // min-height: 462pxToRem;
     }
     @include desktop {
-      grid-area: auto / 1 / span 2 / span 2;
-      // grid-area: auto/1/span 13/span 2;
-      min-height: unset;
+      // position: absolute;
+      // position: relative;
+      // grid-area: auto / 1 / span 2 / span 2;
+      // // grid-area: auto/1/span 13/span 2;
+      // // min-height: unset;
+      // left: 0;
+      // top: 0;
+
+      grid-area: auto/1/span 2/span 2;
+      /* left: 0; */
+      position: relative;
+      /* top: 0; */
+      padding-bottom: 50.5%;
+      /* width: 100%; */
+      height: 0;
+      width: 100%;
     }
   }
 
   // .examples__image:nth-child(7n + 3){
   //   width: 100%;
-  //   height: 234px;
+  //   height: 234pxToRem;
   //   object-fit: cover;
   //   @include tablet {
   //     width: 100%;
-  //     height: 462px;
+  //     height: 462pxToRem;
   //   }
   //   @include desktop {
-  //     width: 1230px;
-  //     height: 561px;
+  //     width: 1230pxToRem;
+  //     height: 561pxToRem;
   //     grid-area: auto / 1 / span 2 / span 2;
   //   }
   // }
-  .examples__image:nth-child(2),.examples__image:nth-child(3n + 2) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 235px;
+  .image__container:nth-child(2n),.image__container:nth-child(3n + 2) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235pxToRem;
     @include tablet{
-      min-height: 462px;
+      // min-height: 462pxToRem;
     }
     @include desktop {
-      grid-area: auto / 1 / span 1 / span 1;
-      // grid-area: auto/1/span 11/span 1;
-      min-height: unset;
+      // grid-area: auto / 1 / span 1 / span 1;
+      // position: relative;
+      // // position: absolute;
+      // // grid-area: auto/1/span 11/span 1;
+      // // min-height: unset;
+      // left: 0;
+      // top: 0;
+      grid-area: auto/1/span 1/span 1;
+      left: 0;
+      position: relative;
+      top: 0;
+      padding-bottom: 80.5%;
+      /* margin-top: 26pxToRem; */
+      height: 0;
     }
   }
 
   //, .examples__image:nth-child(9n)
-  .examples__image:nth-child(3),.examples__image:nth-child(3n + 3) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 235px;
+  .image__container:nth-child(3n),.image__container:nth-child(3n + 3) {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    // min-height: 235pxToRem;
     @include tablet{
-      min-height: 462px;
+      // min-height: 462pxToRem;
     }
     @include desktop {
-      grid-area: auto / 2 / span 1 / span 1;
-      // grid-area: auto/2/span 11/span 1;
-      min-height: unset;
+      // grid-area: auto / 2 / span 1 / span 1;
+      // // grid-area: auto/2/span 11/span 1;
+      // // min-height: unset;
+      // // position: absolute;
+      // position:relative;
+      // left: 0;
+      // top: 0;
+      grid-area: auto/2/span 1/span 1;
+      left: 0;
+      position: relative;
+      top: 0;
+      padding-bottom: 105.5%;
+      /* margin-top: 26pxToRem; */
+      height: 0;
     }
   }
 
+   .examples__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: pxToRem(235);
+     @include tablet{
+      min-height: pxToRem(462);
+     }
+     @include desktop{
+    min-height: unset;
+    position: absolute;
+    inset: 0;
+     }
+   }
 
   .button__link {
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+  .image__container{
+    position: relative;
   }
 }
