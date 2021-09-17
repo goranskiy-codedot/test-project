@@ -82,11 +82,11 @@
   }
 }
 // Media queries
-@mixin media($min, $max) {
-  @media (min-width: $min) and (max-width: $max) {
-    @content;
-  }
-}
+// @mixin media($min, $max) {
+//   @media (min-width: $min) and (max-width: $max) {
+//     @content;
+//   }
+// }
 
 @mixin media-min($size) {
   @media (min-width: $size) {
@@ -101,25 +101,26 @@
 }
 
 @mixin desktop-extra() {
-  @media (min-width: $desktop-extra) {
+  @media (min-width: pxToRem($desktop-extra, em)) {
     @content;
   }
 }
 
 @mixin desktop() {
-  @media (min-width: $desktop) {
+  @media (min-width: pxToRem($desktop, em)) {
     @content;
   }
 }
 
 @mixin tablet() {
-  @media (min-width: $tablet) {
+  @media (min-width: pxToRem($tablet, em)) {
     @content;
   }
 }
 
 @mixin mobile() {
-  @media (min-width: $mobile) {
+  @media (min-width: pxToRem($mobile, em)) {
     @content;
   }
 }
+

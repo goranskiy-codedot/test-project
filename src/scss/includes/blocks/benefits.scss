@@ -1,6 +1,6 @@
 .benefits {
   .container {
-    @include tablet {
+    @include media($tablet,$desktop){
       padding: pxToRem(0) pxToRem(19);
     }
     @include desktop {
@@ -10,8 +10,10 @@
  
     // padding-top: 68pxToRem;
     h2 {
+      @include media(0,$tablet){
       margin-bottom: pxToRem(39);
-      @include tablet{
+      }
+      @include media($tablet,$desktop){
         margin-bottom: pxToRem(72);
       }
       @include desktop{
@@ -21,47 +23,59 @@
     }
   
   .benefits__wrapper {
+    @include media(0,$tablet){
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-items: baseline;
     row-gap: pxToRem(51);
-    @include tablet {
+    }
+    @include media($tablet,$desktop) {
       margin-left: pxToRem(79);
       // margin-top: 75pxToRem;
       grid-template-rows: 1fr;
       grid-template-columns: 0.95fr 1fr;
       row-gap: pxToRem(82);
+      align-items: baseline;
+      display: grid;
     }
     @include desktop {
       // margin-top: 82pxToRem;
       margin-left: pxToRem(0);
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
-      gap: pxToRem(7);  
+     
+      row-gap: pxToRem(82);
+      gap: pxToRem(7); 
+      align-items: baseline;
+      display: grid;
 
     }
   }
   
 
   .text{
+    @include media(0,$tablet){
     margin-top: pxToRem(20)!important;
     max-width: pxToRem(223);
-    @include tablet {
+    }
+    @include media($tablet,$desktop) {
 
       margin-top: pxToRem(25)!important;
       max-width: pxToRem(262);
     }
     @include desktop{
+      margin-top: pxToRem(25)!important;
       max-width: pxToRem(223);
     }
   }
 
 .section {
-
+@include media(0,$tablet){
   padding-top: pxToRem(15);
   padding-bottom: pxToRem(28);
-  @include tablet {
+}
+@include media($tablet,$desktop) {
     padding-bottom: pxToRemToRem(36);
     padding-top: pxToRemToRem(36);
   }

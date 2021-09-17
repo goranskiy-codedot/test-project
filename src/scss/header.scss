@@ -1,5 +1,7 @@
 #body:target {
+  @include media(0,$tablet){
   overflow: hidden;
+  }
   @include tablet {
     overflow: auto;
   }
@@ -22,7 +24,9 @@
 }
 
 #body:target .logo {
+  @include media(0,$tablet){
   background-color: var(--pallete-common-white);
+  }
   @include tablet {
     background-color: var(--pallete-grey-900);
   }
@@ -30,8 +34,10 @@
 
 #body:not(:target) {
   #navbar {
+    @include media(0,$tablet){
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    }
     @include tablet {
       transform: none;
       transition: unset;
@@ -41,17 +47,22 @@
 
 #body:target {
   #navbar {
+    @include media(0,$tablet){
     transform: translateX(0%);
     transition: transform 0.3s ease;
+    }
     @include tablet {
       transform: none;
+      transition: transform 0.3s ease;
     }
   }
 }
 
 #body:target .menu__burger {
+  @include media(0,$tablet){
   position: fixed;
   right:pxToRem(0);
+  }
   @include tablet {
     display: none;
   }
@@ -88,8 +99,10 @@
 .header {
 
   .container {
+    @include media(0,$tablet){
     padding:pxToRem(0);
-    @include tablet {
+    }
+    @include media($tablet,$desktop){ 
       padding: pxToRem(0) pxToRem(14);
     }
     @include desktop {
@@ -98,25 +111,34 @@
   }
 
   &__menu {
+    @include media(0,$desktop){
     display: flex;
     padding-top: pxToRem(0);
     justify-content: space-between;
     align-items: center;
-    @include tablet {
+    }
+    @include media($tablet,$desktop) {
       padding: pxToRem(13) pxToRem(0);
       gap: pxToRem(25);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     @include desktop {
       padding: pxToRem(30) pxToRem(0);
       max-width: pxToRem(1110);
       width: 100%;
       gap: pxToRem(15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .menu__logo {
       z-index: 1001;
 
       .logo {
+        @include media(0,$desktop){
         display: block;
         z-index: 1001;
         height: pxToRem(65);
@@ -125,12 +147,22 @@
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: pxToRem(49) pxToRem(49);
+        }
         @include desktop {
+          display: block;
+          z-index: 1001;
+          height: pxToRem(65);
+          width: pxToRem(65);
+          background-color: var(--pallete-grey-900);
+          -webkit-mask-position: center;
+          -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: pxToRem(65);
         }
       }
     }
     .menu__burgerMenu {
+      @include media(0,$tablet)
+      {
       z-index: 1003;
 
       .button_closed {
@@ -190,12 +222,14 @@
           padding-left: pxToRem(24);
         }
       }
+    }
       @include tablet {
         display: none;
       }
     }
 
     .menu__navbar {
+      @include media(0,$tablet){
       position: fixed;
       z-index: 1000;
       top: 0;
@@ -214,15 +248,20 @@
       padding-top: pxToRem(62);
       padding-bottom: pxToRem(42);
       display: flex;
-
-      @include tablet {
+      }
+      @include media($tablet,$desktop) {
         position: initial;
         overflow: hidden;
+        z-index: 1000;
         background: transparent;
         transform: none;
         transition: none;
+        list-style: none;
         color: var(--pallete-grey-900);
         padding-top: pxToRem(0);
+        width: 100%;
+        height: 100%;
+        align-items: center;
         flex-direction: initial;
         // justify-content: initial;
         display: initial;
@@ -235,6 +274,20 @@
         // justify-content: initial;
         // display: initial;
         // margin-left: 53pxToRem;
+        position: initial;
+        overflow: hidden;
+        z-index: 1000;
+        background: transparent;
+        transform: none;
+        transition: none;
+        list-style: none;
+        color: var(--pallete-grey-900);
+        padding-top: pxToRem(0);
+        height: 100%;
+        align-items: center;
+        flex-direction: initial;
+       // justify-content: initial;
+        padding-bottom: pxToRem(0);
         max-width: pxToRem(970);
         width: 100%;
         // justify-content: space-between;
@@ -242,15 +295,17 @@
       }
 
       .navbar__navigationContainer {
+        @include media(0,$tablet){
         height: 100%;
         width: 100%;
         overflow: auto;
-        
-        @include tablet {
+        }
+        @include media($tablet,$desktop) {
           display: flex;
           padding-right: pxToRem(0);
           overflow: hidden;
           // gap: 47pxToRem;
+          height: 100%;
           justify-content: space-between;
           max-width: pxToRem(642);
           width: 100%;
@@ -261,21 +316,26 @@
           max-width: pxToRem(970);
           width: 100%;
           justify-content: space-between;
-
+          height: 100%;
           gap: pxToRem(0);
+          
         }
 
         .container__items {
+          @include media(0,$tablet){
           padding-top: pxToRem(42);
           padding-bottom: pxToRem(42);
          margin-left: auto;
          margin-right: auto;
+          }
           @include tablet {
             padding-top: pxToRem(0);
             padding-bottom: pxToRem(0);
             display: flex;
             align-items: center;
+            margin: 0;
           }
+       
         }
       }
 
@@ -286,11 +346,10 @@
         width: auto;
         text-align: center;
         display: block;
-        @include tablet {
-        }
       }
 
       li a {
+        @include media(0,$tablet){
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -301,33 +360,65 @@
         padding-bottom: pxToRem(20);
         padding: pxToRem(20);
         display: block;
-
-        @include tablet {
+        }
+     
+        @include media($tablet, 697) {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
           color:var(--pallete-grey-900);
           font-size: pxToRem(10);
           line-height: 12pxToRem(12);
+          letter-spacing: 0.02em;
+          padding: pxToRem(12.5) pxToRem(4.8);
+        }
+        @include media(697,$desktop) {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          color:var(--pallete-grey-900);
+          font-size: pxToRem(10);
+          line-height: 12pxToRem(12);
+          letter-spacing: 0.02em;
           padding: pxToRem(12.5) pxToRem(12.8);
+          display: block;
           // width: max-content;
         }
-
-        @include desktop {
-          color: var(--pallete-grey-900);
-          font-size: pxToRem(13);
-          line-height: pxToRem(16);
-          padding: pxToRem(12.5) pxToRem(22.4);
-        }
-        @include media(pxToRem(769), pxToRem(992)) {
+        @include media($desktop, 992) {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
           color: var(--pallete-grey-900);
           font-size: pxToRem(10);
           line-height: pxToRem(12);
+          letter-spacing: 0.02em;
           padding: pxToRem(12.5) pxToRem(12.8);
         }
-        @include media(pxToRem(640), pxToRem(697)) {
-          padding: pxToRem(12.5) pxToRem(4.8);
+        @include media(992,$desktop-extra){
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          color: var(--pallete-grey-900);
+          font-size: pxToRem(13);
+          letter-spacing: 0.02em;
+          line-height: pxToRem(16);
+          padding: pxToRem(12.5) pxToRem(22.4);
+        }
+
+        @include desktop-extra {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 500;
+          color: var(--pallete-grey-900);
+          font-size: pxToRem(13);
+          letter-spacing: 0.02em;
+          line-height: pxToRem(16);
+          padding: pxToRem(12.5) pxToRem(22.4);
         }
       }
     }
     .navbar__contactsContainer {
+      @include media(0,$tablet){
       align-items: center;
       display: flex;
       // margin-left: auto;
@@ -335,22 +426,63 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      @include tablet {
-        position: initial;
-        justify-content: space-between;
-        max-width: pxToRem(274);
       }
-      @include desktop {
+   
+      // @include tablet {
+      //   position: initial;
+      //   align-items: center;
+      //   justify-content: space-between;
+      //   max-width: pxToRem(274);
+      //   width: 100%;
+      //   display: flex;
+      // } 
+      @include media($tablet, 727) {
+        display: flex;
+        position: initial;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: pxToRem(254);
+      }  
+      @include media(727,992){
+        display: flex;
+        position: initial;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: pxToRem(254);
+      }
+    
+  
+      // @include media($desktop, 992) {
+      //   display: flex;
+      //   position: initial;
+      //   align-items: center;
+      //   justify-content: space-between;
+      //   width: 100%;
+      //   max-width: pxToRem(306);
+      // }
+      @include media(992,$desktop-extra){
+        display: flex;
+        position: initial;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
         max-width: pxToRem(364);
       }
-      @include media(pxToRem(769), pxToRem(992)) {
-        max-width: pxToRem(306);
+
+      @include desktop-extra {
+        display: flex;
+        position: initial;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: pxToRem(364);
       }
-      @include media(pxToRem(640), pxToRem(727)) {
-        max-width: pxToRem(244);
-      }
+   
     }
     .contactsContainer__tel {
+      @include media(0,$tablet){
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
@@ -359,38 +491,84 @@
       letter-spacing: 0.02em;
       color: inherit;
       display: none;
-      
-      @include tablet {
+      }
+      @include media($tablet,727){
+        font-family: Montserrat;
+        font-style: normal;
         font-weight: bold;
         font-size: pxToRem(10);
         line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(22.4);
+        padding: pxToRem(12.5) pxToRem(15);
         display: block;
         white-space: nowrap;
         &:visited {
           color: var(--pallete-grey-900);
         }
       }
-      @include desktop {
+      @include media(727,$desktop) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
+        padding: pxToRem(12.5) pxToRem(15);
+        display: block;
+        white-space: nowrap;
+        padding-left: pxToRem(4);
+        padding-right: pxToRem(4);
+        &:visited {
+          color: var(--pallete-grey-900);
+        }
+      }
+        
+      @include media($desktop, 992) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
+        display: block;
+        white-space: nowrap;
+        padding: pxToRem(12.5) pxToRem(15);
+        &:visited {
+          color: var(--pallete-grey-900);
+        }
+      }
+      @include media(992,$desktop-extra){
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
+        padding: pxToRem(12.5) pxToRem(22.4);
+        display: block;
+        white-space: nowrap;
         font-size: pxToRem(13);
         line-height: pxToRem(16);
         &:visited {
           color: var(--pallete-grey-900);
         }
       }
-      @include media(pxToRem(769), pxToRem(992)) {
+      @include desktop-extra {
+        font-family: Montserrat;
+        font-style: normal;
         font-weight: bold;
-        font-size:pxToRem(10);
+        font-size: pxToRem(10);
         line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(15);
+        padding: pxToRem(12.5) pxToRem(22.4);
+        display: block;
+        white-space: nowrap;
+        font-size: pxToRem(13);
+        line-height: pxToRem(16);
+        &:visited {
+          color: var(--pallete-grey-900);
+        }
       }
-      @include media(pxToRem(640), pxToRem(727)) {
-        padding-left: pxToRem(4);
-        padding-right: pxToRem(4);
-      }
+ 
     }
 
     .contactsContainer__button {
+      @include media(0,$tablet){
       width: 100%;
       color: var(--pallete-common-white);
       margin-top: auto;
@@ -408,14 +586,15 @@
         background-color: #ff3c68;
         border: pxToRem(1) solid #ff3c68;
       }
-      @include tablet {
+    }
+      @include media($tablet,$desktop) {
         width: initial;
         position: initial;
         min-width: pxToRem(129);
         font-size: pxToRem(10);
         line-height: pxToRem(12);
         padding: pxToRem(0);
-        min-height: pxToRem(33);
+        height: pxToRem(33);
         // margin-bottom: 32pxToRem;
         margin-left: pxToRem(0);
         background-color: var(--pallete-primary-main);
@@ -426,11 +605,13 @@
           border: pxToRem(1) solid var(--pallete-primary-main);
         }
       }
-      @include media(pxToRem(769), pxToRem(992)) {
+      @include media($desktop, 992) {
         width: initial;
         position: initial;
         min-width: pxToRem(129);
-        min-height: pxToRem(33);
+        height: pxToRem(33);
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
         // margin-bottom: 32pxToRem;
         margin-left: pxToRem(0);
         background-color: var(--pallete-primary-main);
@@ -441,7 +622,7 @@
           border: pxToRem(1) solid var(--pallete-primary-main);
         }
       }
-      @include desktop {
+      @include media(992,$desktop-extra){
         min-width: pxToRem(171);
         min-height: pxToRem(41);
         font-size: pxToRem(13);
@@ -450,6 +631,16 @@
         margin-top: 0;
         padding: pxToRem(12);
       }
+      @include desktop-extra {
+        min-width: pxToRem(171);
+        min-height: pxToRem(41);
+        font-size: pxToRem(13);
+        line-height: pxToRem(16);
+        // margin-right: 25pxToRem;
+        margin-top: 0;
+        padding: pxToRem(12);
+      }
+  
     }
     &__logo {
       position: fixed;

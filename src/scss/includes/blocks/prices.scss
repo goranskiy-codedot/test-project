@@ -1,131 +1,174 @@
 .pricesSection {
-  padding-bottom: 66px;
-  padding-top: 66px;
-  @include tablet{
-    padding-bottom: 65px;
-    padding-top: 65px;
+  @include media(0,$tablet){
+  padding-bottom: pxToRem(66);
+  padding-top:pxToRem(66);
+  }
+  @include media($tablet,$desktop){
+    padding-bottom: pxToRem(65);
+    padding-top: pxToRem(65);
   }
   @include desktop {
-    padding-bottom: 68px;
-    padding-top: 72px;
+    padding-bottom: pxToRem(68);
+    padding-top: pxToRem(72);
   }
   h2 {
+    @include media(0,$tablet){
     text-align: center;
     width: 100%;
-    margin-bottom: 38px;
-    @include tablet {
-      // max-width: 60px;
-      margin-bottom: 52px;
+    margin-bottom: pxToRem(38);
+    }
+    @include media($tablet,$desktop){
+      // max-width: 60pxToRem;
+      text-align: center;
+      width: 100%;
+      margin-bottom: pxToRem(52);
     }
     @include desktop {
-      margin-bottom: 65px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: pxToRem(65);
 
     }
   }
   .prices {
     // justify-content: center;
-    // padding-left: 29px;
-    // padding-right: 27px;
+    // padding-left: 29pxToRem;
+    // padding-right: 27pxToRem;
     // width: max-content;
+    @include media(0,$tablet){
     margin: 0 auto;   
     padding-right: 0;
 
     justify-content: center;
+    }
     @include tablet {
-      padding-left: 0px;
-      padding-right: 0px;
-      // margin-top: 52px;
+      padding-left: pxToRem(0);
+      padding-right: pxToRem(0);
+      // margin-top: 52pxToRem;
       display: grid;
    justify-content: center;
     flex-wrap: wrap;
     padding-left: 0;
-
+    margin: 0 auto;   
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3,32%);
     }
-    @include desktop {
 
-    }
     .pack {
-      max-width: 244px;
-      // min-height: 386px;
-      border: 1px solid var(--pallete-grey-10);
-      padding: 18px;
+      @include media(0,$tablet){
+      max-width: pxToRem(244);
+      // min-height: 386pxToRem;
+      border: pxToRem(1) solid var(--pallete-grey-10);
+      padding: pxToRem(18);
       height: 100%;
-      padding:19px 19px 34px;
-      min-height: 386px;
+      padding:pxToRem(19) pxToRem(19) pxToRem(34);
+      min-height: pxToRem(386);
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      @include tablet{
-        padding:19px 19px 34px;
-        
       }
- 
-      @include desktop {
-        // min-height: 552px;
-        padding: 34px 32px 48px;
-        max-width: 370px;
+      @include tablet{
+        max-width: pxToRem(244);
+        // min-height: 386pxToRem;
+        border: pxToRem(1) solid var(--pallete-grey-10);
+        padding: pxToRem(18);
+        height: 100%;
+        padding:pxToRem(19) pxToRem(19) pxToRem(34);
+        min-height: pxToRem(386);
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
       }
  
-      @include media(641px,740px){
-        // min-height: 443px;
+      @include desktop {
+        // min-height: 552pxToRem;
+        border: pxToRem(1) solid var(--pallete-grey-10);
+        min-height: pxToRem(386);
+        margin-left: auto;
+        margin-right: auto;
+        padding: pxToRem(34) pxToRem(32) pxToRem(48);
+        max-width: pxToRem(370);
+        width: 100%;
+      }
+ 
+      @include media(641,740){
+        // min-height: 443pxToRem;
         height: 100%;
      }
-      @include media(769px,1118px){
-        // min-height: 653px;
+      @include media($desktop,1118){
+        // min-height: 653pxToRem;
         height: 100%;
      }
       &__wrapper {
-        border-bottom: 2px solid var(--pallete-grey-10);
-        margin: 0 0 25px;
-        // margin: 21px;
+        @include media(0,$tablet){
+        border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+        margin: pxToRem(0) pxToRem(0) pxToRem(25);
+        // margin: 21pxToRem;
         text-align: center;
-        @include tablet {
-          // margin: 19px;
-          margin: 0 0 26px;
+        }
+        @include media($tablet,$desktop) {
+          // margin: 19pxToRem;
+          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+          margin: pxToRem(0) pxToRem(0) pxToRem(26);
+          text-align: center;
         }
         @include desktop {
-          border-bottom: 2px solid var(--pallete-grey-10);
-          margin: 0 0 39px 0;
-          // margin: 32px;
+          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+          margin: pxToRem(0) pxToRem(0) pxToRem(39) pxToRem(0);
+          // margin: 32pxToRem;
+          text-align: center;
         }
       }
       &__header{
+        @include media(0,$desktop){
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 10px;
-        line-height: 15px;
+        font-size: pxToRem(10);
+        line-height: pxToRem(15);
         letter-spacing: 0.02em;
         margin-block-end: 0em;
         margin-block-start: 0em;
-        margin-bottom: 25px;
+        margin-bottom:pxToRem(25);
+        }
         @include desktop{
-          font-size: 15px;
-          line-height: 22px;
-          margin-bottom: 42px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: pxToRem(15);
+          line-height: pxToRem(22);
+          margin-bottom:pxToRem(42);
+          letter-spacing: 0.02em;
+          margin-block-end: 0em;
+          margin-block-start: 0em;
           
         }
       }
 
       &__price {
+        @include media(0,$desktop){
         display: flex;
 
         align-items: baseline;
         justify-content: center;
         position: relative;
-        // margin-top: 22px;
-        gap: 5px;
-        // margin-right: 17px;
-        max-width: 320px;
+        // margin-top: 22pxToRem;
+        gap: pxToRem(5);
+        // margin-right: 17pxToRem;
+        max-width: pxToRem(320);
+        }
         @include tablet {
-          // margin-top: 21px;
+          // margin-top: 21pxToRem;
         }
         @include desktop {
-          // margin-top: 43px;
-          gap: 10px;
+          // margin-top: 43pxToRem;
+          gap: pxToRem(10);
+          max-width: pxToRem(320);
+          display: flex;
+
+          align-items: baseline;
+          justify-content: center;
+          position: relative;
         }
         .grivna::before {
           content: "₴";
@@ -136,157 +179,219 @@
         
 
         .price {
+          @include media(0,$desktop){
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
-          font-size: 20px;
-          line-height: 29px;
+          font-size: pxToRem(20);
+          line-height: pxToRem(29);
           letter-spacing: 0.02em;
           color: var(--pallete-grey-900);
-          // padding-right: 12px;
-          // padding-top: 7px;
-          // margin-top: 4px;
-          // margin-right: 15px;
+          // padding-right: 12pxToRem;
+          // padding-top: 7pxToRem;
+          // margin-top: 4pxToRem;
+          // margin-right: 15pxToRem;
+          }
           @include desktop {
-            font-size: 30px;
-            line-height: 44px;
-            // margin-top: 10px;
-            // margin-right: 0px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: pxToRem(30);
+            line-height: pxToRem(44);
+            letter-spacing: 0.02em;
+          color: var(--pallete-grey-900);
+            // margin-top: 10pxToRem;
+            // margin-right: 0pxToRem;
           }
         }
       }
       .hint__bottom {
+        @include media(0,$tablet){
         display: block;
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        font-size: 10px;
-        line-height: 19px;
+        font-size: pxToRem(10);
+        line-height: pxToRem(19);
         letter-spacing: 0.02em;
         color: var(--pallete-grey-10);
         margin-block-start: 0em;
         margin-block-end: 0em;
-        margin-bottom: 22px;
-        @include tablet{
-          margin-bottom: 20px;
+        margin-bottom: pxToRem(22);
+        }
+        @include media($tablet,$desktop){
+          display: block;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: pxToRem(10);
+          line-height: pxToRem(19);
+          letter-spacing: 0.02em;
+          color: var(--pallete-grey-10);
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          margin-bottom: pxToRem(20);
         }
         @include desktop {
-          font-size: 12px;
-          line-height: 22px;
-          margin-bottom: 40px;
+
+          display: block;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          letter-spacing: 0.02em;
+          color: var(--pallete-grey-10);
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          font-size: pxToRem(12);
+          line-height: pxToRem(22);
+          margin-bottom: pxToRem(40);
      
         }
       }
       .hint {
+        @include media(0,$desktop){
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 10px;
-        line-height: 15px;
+        font-size: pxToRem(10);
+        line-height: pxToRem(15);
         letter-spacing: 0.02em;
         color: var(--pallete-grey-10);
         margin-block-start: 0em;
         margin-block-end: 0em;
+        }
         @include desktop {
-          font-size: 15px;
-          line-height: 22px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size:pxToRem(15);
+          line-height: pxToRem(22);
+          letter-spacing: 0.02em;
+          color: var(--pallete-grey-10);
+          margin-block-start: 0em;
+          margin-block-end: 0em;
         }
       }
       .button {
-          margin-bottom: 29px;
-          border: 1px solid var(--pallete-primary-main);
+        @include media(0,$tablet){
+          margin-bottom: pxToRem(29);
+          border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-primary-main);
           background-color: transparent;
-
-        @include tablet{
-          // margin-bottom: 29px;
-          border: 1px solid var(--pallete-primary-main);
+        }
+        @include media($tablet,$desktop){
+          // margin-bottom: 29pxToRem;
+          border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-primary-main);
           background-color: transparent;
-          margin-bottom: 30px;
+          margin-bottom: pxToRem(30);
           
         }
         @include desktop {
-          border: 1px solid var(--pallete-grey-900);
+          border: pxToRem(1) solid var(--pallete-grey-900);
           color: var(--pallete-grey-900);
           background-color: transparent;
-          padding: 12px;
-          margin-bottom: 40px;
+          padding: pxToRem(12);
+          margin-bottom: pxToRem(40);
         }
       }
       &__button {
+        @include media(0,$tablet){
         text-align: center;
         justify-content: center;
         align-items: center;
-        // padding-top: 21px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        @include tablet {
-          margin-bottom: 30px;
-          margin-top: 19px;
+        // padding-top: 21pxToRem;
+        margin-top: pxToRem(20);
+        margin-bottom: pxToRem(30);
+        }
+        @include media($tablet,$desktop) {
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: pxToRem(30);
+          margin-top: pxToRem(19);
         }
         @include desktop {
-          // padding-top: 36px;
-          margin-bottom: 40px;
-          margin-top: 40px;
+          // padding-top: 36pxToRem;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: pxToRem(40);
+          margin-top: pxToRem(40);
         }
       
       }
       .line {
-        width: 206px;
-        margin-top: 31px;
+        @include media(0,$desktop){
+        width: pxToRem(206);
+        margin-top: pxToRem(31);
+        }
         @include desktop {
-          width: 306px;
-          margin-top: 41px;
+          width: pxToRem(306);
+          margin-top: pxToRem(41);
         }
       }
  
    
       &__benefits {
         .benefits__list {
-          // padding: 1px 7px;
-          padding-right: 0px;
+          // padding: 1pxToRem 7pxToRem;
+          @include media(0,$tablet){
+          padding-right: pxToRem(0);
           display: grid;
-          row-gap: 9px; 
-          @include tablet {
-            // padding: 0px 13px;
-            padding-right: 0px;
+          row-gap: pxToRem(9); 
+          }
+          @include media($tablet,$desktop) {
+            // padding: 0pxToRem 13pxToRem;
+            padding-right: pxToRem(0);
+            display: grid;
+            row-gap: pxToRem(9); 
           }
           @include desktop {
-            // padding: 0px 0 0px 11px;
-            padding-right: 0px;
+            // padding: 0pxToRem 0 0pxToRem 11pxToRem;
+            padding-right: pxToRem(0);
+            display: grid;
+            row-gap: pxToRem(9); 
          
           }
         
         }
 
         .benefits {
+          @include media(0,$tablet){
           font-family: Montserrat;
           font-style: normal;
           font-weight: normal;
-          font-size: 10px;
-          line-height: 19px;
+          font-size: pxToRem(10);
+          line-height: pxToRem(19);
           letter-spacing: 0.02em;
-          // padding-left: 41px;
-          // margin-block-end: 9px;
-          // margin-block-start: 4px;
-          padding-left: 24px;
-          @include tablet {
-            // margin-block-end: 10px;
-            // margin-block-start: 8px;
-            padding-left: 21px;
+          // padding-left: 41pxToRem;
+          // margin-block-end: 9pxToRem;
+          // margin-block-start: 4pxToRem;
+          padding-left: pxToRem(24);
+          }
+          @include media($tablet,$desktop) {
+            // margin-block-end: 10pxToRem;
+            // margin-block-start: 8pxToRem;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: pxToRem(10);
+            line-height: pxToRem(19);
+            letter-spacing: 0.02em;
+            padding-left: pxToRem(21);
           }
           @include desktop {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
-            font-size: 15px;
-            line-height: 28px;
+            font-size: pxToRem(15);
+            line-height: pxToRem(28);
             letter-spacing: 0.02em;
-            // margin-block-start: 8px;
+            // margin-block-start: 8pxToRem;
 
-            // margin-block-end: 9px;
-            padding-left: 32px;
+            // margin-block-end: 9pxToRem;
+            padding-left: pxToRem(32);
           }
           // &::marker {
           //   content: url(../../../uploads/check.svg);
@@ -296,34 +401,48 @@
           //   }
           // }
           &::before {
+            @include media(0,$desktop){
             content: "";
-            width: 10px;
-            height: 6px;
+            width: pxToRem(10);
+            height: pxToRem(6);
             display: block;
             transform: rotate(-45deg);
-            border-bottom: 2px solid var(--pallete-secondary-main);
-            border-left: 2px solid var(--pallete-secondary-main);
-            margin-left: -23px;
-            margin-top: 4px;
+            border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+            border-left: pxToRem(2) solid var(--pallete-secondary-main);
+            margin-left: pxToRem(-23);
+            margin-top: pxToRem(4);
             position: absolute;
+            }
             @include desktop {
-              height: 9px;
-              margin-left: -31px;
-              margin-top: 9px;
-              width: 14px;
+              content: "";
+              display: block;
+              height:pxToRem(9);
+              transform: rotate(-45deg);
+              margin-left: pxToRem(-31);
+              margin-top: pxToRem(9);
+              border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+              border-left: pxToRem(2) solid var(--pallete-secondary-main);
+              width: pxToRem(14);
+              position: absolute;
             }
           }
         }
         .benefit__bold{
+          @include media(0,$desktop){
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
-          font-size: 10px;
-          line-height: 19px;
+          font-size: pxToRem(10);
+          line-height: pxToRem(19);
           letter-spacing: 0.02em;
+          }
           @include desktop{
-          font-size: 15px;
-          line-height: 28px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: pxToRem(15);
+          line-height: pxToRem(28);
+          letter-spacing: 0.02em;
           }
         
         }
@@ -339,65 +458,78 @@
     //   font-family: Montserrat;
     //   font-style: normal;
     //   font-weight: bold;
-    //   font-size: 20px;
+    //   font-size: 20pxToRem;
     //   line-height: 145%;
     //   letter-spacing: 0.02em;
     //   opacity: 0;
     //   @include desktop{
     //     font-family: Montserrat;
-    //     font-size: 30px;
+    //     font-size: 30pxToRem;
     //     font-style: normal;
     //     font-weight: 700;
     //     letter-spacing: .02em;
     //     line-height: 145%;
-    //     margin-top: 10px;
+    //     margin-top: 10pxToRem;
     //     opacity: 0;
     //   }
     // }
 
     .hover {
-      border: 1px solid var(--pallete-primary-main);
+      border: pxToRem(1) solid var(--pallete-primary-main);
       position: relative;
       background-color: var(--pallete-common-white-20);
    
       &::before {
+        @include media(0,$desktop){
         content: "";
-        width: 17px;
-        height: 26px;
+        width: pxToRem(17);
+        height: pxToRem(26);
         background-color: var(--pallete-primary-main);
         display: inline-block;
         position: absolute;
-        right: 18px;
+        right: pxToRem(18);
         top: 0;
+        }
         @include desktop {
-          width: 27px;
-          height: 43px;
-          right: 31px;
+          content: "";
+          width: pxToRem(27);
+          height: pxToRem(43);
+          right: pxToRem(31);
+          background-color: var(--pallete-primary-main);
+        display: inline-block;
+        position: absolute;
+        top: 0;
         }
       }
       &::after {
+        @include media(0,$desktop){
         background-color: inherit;
         content: "";
         display: inline-block;
-        height: 14px;
+        height: pxToRem(14);
         position: absolute;
-        right: 20px;
-        top: 19px;
+        right: pxToRem(20);
+        top: pxToRem(19);
         transform: rotate(45deg);
-        width: 14px;
-
+        width: pxToRem(14);
+        }
         @include desktop {
-          height: 20px;
-          width: 20px;
-          top: 33px;
-          right: 34px;
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          height: pxToRem(20);
+          width: pxToRem(20);
+          top: pxToRem(33);
+          right: pxToRem(34);
+          transform: rotate(45deg);
         }
       }
       .button {
         color: var(--pallete-primary-main);
-        border: 1px solid var(--pallete-primary-main);
+        border: pxToRem(1) solid var(--pallete-primary-main);
         &:hover {
-          border: 1px solid var(--pallete-primary-main);
+          border: pxToRem(1) solid var(--pallete-primary-main);
           background-color: var(--pallete-primary-main);
           color: var(--pallete-common-white);
         }
