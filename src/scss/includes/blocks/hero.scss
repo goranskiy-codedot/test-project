@@ -1,7 +1,9 @@
 .hero {
+  @include media(0,$tablet){
   padding-bottom: pxToRem(22);
   padding-top: pxToRem(32);
-  @include tablet {
+  }
+  @include media($tablet,$desktop) {
     padding-bottom: pxToRem(10);
     padding-top: pxToRem(10);
   }
@@ -10,8 +12,8 @@
     padding-bottom: pxToRem(26);
   }
   .container {
-    @include tablet {
-      padding: ToRem(0) pxToRem(19);
+    @include media($tablet,$desktop) {
+      padding: pxToRem(0) pxToRem(19);
     }
 
     @include desktop {
@@ -24,19 +26,20 @@
     display: flex;
     width: 100%;
 
-    @include tablet {
-      // margin-top: 27pxToRem;
-    }
+    // @include tablet {
+    //   // margin-top: 27pxToRem;
+    // }
 
-    @include desktop {
-      // margin-top: 64pxToRem;
-    }
+    // @include desktop {
+    //   // margin-top: 64pxToRem;
+    // }
   }
 
   &__content {
+    @include media(0,$tablet){
     display: block;
     width: 100%;
-
+    }
     @include tablet {
       width: 50%;
     }
@@ -44,8 +47,9 @@
 
 
   .hero__image {
+    @include media(0,$tablet){
     width: 0%;
-
+    }
     @include tablet {
       width: 50%;
       overflow: hidden;
@@ -53,12 +57,12 @@
   }
 
   .image__container {
+    @include media(0,$tablet){
     display: none;
     //  transition:2s  ease-in-out ;
-
-    @include tablet {
+    }
+    @include media($tablet,$desktop) {
       display: flex;
-      max-height:pxToRem(287);
       width: 100%;
       overflow: hidden;
       justify-content: center;
@@ -67,6 +71,11 @@
       max-width: pxToRem(357);
     }
     @include desktop {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      justify-content: center;
+      height: auto;
       max-height: pxToRem(416);
       max-width: pxToRem(451);
     }
@@ -80,24 +89,28 @@
 
   &__content {
     h1{
+      @include media(0,$tablet){
       margin-bottom: pxToRem(26);
       // margin-top: 10pxToRem;  
-      @include tablet{
+      }
+      @include media($tablet,$desktop){
         margin-bottom: pxToRem(36);
         margin-top: pxToRem(36);
       }
-      @include desktop{
+      @include desktop-extra{
         margin-bottom: pxToRem(31);
         margin-top:pxToRem(68);
       }
-      @include media(pxToRem(769), pxToRem(952)) {
+      @include media($desktop, 952) {
         font-size: pxToRem(29);
       }
     }
   }
   p {
+    @include media(0,$tablet){
     margin-bottom: pxToRem(25);
-    @include tablet {
+    }
+    @include media($tablet,$desktop){
       max-width: pxToRem(374);
       margin-bottom: pxToRem(33);
     }
@@ -111,16 +124,34 @@
 
   .content__buttons {
     // margin-top: 32pxToRem;
+    @include media(0,$desktop){
     display: flex;
     gap: pxToRem(20);
     align-items: center;
-
     max-width: pxToRem(380);
     flex-wrap: wrap;
-    @include desktop {
     }
-    @include media(pxToRem(769), pxToRem(952)) {
+
+    @include media($desktop,952) {
+      display: flex;
       gap: pxToRem(5);
+      align-items: center;
+      max-width: pxToRem(380);
+      flex-wrap: wrap;
+    }
+    @include media(952,$desktop-extra){
+      display: flex;
+      gap: pxToRem(5);
+      align-items: center;
+      max-width: pxToRem(380);
+      flex-wrap: wrap;
+    }
+    @include desktop-extra {
+      display: flex;
+      gap: pxToRem(5);
+      align-items: center;
+      max-width: pxToRem(380);
+      flex-wrap: wrap;
     }
 
 

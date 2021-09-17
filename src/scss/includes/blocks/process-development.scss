@@ -1,8 +1,10 @@
 .processDevelopment {
-  padding-bottom: pxToRem(55);
-  padding-top: pxToRem(55);
-  @include tablet {
-
+  @include media(0, $tablet) {
+    padding-bottom: pxToRem(55);
+    padding-top: pxToRem(55);
+  }
+  @include media($tablet, $desktop) {
+    padding-bottom: pxToRem(55);
     padding-top: pxToRem(96);
   }
   @include desktop {
@@ -10,62 +12,67 @@
     padding-top: pxToRem(52);
   }
   .container {
-    @include tablet {
+    @include media($tablet, $desktop) {
       padding: pxToRem(0) pxToRem(19);
     }
     @include desktop {
       padding: pxToRem(0) pxToRem(35);
     }
   }
- 
 
-    h2 {
+  h2 {
+    @include media(0, $tablet) {
       width: 64%;
       font-size: pxToRem(13);
       line-height: pxToRem(19);
       margin-bottom: pxToRem(30);
-      @include tablet {
-        font-size: pxToRem(20);
-        // width: max-content;
-        // max-width: 442pxToRem;
-        width: 100%;
-        max-width: none;
-        line-height: pxToRem(29);
-        margin-bottom: pxToRem(49);
-        
-
-      }
-
-      @include desktop {
-        font-size: pxToRem(30);
-        width: 100%;
-        max-width: none;
-        line-height: pxToRem(44);
-        margin-bottom: pxToRem(49);
-      }
     }
-  
+    @include media($tablet, $desktop) {
+      font-size: pxToRem(20);
+      // width: max-content;
+      // max-width: 442pxToRem;
+      width: 100%;
+      max-width: none;
+      line-height: pxToRem(29);
+      margin-bottom: pxToRem(49);
+    }
+
+    @include desktop {
+      font-size: pxToRem(30);
+      width: 100%;
+      max-width: none;
+      line-height: pxToRem(44);
+      margin-bottom: pxToRem(49);
+    }
+  }
 
   &__stepsContainer {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: overlay;
-    // margin-top: 32pxToRem;
-    // margin-left: 10pxToRem;
-    // height: 158pxToRem;
-    // margin-bottom: 23pxToRem;
-    scrollbar-width: none;
-    margin-left: pxToRem(-25);
-    margin-right: pxToRem(-25);
-    margin-bottom: pxToRem(21);
-    .stepsContainer__stages{
+    @include media(0, $tablet) {
       display: flex;
-      padding: pxToRem(0) pxToRem(93);
-      gap:pxToRem(45);
-      @include tablet {
+      overflow-y: hidden;
+      overflow-x: overlay;
+      // margin-top: 32pxToRem;
+      // margin-left: 10pxToRem;
+      // height: 158pxToRem;
+      // margin-bottom: 23pxToRem;
+      scrollbar-width: none;
+      margin-left: pxToRem(-25);
+      margin-right: pxToRem(-25);
+      margin-bottom: pxToRem(21);
+    }
+    .stepsContainer__stages {
+      @include media(0, $tablet) {
+        display: flex;
+        padding: pxToRem(0) pxToRem(93);
+        gap: pxToRem(45);
+      }
+      @include media($tablet, $desktop) {
+        display: flex;
         padding: pxToRem(0) pxToRem(30);
+        gap: pxToRem(45);
       }
       @include desktop {
+        display: flex;
         padding: pxToRem(0) pxToRem(93);
         overflow-x: overlay;
         overflow-y: hidden;
@@ -76,57 +83,89 @@
       }
     }
 
-    @include tablet {
+    @include media($tablet, $desktop) {
       // margin-top: 49pxToRem;
+      display: flex;
+      overflow-y: hidden;
+      overflow-x: overlay;
+      // margin-top: 32pxToRem;
+      // margin-left: 10pxToRem;
+      // height: 158pxToRem;
+      // margin-bottom: 23pxToRem;
+      scrollbar-width: none;
+      margin-left: pxToRem(-25);
+      margin-right: pxToRem(-25);
       margin-bottom: pxToRem(50);
-      
     }
 
     @include desktop {
       // margin-top: 49pxToRem;
       // height: 249pxToRem;
+      display: flex;
+      overflow-y: hidden;
+      overflow-x: overlay;
+      // margin-top: 32pxToRem;
+      // margin-left: 10pxToRem;
+      // height: 158pxToRem;
+      // margin-bottom: 23pxToRem;
+      scrollbar-width: none;
+      margin-left: pxToRem(-25);
+      margin-right: pxToRem(-25);
       margin-bottom: pxToRem(22);
     }
     .ellipse {
-      width: pxToRem(85);
-      height: pxToRem(85);
-      border-radius: 50%;
-      display: flex;
-      position: absolute;
-      z-index: -1;
-      background: var(--pallete-common-white-10);
-      @include tablet {
+      @include media(0, $desktop) {
+        width: pxToRem(85);
+        height: pxToRem(85);
+        border-radius: 50%;
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        background: var(--pallete-common-white-10);
       }
       @include desktop {
         width: pxToRem(113);
         height: pxToRem(113);
+        border-radius: 50%;
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        background: var(--pallete-common-white-10);
       }
     }
-    
+
     .stage:nth-child(1),
     .stage:nth-child(5n) {
       // height: 100%;
       // margin-left: 69pxToRem;
       // width: max-content;
-      position: relative;
-      z-index: 1;
+      @include media(0, $tablet) {
+        position: relative;
+        z-index: 1;
+      }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
-      @include tablet {
+      @include media($tablet, $desktop) {
         margin-top: pxToRem(9);
+        position: relative;
+        z-index: 1;
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
       @include desktop {
         // margin-left: 122pxToRem;
         margin-top: pxToRem(14);
+        position: relative;
+        z-index: 1;
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
       .stage__ellipse {
-        left: pxToRem(35);
-        top: pxToRem(26);
-        @include tablet {
+        @include media(0, $tablet) {
+          left: pxToRem(35);
+          top: pxToRem(26);
+        }
+        @include media($tablet, $desktop) {
           left: pxToRem(33);
           top: pxToRem(25);
         }
@@ -143,24 +182,32 @@
     .stage:nth-child(6n) {
       // height: 100%;
       // width: max-content;
-      position: relative;
-      z-index: 1;
+      @include media(0, $tablet) {
+        position: relative;
+        z-index: 1;
+      }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
-      @include tablet {
+      @include media($tablet, $desktop) {
         margin-top: pxToRem(56);
+        position: relative;
+        z-index: 1;
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
       @include desktop {
         margin-top: pxToRem(71);
+        position: relative;
+        z-index: 1;
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
       .stage__ellipse {
-        left: pxToRem(35);
-        top: pxToRem(24);
-        @include tablet {
+        @include media(0, $tablet) {
+          left: pxToRem(35);
+          top: pxToRem(24);
+        }
+        @include media($tablet, $desktop) {
           left: pxToRem(33);
           top: pxToRem(30);
         }
@@ -168,12 +215,10 @@
           width: pxToRem(113);
           height: pxToRem(113);
           left: pxToRem(47);
-          top:pxToRem(31);
+          top: pxToRem(31);
         }
       }
       .text {
-        @include tablet {
-        }
         @include desktop {
           font-family: Montserrat;
           font-style: normal;
@@ -182,7 +227,7 @@
           line-height: pxToRem(28);
           letter-spacing: 0.02em;
         }
-        &:nth-child(3){
+        &:nth-child(3) {
           width: pxToRem(218);
         }
       }
@@ -195,17 +240,18 @@
       width: pxToRem(211);
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
-       .text{
+      .text {
         //  max-width: 218pxToRem;
         //  @include tablet{
         //   max-width: 193pxToRem;
         //  }
-       }
+      }
       .stage__ellipse {
-        left:pxToRem(35);
-        top: pxToRem(24);
-
-        @include tablet {
+        @include media(0, $tablet) {
+          left: pxToRem(35);
+          top: pxToRem(24);
+        }
+        @include media($tablet, $desktop) {
           left: pxToRem(34);
           top: pxToRem(31);
         }
@@ -216,30 +262,37 @@
           top: pxToRem(30);
         }
       }
-     
     }
     .stage:nth-child(4),
     .stage:nth-child(8n) {
       // height: 100%;
       // width: max-content;
-      position: relative;
-      z-index: 1;
+      @include media(0, $tablet) {
+        position: relative;
+        z-index: 1;
+      }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
-      @include tablet {
+      @include media($tablet, $desktop) {
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
         margin-top: pxToRem(10);
+        position: relative;
+        z-index: 1;
       }
       @include desktop {
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
         margin-top: pxToRem(37);
+        position: relative;
+        z-index: 1;
       }
       .stage__ellipse {
-        left: pxToRem(35);
-        top: pxToRem(24);
-        @include tablet {
+        @include media(0, $tablet) {
+          left: pxToRem(35);
+          top: pxToRem(24);
+        }
+        @include media($tablet, $desktop) {
           left: pxToRem(33);
           top: pxToRem(25);
         }
@@ -253,24 +306,37 @@
     }
 
     .stage__number {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: 900;
-      font-size: pxToRem(50);
-      line-height: pxToRem(73);
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      border: pxToRem(1);
-      color: transparent;
-      mix-blend-mode: multiply;
-      -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
-      font-stretch: ultra-expanded;
-      z-index: 1;
-      margin-bottom: pxToRem(10);
+      @include media(0, $desktop) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        font-size: pxToRem(50);
+        line-height: pxToRem(73);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        border: pxToRem(1);
+        color: transparent;
+        mix-blend-mode: multiply;
+        -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
+        font-stretch: ultra-expanded;
+        z-index: 1;
+        margin-bottom: pxToRem(10);
+      }
       @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
         font-size: pxToRem(70);
         margin-bottom: pxToRem(0);
-        line-height:pxToRem(102);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        border: pxToRem(1);
+        color: transparent;
+        mix-blend-mode: multiply;
+        -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
+        font-stretch: ultra-expanded;
+        z-index: 1;
+        line-height: pxToRem(102);
       }
     }
   }
@@ -279,23 +345,34 @@
   }
 
   p {
-    width: pxToRem(196);
-    z-index: 1;
-    line-height: pxToRem(28);
-   @include tablet{
-     width: pxToRem(210);
-   }
+    @include media(0, $tablet) {
+      width: pxToRem(196);
+      z-index: 1;
+      line-height: pxToRem(28);
+    }
+    @include media($tablet, $desktop) {
+      width: pxToRem(210);
+      z-index: 1;
+      line-height: pxToRem(28);
+    }
     @include desktop {
       padding-top: pxToRem(0);
       width: pxToRem(210);
+      z-index: 1;
+      line-height: pxToRem(28);
     }
   }
-  .processDevelopment__slider{
-    display: flex;
-    // margin-top: 2pxToRem;
-    width: 100%;
-    @include tablet {
+  .processDevelopment__slider {
+    @include media(0, $tablet) {
+      display: flex;
+      // margin-top: 2pxToRem;
+      width: 100%;
+    }
+    @include media($tablet, 1279) {
       margin-top: pxToRem(25);
+      display: flex;
+      // margin-top: 2pxToRem;
+      width: 100%;
     }
     @include desktop-extra {
       display: none;
@@ -331,38 +408,45 @@
       &:hover {
         color: var(--pallete-primary-main);
         border: pxToRem(1) solid var(--pallete-primary-main);
-        .arrow__left{
-          border-right:pxToRem(5) solid var(--pallete-primary-main);
+        .arrow__left {
+          border-right: pxToRem(5) solid var(--pallete-primary-main);
         }
-        .arrow__right{
-          border-left:pxToRem(5) solid var(--pallete-primary-main);
+        .arrow__right {
+          border-left: pxToRem(5) solid var(--pallete-primary-main);
         }
       }
     }
 
     .slider__scrollbar {
-      display: flex;
-      // width: 194pxToRemToRem;
-      width: 100%;
-      max-width: pxToRem(194);
-      align-items: center;
-      padding-right: pxToRem(15);
-      padding-left: pxToRem(15);
-      @include tablet {
+      @include media(0, $tablet) {
+        display: flex;
+        // width: 194pxToRemToRem;
+        width: 100%;
+        max-width: pxToRem(194);
+        align-items: center;
+        padding-right: pxToRem(15);
+        padding-left: pxToRem(15);
+      }
+      @include media($tablet, $desktop) {
         max-width: pxToRem(754);
         width: 100%;
         padding-right: pxToRem(27);
         padding-left: pxToRem(27);
+        align-items: center;
+        display: flex;
       }
-      @include desktop{
+      @include desktop {
         max-width: pxToRem(1034);
         padding-right: pxToRem(27);
         padding-left: pxToRem(27);
+        align-items: center;
+        display: flex;
+        width: 100%;
       }
 
       .scrollbar__track {
         width: 50%;
-        height:pxToRem(2);
+        height: pxToRem(2);
         background-color: var(--pallete-grey-10);
       }
       .scrollbar__thumb {
