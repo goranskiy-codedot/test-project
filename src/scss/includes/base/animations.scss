@@ -25,29 +25,9 @@
     background-color: var(--pallete-common-white);
   }
 }
-// @keyframes line_2_anim {
-//   0% {
-//     transform: translateX(0);
-//     width: 29px;
-//     margin-left: -9px;
-//   }
-//   50% {
-//     transform: translateX(0);
-//     width: 20px;
-//     margin-left: 0px;
-//   }
-//   100% {
-//     transform: translateX(0);
-//     // opacity: 0;
-//     width: 20px;
-//     margin-left: 0px;
-//   }
-// }
-
 @keyframes line_2_anim {
   0% {
     transform: translateX(0);
-    // background-color: transparent;
     width: 29px;
     margin-left: -9px;
   }
@@ -58,7 +38,6 @@
   }
   100% {
     transform: translateX(0);
-    // opacity: 0;
     width: 20px;
     margin-left: 0px;
     background-color: transparent;
@@ -76,7 +55,12 @@
   }
   100% {
     transform: translateY(0);
+    @include light-theme{
     background-color: var(--pallete-grey-900);
+    }
+    @include dark-theme{
+      background-color: var(--pallete-common-white);
+    }
     top: -6px;
   }
 }
@@ -89,23 +73,14 @@
   }
   100% {
     transform: translateY(0);
-    background-color: var(--pallete-grey-900);
+    @include light-theme{
+      background-color: var(--pallete-grey-900);
+      }
+      @include dark-theme{
+        background-color: var(--pallete-common-white);
+      }
   }
 }
-// @keyframes line_2_anim_closing {
-//   0% {
-//     transform: translateY(2 * 3px) rotate(-45deg);
-//     width: 20px;
-//   }
-//   50% {
-//     transform: translateY(2 * 3px);
-//   }
-//   100% {
-//     transform: translateY(0);
-//     background-color: $pallete-grey-900;
-//     width: 29px;
-//   }
-// }
 
 @keyframes line_2_anim_closing {
   0% {
@@ -117,16 +92,28 @@
   }
   50% {
     transform: translateX(0);
-    // opacity: 0.5;
     width: 20px;
     margin-left: 0px;
   }
   100% {
     transform: translateX(0);
-    // opacity: 1;
     width: 29px;
     margin-left: -9px;
-    background-color: var(--pallete-grey-900);
-    // background-color: transparent;
+    @include light-theme{
+      background-color: var(--pallete-grey-900);
+      }
+      @include dark-theme{
+        background-color: var(--pallete-common-white);
+      }
+  }
+}
+
+@keyframes appearance {
+ from {
+    opacity: 0;
+  }
+
+  to{
+   opacity: 1;
   }
 }

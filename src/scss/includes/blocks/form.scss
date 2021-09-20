@@ -1,4 +1,40 @@
+html[dir="rtl"]{
+  .form__image {
+    @include media(0,$desktop){
+    display: none;
+    }
+    @include desktop {
+      // bottom: -7pxToRem;
+      // display: block;
+      // left: 29pxToRem;
+      // max-width: 41.5%;
+      // position: absolute;
+      // width: 100%;
+      bottom: pxToRem(-143);
+      display: block;
+      right: pxToRem(-74);
+      max-width: 49.5%;
+      position: absolute;
+      width: 100%;
+    }
+    @include media-max(pxToRem(992)) {
+      // gap: 128pxToRem;
+      display: none;
+    }
+  }
+  .form__checkbox + .checkbox__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    gap: pxToRem(15);
+  }
+  .checkbox__label::after {
+    left: pxToRem(0);
+    right: pxToRem(18);
+  }
+}
 .form {
+
   @include media(0, $mobile) {
     padding-top: pxToRem(44);
   }
@@ -270,7 +306,12 @@
   }
   .form__wrapper {
     @include media(0,$tablet){
+      @include light-theme{
     background-color: var(--pallete-primary-main);
+      }
+      @include dark-theme{
+        background-color: #2d2b88;
+      }
     // min-height: 653pxToRem;
     padding-top: pxToRem(66);
     padding-bottom: pxToRem(52);
@@ -281,7 +322,12 @@
       // padding-bottom: 96pxToRem;
       padding-top: pxToRem(97);
       padding-bottom: pxToRem(104);
-      background-color: var(--pallete-primary-main);
+      @include light-theme{
+        background-color: var(--pallete-primary-main);
+          }
+          @include dark-theme{
+            background-color: #2d2b88;
+          }
     }
     @include desktop {
       align-items: center;
@@ -291,7 +337,12 @@
       padding-top: pxToRem(133);
       height: 100%;
       position: relative;
-      background-color: var(--pallete-primary-main);
+      @include light-theme{
+        background-color: var(--pallete-primary-main);
+          }
+          @include dark-theme{
+            background-color: #2d2b88;
+          }
     }
   }
   &__inputs {
@@ -526,7 +577,8 @@
     border: var(--pallete-secondary-main);
     width: pxToRem(301);
     height: pxToRem(33);
-    color: var(--pallete-common-white);
+    // color: var(--pallete-common-white);
+    color: #000000;
     }
     // margin-top: pxToRem;
     // margin-top: 46pxToRem;
@@ -537,7 +589,8 @@
       font-weight: 500;
       font-size: pxToRem(13);
       line-height: pxToRem(16);
-      color: var(--pallete-common-white);
+      // color: var(--pallete-common-white);
+      color: #000000;
       background-color: var(--pallete-secondary-main);
       border: var(--pallete-secondary-main);
       // margin-top:63pxToRem;

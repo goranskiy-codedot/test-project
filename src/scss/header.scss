@@ -1,3 +1,32 @@
+html[dir="rtl"]{
+  .burgerMenu {
+    .burger__line::before {
+      // content: "";
+      // display: block;
+      // background-color: var(--pallete-grey-900);
+      // width: pxToRem(20);
+      // height: pxToRem(2);
+      // position: absolute;
+      // top: pxToRem(-6);
+      left: pxToRem(0);
+      // z-index: 1010;
+      right: 9px!important;
+    }
+
+    .burger__line::after {
+      // content: "";
+      // display: block;
+      // position: absolute;
+      // background-color: var(--pallete-grey-900);
+      // width: pxToRem(20);
+      // height: pxToRem(2);
+      // top: pxToRem(7);
+      left: pxToRem(0);
+      // z-index: 1010;
+      right: 9px!important;
+    }
+  }          
+}
 #body:target {
   @include media(0,$tablet){
   overflow: hidden;
@@ -25,10 +54,20 @@
 
 #body:target .logo {
   @include media(0,$tablet){
+    @include light-theme {
   background-color: var(--pallete-common-white);
+    }
+    @include dark-theme {
+      background-color: var(--pallete-common-white);
+        }
   }
   @include tablet {
+    @include light-theme {
     background-color: var(--pallete-grey-900);
+    }
+    @include dark-theme {
+      background-color: var(--pallete-common-white);
+        }
   }
 }
 
@@ -95,9 +134,54 @@
     animation-iteration-count: 1;
   }
 }
+.page-wrapper{
+  @include light-theme{
+    background: transparent;
+    }
+    @include dark-theme{
+      background: var(--pallete-grey-900);
+    }
+}
 
+
+#animation-loading:target{
+  .menu__logo {
+  opacity: 0;
+  animation: appearance 1s ease-in-out forwards;
+  animation-delay:0.5s;
+  }
+  }
+  #animation-loading:target{
+    .menu__burgerMenu{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;
+    animation-delay:0.75s;
+    }
+    }
+#animation-loading:target{
+  .container__items{
+  opacity: 0;
+  animation: appearance 1s ease-in-out forwards;
+  animation-delay:1s;
+  }
+  }
+  #animation-loading:target{
+    .contactsContainer__tel{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;
+    animation-delay:1.25s;
+    }
+    }
+
+    #animation-loading:target{
+      .contactsContainer__button{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;
+      animation-delay:1.5s;
+      }
+      }
+  
 .header {
-
   .container {
     @include media(0,$tablet){
     padding:pxToRem(0);
@@ -136,14 +220,23 @@
 
     .menu__logo {
       z-index: 1001;
-
+      // #animation-loading:target{
+      // opacity: 0;
+      // animation: appearance 1s ease-in-out forwards;
+      // animation-delay:0.5s;
+      // }
       .logo {
         @include media(0,$desktop){
         display: block;
         z-index: 1001;
         height: pxToRem(65);
         width: pxToRem(65);
+        @include light-theme{
         background-color: var(--pallete-grey-900);
+        }
+          @include dark-theme{
+            background-color:var(--pallete-common-white);
+          }
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: pxToRem(49) pxToRem(49);
@@ -153,7 +246,12 @@
           z-index: 1001;
           height: pxToRem(65);
           width: pxToRem(65);
+          @include light-theme{
           background-color: var(--pallete-grey-900);
+          }
+          @include dark-theme{
+            background-color: var(--pallete-common-white);
+            }
           -webkit-mask-position: center;
           -webkit-mask-repeat: no-repeat;
           -webkit-mask-size: pxToRem(65);
@@ -163,6 +261,11 @@
     .menu__burgerMenu {
       @include media(0,$tablet)
       {
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:0.75s;
+        }
       z-index: 1003;
 
       .button_closed {
@@ -179,7 +282,12 @@
 
         .burger__line {
           z-index: 1003;
+          @include light-theme{
           background-color: var(--pallete-grey-900);
+          }
+          @include dark-theme{
+            background-color: var(--pallete-common-white);
+          }
           width: pxToRem(20);
           height: pxToRem(2);
           margin-top: pxToRem(4);
@@ -191,7 +299,12 @@
         .burger__line::before {
           content: "";
           display: block;
-          background-color: var(--pallete-grey-900);
+          @include light-theme{
+            background-color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              background-color: var(--pallete-common-white);
+            }
           width: pxToRem(20);
           height: pxToRem(2);
           position: absolute;
@@ -204,7 +317,12 @@
           content: "";
           display: block;
           position: absolute;
-          background-color: var(--pallete-grey-900);
+          @include light-theme{
+            background-color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              background-color: var(--pallete-common-white);
+            }
           width: pxToRem(20);
           height: pxToRem(2);
           top: pxToRem(7);
@@ -238,7 +356,13 @@
       height: 100%;
       overflow: auto;
       list-style: none;
+      
+      @include light-theme{
       background: var(--pallete-primary-main);
+      }
+      @include dark-theme{
+        background: #2d2b88;
+      }
       flex-direction: column;
       // justify-content: space-evenly;
       transform: translateX(100%);
@@ -257,14 +381,20 @@
         transform: none;
         transition: none;
         list-style: none;
+        display: flex;
+
+        @include light-theme{
         color: var(--pallete-grey-900);
+        }
+        @include dark-theme{
+          color:var(--pallete-common-white);
+        }
         padding-top: pxToRem(0);
         width: 100%;
         height: 100%;
         align-items: center;
         flex-direction: initial;
         // justify-content: initial;
-        display: initial;
         max-width: pxToRem(650);
         padding-bottom: pxToRem(0);
       }
@@ -281,7 +411,13 @@
         transform: none;
         transition: none;
         list-style: none;
-        color: var(--pallete-grey-900);
+
+        @include light-theme{
+          color: var(--pallete-grey-900);
+          }
+          @include dark-theme{
+            color:var(--pallete-common-white);
+          }
         padding-top: pxToRem(0);
         height: 100%;
         align-items: center;
@@ -318,7 +454,7 @@
           justify-content: space-between;
           height: 100%;
           gap: pxToRem(0);
-          
+     
         }
 
         .container__items {
@@ -327,6 +463,11 @@
           padding-bottom: pxToRem(42);
          margin-left: auto;
          margin-right: auto;
+         #animation-loading:target{
+         opacity: 0;
+         animation: appearance 1s ease-in-out forwards;
+         animation-delay:1s;
+         }
           }
           @include tablet {
             padding-top: pxToRem(0);
@@ -334,6 +475,11 @@
             display: flex;
             align-items: center;
             margin: 0;
+            #animation-loading:target{
+            opacity: 0;
+            animation: appearance 1s ease-in-out forwards;
+            animation-delay:1s;
+            }
           }
        
         }
@@ -360,13 +506,20 @@
         padding-bottom: pxToRem(20);
         padding: pxToRem(20);
         display: block;
+        // opacity: 0;
+     
         }
      
         @include media($tablet, 697) {
           font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          color:var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
           font-size: pxToRem(10);
           line-height: 12pxToRem(12);
           letter-spacing: 0.02em;
@@ -376,7 +529,12 @@
           font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          color:var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
           font-size: pxToRem(10);
           line-height: 12pxToRem(12);
           letter-spacing: 0.02em;
@@ -388,7 +546,12 @@
           font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
           font-size: pxToRem(10);
           line-height: pxToRem(12);
           letter-spacing: 0.02em;
@@ -398,7 +561,12 @@
           font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
           font-size: pxToRem(13);
           letter-spacing: 0.02em;
           line-height: pxToRem(16);
@@ -409,11 +577,17 @@
           font-family: Montserrat;
           font-style: normal;
           font-weight: 500;
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
           font-size: pxToRem(13);
           letter-spacing: 0.02em;
           line-height: pxToRem(16);
           padding: pxToRem(12.5) pxToRem(22.4);
+
         }
       }
     }
@@ -491,6 +665,11 @@
       letter-spacing: 0.02em;
       color: inherit;
       display: none;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;
+      animation-delay:1.25s;
+      }
       }
       @include media($tablet,727){
         font-family: Montserrat;
@@ -502,7 +681,18 @@
         display: block;
         white-space: nowrap;
         &:visited {
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
+
+        }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.25s;
         }
       }
       @include media(727,$desktop) {
@@ -517,7 +707,17 @@
         padding-left: pxToRem(4);
         padding-right: pxToRem(4);
         &:visited {
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
+        }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.25s;
         }
       }
         
@@ -531,7 +731,17 @@
         white-space: nowrap;
         padding: pxToRem(12.5) pxToRem(15);
         &:visited {
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
+        }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.25s;
         }
       }
       @include media(992,$desktop-extra){
@@ -546,8 +756,19 @@
         font-size: pxToRem(13);
         line-height: pxToRem(16);
         &:visited {
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
+            #animation-loading:target{
+            opacity: 0;
+            animation: appearance 1s ease-in-out forwards;
+            animation-delay:1.25s;
+            }
         }
+        
       }
       @include desktop-extra {
         font-family: Montserrat;
@@ -561,7 +782,17 @@
         font-size: pxToRem(13);
         line-height: pxToRem(16);
         &:visited {
-          color: var(--pallete-grey-900);
+          @include light-theme{
+            color: var(--pallete-grey-900);
+            }
+            @include dark-theme{
+              color:var(--pallete-common-white);
+            }
+        }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.25s;
         }
       }
  
@@ -580,11 +811,16 @@
       border: var(--pallete-secondary-main);
       font-size: pxToRem(15);
       line-height: pxToRem(18);
-
+       color: #000;
       &:hover {
         color: var(--pallete-common-white);
         background-color: #ff3c68;
         border: pxToRem(1) solid #ff3c68;
+      }
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;
+      animation-delay:1.5s;
       }
     }
       @include media($tablet,$desktop) {
@@ -604,6 +840,11 @@
           background-color: transparent;
           border: pxToRem(1) solid var(--pallete-primary-main);
         }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.5s;
+        }
       }
       @include media($desktop, 992) {
         width: initial;
@@ -621,6 +862,11 @@
           background-color: transparent;
           border: pxToRem(1) solid var(--pallete-primary-main);
         }
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.5s;
+        }
       }
       @include media(992,$desktop-extra){
         min-width: pxToRem(171);
@@ -630,6 +876,11 @@
         // margin-right: 25pxToRem;
         margin-top: 0;
         padding: pxToRem(12);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.5s;
+        }
       }
       @include desktop-extra {
         min-width: pxToRem(171);
@@ -639,6 +890,11 @@
         // margin-right: 25pxToRem;
         margin-top: 0;
         padding: pxToRem(12);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay:1.5s;
+        }
       }
   
     }
@@ -648,4 +904,6 @@
       left: pxToRem(9);
     }
   }
+  
 }
+

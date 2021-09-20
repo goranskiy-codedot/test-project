@@ -1,3 +1,52 @@
+html[dir="rtl"]{
+  .portfolios {
+    display: flex;
+    // margin-top: 53pxToRem;
+    gap: pxToRem(13);
+    height: pxToRem(39);
+
+    // margin-bottom: 37pxToRem;
+
+    &__item-icon {
+      width: pxToRem(13);
+      height: pxToRem(13);
+      display: block;
+      fill: var(--pallete-common-white);
+      top: pxToRem(12);
+      left: pxToRem(13);
+      position: absolute;
+    }
+    // @include tablet {
+    //   // margin-top: 64pxToRem;
+    //   // margin-bottom: 68pxToRem;
+    // }
+    @include desktop {
+      // left: 85pxToRem;
+      // margin-top: 0;
+      // position: absolute;
+      // top: 167pxToRem;
+      // margin-bottom: 0pxToRem;
+      top: pxToRem(85);
+      right: pxToRem(0);
+      position: absolute;
+    }
+    .ellipse {
+      border: pxToRem(1) solid var(--pallete-common-white);
+      border-radius: 50%;
+      width: pxToRem(39);
+      height: pxToRem(39);
+      position: relative;
+      &:hover {
+        border-color: var(--pallete-secondary-main);
+        .portfolios__item-icon {
+          fill: var(--pallete-secondary-main);
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   @include media(0,$tablet){
   background-color: var(--pallete-grey-900);
@@ -211,6 +260,7 @@
       max-width: pxToRem(540);
       column-gap: pxToRem(30);
       margin-bottom: pxToRem(65);
+      display: flex;
     }
     @include media(910,$desktop-extra){
          // column-gap: 100pxToRem;
@@ -242,6 +292,9 @@
     line-height: pxToRem(22);
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @include light-theme{
+      color:var(--pallete-common-white)
+    }
   }
   .text {
     @include media(0,$tablet){
@@ -447,7 +500,8 @@
       font-size:pxToRem(10);
       line-height: pxToRem(12);
 
-      color: rgba(255, 255, 255, 0.3);
+      // color: rgba(255, 255, 255, 0.3);
+      color:#afafaff5;
       }
       @include desktop {
         font-family: Montserrat;
@@ -455,7 +509,8 @@
         font-weight: normal;
         font-size: pxToRem(12);
         line-height: pxToRem(15);
-        color: rgba(255, 255, 255, 0.3);
+        // color: rgba(255, 255, 255, 0.3);
+        color:#afafaff5;
       }
     }
     .copyright {

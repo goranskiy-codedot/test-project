@@ -1,3 +1,31 @@
+#animation-loading:target{
+  .content__buttons{
+  opacity: 0;
+  animation: appearance 1s ease-in-out forwards;  
+  animation-delay: 2.25s;
+  }
+  }
+  #animation-loading:target{
+    .image__container{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2.5s;
+    }
+    }
+    #animation-loading:target{
+      h1{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay:1.75s;
+      }
+      }
+      #animation-loading:target{
+        p{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 2s;
+        }
+        }
 .hero {
   @include media(0,$tablet){
   padding-bottom: pxToRem(22);
@@ -69,6 +97,11 @@
       height: auto;
       max-height: pxToRem(289);
       max-width: pxToRem(357);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.5s;
+      }
     }
     @include desktop {
       display: flex;
@@ -78,12 +111,18 @@
       height: auto;
       max-height: pxToRem(416);
       max-width: pxToRem(451);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.5s;
+      }
     }
 
     .image {
       height: auto;
       object-fit: contain;
       width: 100%;
+  
     }
   }
 
@@ -92,32 +131,78 @@
       @include media(0,$tablet){
       margin-bottom: pxToRem(26);
       // margin-top: 10pxToRem;  
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay:1.75s;
+      }
       }
       @include media($tablet,$desktop){
         margin-bottom: pxToRem(36);
         margin-top: pxToRem(36);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay:1.75s;
+        }
       }
       @include desktop-extra{
         margin-bottom: pxToRem(31);
         margin-top:pxToRem(68);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay:1.75s;
+        }
       }
       @include media($desktop, 952) {
         font-size: pxToRem(29);
+        margin-bottom: pxToRem(36);
+        margin-top: pxToRem(36);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay:1.75s;
+        }
+      }
+      @include media(952,$desktop-extra){
+        margin-bottom: pxToRem(31);
+        margin-top: pxToRem(68);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay:1.75s;
+        }
       }
     }
   }
   p {
     @include media(0,$tablet){
     margin-bottom: pxToRem(25);
+    #animation-loading:target{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2s;
+    }
     }
     @include media($tablet,$desktop){
       max-width: pxToRem(374);
       margin-bottom: pxToRem(33);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2s;
+      }
     }
     @include desktop {
       max-width: pxToRem(380);
       width: 100%;
       margin-bottom: pxToRem(54);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2s;
+      }
     }
   }
   
@@ -130,6 +215,11 @@
     align-items: center;
     max-width: pxToRem(380);
     flex-wrap: wrap;
+    #animation-loading:target{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2.25s;
+    }
     }
 
     @include media($desktop,952) {
@@ -138,25 +228,41 @@
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
     @include media(952,$desktop-extra){
       display: flex;
-      gap: pxToRem(5);
+      gap: 20px;
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
     @include desktop-extra {
       display: flex;
-      gap: pxToRem(5);
+      gap: 20px;
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
 
 
 
     .price__button {
+      @include light-theme{
       background-color: transparent;
       border: pxToRem(1) solid var(--pallete-primary-main);
       color: var(--pallete-primary-main);
@@ -165,7 +271,17 @@
         background-color: var(--pallete-primary-main);
         border: pxToRem(1) solid var(--pallete-primary-main);
       }
-
+    }
+      @include dark-theme{
+        border:pxToRem(1) solid #2d2b88;
+        color:#2d2b88;
+        background-color:transparent;
+        &:hover {
+          color:var(--pallete-common-white);
+          background-color:#2d2b88;
+          border:pxToRem(1) solid #2d2b88;
+        }
+      }
     }
   }
 }

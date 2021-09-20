@@ -1,3 +1,10 @@
+#animation-loading:target{
+  .examples__images{
+  opacity: 0;
+  animation: appearance 1s ease-in-out forwards;  
+  animation-delay: 3.4s;
+  }
+  }
 .examples {
   @include media(0,$tablet){
   padding-bottom: pxToRem(17);
@@ -25,15 +32,30 @@
       @include media(0,$tablet){
       margin-bottom: pxToRem(33);
       // max-width: 132pxToRem;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3.5s;
+      }
       }
       @include media($tablet,$desktop) {
         margin-bottom: pxToRem(57);
         // max-width: 175pxToRem;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        }
+        animation-delay: 3.5s;
       }
       @include desktop {
 
         // max-width: 262pxToRem;
         margin-bottom: pxToRem(66);
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        }
+        animation-delay: 3.5s;
       }
     }
   
@@ -46,6 +68,14 @@
     justify-content: center;
     text-align: center;
     margin-bottom: pxToRem(40);
+    #animation-loading:target{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 3.6s;
+    }
+    @include dark-theme{
+      filter: brightness(0.5);
+     }
     }
     @include media($tablet,$desktop) {
       // margin-top: 57pxToRem;
@@ -56,6 +86,14 @@
       justify-content: center;
       text-align: center;
       margin-bottom: pxToRem(50);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3.6s;
+      }
+      @include dark-theme{
+        filter: brightness(0.5);
+       }
     }
     @include desktop {
       padding-left: pxToRem(85);
@@ -67,7 +105,14 @@
       object-fit: cover;
       width: 100%;
       margin-bottom: pxToRem(52);
-
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3.6s;
+      }
+     @include dark-theme{
+      filter: brightness(0.5);
+     }
 
 
       // display: grid;
@@ -196,14 +241,14 @@
 
    .examples__image{
      @include media(0,$tablet){
-    width: 100%;
-    height: 100%;
+    width: 100%!important;
+    height: 100%!important;
     object-fit: cover;
     min-height: pxToRem(235);
      }
      @include media($tablet,$desktop){
-      width: 100%;
-      height: 100%;
+      width: 100%!important;
+      height: 100%!important;
       object-fit: cover;
       min-height: pxToRem(462);
      }
@@ -211,8 +256,8 @@
     min-height: unset;
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%!important;
+    height: 100%!important;
     object-fit: cover;
      }
    }

@@ -1,3 +1,75 @@
+html[dir="rtl"]{
+  .benefits {
+    @include media(0,$tablet){
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: pxToRem(10);
+    line-height: pxToRem(19);
+    letter-spacing: 0.02em;
+    // padding-left: 41pxToRem;
+    // margin-block-end: 9pxToRem;
+    // margin-block-start: 4pxToRem;
+    padding-right: pxToRem(24);
+    }
+    @include media($tablet,$desktop) {
+      // margin-block-end: 10pxToRem;
+      // margin-block-start: 8pxToRem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      padding-right: pxToRem(21);
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(15);
+      line-height: pxToRem(28);
+      letter-spacing: 0.02em;
+      // margin-block-start: 8pxToRem;
+
+      // margin-block-end: 9pxToRem;
+      padding-right: pxToRem(32);
+    }
+    // &::marker {
+    //   content: url(../../../uploads/check.svg);
+
+    //   position: absolute;
+    //   @include desktop {
+    //   }
+    // }
+    &::before {
+      @include media(0,$desktop){
+      content: "";
+      width: pxToRem(10);
+      height: pxToRem(6);
+      display: block;
+      transform: rotate(-45deg);
+      border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+      border-left: pxToRem(2) solid var(--pallete-secondary-main);
+      margin-right: pxToRem(-23);
+      margin-top: pxToRem(4);
+      position: absolute;
+      }
+      @include desktop {
+        content: "";
+        display: block;
+        height:pxToRem(9);
+        transform: rotate(-45deg);
+        margin-right: pxToRem(-31);
+        margin-top: pxToRem(9);
+        border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+        border-left: pxToRem(2) solid var(--pallete-secondary-main);
+        width: pxToRem(14);
+        position: absolute;
+      }
+    }
+  }
+}
 .pricesSection {
   @include media(0,$tablet){
   padding-bottom: pxToRem(66);
@@ -186,7 +258,12 @@
           font-size: pxToRem(20);
           line-height: pxToRem(29);
           letter-spacing: 0.02em;
+          @include light-theme{
           color: var(--pallete-grey-900);
+          }
+          @include dark-theme{
+            color: var(--pallete-common-white);
+          }
           // padding-right: 12pxToRem;
           // padding-top: 7pxToRem;
           // margin-top: 4pxToRem;
@@ -199,7 +276,12 @@
             font-size: pxToRem(30);
             line-height: pxToRem(44);
             letter-spacing: 0.02em;
-          color: var(--pallete-grey-900);
+            @include light-theme{
+              color: var(--pallete-grey-900);
+              }
+              @include dark-theme{
+                color: var(--pallete-common-white);
+              }
             // margin-top: 10pxToRem;
             // margin-right: 0pxToRem;
           }
@@ -214,7 +296,8 @@
         font-size: pxToRem(10);
         line-height: pxToRem(19);
         letter-spacing: 0.02em;
-        color: var(--pallete-grey-10);
+        // color: var(--pallete-grey-10);
+        color:#585858;
         margin-block-start: 0em;
         margin-block-end: 0em;
         margin-bottom: pxToRem(22);
@@ -227,7 +310,8 @@
           font-size: pxToRem(10);
           line-height: pxToRem(19);
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color:#585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
           margin-bottom: pxToRem(20);
@@ -239,7 +323,8 @@
           font-style: normal;
           font-weight: normal;
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color:#585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
           font-size: pxToRem(12);
@@ -256,7 +341,8 @@
         font-size: pxToRem(10);
         line-height: pxToRem(15);
         letter-spacing: 0.02em;
-        color: var(--pallete-grey-10);
+        // color: var(--pallete-grey-10);
+        color: #585858;
         margin-block-start: 0em;
         margin-block-end: 0em;
         }
@@ -267,7 +353,8 @@
           font-size:pxToRem(15);
           line-height: pxToRem(22);
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color: #585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
         }
@@ -288,13 +375,31 @@
           
         }
         @include desktop {
+          @include light-theme{
           border: pxToRem(1) solid var(--pallete-grey-900);
           color: var(--pallete-grey-900);
           background-color: transparent;
+          }
+          @include dark-theme{
+            border: pxToRem(1) solid var(--pallete-common-white);
+            color: var(--pallete-common-white);
+            background-color: transparent;
+          }
           padding: pxToRem(12);
           margin-bottom: pxToRem(40);
         }
-      }
+        &:hover{
+          border: pxToRem(1) solid var(--pallete-primary-main);
+          color: var(--pallete-common-white);
+          background-color: var(--pallete-primary-main);
+          @include dark-theme{
+          color:var(--pallete-common-white);
+          background-color:#2d2b88;
+          border:pxToRem(1) solid #2d2b88;   
+            }
+          }
+        }
+      
       &__button {
         @include media(0,$tablet){
         text-align: center;
@@ -478,6 +583,12 @@
       border: pxToRem(1) solid var(--pallete-primary-main);
       position: relative;
       background-color: var(--pallete-common-white-20);
+      @include light-theme{
+        background-color: var(--pallete-common-white-20);
+        }
+        @include dark-theme{
+          background-color: var(--pallete-grey-900);
+        }
    
       &::before {
         @include media(0,$desktop){
@@ -532,6 +643,11 @@
           border: pxToRem(1) solid var(--pallete-primary-main);
           background-color: var(--pallete-primary-main);
           color: var(--pallete-common-white);
+          @include dark-theme{
+            color:var(--pallete-common-white);
+            background-color:#2d2b88;
+            border:pxToRem(1) solid #2d2b88;   
+              }
         }
       }
     }

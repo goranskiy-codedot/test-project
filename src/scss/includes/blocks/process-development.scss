@@ -1,3 +1,52 @@
+html[dir="rtl"]{
+
+  }
+  #animation-loading:target{
+    h2{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2.75s;
+    }
+    }
+    #animation-loading:target{
+      .stage:nth-child(1),
+      .stage:nth-child(5n){
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3s;
+      }
+      }
+      #animation-loading:target{
+        .stage:nth-child(2),
+        .stage:nth-child(6n){
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.1s;
+        }
+        }
+        #animation-loading:target{
+          .stage:nth-child(3),
+          .stage:nth-child(7n){
+          opacity: 0;
+          animation: appearance 1s ease-in-out forwards;  
+          animation-delay: 3.2s;
+          }
+          }
+          #animation-loading:target{
+            .stage:nth-child(4),
+            .stage:nth-child(8n){
+            opacity: 0;
+            animation: appearance 1s ease-in-out forwards;  
+            animation-delay: 3.3s;
+            }
+            }
+            #animation-loading:target{
+              .processDevelopment__slider{
+              opacity: 0;
+              animation: appearance 1s ease-in-out forwards;  
+              animation-delay: 3.4s;
+              }
+              }
 .processDevelopment {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(55);
@@ -26,6 +75,11 @@
       font-size: pxToRem(13);
       line-height: pxToRem(19);
       margin-bottom: pxToRem(30);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.75s;
+      }
     }
     @include media($tablet, $desktop) {
       font-size: pxToRem(20);
@@ -35,6 +89,11 @@
       max-width: none;
       line-height: pxToRem(29);
       margin-bottom: pxToRem(49);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.75s;
+      }
     }
 
     @include desktop {
@@ -43,6 +102,11 @@
       max-width: none;
       line-height: pxToRem(44);
       margin-bottom: pxToRem(49);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.75s;
+      }
     }
   }
 
@@ -121,7 +185,13 @@
         display: flex;
         position: absolute;
         z-index: -1;
+        @include light-theme{
         background: var(--pallete-common-white-10);
+        }
+        @include dark-theme{
+          background: var(--pallete-primary-main);
+          opacity: .1;
+        }
       }
       @include desktop {
         width: pxToRem(113);
@@ -130,7 +200,13 @@
         display: flex;
         position: absolute;
         z-index: -1;
-        background: var(--pallete-common-white-10);
+        @include light-theme{
+          background: var(--pallete-common-white-10);
+          }
+          @include dark-theme{
+            background: var(--pallete-primary-main);
+            opacity: .1;
+          }
       }
     }
 
@@ -142,6 +218,11 @@
       @include media(0, $tablet) {
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3s;
+        }
       }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
@@ -149,6 +230,11 @@
         margin-top: pxToRem(9);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3s;
+        }
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
@@ -157,6 +243,11 @@
         margin-top: pxToRem(14);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3s;
+        }
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
@@ -185,6 +276,11 @@
       @include media(0, $tablet) {
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.1s;
+        }
       }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
@@ -192,6 +288,11 @@
         margin-top: pxToRem(56);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.1s;
+        }
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
@@ -199,6 +300,11 @@
         margin-top: pxToRem(71);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.1s;
+        }
         // padding-left: 22pxToRem;
         // padding-right: 22pxToRem;
       }
@@ -234,18 +340,57 @@
     }
     .stage:nth-child(3),
     .stage:nth-child(7n) {
-      // height: 100%;
-      // width: max-content;
-      position: relative;
-      width: pxToRem(211);
+      @include media(0, $tablet) {
+        position: relative;
+        z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.2s;
+        }
+      }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
-      .text {
-        //  max-width: 218pxToRem;
-        //  @include tablet{
-        //   max-width: 193pxToRem;
-        //  }
+      @include media($tablet, $desktop) {
+        // margin-top: pxToRem(56);
+        position: relative;
+        z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.2s;
+        }
+        // padding-left: 22pxToRem;
+        // padding-right: 22pxToRem;
       }
+      @include desktop {
+        // margin-top: pxToRem(71);
+        position: relative;
+        z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.2s;
+        }
+        // padding-left: 22pxToRem;
+        // padding-right: 22pxToRem;
+      }
+      // height: 100%;
+      // width: max-content;
+
+
+      // position: relative;
+      // width: pxToRem(211);
+
+
+      // padding-left: 22pxToRem;
+      // padding-right: 22pxToRem;
+      // .text {
+      //   //  max-width: 218pxToRem;
+      //   //  @include tablet{
+      //   //   max-width: 193pxToRem;
+      //   //  }
+      // }
       .stage__ellipse {
         @include media(0, $tablet) {
           left: pxToRem(35);
@@ -270,6 +415,11 @@
       @include media(0, $tablet) {
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.3s;
+        }
       }
       // padding-left: 22pxToRem;
       // padding-right: 22pxToRem;
@@ -279,6 +429,11 @@
         margin-top: pxToRem(10);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.3s;
+        }
       }
       @include desktop {
         // padding-left: 22pxToRem;
@@ -286,6 +441,11 @@
         margin-top: pxToRem(37);
         position: relative;
         z-index: 1;
+        #animation-loading:target{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 3.3s;
+        }
       }
       .stage__ellipse {
         @include media(0, $tablet) {
@@ -367,12 +527,22 @@
       display: flex;
       // margin-top: 2pxToRem;
       width: 100%;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3.4s;
+      }
     }
     @include media($tablet, 1279) {
       margin-top: pxToRem(25);
       display: flex;
       // margin-top: 2pxToRem;
       width: 100%;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 3.4s;
+      }
     }
     @include desktop-extra {
       display: none;
@@ -382,20 +552,47 @@
       float: left;
       .arrow-left {
         border: pxToRem(4) solid transparent;
+        @include light-theme{
+          border-right: pxToRem(5) solid #1c1d28;
+          }
+          @include dark-theme{
+            border-right: pxToRem(5) solid var(--pallete-common-white);
+          }
         border-right: pxToRem(5) solid #1c1d28;
         float: inherit;
         height: pxToRem(6);
         width: pxToRem(14);
+        // &:hover{
+        //     border-right: pxToRem(5) solid var(--pallete-primary-main);
+        // }
       }
+      &:hover{
+        .arrow-left{
+        border-right: pxToRem(5) solid var(--pallete-primary-main);
+        }
+    }
     }
     .button-right {
       float: right;
       .arrow-right {
         border: pxToRem(4) solid transparent;
-        border-left: pxToRem(5) solid #1c1d28;
+        @include light-theme{
+          border-left: pxToRem(5) solid #1c1d28;
+          }
+          @include dark-theme{
+            border-left: pxToRem(5) solid var(--pallete-common-white);
+          }
         float: inherit;
         height: pxToRem(6);
         width: pxToRem(14);
+      //   &:hover{
+      //     border-left: pxToRem(5) solid var(--pallete-primary-main);
+      // }
+      }
+      &:hover{
+        .arrow-right{
+        border-left: pxToRem(5) solid var(--pallete-primary-main);
+        }
       }
     }
     .slider__button {
