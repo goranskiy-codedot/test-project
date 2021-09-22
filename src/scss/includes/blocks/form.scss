@@ -384,10 +384,10 @@ html[dir="rtl"]{
       @include placeholder-color(rgba(255, 255, 255, 0.3));
       @include placeholder-style(Montserrat, normal, normal, 10px, 12px);
       &:focus {
-        @include placeholder-animation(600px, 0.3s);
+        @include textarea-animation(-500px, 0.3s);
       }
       &:not(:focus) {
-        @include placeholder-animation(0px, 0.3s);
+        @include textarea-animation(0px, 0.3s);
       }
       transition: text-indent 3s;
     }
@@ -403,10 +403,10 @@ html[dir="rtl"]{
         transition: text-indent 1s;
         @include placeholder-color(rgba(255, 255, 255, 0.3));
         &:focus {
-          @include placeholder-animation(600px, 0.3s);
+          @include textarea-animation(-500px, 0.3s);
         }
         &:not(:focus) {
-          @include placeholder-animation(0px, 0.3s);
+          @include textarea-animation(0px, 0.3s);
         }
         @include placeholder-style(Montserrat, normal, normal, 12, 15);
       }
@@ -528,8 +528,18 @@ html[dir="rtl"]{
     }
     &:hover {
       color: var(--pallete-common-white);
-      background-color: #ff3c68;
-      border: pxToRem(1) solid #ff3c68;
+      background-color: #90030c;
+      border: pxToRem(1) solid #90030c;
+    }
+    @include light-theme{
+      background-color: #e2000d;
+      border: #e2000d;
+      color: #f6f6f6;
+    }
+    @include dark-theme{
+      background-color: #e2000d;
+      border: #e2000d;
+      color: #f6f6f6;
     }
   }
 }

@@ -124,7 +124,7 @@
       margin-bottom: pxToRem(26);
       white-space: nowrap;
       overflow: hidden;
-      gap: 10px;
+      gap: pxToRem(10);
       display: flex;
       }
       @include media($tablet,$desktop){
@@ -132,7 +132,7 @@
         margin-top: pxToRem(36);
         white-space: nowrap;
         overflow: hidden;
-        gap: 10px;
+        gap: pxToRem(10);
         display: flex;
       }
       @include desktop-extra{
@@ -140,8 +140,8 @@
         margin-top:pxToRem(68);
         white-space: nowrap;
         overflow: hidden;
-        gap: 10px;
         max-width: pxToRem(450);
+        gap: pxToRem(10); 
         display: flex;
       }
       @include media($desktop, 952) {
@@ -150,8 +150,8 @@
         margin-top: pxToRem(36);
         white-space: nowrap;
         overflow: hidden;
-        gap: 10px;
         max-width: pxToRem(450);
+        gap: pxToRem(10);
         display: flex;
       }
       @include media(952,$desktop-extra){
@@ -160,19 +160,41 @@
         white-space: nowrap;
         overflow: hidden;
         width: 19ch;
-        display: flex;
         max-width: pxToRem(450);
-        gap: 10px;
+        position: relative;
+        display: flex;
+        gap: pxToRem(10);
       }
-      animation: hero-header__typingAnimation 3s steps(38, end),
-      hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
+      span{
+        opacity: 1;
+        // position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 19ch;
+        // &:nth-child(1){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 1.5s ;
+        // } &:nth-child(2){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 6.5s;
+        // } &:nth-child(3){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 11.5s;
+        // } &:nth-child(4){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 16.5s;
+        // } &:nth-child(5){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 21.5s;
+        // } &:nth-child(6){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 26.5s;
+        // }
+    }
+      animation: hero-header__typingAnimation 3s steps(38, end),hero-header__eraseAnimation 7s infinite steps(38, end) 4s;
+      // animation: hero-header__typingAnimation 3s steps(38, end),
+      // hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
       
-      &::after{
-        content: "Креатива";
-        // animation: hero-header__eraseAnimation 3.5s steps(10, end);
-        // animation-delay: 8.5s;
-        animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
-      }
+      // &::after{
+      //   content: "Креатива";
+      //   // animation: hero-header__eraseAnimation 3.5s steps(10, end);
+      //   // animation-delay: 8.5s;
+      //   animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
+      // }
     }
   }
   p {
@@ -271,15 +293,16 @@
       }
     }
       @include dark-theme{
-        border:pxToRem(1) solid #2d2b88;
-        color:#2d2b88;
+        border: pxToRem(1) solid var(--pallete-primary-main);
+        color: var(--pallete-primary-main);
         background-color:transparent;
         &:hover {
-          color:var(--pallete-common-white);
-          background-color:#2d2b88;
-          border:pxToRem(1) solid #2d2b88;
-        }
+          color: var(--pallete-common-white);
+        background-color: var(--pallete-primary-main);
+        border: pxToRem(1) solid var(--pallete-primary-main);
+        
       }
     }
   }
+}
 }

@@ -346,11 +346,11 @@ html[dir="rtl"]{
           border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-common-white);
           background-color: var(--pallete-primary-main);
-          @include dark-theme{
-          color:var(--pallete-common-white);
-          background-color:#2d2b88;
-          border:pxToRem(1) solid #2d2b88;   
-            }
+          // @include dark-theme{
+          // color:var(--pallete-common-white);
+          // background-color:#2d2b88;
+          // border:pxToRem(1) solid #2d2b88;   
+          //   }
           }
         }
       
@@ -550,7 +550,7 @@ html[dir="rtl"]{
           height: pxToRem(20);
           width: pxToRem(20);
           top: pxToRem(33);
-          right: pxToRem(34);
+          right: pxToRem(34.5);
           transform: rotate(45deg);
         }
       }
@@ -561,11 +561,120 @@ html[dir="rtl"]{
           border: pxToRem(1) solid var(--pallete-primary-main);
           background-color: var(--pallete-primary-main);
           color: var(--pallete-common-white);
-          @include dark-theme{
-            color:var(--pallete-common-white);
-            background-color:#2d2b88;
-            border:pxToRem(1) solid #2d2b88;   
-              }
+        //   @include dark-theme{
+        //     color:var(--pallete-common-white);
+        //     background-color:#2d2b88;
+        //     border:pxToRem(1) solid #2d2b88;   
+        //       }
+        }
+      }
+    }
+    &:hover{
+      .hover::before {
+        @include media(0,$desktop){
+        content: "";
+        width: pxToRem(17);
+        height: pxToRem(26);
+        background-color: var(--pallete-primary-main);
+        display: inline-block;
+        position: absolute;
+        right: pxToRem(18);
+        top: 0;
+        }
+        @include desktop {
+          content: "";
+          width: pxToRem(27);
+          height: pxToRem(43);
+          right: pxToRem(31);
+          transition: 2s;
+          background-color: var(--pallete-primary-main);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        // animation-direction:alternate;
+        animation: bookmark__animation-Hover 1s ease ,bookmark__animation-HoverDown 0.2s 1s;
+        }
+      }
+      .hover::after {
+        @include media(0,$desktop){
+        background-color: inherit;
+        content: "";
+        display: inline-block;
+        height: pxToRem(14);
+        position: absolute;
+        right: pxToRem(20);
+        top: pxToRem(19);
+        transform: rotate(45deg);
+        width: pxToRem(14);
+        }
+        @include desktop {
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          height: pxToRem(20);
+          width: pxToRem(20);
+          top: pxToRem(33);
+          right: pxToRem(34.5);
+          transform: rotate(45deg);
+           transition: 2s;
+           animation-direction:alternate;
+           animation: bookmarkTip__animation-Hover 1s ease,bookmarkTip__animation-HoverDown 0.2s 1s;
+
+        }
+      }
+    }
+    &:not(:hover){
+      .hover::before {
+        @include media(0,$desktop){
+        content: "";
+        width: pxToRem(17);
+        height: pxToRem(26);
+        background-color: var(--pallete-primary-main);
+        display: inline-block;
+        position: absolute;
+        right: pxToRem(18);
+        top: 0;
+        }
+        @include desktop {
+          content: "";
+          width: pxToRem(27);
+          height: pxToRem(43);
+          right: pxToRem(31);
+          transition: 2s;
+          background-color: var(--pallete-primary-main);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        // animation-direction:alternate;
+        animation: bookmark__animation-notHover 4s forwards;
+        }
+      }
+      .hover::after {
+        @include media(0,$desktop){
+        background-color: inherit;
+        content: "";
+        display: inline-block;
+        height: pxToRem(14);
+        position: absolute;
+        right: pxToRem(20);
+        top: pxToRem(19);
+        transform: rotate(45deg);
+        width: pxToRem(14);
+        }
+        @include desktop {
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          height: pxToRem(20);
+          width: pxToRem(20);
+          top: pxToRem(33);
+          right: pxToRem(34.5);
+          transform: rotate(45deg);
+          //  transition: 2s;
+           animation-direction:alternate;
+           animation: bookmarkTip__animation-notHover 4s forwards;
         }
       }
     }

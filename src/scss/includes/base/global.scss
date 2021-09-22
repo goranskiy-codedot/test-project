@@ -207,16 +207,16 @@ strong {
     background-color: transparent;
     border: pxToRem(1) solid var(--pallete-primary-main);
   }
-  @include dark-theme{
-    border: #2d2b88;
-    color: var(--pallete-common-white);
-    background-color: #2d2b88;
-    &:hover {
-      color:#2d2b88;
-      background-color: transparent;
-      border:pxToRem(1) solid #2d2b88;
-    }
-  }
+  // @include dark-theme{
+  //   border: #2d2b88;
+  //   color: var(--pallete-common-white);
+  //   background-color: #2d2b88;
+  //   &:hover {
+  //     color:#2d2b88;
+  //     background-color: transparent;
+  //     border:pxToRem(1) solid #2d2b88;
+  //   }
+  // }
   @include desktop {
     // min-width: 171pxToRem;
     // min-height: 41pxToRem;
@@ -227,6 +227,9 @@ strong {
     height: pxToRem(41);
 
   }
+//   &:hover{
+//   box-shadow: 0 0 10px 0 #2d2b88 inset, 0 0 10px 2px #2d2b88;
+// }
 }
 h1 {
 

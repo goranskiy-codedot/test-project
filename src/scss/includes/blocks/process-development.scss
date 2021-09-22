@@ -198,6 +198,12 @@ html[dir="rtl"]{
       transition: .5s;
     }
   }
+  .stage:not(:hover){
+    .stage__ellipse{
+      transform: scale(1);
+      transition: .5s;
+    }
+  }
 
 
     .stage:nth-child(1),

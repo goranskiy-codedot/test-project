@@ -761,15 +761,25 @@ html[dir="rtl"]{
       height: auto;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
-      background-color: var(--pallete-secondary-main);
+      @include light-theme{
+        background-color: #e2000d;
+        border: #e2000d;
+        color: #f6f6f6;
+      }
+      @include dark-theme{
+        background-color: #e2000d;
+        border: #e2000d;
+        color: #f6f6f6;
+      }
+ 
       border: var(--pallete-secondary-main);
       font-size: pxToRem(15);
       line-height: pxToRem(18);
-       color: #000;
       &:hover {
-        color: var(--pallete-common-white);
-        background-color: #ff3c68;
-        border: pxToRem(1) solid #ff3c68;
+          color: var(--pallete-common-white);
+          background-color: #90030c;
+          border: pxToRem(1) solid #90030c;
+
       }
       #animation-loading:target{
       opacity: 0;
