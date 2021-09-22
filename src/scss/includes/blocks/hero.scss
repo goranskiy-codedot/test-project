@@ -50,17 +50,8 @@
   }
 
   &__wrapper {
-    // margin-top: 24pxToRem;
     display: flex;
     width: 100%;
-
-    // @include tablet {
-    //   // margin-top: 27pxToRem;
-    // }
-
-    // @include desktop {
-    //   // margin-top: 64pxToRem;
-    // }
   }
 
   &__content {
@@ -87,7 +78,6 @@
   .image__container {
     @include media(0,$tablet){
     display: none;
-    //  transition:2s  ease-in-out ;
     }
     @include media($tablet,$desktop) {
       display: flex;
@@ -122,6 +112,8 @@
       height: auto;
       object-fit: contain;
       width: 100%;
+      animation: hero-image__animation 2s forwards;
+      animation-iteration-count: infinite;
   
     }
   }
@@ -130,49 +122,56 @@
     h1{
       @include media(0,$tablet){
       margin-bottom: pxToRem(26);
-      // margin-top: 10pxToRem;  
-      #animation-loading:target{
-      opacity: 0;
-      animation: appearance 1s ease-in-out forwards;  
-      animation-delay:1.75s;
-      }
+      white-space: nowrap;
+      overflow: hidden;
+      gap: 10px;
+      display: flex;
       }
       @include media($tablet,$desktop){
         margin-bottom: pxToRem(36);
         margin-top: pxToRem(36);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;  
-        animation-delay:1.75s;
-        }
+        white-space: nowrap;
+        overflow: hidden;
+        gap: 10px;
+        display: flex;
       }
       @include desktop-extra{
         margin-bottom: pxToRem(31);
         margin-top:pxToRem(68);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;  
-        animation-delay:1.75s;
-        }
+        white-space: nowrap;
+        overflow: hidden;
+        gap: 10px;
+        max-width: pxToRem(450);
+        display: flex;
       }
       @include media($desktop, 952) {
         font-size: pxToRem(29);
         margin-bottom: pxToRem(36);
         margin-top: pxToRem(36);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;  
-        animation-delay:1.75s;
-        }
+        white-space: nowrap;
+        overflow: hidden;
+        gap: 10px;
+        max-width: pxToRem(450);
+        display: flex;
       }
       @include media(952,$desktop-extra){
         margin-bottom: pxToRem(31);
         margin-top: pxToRem(68);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;  
-        animation-delay:1.75s;
-        }
+        white-space: nowrap;
+        overflow: hidden;
+        width: 19ch;
+        display: flex;
+        max-width: pxToRem(450);
+        gap: 10px;
+      }
+      animation: hero-header__typingAnimation 3s steps(38, end),
+      hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
+      
+      &::after{
+        content: "Креатива";
+        // animation: hero-header__eraseAnimation 3.5s steps(10, end);
+        // animation-delay: 8.5s;
+        animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
       }
     }
   }
@@ -208,7 +207,6 @@
   
 
   .content__buttons {
-    // margin-top: 32pxToRem;
     @include media(0,$desktop){
     display: flex;
     gap: pxToRem(20);

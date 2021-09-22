@@ -1,28 +1,12 @@
 html[dir="rtl"]{
   .burgerMenu {
     .burger__line::before {
-      // content: "";
-      // display: block;
-      // background-color: var(--pallete-grey-900);
-      // width: pxToRem(20);
-      // height: pxToRem(2);
-      // position: absolute;
-      // top: pxToRem(-6);
       left: pxToRem(0);
-      // z-index: 1010;
       right: 9px!important;
     }
 
     .burger__line::after {
-      // content: "";
-      // display: block;
-      // position: absolute;
-      // background-color: var(--pallete-grey-900);
-      // width: pxToRem(20);
-      // height: pxToRem(2);
-      // top: pxToRem(7);
       left: pxToRem(0);
-      // z-index: 1010;
       right: 9px!important;
     }
   }          
@@ -220,11 +204,6 @@ html[dir="rtl"]{
 
     .menu__logo {
       z-index: 1001;
-      // #animation-loading:target{
-      // opacity: 0;
-      // animation: appearance 1s ease-in-out forwards;
-      // animation-delay:0.5s;
-      // }
       .logo {
         @include media(0,$desktop){
         display: block;
@@ -400,10 +379,6 @@ html[dir="rtl"]{
       }
 
       @include desktop {
-        // margin-top: 15pxToRem;
-        // justify-content: initial;
-        // display: initial;
-        // margin-left: 53pxToRem;
         position: initial;
         overflow: hidden;
         z-index: 1000;
@@ -422,11 +397,9 @@ html[dir="rtl"]{
         height: 100%;
         align-items: center;
         flex-direction: initial;
-       // justify-content: initial;
         padding-bottom: pxToRem(0);
         max-width: pxToRem(970);
         width: 100%;
-        // justify-content: space-between;
         display: flex;
       }
 
@@ -440,7 +413,6 @@ html[dir="rtl"]{
           display: flex;
           padding-right: pxToRem(0);
           overflow: hidden;
-          // gap: 47pxToRem;
           height: 100%;
           justify-content: space-between;
           max-width: pxToRem(642);
@@ -540,7 +512,6 @@ html[dir="rtl"]{
           letter-spacing: 0.02em;
           padding: pxToRem(12.5) pxToRem(12.8);
           display: block;
-          // width: max-content;
         }
         @include media($desktop, 992) {
           font-family: Montserrat;
@@ -595,21 +566,11 @@ html[dir="rtl"]{
       @include media(0,$tablet){
       align-items: center;
       display: flex;
-      // margin-left: auto;
       justify-content: space-around;
       position: absolute;
       bottom: 0;
       width: 100%;
       }
-   
-      // @include tablet {
-      //   position: initial;
-      //   align-items: center;
-      //   justify-content: space-between;
-      //   max-width: pxToRem(274);
-      //   width: 100%;
-      //   display: flex;
-      // } 
       @include media($tablet, 727) {
         display: flex;
         position: initial;
@@ -628,14 +589,7 @@ html[dir="rtl"]{
       }
     
   
-      // @include media($desktop, 992) {
-      //   display: flex;
-      //   position: initial;
-      //   align-items: center;
-      //   justify-content: space-between;
-      //   width: 100%;
-      //   max-width: pxToRem(306);
-      // }
+  
       @include media(992,$desktop-extra){
         display: flex;
         position: initial;
@@ -831,7 +785,6 @@ html[dir="rtl"]{
         line-height: pxToRem(12);
         padding: pxToRem(0);
         height: pxToRem(33);
-        // margin-bottom: 32pxToRem;
         margin-left: pxToRem(0);
         background-color: var(--pallete-primary-main);
         margin-top: 0;
@@ -853,7 +806,6 @@ html[dir="rtl"]{
         height: pxToRem(33);
         font-size: pxToRem(10);
         line-height: pxToRem(12);
-        // margin-bottom: 32pxToRem;
         margin-left: pxToRem(0);
         background-color: var(--pallete-primary-main);
         margin-top: 0;
@@ -873,7 +825,6 @@ html[dir="rtl"]{
         min-height: pxToRem(41);
         font-size: pxToRem(13);
         line-height: pxToRem(16);
-        // margin-right: 25pxToRem;
         margin-top: 0;
         padding: pxToRem(12);
         #animation-loading:target{
@@ -887,7 +838,6 @@ html[dir="rtl"]{
         min-height: pxToRem(41);
         font-size: pxToRem(13);
         line-height: pxToRem(16);
-        // margin-right: 25pxToRem;
         margin-top: 0;
         padding: pxToRem(12);
         #animation-loading:target{

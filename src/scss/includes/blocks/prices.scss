@@ -7,14 +7,9 @@ html[dir="rtl"]{
     font-size: pxToRem(10);
     line-height: pxToRem(19);
     letter-spacing: 0.02em;
-    // padding-left: 41pxToRem;
-    // margin-block-end: 9pxToRem;
-    // margin-block-start: 4pxToRem;
     padding-right: pxToRem(24);
     }
     @include media($tablet,$desktop) {
-      // margin-block-end: 10pxToRem;
-      // margin-block-start: 8pxToRem;
       font-family: Montserrat;
       font-style: normal;
       font-weight: normal;
@@ -30,18 +25,8 @@ html[dir="rtl"]{
       font-size: pxToRem(15);
       line-height: pxToRem(28);
       letter-spacing: 0.02em;
-      // margin-block-start: 8pxToRem;
-
-      // margin-block-end: 9pxToRem;
       padding-right: pxToRem(32);
     }
-    // &::marker {
-    //   content: url(../../../uploads/check.svg);
-
-    //   position: absolute;
-    //   @include desktop {
-    //   }
-    // }
     &::before {
       @include media(0,$desktop){
       content: "";
@@ -90,7 +75,6 @@ html[dir="rtl"]{
     margin-bottom: pxToRem(38);
     }
     @include media($tablet,$desktop){
-      // max-width: 60pxToRem;
       text-align: center;
       width: 100%;
       margin-bottom: pxToRem(52);
@@ -103,10 +87,6 @@ html[dir="rtl"]{
     }
   }
   .prices {
-    // justify-content: center;
-    // padding-left: 29pxToRem;
-    // padding-right: 27pxToRem;
-    // width: max-content;
     @include media(0,$tablet){
     margin: 0 auto;   
     padding-right: 0;
@@ -116,7 +96,6 @@ html[dir="rtl"]{
     @include tablet {
       padding-left: pxToRem(0);
       padding-right: pxToRem(0);
-      // margin-top: 52pxToRem;
       display: grid;
    justify-content: center;
     flex-wrap: wrap;
@@ -129,7 +108,6 @@ html[dir="rtl"]{
     .pack {
       @include media(0,$tablet){
       max-width: pxToRem(244);
-      // min-height: 386pxToRem;
       border: pxToRem(1) solid var(--pallete-grey-10);
       padding: pxToRem(18);
       height: 100%;
@@ -141,7 +119,6 @@ html[dir="rtl"]{
       }
       @include tablet{
         max-width: pxToRem(244);
-        // min-height: 386pxToRem;
         border: pxToRem(1) solid var(--pallete-grey-10);
         padding: pxToRem(18);
         height: 100%;
@@ -153,7 +130,6 @@ html[dir="rtl"]{
       }
  
       @include desktop {
-        // min-height: 552pxToRem;
         border: pxToRem(1) solid var(--pallete-grey-10);
         min-height: pxToRem(386);
         margin-left: auto;
@@ -164,22 +140,18 @@ html[dir="rtl"]{
       }
  
       @include media(641,740){
-        // min-height: 443pxToRem;
         height: 100%;
      }
       @include media($desktop,1118){
-        // min-height: 653pxToRem;
         height: 100%;
      }
       &__wrapper {
         @include media(0,$tablet){
         border-bottom: pxToRem(2) solid var(--pallete-grey-10);
         margin: pxToRem(0) pxToRem(0) pxToRem(25);
-        // margin: 21pxToRem;
         text-align: center;
         }
         @include media($tablet,$desktop) {
-          // margin: 19pxToRem;
           border-bottom: pxToRem(2) solid var(--pallete-grey-10);
           margin: pxToRem(0) pxToRem(0) pxToRem(26);
           text-align: center;
@@ -187,7 +159,6 @@ html[dir="rtl"]{
         @include desktop {
           border-bottom: pxToRem(2) solid var(--pallete-grey-10);
           margin: pxToRem(0) pxToRem(0) pxToRem(39) pxToRem(0);
-          // margin: 32pxToRem;
           text-align: center;
         }
       }
@@ -224,16 +195,10 @@ html[dir="rtl"]{
         align-items: baseline;
         justify-content: center;
         position: relative;
-        // margin-top: 22pxToRem;
         gap: pxToRem(5);
-        // margin-right: 17pxToRem;
         max-width: pxToRem(320);
         }
-        @include tablet {
-          // margin-top: 21pxToRem;
-        }
         @include desktop {
-          // margin-top: 43pxToRem;
           gap: pxToRem(10);
           max-width: pxToRem(320);
           display: flex;
@@ -244,11 +209,7 @@ html[dir="rtl"]{
         }
         .grivna::before {
           content: "₴";
-        }
-        .hint__bottom{
-         
-        }
-        
+        }  
 
         .price {
           @include media(0,$desktop){
@@ -264,10 +225,6 @@ html[dir="rtl"]{
           @include dark-theme{
             color: var(--pallete-common-white);
           }
-          // padding-right: 12pxToRem;
-          // padding-top: 7pxToRem;
-          // margin-top: 4pxToRem;
-          // margin-right: 15pxToRem;
           }
           @include desktop {
             font-family: Montserrat;
@@ -282,8 +239,6 @@ html[dir="rtl"]{
               @include dark-theme{
                 color: var(--pallete-common-white);
               }
-            // margin-top: 10pxToRem;
-            // margin-right: 0pxToRem;
           }
         }
       }
@@ -367,7 +322,6 @@ html[dir="rtl"]{
           background-color: transparent;
         }
         @include media($tablet,$desktop){
-          // margin-bottom: 29pxToRem;
           border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-primary-main);
           background-color: transparent;
@@ -405,7 +359,6 @@ html[dir="rtl"]{
         text-align: center;
         justify-content: center;
         align-items: center;
-        // padding-top: 21pxToRem;
         margin-top: pxToRem(20);
         margin-bottom: pxToRem(30);
         }
@@ -417,7 +370,6 @@ html[dir="rtl"]{
           margin-top: pxToRem(19);
         }
         @include desktop {
-          // padding-top: 36pxToRem;
           text-align: center;
           justify-content: center;
           align-items: center;
@@ -440,20 +392,17 @@ html[dir="rtl"]{
    
       &__benefits {
         .benefits__list {
-          // padding: 1pxToRem 7pxToRem;
           @include media(0,$tablet){
           padding-right: pxToRem(0);
           display: grid;
           row-gap: pxToRem(9); 
           }
           @include media($tablet,$desktop) {
-            // padding: 0pxToRem 13pxToRem;
             padding-right: pxToRem(0);
             display: grid;
             row-gap: pxToRem(9); 
           }
           @include desktop {
-            // padding: 0pxToRem 0 0pxToRem 11pxToRem;
             padding-right: pxToRem(0);
             display: grid;
             row-gap: pxToRem(9); 
@@ -470,14 +419,11 @@ html[dir="rtl"]{
           font-size: pxToRem(10);
           line-height: pxToRem(19);
           letter-spacing: 0.02em;
-          // padding-left: 41pxToRem;
-          // margin-block-end: 9pxToRem;
-          // margin-block-start: 4pxToRem;
+
           padding-left: pxToRem(24);
           }
           @include media($tablet,$desktop) {
-            // margin-block-end: 10pxToRem;
-            // margin-block-start: 8pxToRem;
+
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -493,18 +439,8 @@ html[dir="rtl"]{
             font-size: pxToRem(15);
             line-height: pxToRem(28);
             letter-spacing: 0.02em;
-            // margin-block-start: 8pxToRem;
-
-            // margin-block-end: 9pxToRem;
             padding-left: pxToRem(32);
           }
-          // &::marker {
-          //   content: url(../../../uploads/check.svg);
-
-          //   position: absolute;
-          //   @include desktop {
-          //   }
-          // }
           &::before {
             @include media(0,$desktop){
             content: "";
@@ -559,25 +495,7 @@ html[dir="rtl"]{
         opacity: 1;
       }
     }
-    // .currency{
-    //   font-family: Montserrat;
-    //   font-style: normal;
-    //   font-weight: bold;
-    //   font-size: 20pxToRem;
-    //   line-height: 145%;
-    //   letter-spacing: 0.02em;
-    //   opacity: 0;
-    //   @include desktop{
-    //     font-family: Montserrat;
-    //     font-size: 30pxToRem;
-    //     font-style: normal;
-    //     font-weight: 700;
-    //     letter-spacing: .02em;
-    //     line-height: 145%;
-    //     margin-top: 10pxToRem;
-    //     opacity: 0;
-    //   }
-    // }
+
 
     .hover {
       border: pxToRem(1) solid var(--pallete-primary-main);

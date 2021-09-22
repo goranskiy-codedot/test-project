@@ -31,7 +31,6 @@
     h2 {
       @include media(0,$tablet){
       margin-bottom: pxToRem(33);
-      // max-width: 132pxToRem;
       #animation-loading:target{
       opacity: 0;
       animation: appearance 1s ease-in-out forwards;  
@@ -40,7 +39,6 @@
       }
       @include media($tablet,$desktop) {
         margin-bottom: pxToRem(57);
-        // max-width: 175pxToRem;
         #animation-loading:target{
         opacity: 0;
         animation: appearance 1s ease-in-out forwards;  
@@ -48,8 +46,6 @@
         animation-delay: 3.5s;
       }
       @include desktop {
-
-        // max-width: 262pxToRem;
         margin-bottom: pxToRem(66);
         #animation-loading:target{
         opacity: 0;
@@ -62,7 +58,6 @@
   &__images {
     @include media(0,$tablet){
     object-fit: cover;
-    // margin-top: 33pxToRem;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -78,9 +73,9 @@
      }
     }
     @include media($tablet,$desktop) {
-      // margin-top: 57pxToRem;
+
       object-fit: cover;
-      // margin-top: 33pxToRem;
+
       width: 100%;
       align-items: center;
       justify-content: center;
@@ -98,7 +93,7 @@
     @include desktop {
       padding-left: pxToRem(85);
       padding-right: pxToRem(85);
-      // margin-top: 65pxToRem;
+
       align-items: initial;
       justify-content: initial;
       text-align: initial;
@@ -113,12 +108,6 @@
      @include dark-theme{
       filter: brightness(0.5);
      }
-
-
-      // display: grid;
-      // grid-template-columns: 497pxToRem;
-      // grid-template-rows: 560pxToRem 497pxToRem;
-      // grid-gap: 24pxToRem;
     }
 
     .container {
@@ -126,13 +115,6 @@
       padding: 0 0;
       }
       @include desktop {
-        // column-gap: 24pxToRem;
-        // display: grid;
-        // // grid: repeat(2,246pxToRem)/55% auto;
-        // // grid: repeat(24,20pxToRem)/55% auto;
-        // justify-content: center;
-        // row-gap: 26pxToRem;
-        // grid: repeat(4,246pxToRem)/55% 45%;
         column-gap: pxToRem(24);
         display: grid;
         grid: repeat(4,auto)/55.5% 42.5%;
@@ -145,96 +127,36 @@
 
 
   .image__container:nth-child(1n),.image__container:nth-child(3n + 1) {
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-    // min-height: 235pxToRem;
-    @include tablet{
-      // min-height: 462pxToRem;
-    }
     @include desktop {
-      // position: absolute;
-      // position: relative;
-      // grid-area: auto / 1 / span 2 / span 2;
-      // // grid-area: auto/1/span 13/span 2;
-      // // min-height: unset;
-      // left: 0;
-      // top: 0;
-
       grid-area: auto/1/span 2/span 2;
-      /* left: 0; */
       position: relative;
-      /* top: 0; */
       padding-bottom: 50.5%;
-      /* width: 100%; */
       height: 0;
       width: 100%;
     }
   }
 
-  // .examples__image:nth-child(7n + 3){
-  //   width: 100%;
-  //   height: 234pxToRem;
-  //   object-fit: cover;
-  //   @include tablet {
-  //     width: 100%;
-  //     height: 462pxToRem;
-  //   }
-  //   @include desktop {
-  //     width: 1230pxToRem;
-  //     height: 561pxToRem;
-  //     grid-area: auto / 1 / span 2 / span 2;
-  //   }
-  // }
+  
   .image__container:nth-child(2n),.image__container:nth-child(3n + 2) {
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-    // min-height: 235pxToRem;
-    @include tablet{
-      // min-height: 462pxToRem;
-    }
     @include desktop {
-      // grid-area: auto / 1 / span 1 / span 1;
-      // position: relative;
-      // // position: absolute;
-      // // grid-area: auto/1/span 11/span 1;
-      // // min-height: unset;
-      // left: 0;
-      // top: 0;
+     
       grid-area: auto/1/span 1/span 1;
       left: 0;
       position: relative;
       top: 0;
       padding-bottom: 80.5%;
-      /* margin-top: 26pxToRem; */
       height: 0;
     }
   }
 
-  //, .examples__image:nth-child(9n)
   .image__container:nth-child(3n),.image__container:nth-child(3n + 3) {
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-    // min-height: 235pxToRem;
-    @include tablet{
-      // min-height: 462pxToRem;
-    }
     @include desktop {
-      // grid-area: auto / 2 / span 1 / span 1;
-      // // grid-area: auto/2/span 11/span 1;
-      // // min-height: unset;
-      // // position: absolute;
-      // position:relative;
-      // left: 0;
-      // top: 0;
+
       grid-area: auto/2/span 1/span 1;
       left: 0;
       position: relative;
       top: 0;
       padding-bottom: 105.5%;
-      /* margin-top: 26pxToRem; */
       height: 0;
     }
   }
@@ -259,6 +181,9 @@
     width: 100%!important;
     height: 100%!important;
     object-fit: cover;
+     }
+     &:hover{
+       transform: scale(1.05);
      }
    }
 

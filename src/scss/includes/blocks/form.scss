@@ -4,12 +4,6 @@ html[dir="rtl"]{
     display: none;
     }
     @include desktop {
-      // bottom: -7pxToRem;
-      // display: block;
-      // left: 29pxToRem;
-      // max-width: 41.5%;
-      // position: absolute;
-      // width: 100%;
       bottom: pxToRem(-143);
       display: block;
       right: pxToRem(-74);
@@ -18,7 +12,6 @@ html[dir="rtl"]{
       width: 100%;
     }
     @include media-max(pxToRem(992)) {
-      // gap: 128pxToRem;
       display: none;
     }
   }
@@ -49,13 +42,11 @@ html[dir="rtl"]{
     @include desktop {
       display: flex;
       padding: 0;
-      // gap: 75pxToRem;
       max-width: pxToRem(1080);
       justify-content: space-between;
       position: relative;
     }
     @include media-max(pxToRem(992)) {
-      // gap: 128pxToRem;
       align-items: center;
       display: block;
     }
@@ -65,18 +56,11 @@ html[dir="rtl"]{
     text-align: center;
     margin-bottom: pxToRem(49);
     }
-    // padding-top: 79pxToRem;
-
-    //  margin-top: 52pxToRem;
     @include media(992, $desktop){
-      // margin-top: 109pxToRem;
-      // padding-top: 97pxToRem;
       text-align: center;
       margin-bottom: pxToRem(98);
     }
     @include desktop {
-      // margin-top: 134pxToRem;
-      // padding-top: 0pxToRem;
       text-align: -webkit-center;
       width: 40%;
       margin-bottom: pxToRem(0);
@@ -93,12 +77,6 @@ html[dir="rtl"]{
       display: none;
       }
       @include desktop {
-        // bottom: -7pxToRem;
-        // display: block;
-        // left: 29pxToRem;
-        // max-width: 41.5%;
-        // position: absolute;
-        // width: 100%;
         bottom: pxToRem(-143);
         display: block;
         left: pxToRem(-74);
@@ -107,7 +85,6 @@ html[dir="rtl"]{
         width: 100%;
       }
       @include media-max(pxToRem(992)) {
-        // gap: 128pxToRem;
         display: none;
       }
     }
@@ -121,7 +98,6 @@ html[dir="rtl"]{
         color: var(--pallete-common-white);
       }
       @include desktop {
-        // margin-bottom: 23pxToRem;
         max-width: pxToRem(280);
         margin-right: pxToRem(48);
         margin-bottom: pxToRem(25);
@@ -139,8 +115,6 @@ html[dir="rtl"]{
       color: var(--pallete-common-white);
       margin-block-start: 0em;
       margin-block-end: 0em;
-      // padding-top: 9pxToRem;
-      // margin-bottom: 49pxToRem;
       }
       @include media($tablet,$desktop) {
         font-family: Montserrat;
@@ -153,8 +127,6 @@ html[dir="rtl"]{
       color: var(--pallete-common-white);
       margin-block-start: 0em;
       margin-block-end: 0em;
-        // margin-top: 23pxToRem;
-        // margin-bottom: 98pxToRem;
       }
       @include desktop {
         font-family: Montserrat;
@@ -164,7 +136,6 @@ html[dir="rtl"]{
         padding-top: pxToRem(0);
         padding-top: pxToRem(0);
         width: pxToRem(345);
-        // margin-left: 100pxToRem;
         margin-left: pxToRem(18);
         letter-spacing: 0.02em;
       color: var(--pallete-common-white);
@@ -200,19 +171,15 @@ html[dir="rtl"]{
     .checkbox {
       display: none;
     }
-    @include desktop {
-      // margin-top: 27pxToRem;
-    }
     @include tablet {
       text-align: initial;
       display: flex;
       align-items: end;
-      // margin-top: 57pxToRem;
+
       .checkbox {
         @include media(0,$tablet){
         display: initial;
-        // margin-top: 13pxToRem;
-        // margin-left: 38pxToRem;
+ 
         cursor: pointer;
         text-decoration: none;
         margin-top: auto;
@@ -221,8 +188,7 @@ html[dir="rtl"]{
         @include media($tablet,$desktop) {
           padding-top: pxToRem(21);
           display: initial;
-          // margin-top: 13pxToRem;
-          // margin-left: 38pxToRem;
+
           cursor: pointer;
           text-decoration: none;
           margin-top: auto;
@@ -231,8 +197,7 @@ html[dir="rtl"]{
         @include desktop {
           padding-top: pxToRem(18);
           display: initial;
-          // margin-top: 13pxToRem;
-          // margin-left: 38pxToRem;
+
           cursor: pointer;
           text-decoration: none;
           margin-top: auto;
@@ -312,14 +277,11 @@ html[dir="rtl"]{
       @include dark-theme{
         background-color: #2d2b88;
       }
-    // min-height: 653pxToRem;
+
     padding-top: pxToRem(66);
     padding-bottom: pxToRem(52);
     }
     @include media($tablet,$desktop)  {
-      // min-height: 721pxToRem;
-      // padding-top: 96pxToRem;
-      // padding-bottom: 96pxToRem;
       padding-top: pxToRem(97);
       padding-bottom: pxToRem(104);
       @include light-theme{
@@ -332,7 +294,6 @@ html[dir="rtl"]{
     @include desktop {
       align-items: center;
       display: flex;
-      // min-height: 611pxToRem;
       padding-bottom: pxToRem(143);
       padding-top: pxToRem(133);
       height: 100%;
@@ -346,8 +307,6 @@ html[dir="rtl"]{
     }
   }
   &__inputs {
-    // margin-bottom: 36pxToRem;
-    // margin-top: 44pxToRem;
     @include media(0,$tablet){
     display: grid;
     grid-template-rows: repeat(5, pxToRem(59));
@@ -355,8 +314,6 @@ html[dir="rtl"]{
     grid-template-columns: repeat(1, pxToRem(300));
     }
     @include media($tablet,$desktop)  {
-      // margin-top: 97pxToRem;
-      // margin-left: 80pxToRem;
       display: grid;
       grid-template-rows: repeat(4, pxToRem(59));
       grid-template-columns: repeat(2, pxToRem(261));
@@ -390,27 +347,27 @@ html[dir="rtl"]{
       color: var(--pallete-common-white);
       margin-block-start: pxToRem(0);
       margin-block-end: pxToRem(0);
-      // padding-top: 27pxToRem;
+
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
       font-size: pxToRem(13);
       line-height: pxToRem(16);
-      // margin-bottom: 11pxToRem;
+
       display: block;
       }
       @include tablet {
         color: var(--pallete-common-white);
         margin-block-start: pxToRem(0);
         margin-block-end: pxToRem(0);
-        // padding-top: 27pxToRem;
+
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
         font-size: pxToRem(15);
         line-height: pxToRem(18);
         display: block;
-        // padding-top: 37pxToRem;
+  
       }
     }
 
@@ -420,8 +377,6 @@ html[dir="rtl"]{
       border-bottom: pxToRem(1) solid var(--pallete-common-white);
       width: 100%;
       color: var(--pallete-common-white);
-      // padding-bottom: 8pxToRem;
-      // padding-top: 8pxToRem;
       padding-bottom: pxToRem(9);
       padding-top: pxToRem(9);
       text-indent: pxToRem(0);
@@ -446,8 +401,6 @@ html[dir="rtl"]{
         padding-top: pxToRem(14);
         text-indent: pxToRem(0);
         transition: text-indent 1s;
-        // padding-top: 12pxToRem;
-        // margin-bottom: 35pxToRem;
         @include placeholder-color(rgba(255, 255, 255, 0.3));
         &:focus {
           @include placeholder-animation(600px, 0.3s);
@@ -460,14 +413,12 @@ html[dir="rtl"]{
     }
     .input__name {
       min-width: pxToRem(236);
-      // margin-bottom: 35pxToRem;
       grid-area: 1/1 / span 1 / span 2;
 
     }
     .input__message {
       @include media(0,$tablet){
       min-width: pxToRem(236);
-      // margin-bottom: 57pxToRem;
       grid-area: 4/1 / span 1 / span 2;
       }
       @include tablet {
@@ -478,7 +429,6 @@ html[dir="rtl"]{
     .input__email {
       @include media(0,$tablet){
       min-width: pxToRem(236);
-      // margin-bottom: 30pxToRem;
       grid-area: 3/1 / span 1 / span 2;
       }
       @include tablet {
@@ -499,17 +449,6 @@ html[dir="rtl"]{
         width: 45%;
       }
     }
-    // .inputs__center {
-    //   display: initial;
-
-    //   @include tablet {
-    //     display: flex;
-    //     gap: 50pxToRem;
-    //   }
-    //   @include tablet{
-    //     column-gap: 23pxToRem;
-    //   }
-    // }
     .textarea {
       @include media(0,$tablet){
       border: none;
@@ -521,7 +460,6 @@ html[dir="rtl"]{
       transition: text-indent 1s;
       padding-top: pxToRem(8);
       padding-bottom: pxToRem(8);
-      // margin-bottom: 57pxToRem;
       @include placeholder-color(rgba(255, 255, 255, 0.3));
       &:focus {
         @include textarea-animation(-500px, 0.3s);
@@ -537,7 +475,6 @@ html[dir="rtl"]{
         width: 100%;
         color: var(--pallete-common-white);
         max-width: pxToRem(523);
-        // padding: pxToRem(0);
         text-indent: pxToRem(0);
         transition: text-indent 1s;
         padding-top: pxToRem(8);
@@ -558,7 +495,6 @@ html[dir="rtl"]{
         padding-top: pxToRem(14);
         padding-bottom: pxToRem(11);
         max-width: pxToRem(523);
-        // padding: pxToRem(0);
         text-indent: pxToRem(0);
         transition: text-indent 1s;
         @include placeholder-color(rgba(255, 255, 255, 0.3));
@@ -577,11 +513,8 @@ html[dir="rtl"]{
     border: var(--pallete-secondary-main);
     width: pxToRem(301);
     height: pxToRem(33);
-    // color: var(--pallete-common-white);
     color: #000000;
     }
-    // margin-top: pxToRem;
-    // margin-top: 46pxToRem;
     @include tablet {
       width: pxToRem(171);
       height: pxToRem(41);
@@ -589,12 +522,9 @@ html[dir="rtl"]{
       font-weight: 500;
       font-size: pxToRem(13);
       line-height: pxToRem(16);
-      // color: var(--pallete-common-white);
       color: #000000;
       background-color: var(--pallete-secondary-main);
       border: var(--pallete-secondary-main);
-      // margin-top:63pxToRem;
-      // margin-top: 0pxToRem;
     }
     &:hover {
       color: var(--pallete-common-white);

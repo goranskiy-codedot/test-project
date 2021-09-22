@@ -117,3 +117,74 @@
    opacity: 1;
   }
 }
+
+@keyframes  hero-image__animation {
+  0% {
+    transform: translate3d(0, pxToRem(-5), 0);
+  }
+  50% {
+    transform: translate3d(0, pxToRem(5), 0);
+  }
+  100% {
+    transform: translate3d(0,  pxToRem(-5), 0);
+  }
+}
+
+@keyframes hero-header__typingAnimation {
+  from{
+   width: 0;
+  }
+  50%{
+    width: 35%;
+  }
+  to{
+    width: 100%;
+  }
+}
+@keyframes hero-header__eraseAnimation {
+  0%{
+   width: 100%;
+  }
+  50%{
+    width: 35%;
+  }
+  100%{
+     width: 100%;
+  }
+}
+@keyframes hero-header__typingAfterAnimation {
+  from{
+   width: 35%;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes hero-header__afterAnimation {
+  0%{
+    width: 100%;
+   content: "Креатива";
+  }
+  20%{
+    width: 100%;
+    content: "Дизайна";
+   }
+   40%{
+    width: 100%;
+    content: "Логотипа";
+   }
+  60%{
+    width: 100%;
+    content: "Призентации";
+   }
+  80%{
+    width: 100%;
+    content: "Иллюстрации";
+  }
+  100%{
+    width: 100%;
+    content: "Айдентики";
+  }
+
+}
