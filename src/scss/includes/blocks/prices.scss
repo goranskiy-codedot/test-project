@@ -535,12 +535,12 @@ html[dir="rtl"]{
         background-color: inherit;
         content: "";
         display: inline-block;
-        height: pxToRem(14);
+        height: pxToRem(13.5);
         position: absolute;
         right: pxToRem(20);
         top: pxToRem(19);
         transform: rotate(45deg);
-        width: pxToRem(14);
+        width: pxToRem(13.5);
         }
         @include desktop {
           background-color: inherit;
@@ -580,13 +580,13 @@ html[dir="rtl"]{
         position: absolute;
         right: pxToRem(18);
         top: 0;
+        animation: bookmark__mobileAnimation-Hover 1s ease ,bookmark__mobileAnimation-HoverDown 0.2s 1s;
         }
         @include desktop {
           content: "";
           width: pxToRem(27);
           height: pxToRem(43);
           right: pxToRem(31);
-          transition: 2s;
           background-color: var(--pallete-primary-main);
         display: inline-block;
         position: absolute;
@@ -606,6 +606,8 @@ html[dir="rtl"]{
         top: pxToRem(19);
         transform: rotate(45deg);
         width: pxToRem(14);
+        animation-direction:alternate;
+        animation: bookmarkTip__mobileAnimation-Hover 1s ease,bookmarkTip__mobileAnimation-HoverDown 0.2s 1s;
         }
         @include desktop {
           background-color: inherit;
@@ -617,10 +619,8 @@ html[dir="rtl"]{
           top: pxToRem(33);
           right: pxToRem(34.5);
           transform: rotate(45deg);
-           transition: 2s;
            animation-direction:alternate;
            animation: bookmarkTip__animation-Hover 1s ease,bookmarkTip__animation-HoverDown 0.2s 1s;
-
         }
       }
     }
@@ -635,13 +635,13 @@ html[dir="rtl"]{
         position: absolute;
         right: pxToRem(18);
         top: 0;
+        animation: bookmark__mobileAnimation-notHover 4s forwards;
         }
         @include desktop {
           content: "";
           width: pxToRem(27);
           height: pxToRem(43);
           right: pxToRem(31);
-          transition: 2s;
           background-color: var(--pallete-primary-main);
         display: inline-block;
         position: absolute;
@@ -661,6 +661,8 @@ html[dir="rtl"]{
         top: pxToRem(19);
         transform: rotate(45deg);
         width: pxToRem(14);
+        animation-direction:alternate;
+        animation: bookmarkTip__mobileAnimation-notHover 4s forwards;
         }
         @include desktop {
           background-color: inherit;
@@ -672,7 +674,6 @@ html[dir="rtl"]{
           top: pxToRem(33);
           right: pxToRem(34.5);
           transform: rotate(45deg);
-          //  transition: 2s;
            animation-direction:alternate;
            animation: bookmarkTip__animation-notHover 4s forwards;
         }

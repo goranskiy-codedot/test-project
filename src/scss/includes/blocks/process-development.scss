@@ -57,7 +57,7 @@ html[dir="rtl"]{
     padding-top: pxToRem(96);
   }
   @include desktop {
-    padding-bottom: pxToRem(52);
+    padding-bottom: pxToRem(12);
     padding-top: pxToRem(52);
   }
   .container {
@@ -74,7 +74,7 @@ html[dir="rtl"]{
       width: 64%;
       font-size: pxToRem(13);
       line-height: pxToRem(19);
-      margin-bottom: pxToRem(30);
+      margin-bottom: pxToRem(18);
       #animation-loading:target{
       opacity: 0;
       animation: appearance 1s ease-in-out forwards;  
@@ -86,7 +86,7 @@ html[dir="rtl"]{
       width: 100%;
       max-width: none;
       line-height: pxToRem(29);
-      margin-bottom: pxToRem(49);
+      margin-bottom: pxToRem(39);
       #animation-loading:target{
       opacity: 0;
       animation: appearance 1s ease-in-out forwards;  
@@ -100,6 +100,7 @@ html[dir="rtl"]{
       max-width: none;
       line-height: pxToRem(44);
       margin-bottom: pxToRem(49);
+      margin-bottom: pxToRem(29);
       #animation-loading:target{
       opacity: 0;
       animation: appearance 1s ease-in-out forwards;  
@@ -116,18 +117,22 @@ html[dir="rtl"]{
       scrollbar-width: none;
       margin-left: pxToRem(-25);
       margin-right: pxToRem(-25);
-      margin-bottom: pxToRem(21);
+      margin-bottom: pxToRem(13);
     }
     .stepsContainer__stages {
       @include media(0, $tablet) {
         display: flex;
         padding: pxToRem(0) pxToRem(93);
         gap: pxToRem(45);
+        padding-top: pxToRem(10);
+        padding-bottom: pxToRem(10);
       }
       @include media($tablet, $desktop) {
         display: flex;
         padding: pxToRem(0) pxToRem(30);
         gap: pxToRem(45);
+        padding-top: pxToRem(10);
+        padding-bottom: pxToRem(10);
       }
       @include desktop {
         display: flex;
@@ -135,6 +140,8 @@ html[dir="rtl"]{
         overflow-x: overlay;
         overflow-y: hidden;
         gap: pxToRem(45);
+        padding-top: pxToRem(20); 
+        padding-bottom: pxToRem(40);
         &::-webkit-scrollbar {
           width: pxToRem(0);
         }
@@ -148,7 +155,7 @@ html[dir="rtl"]{
       scrollbar-width: none;
       margin-left: pxToRem(-25);
       margin-right: pxToRem(-25);
-      margin-bottom: pxToRem(50);
+      margin-bottom: pxToRem(41);
     }
 
     @include desktop {
@@ -194,14 +201,17 @@ html[dir="rtl"]{
     }
    .stage:hover{
     .stage__ellipse{
-      transform: scale(1.8);
+      transform: scale(1.5);
       transition: .5s;
+      left: pxToRem(17)!important;
     }
   }
   .stage:not(:hover){
     .stage__ellipse{
       transform: scale(1);
       transition: .5s;
+      left: pxToRem(47);
+      
     }
   }
 

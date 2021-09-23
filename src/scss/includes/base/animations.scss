@@ -1,3 +1,4 @@
+//burgermenu in header
 @keyframes line_1_anim {
   0% {
     transform: translateY(0);
@@ -81,7 +82,6 @@
     }
   }
 }
-
 @keyframes line_2_anim_closing {
   0% {
     transform: translateX(0);
@@ -108,6 +108,7 @@
   }
 }
 
+//loading animation
 @keyframes appearance {
   from {
     opacity: 0;
@@ -118,6 +119,7 @@
   }
 }
 
+//image in hero
 @keyframes hero-image__animation {
   0% {
     transform: translate3d(0, pxToRem(-5), 0);
@@ -130,6 +132,7 @@
   }
 }
 
+//header in hero
 @keyframes hero-header__typingAnimation {
   from {
     width: 0;
@@ -141,74 +144,6 @@
     width: 100%;
   }
 }
-// @keyframes hero-header__typingDynamicAnimation {
-//   0%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(1){
-//             opacity: 1;
-//           }
-//         }
-//       }
-//       20%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(2){
-//             opacity: 1;
-//           }
-//         }
-//        }
-//        40%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(2){
-//             opacity: 1;
-//           }
-//         }
-//        }
-//       60%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(3){
-//             opacity: 1;
-//           }
-//         }
-//        }
-//       80%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(4){
-//             opacity: 1;
-//           }
-//         }
-//       }
-//       100%{
-//         width: 100%;
-//         h1{
-//           span:nth-child(5){
-//             opacity: 1;
-//           }
-//         }
-//       }
-// }
-// @keyframes hero-header__typingDynamicAnimation {
-//   0% {
-//     opacity: 1;
-//     width: 0%;
-//   }
-//   50% {
-//     opacity: 1;
-//     width: 35%;
-//   }
-//   99% {
-//     opacity: 1;
-//     width: 0%;
-//   }
-//   100% {
-//     opacity: 0;
-//     width: 0%;
-//   }
-// }
 @keyframes hero-header__eraseAnimation {
   0% {
     width: 100%;
@@ -226,43 +161,10 @@
     width: 100%;
   }
 }
-// @keyframes hero-header__typingAfterAnimation {
-//   from{
-//    width: 35%;
-//   }
-//   to{
-//     width: 100%;
-//   }
-// }
 
-// @keyframes hero-header__afterAnimation {
-//   0%{
-//     width: 100%;
-//    content: "Креатива";
-//   }
-//   20%{
-//     width: 100%;
-//     content: "Дизайна";
-//    }
-//    40%{
-//     width: 100%;
-//     content: "Логотипа";
-//    }
-//   60%{
-//     width: 100%;
-//     content: "Призентации";
-//    }
-//   80%{
-//     width: 100%;
-//     content: "Иллюстрации";
-//   }
-//   100%{
-//     width: 100%;
-//     content: "Айдентики";
-//   }
 
-// }
 
+//bookmark in prices
 @keyframes bookmark__animation-Hover {
    from{
      height: 43px;
@@ -277,7 +179,6 @@
      right: pxToRem(35);
    }
 }
-
 @keyframes bookmark__animation-HoverDown {
   from{
     height: pxToRem(86);
@@ -291,26 +192,6 @@
     width: pxToRem(27);
   }
 }
-
-// @keyframes bookmark__animation-notHover {
-//   from{
-    
-//     height: 86px;
-//   }
-//   to{
-//     height: 43px;
-//   }
-// }
-
-// @keyframes bookmarkTip__animation-notHover {
-//   from{
-    
-//     top: 76px;
-//   }
-//   to{
-//     top: 33px;
-//   }
-// }
 @keyframes bookmarkTip__animation-Hover {
   from{
     
@@ -341,4 +222,65 @@
   to{
     top: 33px;
   }
+}
+@keyframes bookmark__mobileAnimation-Hover {
+  from{
+    height: pxToRem(26);
+  }
+  80%{
+    width: pxToRem(10);
+    right: pxToRem(20);
+  }
+  to{
+    height: pxToRem(52);
+    width: pxToRem(10);
+    right: pxToRem(20);
+  }
+}
+@keyframes bookmark__mobileAnimation-HoverDown {
+ from{
+   height: pxToRem(52);
+ }
+ 80%{
+   height: pxToRem(16);
+   width: pxToRem(17);
+ }
+ to{
+   height: pxToRem(26);
+   width: pxToRem(17);
+ }
+}
+@keyframes bookmarkTip__mobileAnimation-Hover {
+ from{
+   
+   top: pxToRem(19);
+ }
+ 50%{
+  right: pxToRem(18.2);
+ }
+ 80%{
+   height: pxToRem(13.5);
+   width: pxToRem(13.5);
+   right: pxToRem(18.2);
+ }
+ to{
+   top: pxToRem(45);
+   height: pxToRem(14);
+   width: pxToRem(14);
+   right: pxToRem(18.2);
+
+ }
+}
+@keyframes bookmarkTip__mobileAnimation-HoverDown {
+ from{  
+   top: pxToRem(45);
+ }
+ 80%{
+ top: pxToRem(10);
+ height: pxToRem(13.5);
+ width: pxToRem(13.5);
+ }
+ to{
+   top: pxToRem(19);
+ }
 }
