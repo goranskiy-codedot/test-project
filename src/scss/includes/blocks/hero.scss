@@ -54,7 +54,7 @@
     width: 100%;
   }
 
-  .content {
+  &-content {
     @include media(0, $tablet) {
       display: block;
       width: 100%;
@@ -64,7 +64,7 @@
     }
   }
 
-  .picture {
+  &-picture {
     @include media(0, $tablet) {
       width: 0%;
     }
@@ -74,7 +74,7 @@
     }
   }
 
-  .picture__container {
+  &-picture__container {
     @include media(0, $tablet) {
       display: none;
     }
@@ -107,96 +107,95 @@
       }
     }
 
-    .image {
-      height: auto;
-      object-fit: contain;
-      width: 100%;
-      animation: hero-image__animation 2s forwards;
-      animation-iteration-count: infinite;
-    }
+
   }
-
-  .content {
-    h1 {
-      @include media(0, $tablet) {
-        margin-bottom: pxToRem(26);
-        white-space: nowrap;
-        overflow: hidden;
-        gap: pxToRem(10);
-        display: flex;
-      }
-      @include media($tablet, $desktop) {
-        margin-bottom: pxToRem(36);
-        margin-top: pxToRem(36);
-        white-space: nowrap;
-        overflow: hidden;
-        gap: pxToRem(10);
-        display: flex;
-      }
-      @include desktop-extra {
-        margin-bottom: pxToRem(31);
-        margin-top: pxToRem(68);
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: pxToRem(450);
-        gap: pxToRem(10);
-        display: flex;
-      }
-      @include media($desktop, 952) {
-        font-size: pxToRem(29);
-        margin-bottom: pxToRem(36);
-        margin-top: pxToRem(36);
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: pxToRem(450);
-        gap: pxToRem(10);
-        display: flex;
-      }
-      @include media(952, $desktop-extra) {
-        margin-bottom: pxToRem(31);
-        margin-top: pxToRem(68);
-        white-space: nowrap;
-        overflow: hidden;
-        width: 19ch;
-        max-width: pxToRem(450);
-        position: relative;
-        display: flex;
-        gap: pxToRem(10);
-      }
-      span {
-        opacity: 1;
-        // position: absolute;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 19ch;
-        // &:nth-child(1){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 1.5s ;
-        // } &:nth-child(2){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 6.5s;
-        // } &:nth-child(3){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 11.5s;
-        // } &:nth-child(4){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 16.5s;
-        // } &:nth-child(5){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 21.5s;
-        // } &:nth-child(6){
-        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 26.5s;
-        // }
-      }
-      animation: hero-header__typingAnimation 3s steps(38, end),
-        hero-header__eraseAnimation 7s infinite steps(38, end) 4s;
-      // animation: hero-header__typingAnimation 3s steps(38, end),
-      // hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
-
-      // &::after{
-      //   content: "Креатива";
-      //   // animation: hero-header__eraseAnimation 3.5s steps(10, end);
-      //   // animation-delay: 8.5s;
-      //   animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
+  &__image {
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+    animation: hero-image__animation 2s forwards;
+    animation-iteration-count: infinite;
+  }
+  &__title {
+    @include media(0, $tablet) {
+      margin-bottom: pxToRem(26);
+      white-space: nowrap;
+      overflow: hidden;
+      gap: pxToRem(10);
+      display: flex;
+    }
+    @include media($tablet, $desktop) {
+      margin-bottom: pxToRem(36);
+      margin-top: pxToRem(36);
+      white-space: nowrap;
+      overflow: hidden;
+      gap: pxToRem(10);
+      display: flex;
+    }
+    @include desktop-extra {
+      margin-bottom: pxToRem(31);
+      margin-top: pxToRem(68);
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: pxToRem(450);
+      gap: pxToRem(10);
+      display: flex;
+    }
+    @include media($desktop, 952) {
+      font-size: pxToRem(29);
+      margin-bottom: pxToRem(36);
+      margin-top: pxToRem(36);
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: pxToRem(450);
+      gap: pxToRem(10);
+      display: flex;
+    }
+    @include media(952, $desktop-extra) {
+      margin-bottom: pxToRem(31);
+      margin-top: pxToRem(68);
+      white-space: nowrap;
+      overflow: hidden;
+      width: 19ch;
+      max-width: pxToRem(450);
+      position: relative;
+      display: flex;
+      gap: pxToRem(10);
+    }
+    span {
+      opacity: 1;
+      // position: absolute;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 19ch;
+      // &:nth-child(1){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 1.5s ;
+      // } &:nth-child(2){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 6.5s;
+      // } &:nth-child(3){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 11.5s;
+      // } &:nth-child(4){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 16.5s;
+      // } &:nth-child(5){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 21.5s;
+      // } &:nth-child(6){
+      //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 26.5s;
       // }
     }
+    animation: hero-header__typingAnimation 3s steps(38, end),
+      hero-header__eraseAnimation 7s infinite steps(38, end) 4s;
+    // animation: hero-header__typingAnimation 3s steps(38, end),
+    // hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
+
+    // &::after{
+    //   content: "Креатива";
+    //   // animation: hero-header__eraseAnimation 3.5s steps(10, end);
+    //   // animation-delay: 8.5s;
+    //   animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
+    // }
   }
-  p {
+
+  &__subtitle {
     @include media(0, $tablet) {
       margin-bottom: pxToRem(25);
       #animation-loading:target {
@@ -226,7 +225,7 @@
     }
   }
 
-  .content__buttons {
+  &-content__buttons {
     @include media(0, $desktop) {
       display: flex;
       gap: pxToRem(20);
