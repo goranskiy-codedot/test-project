@@ -203,7 +203,7 @@ html[dir="rtl"] {
 
     
   }
-  .menu__logo {
+  &__menu-logo {
     z-index: 1001;
     .logo {
       @include media(0, $desktop) {
@@ -238,7 +238,7 @@ html[dir="rtl"] {
       }
     }
   }
-  .menu__burgerMenu {
+  &__menu-burgerMenu {
     @include media(0, $tablet) {
       #animation-loading:target {
         opacity: 0;
@@ -324,8 +324,48 @@ html[dir="rtl"] {
       display: none;
     }
   }
+  &__menu-navigationContainer {
+    @include media(0, $tablet) {
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+    }
+    @include media($tablet, $desktop) {
+      display: flex;
+      padding-right: pxToRem(0);
+      overflow: hidden;
+      height: 100%;
+      justify-content: space-between;
+      max-width: pxToRem(642);
+      width: 100%;
+    }
 
-  .menu__navbar {
+    @include desktop {
+      display: flex;
+      max-width: pxToRem(970);
+      width: 100%;
+      justify-content: space-between;
+      height: 100%;
+      gap: pxToRem(0);
+    }
+
+    .container__items {
+      @include media(0, $tablet) {
+        padding-top: pxToRem(42);
+        padding-bottom: pxToRem(42);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include tablet {
+        padding-top: pxToRem(0);
+        padding-bottom: pxToRem(0);
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+  &__menu-navbar {
     @include media(0, $tablet) {
       position: fixed;
       z-index: 1000;
@@ -403,47 +443,7 @@ html[dir="rtl"] {
       display: flex;
     }
 
-    .navbar__navigationContainer {
-      @include media(0, $tablet) {
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-      }
-      @include media($tablet, $desktop) {
-        display: flex;
-        padding-right: pxToRem(0);
-        overflow: hidden;
-        height: 100%;
-        justify-content: space-between;
-        max-width: pxToRem(642);
-        width: 100%;
-      }
 
-      @include desktop {
-        display: flex;
-        max-width: pxToRem(970);
-        width: 100%;
-        justify-content: space-between;
-        height: 100%;
-        gap: pxToRem(0);
-      }
-
-      .container__items {
-        @include media(0, $tablet) {
-          padding-top: pxToRem(42);
-          padding-bottom: pxToRem(42);
-          margin-left: auto;
-          margin-right: auto;
-        }
-        @include tablet {
-          padding-top: pxToRem(0);
-          padding-bottom: pxToRem(0);
-          display: flex;
-          align-items: center;
-          margin: 0;
-        }
-      }
-    }
 
     &:target {
       transform: translateY(0);
@@ -548,7 +548,7 @@ html[dir="rtl"] {
       }
     }
   }
-  .navbar__contactsContainer {
+  &__menu-contactsContainer {
     @include media(0, $tablet) {
       align-items: center;
       display: flex;
@@ -592,7 +592,7 @@ html[dir="rtl"] {
       max-width: pxToRem(364);
     }
   }
-  .contactsContainer__tel {
+  &__menu-tel {
     @include media(0, $tablet) {
       font-family: Montserrat;
       font-style: normal;
@@ -702,7 +702,7 @@ html[dir="rtl"] {
     }
   }
 
-  .contactsContainer__button {
+  &__menu-button {
     @include media(0, $tablet) {
       width: 100%;
       color: var(--pallete-common-white);
