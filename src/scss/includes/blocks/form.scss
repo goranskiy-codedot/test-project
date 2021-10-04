@@ -73,83 +73,87 @@ html[dir="rtl"] {
       text-align: -webkit-center;
     }
 
-    .form__image {
-      @include media(0, $desktop) {
-        display: none;
-      }
-      @include desktop {
-        bottom: pxToRem(-143);
-        display: block;
-        left: pxToRem(-74);
-        max-width: 49.5%;
-        position: absolute;
-        width: 100%;
-      }
-      @include media-max(pxToRem(992)) {
-        display: none;
-      }
+
+    
+    
+  }
+  &__image {
+    @include media(0, $desktop) {
+      display: none;
     }
-    h2 {
-      @include media(0, $tablet) {
-        color: var(--pallete-common-white);
-        margin-bottom: pxToRem(21);
-      }
-      @include media($tablet, $desktop) {
-        margin-bottom: pxToRem(22);
-        color: var(--pallete-common-white);
-      }
-      @include desktop {
-        max-width: pxToRem(280);
-        margin-right: pxToRem(48);
-        margin-bottom: pxToRem(25);
-        color: var(--pallete-common-white);
-      }
+    @include desktop {
+      bottom: pxToRem(-143);
+      display: block;
+      left: pxToRem(-74);
+      max-width: 49.5%;
+      position: absolute;
+      width: 100%;
     }
-    .header__hint {
-      @include media(0, $tablet) {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: pxToRem(13);
-        line-height: pxToRem(24);
-        letter-spacing: 0.02em;
-        color: var(--pallete-common-white);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-      }
-      @include media($tablet, $desktop) {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: pxToRem(15);
-        line-height: pxToRem(28);
-        text-align: center;
-        letter-spacing: 0.02em;
-        color: var(--pallete-common-white);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-      }
-      @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        text-align: initial;
-        padding-top: pxToRem(0);
-        padding-top: pxToRem(0);
-        width: pxToRem(345);
-        margin-left: pxToRem(18);
-        letter-spacing: 0.02em;
-        color: var(--pallete-common-white);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-      }
-      @include media-max(pxToRem(992)) {
-        width: unset;
-        margin-left: pxToRem(0);
-        margin-left: auto;
-        margin-right: auto;
-        display: contents;
-      }
+    @include media-max(pxToRem(992)) {
+      display: none;
+    }
+  }
+  &__header-title {
+    @include media(0, $tablet) {
+      color: var(--pallete-common-white);
+      margin-bottom: pxToRem(21);
+    }
+    @include media($tablet, $desktop) {
+      margin-bottom: pxToRem(22);
+      color: var(--pallete-common-white);
+    }
+    @include desktop {
+      max-width: pxToRem(280);
+      margin-right: pxToRem(48);
+      margin-bottom: pxToRem(25);
+      color: var(--pallete-common-white);
+    }
+  }
+
+  &__header-hint {
+    @include media(0, $tablet) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(13);
+      line-height: pxToRem(24);
+      letter-spacing: 0.02em;
+      color: var(--pallete-common-white);
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+    @include media($tablet, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(15);
+      line-height: pxToRem(28);
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: var(--pallete-common-white);
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      text-align: initial;
+      padding-top: pxToRem(0);
+      padding-top: pxToRem(0);
+      width: pxToRem(345);
+      margin-left: pxToRem(18);
+      letter-spacing: 0.02em;
+      color: var(--pallete-common-white);
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+    @include media-max(pxToRem(992)) {
+      width: unset;
+      margin-left: pxToRem(0);
+      margin-left: auto;
+      margin-right: auto;
+      display: contents;
     }
   }
   &__submit {
@@ -270,7 +274,7 @@ html[dir="rtl"] {
       }
     }
   }
-  .form__wrapper {
+  &__wrapper {
     @include media(0, $tablet) {
       @include light-theme {
         background-color: var(--pallete-primary-main);
@@ -343,102 +347,7 @@ html[dir="rtl"] {
       margin-left: auto;
       margin-right: auto;
     }
-    .label {
-      @include media(0, $tablet) {
-        color: var(--pallete-common-white);
-        margin-block-start: pxToRem(0);
-        margin-block-end: pxToRem(0);
 
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: pxToRem(13);
-        line-height: pxToRem(16);
-
-        display: block;
-      }
-      @include tablet {
-        color: var(--pallete-common-white);
-        margin-block-start: pxToRem(0);
-        margin-block-end: pxToRem(0);
-
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 500;
-        font-size: pxToRem(15);
-        line-height: pxToRem(18);
-        display: block;
-      }
-    }
-
-    .input {
-      @include media(0, $tablet) {
-        border: none;
-        border-bottom: pxToRem(1) solid var(--pallete-common-white);
-        width: 100%;
-        color: var(--pallete-common-white);
-        padding-bottom: pxToRem(9);
-        padding-top: pxToRem(9);
-        text-indent: pxToRem(0);
-        transition: text-indent 1s;
-        @include placeholder-color(rgba(255, 255, 255, 0.3));
-        @include placeholder-style(Montserrat, normal, normal, 10px, 12px);
-        &:focus {
-          @include textarea-animation(-500px, 0.3s);
-        }
-        &:not(:focus) {
-          @include textarea-animation(0px, 0.3s);
-        }
-        transition: text-indent 3s;
-      }
-      @include tablet {
-        border: none;
-        border-bottom: pxToRem(1) solid var(--pallete-common-white);
-        width: 100%;
-        color: var(--pallete-common-white);
-        max-width: pxToRem(523);
-        padding-bottom: pxToRem(14);
-        padding-top: pxToRem(14);
-        text-indent: pxToRem(0);
-        transition: text-indent 1s;
-        @include placeholder-color(rgba(255, 255, 255, 0.3));
-        &:focus {
-          @include textarea-animation(-500px, 0.3s);
-        }
-        &:not(:focus) {
-          @include textarea-animation(0px, 0.3s);
-        }
-        @include placeholder-style(Montserrat, normal, normal, 12, 15);
-      }
-    }
-    .input-name {
-      min-width: pxToRem(236);
-      grid-area: 1/1 / span 1 / span 2;
-    }
-    .input-message {
-      @include media(0, $tablet) {
-        min-width: pxToRem(236);
-        grid-area: 4/1 / span 1 / span 2;
-      }
-      @include tablet {
-        min-width: pxToRem(236);
-        grid-area: 3/1 / span 1 / span 2;
-      }
-    }
-    .input-email {
-      @include media(0, $tablet) {
-        min-width: pxToRem(236);
-        grid-area: 3/1 / span 1 / span 2;
-      }
-      @include tablet {
-        min-width: pxToRem(236);
-        grid-area: 2/2 / span 1 / span 1;
-      }
-    }
-    .input-tel {
-      min-width: pxToRem(236);
-      grid-area: 2/1 / span 1 / span 2;
-    }
     .nowrap {
       @include media(0, $tablet) {
         width: 100%;
@@ -448,65 +357,165 @@ html[dir="rtl"] {
         width: 45%;
       }
     }
-    .textarea {
-      @include media(0, $tablet) {
-        border: none;
-        border-bottom: pxToRem(1) solid var(--pallete-common-white);
-        width: 100%;
-        color: var(--pallete-common-white);
-        padding: pxToRem(0);
-        text-indent: pxToRem(0);
-        transition: text-indent 1s;
-        padding-top: pxToRem(8);
-        padding-bottom: pxToRem(8);
-        @include placeholder-color(rgba(255, 255, 255, 0.3));
-        &:focus {
-          @include textarea-animation(-500px, 0.3s);
-        }
-        &:not(:focus) {
-          @include textarea-animation(0px, 0.3s);
-        }
-      }
 
-      @include media($tablet, $desktop) {
-        border: none;
-        border-bottom: pxToRem(1) solid var(--pallete-common-white);
-        width: 100%;
-        color: var(--pallete-common-white);
-        max-width: pxToRem(523);
-        text-indent: pxToRem(0);
-        transition: text-indent 1s;
-        padding-top: pxToRem(8);
-        padding-bottom: pxToRem(8);
-        @include placeholder-color(rgba(255, 255, 255, 0.3));
-        &:focus {
-          @include textarea-animation(-500px, 0.3s);
-        }
-        &:not(:focus) {
-          @include textarea-animation(0px, 0.3s);
-        }
+  }
+
+  &___input-label {
+    @include media(0, $tablet) {
+      color: var(--pallete-common-white);
+      margin-block-start: pxToRem(0);
+      margin-block-end: pxToRem(0);
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: pxToRem(13);
+      line-height: pxToRem(16);
+
+      display: block;
+    }
+    @include tablet {
+      color: var(--pallete-common-white);
+      margin-block-start: pxToRem(0);
+      margin-block-end: pxToRem(0);
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: pxToRem(15);
+      line-height: pxToRem(18);
+      display: block;
+    }
+  }
+  &__input {
+    @include media(0, $tablet) {
+      border: none;
+      border-bottom: pxToRem(1) solid var(--pallete-common-white);
+      width: 100%;
+      color: var(--pallete-common-white);
+      padding-bottom: pxToRem(9);
+      padding-top: pxToRem(9);
+      text-indent: pxToRem(0);
+      transition: text-indent 1s;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      @include placeholder-style(Montserrat, normal, normal, 10px, 12px);
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
       }
-      @include desktop {
-        border: none;
-        border-bottom: pxToRem(1) solid var(--pallete-common-white);
-        width: 100%;
-        color: var(--pallete-common-white);
-        padding-top: pxToRem(14);
-        padding-bottom: pxToRem(11);
-        max-width: pxToRem(523);
-        text-indent: pxToRem(0);
-        transition: text-indent 1s;
-        @include placeholder-color(rgba(255, 255, 255, 0.3));
-        &:focus {
-          @include textarea-animation(-500px, 0.3s);
-        }
-        &:not(:focus) {
-          @include textarea-animation(0px, 0.3s);
-        }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
+      }
+      transition: text-indent 3s;
+    }
+    @include tablet {
+      border: none;
+      border-bottom: pxToRem(1) solid var(--pallete-common-white);
+      width: 100%;
+      color: var(--pallete-common-white);
+      max-width: pxToRem(523);
+      padding-bottom: pxToRem(14);
+      padding-top: pxToRem(14);
+      text-indent: pxToRem(0);
+      transition: text-indent 1s;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
+      }
+      @include placeholder-style(Montserrat, normal, normal, 12, 15);
+    }
+  }
+
+  &__inputs-name {
+    min-width: pxToRem(236);
+    grid-area: 1/1 / span 1 / span 2;
+  }
+  &__inputs-message {
+    @include media(0, $tablet) {
+      min-width: pxToRem(236);
+      grid-area: 4/1 / span 1 / span 2;
+    }
+    @include tablet {
+      min-width: pxToRem(236);
+      grid-area: 3/1 / span 1 / span 2;
+    }
+  }
+  &__inputs-email {
+    @include media(0, $tablet) {
+      min-width: pxToRem(236);
+      grid-area: 3/1 / span 1 / span 2;
+    }
+    @include tablet {
+      min-width: pxToRem(236);
+      grid-area: 2/2 / span 1 / span 1;
+    }
+  }
+  &__inputs-tel {
+    min-width: pxToRem(236);
+    grid-area: 2/1 / span 1 / span 2;
+  }
+
+  &__textarea {
+    @include media(0, $tablet) {
+      border: none;
+      border-bottom: pxToRem(1) solid var(--pallete-common-white);
+      width: 100%;
+      color: var(--pallete-common-white);
+      padding: pxToRem(0);
+      text-indent: pxToRem(0);
+      transition: text-indent 1s;
+      padding-top: pxToRem(8);
+      padding-bottom: pxToRem(8);
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
+      }
+    }
+
+    @include media($tablet, $desktop) {
+      border: none;
+      border-bottom: pxToRem(1) solid var(--pallete-common-white);
+      width: 100%;
+      color: var(--pallete-common-white);
+      max-width: pxToRem(523);
+      text-indent: pxToRem(0);
+      transition: text-indent 1s;
+      padding-top: pxToRem(8);
+      padding-bottom: pxToRem(8);
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
+      }
+    }
+    @include desktop {
+      border: none;
+      border-bottom: pxToRem(1) solid var(--pallete-common-white);
+      width: 100%;
+      color: var(--pallete-common-white);
+      padding-top: pxToRem(14);
+      padding-bottom: pxToRem(11);
+      max-width: pxToRem(523);
+      text-indent: pxToRem(0);
+      transition: text-indent 1s;
+      @include placeholder-color(rgba(255, 255, 255, 0.3));
+      &:focus {
+        @include textarea-animation(-500px, 0.3s);
+      }
+      &:not(:focus) {
+        @include textarea-animation(0px, 0.3s);
       }
     }
   }
-  .button {
+
+  &__button {
     @include media(0, $tablet) {
       background-color: var(--pallete-secondary-main);
       border: var(--pallete-secondary-main);
