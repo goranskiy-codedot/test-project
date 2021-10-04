@@ -75,17 +75,17 @@
   }
   &::placeholder {
     text-indent: $text-ident !important;
-    transition: text-indent $transition-duration  !important;
+    transition: text-indent $transition-duration !important;
   }
 }
 @mixin textarea-animation($text-ident, $transition-duration) {
   &::-moz-placeholder {
     text-indent: $text-ident !important;
-    transition: text-indent $transition-duration  !important;
+    transition: text-indent $transition-duration !important;
   }
   &::-webkit-input-placeholder {
     text-indent: $text-ident !important;
-    transition: text-indent $transition-duration  !important;
+    transition: text-indent $transition-duration !important;
   }
   &::placeholder {
     text-indent: $text-ident !important;
@@ -134,4 +134,3 @@
     @content;
   }
 }
-

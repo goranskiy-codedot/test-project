@@ -1,19 +1,19 @@
-html[dir="rtl"]{
+html[dir="rtl"] {
   .burgerMenu {
     .burger__line::before {
       left: pxToRem(0);
-      right: 9px!important;
+      right: 9px !important;
     }
 
     .burger__line::after {
       left: pxToRem(0);
-      right: 9px!important;
+      right: 9px !important;
     }
-  }          
+  }
 }
 #body:target {
-  @include media(0,$tablet){
-  overflow: hidden;
+  @include media(0, $tablet) {
+    overflow: hidden;
   }
   @include tablet {
     overflow: auto;
@@ -31,35 +31,35 @@ html[dir="rtl"]{
 }
 
 #body:target .button_closed {
-  padding:pxToRem(0);
+  padding: pxToRem(0);
   width: pxToRem(0);
   height: pxToRem(0);
 }
 
 #body:target .logo {
-  @include media(0,$tablet){
+  @include media(0, $tablet) {
     @include light-theme {
-  background-color: var(--pallete-common-white);
+      background-color: var(--pallete-common-white);
     }
     @include dark-theme {
       background-color: var(--pallete-common-white);
-        }
+    }
   }
   @include tablet {
     @include light-theme {
-    background-color: var(--pallete-grey-900);
+      background-color: var(--pallete-grey-900);
     }
     @include dark-theme {
       background-color: var(--pallete-common-white);
-        }
+    }
   }
 }
 
 #body:not(:target) {
   #navbar {
-    @include media(0,$tablet){
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    @include media(0, $tablet) {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
     }
     @include tablet {
       transform: none;
@@ -70,9 +70,9 @@ html[dir="rtl"]{
 
 #body:target {
   #navbar {
-    @include media(0,$tablet){
-    transform: translateX(0%);
-    transition: transform 0.3s ease;
+    @include media(0, $tablet) {
+      transform: translateX(0%);
+      transition: transform 0.3s ease;
     }
     @include tablet {
       transform: none;
@@ -82,9 +82,9 @@ html[dir="rtl"]{
 }
 
 #body:target .menu__burger {
-  @include media(0,$tablet){
-  position: fixed;
-  right:pxToRem(0);
+  @include media(0, $tablet) {
+    position: fixed;
+    right: pxToRem(0);
   }
   @include tablet {
     display: none;
@@ -118,59 +118,58 @@ html[dir="rtl"]{
     animation-iteration-count: 1;
   }
 }
-.page-wrapper{
-  @include light-theme{
+.page-wrapper {
+  @include light-theme {
     background: transparent;
-    }
-    @include dark-theme{
-      background: var(--pallete-grey-900);
-    }
+  }
+  @include dark-theme {
+    background: var(--pallete-grey-900);
+  }
 }
 
-
-#animation-loading:target{
+#animation-loading:target {
   .menu__logo {
-  opacity: 0;
-  animation: appearance 1s ease-in-out forwards;
-  animation-delay:0.5s;
-  }
-  }
-  #animation-loading:target{
-    .menu__burgerMenu{
     opacity: 0;
     animation: appearance 1s ease-in-out forwards;
-    animation-delay:0.75s;
-    }
-    }
-#animation-loading:target{
-  .container__items{
-  opacity: 0;
-  animation: appearance 1s ease-in-out forwards;
-  animation-delay:1s;
+    animation-delay: 0.5s;
   }
-  }
-  #animation-loading:target{
-    .contactsContainer__tel{
+}
+#animation-loading:target {
+  .menu__burgerMenu {
     opacity: 0;
     animation: appearance 1s ease-in-out forwards;
-    animation-delay:1.25s;
-    }
-    }
+    animation-delay: 0.75s;
+  }
+}
+#animation-loading:target {
+  .container__items {
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+}
+#animation-loading:target {
+  .contactsContainer__tel {
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;
+    animation-delay: 1.25s;
+  }
+}
 
-    #animation-loading:target{
-      .contactsContainer__button{
-      opacity: 0;
-      animation: appearance 1s ease-in-out forwards;
-      animation-delay:1.5s;
-      }
-      }
-  
+#animation-loading:target {
+  .contactsContainer__button {
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+}
+
 .header {
   .container {
-    @include media(0,$tablet){
-    padding:pxToRem(0);
+    @include media(0, $tablet) {
+      padding: pxToRem(0);
     }
-    @include media($tablet,$desktop){ 
+    @include media($tablet, $desktop) {
       padding: pxToRem(0) pxToRem(14);
     }
     @include desktop {
@@ -179,13 +178,13 @@ html[dir="rtl"]{
   }
 
   &__menu {
-    @include media(0,$desktop){
-    display: flex;
-    padding-top: pxToRem(0);
-    justify-content: space-between;
-    align-items: center;
+    @include media(0, $desktop) {
+      display: flex;
+      padding-top: pxToRem(0);
+      justify-content: space-between;
+      align-items: center;
     }
-    @include media($tablet,$desktop) {
+    @include media($tablet, $desktop) {
       padding: pxToRem(13) pxToRem(0);
       gap: pxToRem(25);
       display: flex;
@@ -202,49 +201,50 @@ html[dir="rtl"]{
       align-items: center;
     }
 
-    .menu__logo {
-      z-index: 1001;
-      .logo {
-        @include media(0,$desktop){
+    
+  }
+  .menu__logo {
+    z-index: 1001;
+    .logo {
+      @include media(0, $desktop) {
         display: block;
         z-index: 1001;
         height: pxToRem(65);
         width: pxToRem(65);
-        @include light-theme{
-        background-color: var(--pallete-grey-900);
+        @include light-theme {
+          background-color: var(--pallete-grey-900);
         }
-          @include dark-theme{
-            background-color:var(--pallete-common-white);
-          }
+        @include dark-theme {
+          background-color: var(--pallete-common-white);
+        }
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: pxToRem(49) pxToRem(49);
-        }
-        @include desktop {
-          display: block;
-          z-index: 1001;
-          height: pxToRem(65);
-          width: pxToRem(65);
-          @include light-theme{
+      }
+      @include desktop {
+        display: block;
+        z-index: 1001;
+        height: pxToRem(65);
+        width: pxToRem(65);
+        @include light-theme {
           background-color: var(--pallete-grey-900);
-          }
-          @include dark-theme{
-            background-color: var(--pallete-common-white);
-            }
-          -webkit-mask-position: center;
-          -webkit-mask-repeat: no-repeat;
-          -webkit-mask-size: pxToRem(65);
         }
+        @include dark-theme {
+          background-color: var(--pallete-common-white);
+        }
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: pxToRem(65);
       }
     }
-    .menu__burgerMenu {
-      @include media(0,$tablet)
-      {
-        #animation-loading:target{
+  }
+  .menu__burgerMenu {
+    @include media(0, $tablet) {
+      #animation-loading:target {
         opacity: 0;
         animation: appearance 1s ease-in-out forwards;
-        animation-delay:0.75s;
-        }
+        animation-delay: 0.75s;
+      }
       z-index: 1003;
 
       .button_closed {
@@ -261,10 +261,10 @@ html[dir="rtl"]{
 
         .burger__line {
           z-index: 1003;
-          @include light-theme{
-          background-color: var(--pallete-grey-900);
+          @include light-theme {
+            background-color: var(--pallete-grey-900);
           }
-          @include dark-theme{
+          @include dark-theme {
             background-color: var(--pallete-common-white);
           }
           width: pxToRem(20);
@@ -278,12 +278,12 @@ html[dir="rtl"]{
         .burger__line::before {
           content: "";
           display: block;
-          @include light-theme{
+          @include light-theme {
             background-color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              background-color: var(--pallete-common-white);
-            }
+          }
+          @include dark-theme {
+            background-color: var(--pallete-common-white);
+          }
           width: pxToRem(20);
           height: pxToRem(2);
           position: absolute;
@@ -296,12 +296,12 @@ html[dir="rtl"]{
           content: "";
           display: block;
           position: absolute;
-          @include light-theme{
+          @include light-theme {
             background-color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              background-color: var(--pallete-common-white);
-            }
+          }
+          @include dark-theme {
+            background-color: var(--pallete-common-white);
+          }
           width: pxToRem(20);
           height: pxToRem(2);
           top: pxToRem(7);
@@ -313,20 +313,20 @@ html[dir="rtl"]{
           z-index: 1003;
           cursor: pointer;
           display: block;
-          padding-right:pxToRem(10);
+          padding-right: pxToRem(10);
           padding-top: pxToRem(24);
           padding-bottom: pxToRem(24);
           padding-left: pxToRem(24);
         }
       }
     }
-      @include tablet {
-        display: none;
-      }
+    @include tablet {
+      display: none;
     }
+  }
 
-    .menu__navbar {
-      @include media(0,$tablet){
+  .menu__navbar {
+    @include media(0, $tablet) {
       position: fixed;
       z-index: 1000;
       top: 0;
@@ -335,11 +335,11 @@ html[dir="rtl"]{
       height: 100%;
       overflow: auto;
       list-style: none;
-      
-      @include light-theme{
-      background: var(--pallete-primary-main);
+
+      @include light-theme {
+        background: var(--pallete-primary-main);
       }
-      @include dark-theme{
+      @include dark-theme {
         background: #2d2b88;
       }
       flex-direction: column;
@@ -351,123 +351,111 @@ html[dir="rtl"]{
       padding-top: pxToRem(62);
       padding-bottom: pxToRem(42);
       display: flex;
-      }
-      @include media($tablet,$desktop) {
-        position: initial;
-        overflow: hidden;
-        z-index: 1000;
-        background: transparent;
-        transform: none;
-        transition: none;
-        list-style: none;
-        display: flex;
+    }
+    @include media($tablet, $desktop) {
+      position: initial;
+      overflow: hidden;
+      z-index: 1000;
+      background: transparent;
+      transform: none;
+      transition: none;
+      list-style: none;
+      display: flex;
 
-        @include light-theme{
+      @include light-theme {
         color: var(--pallete-grey-900);
-        }
-        @include dark-theme{
-          color:var(--pallete-common-white);
-        }
-        padding-top: pxToRem(0);
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        flex-direction: initial;
-        // justify-content: initial;
-        max-width: pxToRem(650);
-        padding-bottom: pxToRem(0);
       }
-
-      @include desktop {
-        position: initial;
-        overflow: hidden;
-        z-index: 1000;
-        background: transparent;
-        transform: none;
-        transition: none;
-        list-style: none;
-
-        @include light-theme{
-          color: var(--pallete-grey-900);
-          }
-          @include dark-theme{
-            color:var(--pallete-common-white);
-          }
-        padding-top: pxToRem(0);
-        height: 100%;
-        align-items: center;
-        flex-direction: initial;
-        padding-bottom: pxToRem(0);
-        max-width: pxToRem(970);
-        width: 100%;
-        display: flex;
+      @include dark-theme {
+        color: var(--pallete-common-white);
       }
+      padding-top: pxToRem(0);
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      flex-direction: initial;
+      // justify-content: initial;
+      max-width: pxToRem(650);
+      padding-bottom: pxToRem(0);
+    }
 
-      .navbar__navigationContainer {
-        @include media(0,$tablet){
+    @include desktop {
+      position: initial;
+      overflow: hidden;
+      z-index: 1000;
+      background: transparent;
+      transform: none;
+      transition: none;
+      list-style: none;
+
+      @include light-theme {
+        color: var(--pallete-grey-900);
+      }
+      @include dark-theme {
+        color: var(--pallete-common-white);
+      }
+      padding-top: pxToRem(0);
+      height: 100%;
+      align-items: center;
+      flex-direction: initial;
+      padding-bottom: pxToRem(0);
+      max-width: pxToRem(970);
+      width: 100%;
+      display: flex;
+    }
+
+    .navbar__navigationContainer {
+      @include media(0, $tablet) {
         height: 100%;
         width: 100%;
         overflow: auto;
-        }
-        @include media($tablet,$desktop) {
-          display: flex;
-          padding-right: pxToRem(0);
-          overflow: hidden;
-          height: 100%;
-          justify-content: space-between;
-          max-width: pxToRem(642);
-          width: 100%;
-        }
+      }
+      @include media($tablet, $desktop) {
+        display: flex;
+        padding-right: pxToRem(0);
+        overflow: hidden;
+        height: 100%;
+        justify-content: space-between;
+        max-width: pxToRem(642);
+        width: 100%;
+      }
 
-        @include desktop {
-          display: flex;
-          max-width: pxToRem(970);
-          width: 100%;
-          justify-content: space-between;
-          height: 100%;
-          gap: pxToRem(0);
-     
-        }
+      @include desktop {
+        display: flex;
+        max-width: pxToRem(970);
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+        gap: pxToRem(0);
+      }
 
-        .container__items {
-          @include media(0,$tablet){
+      .container__items {
+        @include media(0, $tablet) {
           padding-top: pxToRem(42);
           padding-bottom: pxToRem(42);
-         margin-left: auto;
-         margin-right: auto;
-         #animation-loading:target{
-         opacity: 0;
-         animation: appearance 1s ease-in-out forwards;
-         animation-delay:1s;
-         }
-          }
-          @include tablet {
-            padding-top: pxToRem(0);
-            padding-bottom: pxToRem(0);
-            display: flex;
-            align-items: center;
-            margin: 0;
-            #animation-loading:target{
-            opacity: 0;
-            animation: appearance 1s ease-in-out forwards;
-            animation-delay:1s;
-            }
-          }
-       
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @include tablet {
+          padding-top: pxToRem(0);
+          padding-bottom: pxToRem(0);
+          display: flex;
+          align-items: center;
+          margin: 0;
         }
       }
+    }
 
-      &:target {
-        transform: translateY(0);
-      }
-      .navbar__item {
-        width: auto;
-        text-align: center;
-        display: block;
-      }
+    &:target {
+      transform: translateY(0);
+    }
+    .navbar__item {
+      width: auto;
+      text-align: center;
+      display: block;
+    }
 
-      li a {
-        @include media(0,$tablet){
+    li a {
+      @include media(0, $tablet) {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
@@ -479,138 +467,133 @@ html[dir="rtl"]{
         padding: pxToRem(20);
         display: block;
         // opacity: 0;
-     
-        }
-     
-        @include media($tablet, 697) {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-          font-size: pxToRem(10);
-          line-height: 12pxToRem(12);
-          letter-spacing: 0.02em;
-          padding: pxToRem(12.5) pxToRem(4.8);
-        }
-        @include media(697,$desktop) {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-          font-size: pxToRem(10);
-          line-height: 12pxToRem(12);
-          letter-spacing: 0.02em;
-          padding: pxToRem(12.5) pxToRem(12.8);
-          display: block;
-        }
-        @include media($desktop, 992) {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-          font-size: pxToRem(10);
-          line-height: pxToRem(12);
-          letter-spacing: 0.02em;
-          padding: pxToRem(12.5) pxToRem(12.8);
-        }
-        @include media(992,$desktop-extra){
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-          font-size: pxToRem(13);
-          letter-spacing: 0.02em;
-          line-height: pxToRem(16);
-          padding: pxToRem(12.5) pxToRem(22.4);
-        }
+      }
 
-        @include desktop-extra {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: 500;
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-          font-size: pxToRem(13);
-          letter-spacing: 0.02em;
-          line-height: pxToRem(16);
-          padding: pxToRem(12.5) pxToRem(22.4);
-
+      @include media($tablet, 697) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        @include light-theme {
+          color: var(--pallete-grey-900);
         }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+        font-size: pxToRem(10);
+        line-height: 12pxtorem (12);
+        letter-spacing: 0.02em;
+        padding: pxToRem(12.5) pxToRem(4.8);
+      }
+      @include media(697, $desktop) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+        font-size: pxToRem(10);
+        line-height: 12pxtorem (12);
+        letter-spacing: 0.02em;
+        padding: pxToRem(12.5) pxToRem(12.8);
+        display: block;
+      }
+      @include media($desktop, 992) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
+        letter-spacing: 0.02em;
+        padding: pxToRem(12.5) pxToRem(12.8);
+      }
+      @include media(992, $desktop-extra) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+        font-size: pxToRem(13);
+        letter-spacing: 0.02em;
+        line-height: pxToRem(16);
+        padding: pxToRem(12.5) pxToRem(22.4);
+      }
+
+      @include desktop-extra {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+        font-size: pxToRem(13);
+        letter-spacing: 0.02em;
+        line-height: pxToRem(16);
+        padding: pxToRem(12.5) pxToRem(22.4);
       }
     }
-    .navbar__contactsContainer {
-      @include media(0,$tablet){
+  }
+  .navbar__contactsContainer {
+    @include media(0, $tablet) {
       align-items: center;
       display: flex;
       justify-content: space-around;
       position: absolute;
       bottom: 0;
       width: 100%;
-      }
-      @include media($tablet, 727) {
-        display: flex;
-        position: initial;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: pxToRem(254);
-      }  
-      @include media(727,992){
-        display: flex;
-        position: initial;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: pxToRem(254);
-      }
-    
-  
-  
-      @include media(992,$desktop-extra){
-        display: flex;
-        position: initial;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: pxToRem(364);
-      }
-
-      @include desktop-extra {
-        display: flex;
-        position: initial;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: pxToRem(364);
-      }
-   
     }
-    .contactsContainer__tel {
-      @include media(0,$tablet){
+    @include media($tablet, 727) {
+      display: flex;
+      position: initial;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: pxToRem(254);
+    }
+    @include media(727, 992) {
+      display: flex;
+      position: initial;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: pxToRem(254);
+    }
+
+    @include media(992, $desktop-extra) {
+      display: flex;
+      position: initial;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: pxToRem(364);
+    }
+
+    @include desktop-extra {
+      display: flex;
+      position: initial;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: pxToRem(364);
+    }
+  }
+  .contactsContainer__tel {
+    @include media(0, $tablet) {
       font-family: Montserrat;
       font-style: normal;
       font-weight: 500;
@@ -619,141 +602,108 @@ html[dir="rtl"]{
       letter-spacing: 0.02em;
       color: inherit;
       display: none;
-      #animation-loading:target{
-      opacity: 0;
-      animation: appearance 1s ease-in-out forwards;
-      animation-delay:1.25s;
-      }
-      }
-      @include media($tablet,727){
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(15);
-        display: block;
-        white-space: nowrap;
-        &:visited {
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-
+    }
+    @include media($tablet, 727) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      padding: pxToRem(12.5) pxToRem(15);
+      display: block;
+      white-space: nowrap;
+      &:visited {
+        @include light-theme {
+          color: var(--pallete-grey-900);
         }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.25s;
+        @include dark-theme {
+          color: var(--pallete-common-white);
         }
       }
-      @include media(727,$desktop) {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(15);
-        display: block;
-        white-space: nowrap;
-        padding-left: pxToRem(4);
-        padding-right: pxToRem(4);
-        &:visited {
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
+    }
+    @include media(727, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      padding: pxToRem(12.5) pxToRem(15);
+      display: block;
+      white-space: nowrap;
+      padding-left: pxToRem(4);
+      padding-right: pxToRem(4);
+      &:visited {
+        @include light-theme {
+          color: var(--pallete-grey-900);
         }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.25s;
+        @include dark-theme {
+          color: var(--pallete-common-white);
         }
       }
-        
-      @include media($desktop, 992) {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        display: block;
-        white-space: nowrap;
-        padding: pxToRem(12.5) pxToRem(15);
-        &:visited {
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-        }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.25s;
-        }
-      }
-      @include media(992,$desktop-extra){
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(22.4);
-        display: block;
-        white-space: nowrap;
-        font-size: pxToRem(13);
-        line-height: pxToRem(16);
-        &:visited {
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-            #animation-loading:target{
-            opacity: 0;
-            animation: appearance 1s ease-in-out forwards;
-            animation-delay:1.25s;
-            }
-        }
-        
-      }
-      @include desktop-extra {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        padding: pxToRem(12.5) pxToRem(22.4);
-        display: block;
-        white-space: nowrap;
-        font-size: pxToRem(13);
-        line-height: pxToRem(16);
-        &:visited {
-          @include light-theme{
-            color: var(--pallete-grey-900);
-            }
-            @include dark-theme{
-              color:var(--pallete-common-white);
-            }
-        }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.25s;
-        }
-      }
- 
     }
 
-    .contactsContainer__button {
-      @include media(0,$tablet){
+    @include media($desktop, 992) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      display: block;
+      white-space: nowrap;
+      padding: pxToRem(12.5) pxToRem(15);
+      &:visited {
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+      }
+    }
+    @include media(992, $desktop-extra) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      padding: pxToRem(12.5) pxToRem(22.4);
+      display: block;
+      white-space: nowrap;
+      font-size: pxToRem(13);
+      line-height: pxToRem(16);
+      &:visited {
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+      }
+    }
+    @include desktop-extra {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      padding: pxToRem(12.5) pxToRem(22.4);
+      display: block;
+      white-space: nowrap;
+      font-size: pxToRem(13);
+      line-height: pxToRem(16);
+      &:visited {
+        @include light-theme {
+          color: var(--pallete-grey-900);
+        }
+        @include dark-theme {
+          color: var(--pallete-common-white);
+        }
+      }
+    }
+  }
+
+  .contactsContainer__button {
+    @include media(0, $tablet) {
       width: 100%;
       color: var(--pallete-common-white);
       margin-top: auto;
@@ -761,109 +711,79 @@ html[dir="rtl"]{
       height: auto;
       vertical-align: bottom;
       margin-bottom: calc(0+ env(safe-area-inset-bottom));
-      @include light-theme{
+      @include light-theme {
         background-color: #e2000d;
         border: #e2000d;
         color: #f6f6f6;
       }
-      @include dark-theme{
+      @include dark-theme {
         background-color: #e2000d;
         border: #e2000d;
         color: #f6f6f6;
       }
- 
+
       border: var(--pallete-secondary-main);
       font-size: pxToRem(15);
       line-height: pxToRem(18);
       &:hover {
-          color: var(--pallete-common-white);
-          background-color: #90030c;
-          border: pxToRem(1) solid #90030c;
-
-      }
-      #animation-loading:target{
-      opacity: 0;
-      animation: appearance 1s ease-in-out forwards;
-      animation-delay:1.5s;
+        color: var(--pallete-common-white);
+        background-color: #90030c;
+        border: pxToRem(1) solid #90030c;
       }
     }
-      @include media($tablet,$desktop) {
-        width: initial;
-        position: initial;
-        min-width: pxToRem(129);
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        padding: pxToRem(0);
-        height: pxToRem(33);
-        margin-left: pxToRem(0);
-        background-color: var(--pallete-primary-main);
-        margin-top: 0;
-        &:hover {
-          color:var(--pallete-primary-main);
-          background-color: transparent;
-          border: pxToRem(1) solid var(--pallete-primary-main);
-        }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.5s;
-        }
+    @include media($tablet, $desktop) {
+      width: initial;
+      position: initial;
+      min-width: pxToRem(129);
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      padding: pxToRem(0);
+      height: pxToRem(33);
+      margin-left: pxToRem(0);
+      background-color: var(--pallete-primary-main);
+      margin-top: 0;
+      &:hover {
+        color: var(--pallete-primary-main);
+        background-color: transparent;
+        border: pxToRem(1) solid var(--pallete-primary-main);
       }
-      @include media($desktop, 992) {
-        width: initial;
-        position: initial;
-        min-width: pxToRem(129);
-        height: pxToRem(33);
-        font-size: pxToRem(10);
-        line-height: pxToRem(12);
-        margin-left: pxToRem(0);
-        background-color: var(--pallete-primary-main);
-        margin-top: 0;
-        &:hover {
-          color: var(--pallete-primary-main);
-          background-color: transparent;
-          border: pxToRem(1) solid var(--pallete-primary-main);
-        }
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.5s;
-        }
-      }
-      @include media(992,$desktop-extra){
-        min-width: pxToRem(171);
-        min-height: pxToRem(41);
-        font-size: pxToRem(13);
-        line-height: pxToRem(16);
-        margin-top: 0;
-        padding: pxToRem(12);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.5s;
-        }
-      }
-      @include desktop-extra {
-        min-width: pxToRem(171);
-        min-height: pxToRem(41);
-        font-size: pxToRem(13);
-        line-height: pxToRem(16);
-        margin-top: 0;
-        padding: pxToRem(12);
-        #animation-loading:target{
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay:1.5s;
-        }
-      }
-  
     }
-    &__logo {
-      position: fixed;
-      top: pxToRem(7);
-      left: pxToRem(9);
+    @include media($desktop, 992) {
+      width: initial;
+      position: initial;
+      min-width: pxToRem(129);
+      height: pxToRem(33);
+      font-size: pxToRem(10);
+      line-height: pxToRem(12);
+      margin-left: pxToRem(0);
+      background-color: var(--pallete-primary-main);
+      margin-top: 0;
+      &:hover {
+        color: var(--pallete-primary-main);
+        background-color: transparent;
+        border: pxToRem(1) solid var(--pallete-primary-main);
+      }
+    }
+    @include media(992, $desktop-extra) {
+      min-width: pxToRem(171);
+      min-height: pxToRem(41);
+      font-size: pxToRem(13);
+      line-height: pxToRem(16);
+      margin-top: 0;
+      padding: pxToRem(12);
+    }
+    @include desktop-extra {
+      min-width: pxToRem(171);
+      min-height: pxToRem(41);
+      font-size: pxToRem(13);
+      line-height: pxToRem(16);
+      margin-top: 0;
+      padding: pxToRem(12);
     }
   }
-  
+  &__logo {
+    position: fixed;
+    top: pxToRem(7);
+    left: pxToRem(9);
+  }
 }
-

@@ -1,9 +1,8 @@
-html[dir="rtl"]{
+html[dir="rtl"] {
   .portfolios {
     display: flex;
     gap: pxToRem(13);
     height: pxToRem(39);
-
 
     &__item-icon {
       width: pxToRem(13);
@@ -16,7 +15,6 @@ html[dir="rtl"]{
     }
 
     @include desktop {
-
       top: pxToRem(85);
       right: pxToRem(0);
       position: absolute;
@@ -39,17 +37,17 @@ html[dir="rtl"]{
 }
 
 .footer {
-  @include media(0,$tablet){
-  background-color: var(--pallete-grey-900);
-  color: var(--pallete-common-white);
+  @include media(0, $tablet) {
+    background-color: var(--pallete-grey-900);
+    color: var(--pallete-common-white);
 
-  padding-bottom: pxToRem(34);
-  position: relative;
-  height: 100%;
-  min-height: pxToRem(594);
-  padding-top: pxToRem(17);
+    padding-bottom: pxToRem(34);
+    position: relative;
+    height: 100%;
+    min-height: pxToRem(594);
+    padding-top: pxToRem(17);
   }
-  @include media($tablet,$desktop) {
+  @include media($tablet, $desktop) {
     background-color: var(--pallete-grey-900);
     color: var(--pallete-common-white);
     position: relative;
@@ -70,10 +68,10 @@ html[dir="rtl"]{
     padding-top: pxToRem(69);
   }
   .container {
-    @include media(0,$tablet){
+    @include media(0, $tablet) {
       padding: pxToRem(0) pxToRem(9);
     }
-    @include media($tablet,$desktop) {
+    @include media($tablet, $desktop) {
       padding: pxToRem(0) pxToRem(20);
     }
     @include desktop {
@@ -81,75 +79,72 @@ html[dir="rtl"]{
     }
   }
 
-
-    .footer__logo {
-      @include media(0,$tablet){
+  .footer__logo {
+    @include media(0, $tablet) {
       width: max-content;
       z-index: 1001;
       background-size: pxToRem(46) pxToRem(30);
       height: max-content;
       margin-bottom: pxToRem(26);
-      }
-      @include media($tablet,$desktop) {
-        
-        width: max-content;
-        z-index: 1001;
-        background-size: pxToRem(46) pxToRem(30);
-        height: max-content;
-        margin-bottom: pxToRem(73);
-      }
-      @include desktop {
-        width: max-content;
-        z-index: 1001;
-        background-size: pxToRem(46) pxToRem(30);
-        height: max-content;
-        padding-left: pxToRem(0);
-        margin-top: pxToRem(0);
-      }
-      .logo {
-        @include media(0,$tablet){
+    }
+    @include media($tablet, $desktop) {
+      width: max-content;
+      z-index: 1001;
+      background-size: pxToRem(46) pxToRem(30);
+      height: max-content;
+      margin-bottom: pxToRem(73);
+    }
+    @include desktop {
+      width: max-content;
+      z-index: 1001;
+      background-size: pxToRem(46) pxToRem(30);
+      height: max-content;
+      padding-left: pxToRem(0);
+      margin-top: pxToRem(0);
+    }
+    .logo {
+      @include media(0, $tablet) {
         display: block;
         z-index: 1001;
         height: pxToRem(62);
-    
-        width:pxToRem(54);
+
+        width: pxToRem(54);
         background-color: var(--pallete-common-white);
         -webkit-mask-image: url(../uploads/logo.svg);
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: pxToRem(65) pxToRem(49);
-        }
-        
-        @include media($tablet,$desktop) {
-          background-color: #fff;
-          display: block;
-          height: pxToRem(75);
-          -webkit-mask-image: url(../uploads/logo.svg);
-          -webkit-mask-position: center;
-          -webkit-mask-repeat: no-repeat;
-          -webkit-mask-size: pxToRem(85) pxToRem(62);
-          z-index: 1001;
-          width: pxToRem(61);
-        }
-        @include desktop {
-          background-color: #fff;
-          display: block;
-          -webkit-mask-image: url(../uploads/logo.svg);
-          -webkit-mask-position: center;
-          -webkit-mask-repeat: no-repeat;
-          -webkit-mask-size: pxToRem(65) pxToRem(65);
-          width:pxToRem(65);
-          height: pxToRem(65);
-        }
       }
-    
+
+      @include media($tablet, $desktop) {
+        background-color: #fff;
+        display: block;
+        height: pxToRem(75);
+        -webkit-mask-image: url(../uploads/logo.svg);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: pxToRem(85) pxToRem(62);
+        z-index: 1001;
+        width: pxToRem(61);
+      }
+      @include desktop {
+        background-color: #fff;
+        display: block;
+        -webkit-mask-image: url(../uploads/logo.svg);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: pxToRem(65) pxToRem(65);
+        width: pxToRem(65);
+        height: pxToRem(65);
+      }
+    }
   }
   .footer__wrapper {
-    @include media(0,$tablet){
-    column-gap: pxToRem(55);
-    margin-bottom: pxToRem(16);
+    @include media(0, $tablet) {
+      column-gap: pxToRem(55);
+      margin-bottom: pxToRem(16);
     }
-    @include media($tablet,$desktop) {
+    @include media($tablet, $desktop) {
       margin-bottom: pxToRem(40);
       column-gap: pxToRem(55);
       display: block;
@@ -165,14 +160,14 @@ html[dir="rtl"]{
     }
   }
   .footer__links {
-    @include media(0,$tablet){
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: pxToRem(47);
-    row-gap: pxToRem(36);
-    margin-bottom: pxToRem(37);
+    @include media(0, $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: pxToRem(47);
+      row-gap: pxToRem(36);
+      margin-bottom: pxToRem(37);
     }
-    @include media($tablet,$desktop) {
+    @include media($tablet, $desktop) {
       display: flex;
       flex-wrap: wrap;
       row-gap: pxToRem(36);
@@ -180,19 +175,19 @@ html[dir="rtl"]{
       column-gap: pxToRem(80);
       margin-bottom: pxToRem(65);
     }
-    @include media($desktop,910) {
+    @include media($desktop, 910) {
       max-width: pxToRem(540);
       column-gap: pxToRem(30);
       margin-bottom: pxToRem(65);
       display: flex;
     }
-    @include media(910,$desktop-extra){
-         justify-content: space-between;
-         display: flex;
-         flex-wrap: wrap;
-         margin-bottom: pxToRem(0);
-         max-width: pxToRem(683);
-         column-gap: pxToRem(100);
+    @include media(910, $desktop-extra) {
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: pxToRem(0);
+      max-width: pxToRem(683);
+      column-gap: pxToRem(100);
     }
     @include desktop-extra {
       justify-content: space-between;
@@ -212,35 +207,35 @@ html[dir="rtl"]{
     line-height: pxToRem(22);
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    @include light-theme{
-      color:var(--pallete-common-white)
-    }
-  }
-  .text {
-    @include media(0,$tablet){
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: pxToRem(12);
-    letter-spacing: 0.02em;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--pallete-common-white);
-    padding-bottom: pxToRem(5);
-    padding-top: pxToRem(5);
-    &:hover,
-    :active,
-    :focus {
-      text-decoration: none !important;
-      outline: none !important;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-    &:visited {
+    @include light-theme {
       color: var(--pallete-common-white);
     }
   }
+  .text {
+    @include media(0, $tablet) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(12);
+      letter-spacing: 0.02em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--pallete-common-white);
+      padding-bottom: pxToRem(5);
+      padding-top: pxToRem(5);
+      &:hover,
+      :active,
+      :focus {
+        text-decoration: none !important;
+        outline: none !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      &:visited {
+        color: var(--pallete-common-white);
+      }
+    }
     @include tablet {
       font-family: Montserrat;
       font-style: normal;
@@ -268,8 +263,8 @@ html[dir="rtl"]{
     }
   }
   .footer__content li {
-    @include media(0,$tablet){
-    padding-bottom: pxToRem(9);
+    @include media(0, $tablet) {
+      padding-bottom: pxToRem(9);
     }
     @include tablet {
       padding: pxToRem(5) pxToRem(0);
@@ -281,7 +276,6 @@ html[dir="rtl"]{
     margin-top: pxToRem(16);
   }
   .socials {
-   
     display: flex;
 
     max-width: pxToRem(115);
@@ -299,7 +293,6 @@ html[dir="rtl"]{
       fill: var(--pallete-common-white);
 
       &:hover {
-        
         fill: var(--pallete-secondary-main);
       }
     }
@@ -309,8 +302,6 @@ html[dir="rtl"]{
 
     gap: pxToRem(13);
     height: pxToRem(39);
-
-
 
     &__item-icon {
       width: pxToRem(13);
@@ -351,13 +342,12 @@ html[dir="rtl"]{
     }
 
     .legal {
-      @include media(0,$tablet){
-      display: flex;
-      justify-content: center;
-      gap: pxToRem(23);
+      @include media(0, $tablet) {
+        display: flex;
+        justify-content: center;
+        gap: pxToRem(23);
       }
-      @include media($tablet,$desktop){
-        
+      @include media($tablet, $desktop) {
         gap: pxToRem(30);
         justify-content: space-between;
       }
@@ -368,15 +358,15 @@ html[dir="rtl"]{
       }
     }
     .text {
-      @include media(0,$desktop){
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size:pxToRem(10);
-      line-height: pxToRem(12);
+      @include media(0, $desktop) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: pxToRem(10);
+        line-height: pxToRem(12);
 
-      // color: rgba(255, 255, 255, 0.3);
-      color:#afafaff5;
+        // color: rgba(255, 255, 255, 0.3);
+        color: #afafaff5;
       }
       @include desktop {
         font-family: Montserrat;
@@ -385,15 +375,15 @@ html[dir="rtl"]{
         font-size: pxToRem(12);
         line-height: pxToRem(15);
         // color: rgba(255, 255, 255, 0.3);
-        color:#afafaff5;
+        color: #afafaff5;
       }
     }
     .copyright {
-      @include media(0,$tablet){
-      display: block;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
+      @include media(0, $tablet) {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
       }
       @include tablet {
         margin: pxToRem(0);
@@ -402,14 +392,14 @@ html[dir="rtl"]{
       }
     }
     span {
-      padding:pxToRem(0);
+      padding: pxToRem(0);
     }
   }
   .footer__us li {
-    @include media(0,$tablet){
-    padding-bottom: pxToRem(7);
+    @include media(0, $tablet) {
+      padding-bottom: pxToRem(7);
     }
-    @include media($tablet,$desktop) {
+    @include media($tablet, $desktop) {
       padding-bottom: pxToRem(4);
     }
     @include desktop {
@@ -438,13 +428,12 @@ html[dir="rtl"]{
   }
 
   li {
-    @include media(0,$desktop){
-    padding-top: pxToRem(5);
-    padding-bottom: pxToRem(5);
+    @include media(0, $desktop) {
+      padding-top: pxToRem(5);
+      padding-bottom: pxToRem(5);
     }
     @include desktop {
       padding: pxToRem(5) pxToRem(0);
     }
   }
-
 }

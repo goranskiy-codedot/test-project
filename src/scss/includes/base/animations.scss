@@ -148,10 +148,10 @@
   0% {
     width: 100%;
   }
-  10%{
+  10% {
     width: 35%;
   }
-  20%{
+  20% {
     width: 100%;
   }
   50% {
@@ -162,125 +162,119 @@
   }
 }
 
-
-
 //bookmark in prices
 @keyframes bookmark__animation-Hover {
-   from{
-     height: 43px;
-   }
-   80%{
-     width: 15px;
-     right: pxToRem(35);
-   }
-   to{
-     height: 86px;
-     width: 15px;
-     right: pxToRem(35);
-   }
+  from {
+    height: 43px;
+  }
+  80% {
+    width: 15px;
+    right: pxToRem(35);
+  }
+  to {
+    height: 86px;
+    width: 15px;
+    right: pxToRem(35);
+  }
 }
 @keyframes bookmark__animation-HoverDown {
-  from{
+  from {
     height: pxToRem(86);
   }
-  80%{
+  80% {
     height: pxToRem(23);
     width: pxToRem(34);
   }
-  to{
+  to {
     height: pxToRem(43);
     width: pxToRem(27);
   }
 }
 @keyframes bookmarkTip__animation-Hover {
-  from{
-    
+  from {
     top: 33px;
   }
-  80%{
+  80% {
     height: pxToRem(15);
     width: pxToRem(15);
     right: pxToRem(35.2);
   }
-  to{
+  to {
     top: 76px;
     height: pxToRem(15);
     width: pxToRem(15);
     right: pxToRem(35);
-
   }
 }
 @keyframes bookmarkTip__animation-HoverDown {
-  from{  
+  from {
     top: 76px;
   }
-  80%{
-  top: 14px;
-  height: pxToRem(28);
-  width: pxToRem(28);
+  80% {
+    top: 14px;
+    height: pxToRem(28);
+    width: pxToRem(28);
   }
-  to{
+  to {
     top: 33px;
   }
 }
 @keyframes bookmark__mobileAnimation-Hover {
-  from{
+  from {
     height: pxToRem(26);
   }
-  80%{
+  80% {
     width: pxToRem(10);
     right: pxToRem(20);
   }
-  to{
+  to {
     height: pxToRem(52);
     width: pxToRem(10);
     right: pxToRem(20);
   }
 }
 @keyframes bookmark__mobileAnimation-HoverDown {
- from{
-   height: pxToRem(52);
- }
- 80%{
-   height: pxToRem(16);
-   width: pxToRem(17);
- }
- to{
-   height: pxToRem(26);
-   width: pxToRem(17);
- }
+  from {
+    height: pxToRem(52);
+  }
+  80% {
+    height: pxToRem(16);
+    width: pxToRem(17);
+  }
+  to {
+    height: pxToRem(26);
+    width: pxToRem(17);
+  }
 }
 @keyframes bookmarkTip__mobileAnimation-Hover {
- from{
-   
-   top: pxToRem(19);
- }
- 50%{
-  right: pxToRem(18.2);
- }
- 80%{
-   height: pxToRem(13.5);
-   width: pxToRem(13.5);
-   right: pxToRem(18.2);
- }
- to{
-   top: pxToRem(45);
-   height: pxToRem(14);
-   width: pxToRem(14);
-   right: pxToRem(18.2);
-
- }
+  from {
+    top: pxToRem(19);
+  }
+  50% {
+    right: pxToRem(18.2);
+  }
+  80% {
+    height: pxToRem(13.5);
+    width: pxToRem(13.5);
+    right: pxToRem(18.2);
+  }
+  to {
+    top: pxToRem(45);
+    height: pxToRem(14);
+    width: pxToRem(14);
+    right: pxToRem(18.2);
+  }
 }
 @keyframes bookmarkTip__mobileAnimation-HoverDown {
- from{  
-   top: pxToRem(45);
- }
- 80%{
- top: pxToRem(10);
- height: pxToRem(13.5);
- width: pxToRem(13.5);
- }
- to{
-   top: pxToRem(19);
- }
+  from {
+    top: pxToRem(45);
+  }
+  80% {
+    top: pxToRem(10);
+    height: pxToRem(13.5);
+    width: pxToRem(13.5);
+  }
+  to {
+    top: pxToRem(19);
+  }
 }
