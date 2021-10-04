@@ -68,7 +68,7 @@ html[dir="rtl"] {
     }
   }
 
-  h2 {
+  &__title {
     @include media(0, $tablet) {
       width: 64%;
       font-size: pxToRem(13);
@@ -108,6 +108,35 @@ html[dir="rtl"] {
     }
   }
 
+  &__stages {
+    @include media(0, $tablet) {
+      display: flex;
+      padding: pxToRem(0) pxToRem(93);
+      gap: pxToRem(45);
+      padding-top: pxToRem(10);
+      padding-bottom: pxToRem(10);
+    }
+    @include media($tablet, $desktop) {
+      display: flex;
+      padding: pxToRem(0) pxToRem(30);
+      gap: pxToRem(45);
+      padding-top: pxToRem(10);
+      padding-bottom: pxToRem(10);
+    }
+    @include desktop {
+      display: flex;
+      padding: pxToRem(0) pxToRem(93);
+      overflow-x: overlay;
+      overflow-y: hidden;
+      gap: pxToRem(45);
+      padding-top: pxToRem(20);
+      padding-bottom: pxToRem(40);
+      &::-webkit-scrollbar {
+        width: pxToRem(0);
+      }
+    }
+  }
+
   &__stages-container {
     @include media(0, $tablet) {
       display: flex;
@@ -118,34 +147,7 @@ html[dir="rtl"] {
       margin-right: pxToRem(-25);
       margin-bottom: pxToRem(13);
     }
-    .process-development__stages {
-      @include media(0, $tablet) {
-        display: flex;
-        padding: pxToRem(0) pxToRem(93);
-        gap: pxToRem(45);
-        padding-top: pxToRem(10);
-        padding-bottom: pxToRem(10);
-      }
-      @include media($tablet, $desktop) {
-        display: flex;
-        padding: pxToRem(0) pxToRem(30);
-        gap: pxToRem(45);
-        padding-top: pxToRem(10);
-        padding-bottom: pxToRem(10);
-      }
-      @include desktop {
-        display: flex;
-        padding: pxToRem(0) pxToRem(93);
-        overflow-x: overlay;
-        overflow-y: hidden;
-        gap: pxToRem(45);
-        padding-top: pxToRem(20);
-        padding-bottom: pxToRem(40);
-        &::-webkit-scrollbar {
-          width: pxToRem(0);
-        }
-      }
-    }
+    
 
     @include media($tablet, $desktop) {
       display: flex;
@@ -198,310 +200,310 @@ html[dir="rtl"] {
         }
       }
     }
-    .stage:hover {
-      &:nth-child(1) {
-        .stage__ellipse {
-          @include media(0, $tablet) {
-            transform: scale(1.8);
-            transition: 0.5s;
-          }
-          @include media($tablet, $desktop) {
-            transition: 0.5s;
-            left: pxToRem(19);
-            top: pxToRem(40);
-            transform: scale(1.8);
-          }
-          @include desktop {
-            transform: scale(2.2);
-            transition: 0.5s;
-            left: pxToRem(19);
-            top: pxToRem(40);
-          }
-        }
-      }
-      &:nth-child(2) {
-        .stage__ellipse {
-          @include media(0, $tablet) {
-            transform: scale(1.8);
-            transition: 0.5s;
-          }
-          @include media($tablet, $desktop) {
-            top: pxToRem(15);
-            left: pxToRem(30);
-            transition: 0.5s;
-            transform: scale(1.8);
-          }
-
-          @include desktop {
-            top: pxToRem(15);
-            left: pxToRem(30);
-            transition: 0.5s;
-            transform: scale(2.2);
-          }
-        }
-      }
-      &:nth-child(3) {
-        .stage__ellipse {
-          @include media(0, $tablet) {
-            transform: scale(1.8);
-            transition: 0.5s;
-          }
-          @include media($tablet, $desktop) {
-            left: pxToRem(40);
-            top: pxToRem(50);
-            transition: 0.5s;
-            transform: scale(1.8);
-          }
-          @include desktop {
-            left: pxToRem(40);
-            top: pxToRem(50);
-            transition: 0.5s;
-            transform: scale(2.2);
-          }
-        }
-      }
-      &:nth-child(4) {
-        .stage__ellipse {
-          @include media(0, $tablet) {
-            transform: scale(1.8);
-            transition: 0.5s;
-          }
-          @include media($tablet, $desktop) {
-            transform: scale(1.8);
-            transition: 0.5s;
-            left: pxToRem(30);
-          }
-          @include desktop {
-            transform: scale(2.2);
-            transition: 0.5s;
-            left: pxToRem(30);
-          }
-        }
-      }
-    }
-    .stage:not(:hover) {
-      .stage__ellipse {
-        transform: scale(1);
-        transition: 0.5s;
-        left: pxToRem(47);
-      }
-    }
-
-    .stage:nth-child(1),
-    .stage:nth-child(5n) {
-      @include media(0, $tablet) {
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3s;
-        }
-      }
-      @include media($tablet, $desktop) {
-        margin-top: pxToRem(9);
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3s;
-        }
-      }
-      @include desktop {
-        margin-top: pxToRem(14);
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3s;
-        }
-      }
+  }
+  &__stage:hover {
+    &:nth-child(1) {
       .stage__ellipse {
         @include media(0, $tablet) {
-          left: pxToRem(35);
-          top: pxToRem(26);
+          transform: scale(1.8);
+          transition: 0.5s;
         }
         @include media($tablet, $desktop) {
-          left: pxToRem(33);
-          top: pxToRem(25);
+          transition: 0.5s;
+          left: pxToRem(19);
+          top: pxToRem(40);
+          transform: scale(1.8);
         }
         @include desktop {
-          width: pxToRem(113);
-          height: pxToRem(113);
-          left: pxToRem(47);
-          top: pxToRem(30);
+          transform: scale(2.2);
+          transition: 0.5s;
+          left: pxToRem(19);
+          top: pxToRem(40);
         }
       }
     }
-
-    .stage:nth-child(2),
-    .stage:nth-child(6n) {
-      @include media(0, $tablet) {
-        position: relative;
-        z-index: 1;
-      }
-
-      @include media($tablet, $desktop) {
-        margin-top: pxToRem(56);
-        position: relative;
-        z-index: 1;
-      }
-      @include desktop {
-        margin-top: pxToRem(71);
-        position: relative;
-        z-index: 1;
-      }
+    &:nth-child(2) {
       .stage__ellipse {
         @include media(0, $tablet) {
-          left: pxToRem(35);
-          top: pxToRem(24);
+          transform: scale(1.8);
+          transition: 0.5s;
         }
         @include media($tablet, $desktop) {
-          left: pxToRem(33);
-          top: pxToRem(30);
+          top: pxToRem(15);
+          left: pxToRem(30);
+          transition: 0.5s;
+          transform: scale(1.8);
         }
+
         @include desktop {
-          width: pxToRem(113);
-          height: pxToRem(113);
-          left: pxToRem(47);
-          top: pxToRem(31);
-        }
-      }
-      .text {
-        @include desktop {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: pxToRem(15);
-          line-height: pxToRem(28);
-          letter-spacing: 0.02em;
-        }
-        &:nth-child(3) {
-          width: pxToRem(218);
+          top: pxToRem(15);
+          left: pxToRem(30);
+          transition: 0.5s;
+          transform: scale(2.2);
         }
       }
     }
-    .stage:nth-child(3),
-    .stage:nth-child(7n) {
-      @include media(0, $tablet) {
-        position: relative;
-        z-index: 1;
-      }
-
-      @include media($tablet, $desktop) {
-        position: relative;
-        z-index: 1;
-      }
-      @include desktop {
-        position: relative;
-        z-index: 1;
-      }
-
+    &:nth-child(3) {
       .stage__ellipse {
         @include media(0, $tablet) {
-          left: pxToRem(35);
-          top: pxToRem(24);
+          transform: scale(1.8);
+          transition: 0.5s;
         }
         @include media($tablet, $desktop) {
-          left: pxToRem(34);
-          top: pxToRem(31);
+          left: pxToRem(40);
+          top: pxToRem(50);
+          transition: 0.5s;
+          transform: scale(1.8);
         }
         @include desktop {
-          width: pxToRem(113);
-          height: pxToRem(113);
-          left: pxToRem(47);
-          top: pxToRem(30);
+          left: pxToRem(40);
+          top: pxToRem(50);
+          transition: 0.5s;
+          transform: scale(2.2);
         }
       }
     }
-    .stage:nth-child(4),
-    .stage:nth-child(8n) {
-      @include media(0, $tablet) {
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3.3s;
-        }
-      }
-
-      @include media($tablet, $desktop) {
-        margin-top: pxToRem(10);
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3.3s;
-        }
-      }
-      @include desktop {
-        margin-top: pxToRem(37);
-        position: relative;
-        z-index: 1;
-        #animation-loading:target {
-          opacity: 0;
-          animation: appearance 1s ease-in-out forwards;
-          animation-delay: 3.3s;
-        }
-      }
+    &:nth-child(4) {
       .stage__ellipse {
         @include media(0, $tablet) {
-          left: pxToRem(35);
-          top: pxToRem(24);
+          transform: scale(1.8);
+          transition: 0.5s;
         }
         @include media($tablet, $desktop) {
-          left: pxToRem(33);
-          top: pxToRem(25);
+          transform: scale(1.8);
+          transition: 0.5s;
+          left: pxToRem(30);
         }
         @include desktop {
-          width: pxToRem(113);
-          height: pxToRem(113);
-          left: pxToRem(47);
-          top: pxToRem(30);
+          transform: scale(2.2);
+          transition: 0.5s;
+          left: pxToRem(30);
         }
-      }
-    }
-
-    .stage__number {
-      @include media(0, $desktop) {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 900;
-        font-size: pxToRem(50);
-        line-height: pxToRem(73);
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        border: pxToRem(1);
-        color: transparent;
-        mix-blend-mode: multiply;
-        -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
-        font-stretch: ultra-expanded;
-        z-index: 1;
-        margin-bottom: pxToRem(10);
-      }
-      @include desktop {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 900;
-        font-size: pxToRem(70);
-        margin-bottom: pxToRem(0);
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        border: pxToRem(1);
-        color: transparent;
-        mix-blend-mode: multiply;
-        -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
-        font-stretch: ultra-expanded;
-        z-index: 1;
-        line-height: pxToRem(102);
       }
     }
   }
-  .process-development__stages-container::-webkit-scrollbar {
+  &__stage:not(:hover) {
+    .stage__ellipse {
+      transform: scale(1);
+      transition: 0.5s;
+      left: pxToRem(47);
+    }
+  }
+
+  &__stage:nth-child(1),
+  &__stage:nth-child(5n) {
+    @include media(0, $tablet) {
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3s;
+      }
+    }
+    @include media($tablet, $desktop) {
+      margin-top: pxToRem(9);
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3s;
+      }
+    }
+    @include desktop {
+      margin-top: pxToRem(14);
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3s;
+      }
+    }
+    .stage__ellipse {
+      @include media(0, $tablet) {
+        left: pxToRem(35);
+        top: pxToRem(26);
+      }
+      @include media($tablet, $desktop) {
+        left: pxToRem(33);
+        top: pxToRem(25);
+      }
+      @include desktop {
+        width: pxToRem(113);
+        height: pxToRem(113);
+        left: pxToRem(47);
+        top: pxToRem(30);
+      }
+    }
+  }
+
+  &__stage:nth-child(2),
+  &__stage:nth-child(6n) {
+    @include media(0, $tablet) {
+      position: relative;
+      z-index: 1;
+    }
+
+    @include media($tablet, $desktop) {
+      margin-top: pxToRem(56);
+      position: relative;
+      z-index: 1;
+    }
+    @include desktop {
+      margin-top: pxToRem(71);
+      position: relative;
+      z-index: 1;
+    }
+    .stage__ellipse {
+      @include media(0, $tablet) {
+        left: pxToRem(35);
+        top: pxToRem(24);
+      }
+      @include media($tablet, $desktop) {
+        left: pxToRem(33);
+        top: pxToRem(30);
+      }
+      @include desktop {
+        width: pxToRem(113);
+        height: pxToRem(113);
+        left: pxToRem(47);
+        top: pxToRem(31);
+      }
+    }
+    .text {
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: pxToRem(15);
+        line-height: pxToRem(28);
+        letter-spacing: 0.02em;
+      }
+      &:nth-child(3) {
+        width: pxToRem(218);
+      }
+    }
+  }
+  &__stage:nth-child(3),
+  &__stage:nth-child(7n) {
+    @include media(0, $tablet) {
+      position: relative;
+      z-index: 1;
+    }
+
+    @include media($tablet, $desktop) {
+      position: relative;
+      z-index: 1;
+    }
+    @include desktop {
+      position: relative;
+      z-index: 1;
+    }
+
+    .stage__ellipse {
+      @include media(0, $tablet) {
+        left: pxToRem(35);
+        top: pxToRem(24);
+      }
+      @include media($tablet, $desktop) {
+        left: pxToRem(34);
+        top: pxToRem(31);
+      }
+      @include desktop {
+        width: pxToRem(113);
+        height: pxToRem(113);
+        left: pxToRem(47);
+        top: pxToRem(30);
+      }
+    }
+  }
+  &__stage:nth-child(4),
+  &__stage:nth-child(8n) {
+    @include media(0, $tablet) {
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3.3s;
+      }
+    }
+
+    @include media($tablet, $desktop) {
+      margin-top: pxToRem(10);
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3.3s;
+      }
+    }
+    @include desktop {
+      margin-top: pxToRem(37);
+      position: relative;
+      z-index: 1;
+      #animation-loading:target {
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;
+        animation-delay: 3.3s;
+      }
+    }
+    .stage__ellipse {
+      @include media(0, $tablet) {
+        left: pxToRem(35);
+        top: pxToRem(24);
+      }
+      @include media($tablet, $desktop) {
+        left: pxToRem(33);
+        top: pxToRem(25);
+      }
+      @include desktop {
+        width: pxToRem(113);
+        height: pxToRem(113);
+        left: pxToRem(47);
+        top: pxToRem(30);
+      }
+    }
+  }
+
+  &__stage-number {
+    @include media(0, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: pxToRem(50);
+      line-height: pxToRem(73);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      border: pxToRem(1);
+      color: transparent;
+      mix-blend-mode: multiply;
+      -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
+      font-stretch: ultra-expanded;
+      z-index: 1;
+      margin-bottom: pxToRem(10);
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: pxToRem(70);
+      margin-bottom: pxToRem(0);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      border: pxToRem(1);
+      color: transparent;
+      mix-blend-mode: multiply;
+      -webkit-text-stroke: pxToRem(1) var(--pallete-primary-main);
+      font-stretch: ultra-expanded;
+      z-index: 1;
+      line-height: pxToRem(102);
+    }
+  }
+  &__stages-container::-webkit-scrollbar {
     width: 0;
   }
 
@@ -523,7 +525,7 @@ html[dir="rtl"] {
       line-height: pxToRem(28);
     }
   }
-  .process-development__slider {
+  &__slider {
     @include media(0, $tablet) {
       display: flex;
 
