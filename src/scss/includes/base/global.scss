@@ -11,7 +11,7 @@
     transition-property: background, border, color, left, margin, padding, right, opacity;
   }
 }
-*{
+* {
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,7 +24,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 input[type="submit"]:focus {
@@ -43,8 +42,8 @@ audio {
   max-width: 100%;
   height: auto;
 }
-img{
-  @include dark-theme{
+img {
+  @include dark-theme {
     filter: brightness(0.8);
   }
 }
@@ -143,7 +142,9 @@ textarea {
   resize: none;
 }
 
-a, button, label {
+a,
+button,
+label {
   cursor: pointer;
   text-decoration: none;
   outline: 0;
@@ -220,19 +221,17 @@ strong {
   @include desktop {
     // min-width: 171pxToRem;
     // min-height: 41pxToRem;
-    font-size:pxToRem(13);
+    font-size: pxToRem(13);
     line-height: pxToRem(16);
     padding: pxToRem(12);
     width: pxToRem(171);
     height: pxToRem(41);
-
   }
-//   &:hover{
-//   box-shadow: 0 0 10px 0 #2d2b88 inset, 0 0 10px 2px #2d2b88;
-// }
+  //   &:hover{
+  //   box-shadow: 0 0 10px 0 #2d2b88 inset, 0 0 10px 2px #2d2b88;
+  // }
 }
 h1 {
-
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -241,25 +240,25 @@ h1 {
   letter-spacing: 0.02em;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  @include light-theme{
-  color: var(--pallete-grey-900);
+  @include light-theme {
+    color: var(--pallete-grey-900);
   }
-  @include dark-theme{
+  @include dark-theme {
     color: var(--pallete-common-white);
   }
-    @include tablet {
-      font-size: pxToRem(20);
-      max-width: pxToRem(241);
-      font-size:pxToRem(20);
-      line-height: pxToRem(29);
-    }
-    @include desktop {
-      font-size: pxToRem(30);
-      padding-bottom: pxToRem(0);
-      max-width: pxToRem(380);
-      width: 100%;
-      line-height: pxToRem(44);
-    }
+  @include tablet {
+    font-size: pxToRem(20);
+    max-width: pxToRem(241);
+    font-size: pxToRem(20);
+    line-height: pxToRem(29);
+  }
+  @include desktop {
+    font-size: pxToRem(30);
+    padding-bottom: pxToRem(0);
+    max-width: pxToRem(380);
+    width: 100%;
+    line-height: pxToRem(44);
+  }
 }
 h2 {
   margin-block-start: 0em;
@@ -272,12 +271,12 @@ h2 {
   line-height: pxToRem(19);
   font-size: pxToRem(15);
   line-height: pxToRem(22);
-  @include light-theme{
+  @include light-theme {
     color: var(--pallete-grey-900);
-    }
-    @include dark-theme{
-      color: var(--pallete-common-white);
-    }
+  }
+  @include dark-theme {
+    color: var(--pallete-common-white);
+  }
   @include tablet {
     font-size: pxToRem(20);
     line-height: pxToRem(29);
@@ -290,40 +289,38 @@ h2 {
   }
 }
 p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 0.02em;
-    font-size: pxToRem(13);
-    line-height: pxToRem(24);
-    @include light-theme{
-      color: var(--pallete-grey-900);
-      }
-      @include dark-theme{
-        color: var(--pallete-common-white);
-      }
-    @include tablet {
-      font-size: pxToRem(15);
-      line-height: pxToRem(28);
-  
-    }
-}
-a{
-  @include light-theme{
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  font-size: pxToRem(13);
+  line-height: pxToRem(24);
+  @include light-theme {
     color: var(--pallete-grey-900);
-    }
-    @include dark-theme{
-      color: var(--pallete-common-white);
-    }
+  }
+  @include dark-theme {
+    color: var(--pallete-common-white);
+  }
+  @include tablet {
+    font-size: pxToRem(15);
+    line-height: pxToRem(28);
+  }
 }
-li{
-  @include light-theme{
+a {
+  @include light-theme {
     color: var(--pallete-grey-900);
-    }
-    @include dark-theme{
-      color: var(--pallete-common-white);
-    }
+  }
+  @include dark-theme {
+    color: var(--pallete-common-white);
+  }
 }
-
+li {
+  @include light-theme {
+    color: var(--pallete-grey-900);
+  }
+  @include dark-theme {
+    color: var(--pallete-common-white);
+  }
+}

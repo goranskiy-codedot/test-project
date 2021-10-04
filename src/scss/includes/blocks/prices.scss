@@ -786,20 +786,20 @@ html[dir="rtl"] {
     //   border-right: 0;
     //   }
     // }
-    .hover{
-      @include tablet{
-      position: relative;
-      z-index: 1000!important;
-      margin-left: -1px;
+    .hover {
+      @include tablet {
+        position: relative;
+        z-index: 1000 !important;
+        margin-left: -1px;
       }
     }
     div[class="pack"]:last-child {
       margin-top: -1px;
-      @include tablet{
-      margin-left: -2px;
-      position: relative;
-      z-index: 1;
-      margin-top: 0;
+      @include tablet {
+        margin-left: -2px;
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
       }
     }
     // .hover +.pack{
@@ -809,33 +809,33 @@ html[dir="rtl"] {
     //     z-index: 1;
     //   }
     // }
-    div:nth-child(1n){
-      @include tablet{
-      position: relative;
-      // z-index: 1000;
-      margin-left: 0px;
+    div:nth-child(1n) {
+      @include tablet {
+        position: relative;
+        // z-index: 1000;
+        margin-left: 0px;
       }
     }
-    div:nth-child(3n+2){
+    div:nth-child(3n + 2) {
       margin-top: -1px;
-      @include tablet{
-      margin-left: -1px;
-      position: relative;
-      z-index: 10;
+      @include tablet {
+        margin-left: -1px;
+        position: relative;
+        z-index: 10;
       }
     }
-    div:nth-child(3n){
+    div:nth-child(3n) {
       margin-top: -1px;
-      @include tablet{
-      margin-left: -2px;
-      position: relative;
-      z-index: 1;
+      @include tablet {
+        margin-left: -2px;
+        position: relative;
+        z-index: 1;
       }
     }
-    div:nth-child(n+4){
+    div:nth-child(n + 4) {
       margin-top: -1px;
-      @include tablet{
-      margin-top: -1px;
+      @include tablet {
+        margin-top: -1px;
       }
     }
     // .hover+.pack+.pack{
