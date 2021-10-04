@@ -79,7 +79,7 @@ html[dir="rtl"] {
     }
   }
 
-  .footer__logo {
+  &__logo {
     @include media(0, $tablet) {
       width: max-content;
       z-index: 1001;
@@ -139,7 +139,7 @@ html[dir="rtl"] {
       }
     }
   }
-  .footer__wrapper {
+ &__wrapper {
     @include media(0, $tablet) {
       column-gap: pxToRem(55);
       margin-bottom: pxToRem(16);
@@ -159,7 +159,7 @@ html[dir="rtl"] {
       margin-bottom: pxToRem(26);
     }
   }
-  .footer__links {
+  &__links {
     @include media(0, $tablet) {
       display: flex;
       flex-wrap: wrap;
@@ -199,7 +199,7 @@ html[dir="rtl"] {
     }
   }
 
-  h2 {
+  &__title {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -211,7 +211,7 @@ html[dir="rtl"] {
       color: var(--pallete-common-white);
     }
   }
-  .text {
+  &__text {
     @include media(0, $tablet) {
       font-family: Montserrat;
       font-style: normal;
@@ -262,7 +262,7 @@ html[dir="rtl"] {
       line-height: pxToRem(22);
     }
   }
-  .footer__content li {
+  &__content li {
     @include media(0, $tablet) {
       padding-bottom: pxToRem(9);
     }
@@ -275,65 +275,63 @@ html[dir="rtl"] {
     display: grid;
     margin-top: pxToRem(16);
   }
-  .socials {
+  &__socials {
     display: flex;
-
     max-width: pxToRem(115);
-    &__item {
-      padding-top: pxToRem(15);
-      padding-left: pxToRem(10);
-      padding-right: pxToRem(10);
-      padding-bottom: pxToRem(15);
-    }
-    &__item-icon {
-      width: pxToRem(19);
-      height: pxToRem(19);
-      display: block;
+  }
+  &__socials-item {
+    padding-top: pxToRem(15);
+    padding-left: pxToRem(10);
+    padding-right: pxToRem(10);
+    padding-bottom: pxToRem(15);
+  }
+  &__social-icon {
+    width: pxToRem(19);
+    height: pxToRem(19);
+    display: block;
 
-      fill: var(--pallete-common-white);
+    fill: var(--pallete-common-white);
 
-      &:hover {
-        fill: var(--pallete-secondary-main);
-      }
+    &:hover {
+      fill: var(--pallete-secondary-main);
     }
   }
-  .portfolios {
+  &-portfolios {
     display: flex;
-
     gap: pxToRem(13);
     height: pxToRem(39);
-
-    &__item-icon {
-      width: pxToRem(13);
-      height: pxToRem(13);
-      display: block;
-      fill: var(--pallete-common-white);
-      top: pxToRem(12);
-      left: pxToRem(13);
-      position: absolute;
-    }
 
     @include desktop {
       top: pxToRem(85);
       left: pxToRem(0);
       position: absolute;
     }
-    .ellipse {
-      border: pxToRem(1) solid var(--pallete-common-white);
-      border-radius: 50%;
-      width: pxToRem(39);
-      height: pxToRem(39);
-      position: relative;
-      &:hover {
-        border-color: var(--pallete-secondary-main);
-        .portfolios__item-icon {
-          fill: var(--pallete-secondary-main);
-          transition: 0.5s;
-        }
+
+  }
+  &__ellipse {
+    border: pxToRem(1) solid var(--pallete-common-white);
+    border-radius: 50%;
+    width: pxToRem(39);
+    height: pxToRem(39);
+    position: relative;
+    &:hover {
+      border-color: var(--pallete-secondary-main);
+      .portfolios__item-icon {
+        fill: var(--pallete-secondary-main);
+        transition: 0.5s;
       }
     }
   }
-  .footer__legal {
+  &-portfolios__item-icon {
+    width: pxToRem(13);
+    height: pxToRem(13);
+    display: block;
+    fill: var(--pallete-common-white);
+    top: pxToRem(12);
+    left: pxToRem(13);
+    position: absolute;
+  }
+  &__legal {
     @include tablet {
       display: flex;
       flex-flow: row-reverse;
@@ -341,22 +339,7 @@ html[dir="rtl"] {
       align-items: baseline;
     }
 
-    .legal {
-      @include media(0, $tablet) {
-        display: flex;
-        justify-content: center;
-        gap: pxToRem(23);
-      }
-      @include media($tablet, $desktop) {
-        gap: pxToRem(30);
-        justify-content: space-between;
-      }
-      @include desktop {
-        gap: pxToRem(43);
-        justify-content: space-between;
-        display: flex;
-      }
-    }
+    
     .text {
       @include media(0, $desktop) {
         font-family: Montserrat;
@@ -378,24 +361,43 @@ html[dir="rtl"] {
         color: #afafaff5;
       }
     }
-    .copyright {
-      @include media(0, $tablet) {
-        display: block;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      @include tablet {
-        margin: pxToRem(0);
-        display: block;
-        text-align: center;
-      }
+   
+  }
+  &__legal-copyright {
+    @include media(0, $tablet) {
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
-    span {
-      padding: pxToRem(0);
+    @include tablet {
+      margin: pxToRem(0);
+      display: block;
+      text-align: center;
     }
   }
-  .footer__us li {
+  span {
+    padding: pxToRem(0);
+  }
+
+  .legal {
+    @include media(0, $tablet) {
+      display: flex;
+      justify-content: center;
+      gap: pxToRem(23);
+    }
+    @include media($tablet, $desktop) {
+      gap: pxToRem(30);
+      justify-content: space-between;
+    }
+    @include desktop {
+      gap: pxToRem(43);
+      justify-content: space-between;
+      display: flex;
+    }
+  }
+
+  &__us li {
     @include media(0, $tablet) {
       padding-bottom: pxToRem(7);
     }
@@ -406,7 +408,7 @@ html[dir="rtl"] {
       padding-bottom: pxToRem(3);
     }
   }
-  .footer__contacts {
+  &__contacts {
     display: block;
     @include tablet {
       margin-bottom: pxToRem(0);
