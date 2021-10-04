@@ -27,7 +27,7 @@
     }
   }
 
-  h2 {
+  &__title {
     @include media(0, $tablet) {
       margin-bottom: pxToRem(33);
       #animation-loading:target {
@@ -123,8 +123,8 @@
     }
   }
 
-  .image__container:nth-child(1n),
-  .image__container:nth-child(3n + 1) {
+  &__image-container:nth-child(1n),
+  &__image-container:nth-child(3n + 1) {
     @include desktop {
       grid-area: auto/1/span 2 / span 2;
       position: relative;
@@ -135,8 +135,8 @@
     }
   }
 
-  .image__container:nth-child(2n),
-  .image__container:nth-child(3n + 2) {
+  &__image-container:nth-child(2n),
+  &__image-container:nth-child(3n + 2) {
     @include desktop {
       grid-area: auto/1/span 1 / span 1;
       left: 0;
@@ -148,8 +148,8 @@
     }
   }
 
-  .image__container:nth-child(3n),
-  .image__container:nth-child(3n + 3) {
+  &__image-container:nth-child(3n),
+  &__image-container:nth-child(3n + 3) {
     @include desktop {
       grid-area: auto/2/span 1 / span 1;
       left: 0;
@@ -161,7 +161,7 @@
     }
   }
 
-  .examples__image {
+  &__image {
     @include media(0, $tablet) {
       width: 100% !important;
       height: 100% !important;
@@ -187,7 +187,7 @@
     }
   }
 
-  .examples__button {
+  &__button {
     margin-left: auto;
     margin-right: auto;
     display: block;
