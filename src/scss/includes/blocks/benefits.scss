@@ -8,7 +8,7 @@
     }
   }
  
-    // padding-top: 68pxToRem;
+
     h2 {
       @include media(0,$tablet){
       margin-bottom: pxToRem(39);
@@ -32,7 +32,6 @@
     }
     @include media($tablet,$desktop) {
       margin-left: pxToRem(79);
-      // margin-top: 75pxToRem;
       grid-template-rows: 1fr;
       grid-template-columns: 0.95fr 1fr;
       row-gap: pxToRem(82);
@@ -40,7 +39,6 @@
       display: grid;
     }
     @include desktop {
-      // margin-top: 82pxToRem;
       margin-left: pxToRem(0);
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
@@ -76,11 +74,11 @@
   padding-bottom: pxToRem(28);
 }
 @include media($tablet,$desktop) {
-    padding-bottom: pxToRemToRem(36);
-    padding-top: pxToRemToRem(36);
+    padding-bottom: pxToRem(36);
+    padding-top: pxToRem(36);
   }
   @include desktop {
-    padding-bottom: pxToRemToRem(69);
-    padding-top: pxToRemToRem(69);
+    padding-bottom: pxToRem(69);
+    padding-top: pxToRem(69);
   }
 }

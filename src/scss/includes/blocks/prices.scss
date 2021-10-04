@@ -1,9 +1,66 @@
-.pricesSection {
-  @include media(0,$tablet){
-  padding-bottom: pxToRem(66);
-  padding-top:pxToRem(66);
+html[dir="rtl"] {
+  .benefits {
+    @include media(0, $tablet) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      padding-right: pxToRem(24);
+    }
+    @include media($tablet, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      padding-right: pxToRem(21);
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(15);
+      line-height: pxToRem(28);
+      letter-spacing: 0.02em;
+      padding-right: pxToRem(32);
+    }
+    &::before {
+      @include media(0, $desktop) {
+        content: "";
+        width: pxToRem(10);
+        height: pxToRem(6);
+        display: block;
+        transform: rotate(-45deg);
+        border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+        border-left: pxToRem(2) solid var(--pallete-secondary-main);
+        margin-right: pxToRem(-23);
+        margin-top: pxToRem(4);
+        position: absolute;
+      }
+      @include desktop {
+        content: "";
+        display: block;
+        height: pxToRem(9);
+        transform: rotate(-45deg);
+        margin-right: pxToRem(-31);
+        margin-top: pxToRem(9);
+        border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+        border-left: pxToRem(2) solid var(--pallete-secondary-main);
+        width: pxToRem(14);
+        position: absolute;
+      }
+    }
   }
-  @include media($tablet,$desktop){
+}
+.pricesSection {
+  @include media(0, $tablet) {
+    padding-bottom: pxToRem(66);
+    padding-top: pxToRem(66);
+  }
+  @include media($tablet, $desktop) {
     padding-bottom: pxToRem(65);
     padding-top: pxToRem(65);
   }
@@ -12,13 +69,12 @@
     padding-top: pxToRem(72);
   }
   h2 {
-    @include media(0,$tablet){
-    text-align: center;
-    width: 100%;
-    margin-bottom: pxToRem(38);
+    @include media(0, $tablet) {
+      text-align: center;
+      width: 100%;
+      margin-bottom: pxToRem(38);
     }
-    @include media($tablet,$desktop){
-      // max-width: 60pxToRem;
+    @include media($tablet, $desktop) {
       text-align: center;
       width: 100%;
       margin-bottom: pxToRem(52);
@@ -27,61 +83,166 @@
       text-align: center;
       width: 100%;
       margin-bottom: pxToRem(65);
-
     }
   }
   .prices {
-    // justify-content: center;
-    // padding-left: 29pxToRem;
-    // padding-right: 27pxToRem;
-    // width: max-content;
-    @include media(0,$tablet){
-    margin: 0 auto;   
-    padding-right: 0;
+    @include media(0, $tablet) {
+      margin: 0 auto;
+      padding-right: 0;
 
-    justify-content: center;
+      justify-content: center;
     }
     @include tablet {
       padding-left: pxToRem(0);
       padding-right: pxToRem(0);
-      // margin-top: 52pxToRem;
       display: grid;
-   justify-content: center;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin: 0 auto;   
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3,32%);
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin: 0 auto;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 32%);
     }
-
-    .pack {
-      @include media(0,$tablet){
-      max-width: pxToRem(244);
-      // min-height: 386pxToRem;
-      border: pxToRem(1) solid var(--pallete-grey-10);
-      padding: pxToRem(18);
-      height: 100%;
-      padding:pxToRem(19) pxToRem(19) pxToRem(34);
-      min-height: pxToRem(386);
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
+    // div[class*="hover"]:hover {
+    //   background-color: red;
+    // }
+    div[class*="hover"]:hover {
+      &::before {
+        @include media(0, $desktop) {
+          content: "";
+          width: pxToRem(17);
+          height: pxToRem(26);
+          background-color: var(--pallete-primary-main);
+          display: inline-block;
+          position: absolute;
+          right: pxToRem(18);
+          top: 0;
+          animation: bookmark__mobileAnimation-Hover 1s ease,
+            bookmark__mobileAnimation-HoverDown 0.2s 1s;
+        }
+        @include desktop {
+          content: "";
+          width: pxToRem(27);
+          height: pxToRem(43);
+          right: pxToRem(31);
+          background-color: var(--pallete-primary-main);
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          // animation-direction:alternate;
+          animation: bookmark__animation-Hover 1s ease, bookmark__animation-HoverDown 0.2s 1s;
+        }
       }
-      @include tablet{
+      &::after {
+        @include media(0, $desktop) {
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          height: pxToRem(14);
+          position: absolute;
+          right: pxToRem(20);
+          top: pxToRem(19);
+          transform: rotate(45deg);
+          width: pxToRem(14);
+          animation-direction: alternate;
+          animation: bookmarkTip__mobileAnimation-Hover 1s ease,
+            bookmarkTip__mobileAnimation-HoverDown 0.2s 1s;
+        }
+        @include desktop {
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          height: pxToRem(20);
+          width: pxToRem(20);
+          top: pxToRem(33);
+          right: pxToRem(34.5);
+          transform: rotate(45deg);
+          animation-direction: alternate;
+          animation: bookmarkTip__animation-Hover 1s ease, bookmarkTip__animation-HoverDown 0.2s 1s;
+        }
+      }
+      div[class*="hover"]:not(:hover) {
+        &::before {
+          @include media(0, $desktop) {
+            content: "";
+            width: pxToRem(17);
+            height: pxToRem(26);
+            background-color: var(--pallete-primary-main);
+            display: inline-block;
+            position: absolute;
+            right: pxToRem(18);
+            top: 0;
+            animation: bookmark__mobileAnimation-notHover 4s forwards;
+          }
+          @include desktop {
+            content: "";
+            width: pxToRem(27);
+            height: pxToRem(43);
+            right: pxToRem(31);
+            background-color: var(--pallete-primary-main);
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            // animation-direction:alternate;
+            animation: bookmark__animation-notHover 4s forwards;
+          }
+        }
+        &::after {
+          @include media(0, $desktop) {
+            background-color: inherit;
+            content: "";
+            display: inline-block;
+            height: pxToRem(14);
+            position: absolute;
+            right: pxToRem(20);
+            top: pxToRem(19);
+            transform: rotate(45deg);
+            width: pxToRem(14);
+            animation-direction: alternate;
+            animation: bookmarkTip__mobileAnimation-notHover 4s forwards;
+          }
+          @include desktop {
+            background-color: inherit;
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: pxToRem(20);
+            width: pxToRem(20);
+            top: pxToRem(33);
+            right: pxToRem(34.5);
+            transform: rotate(45deg);
+            animation-direction: alternate;
+            animation: bookmarkTip__animation-notHover 4s forwards;
+          }
+        }
+      }
+    }
+    .pack {
+      @include media(0, $tablet) {
         max-width: pxToRem(244);
-        // min-height: 386pxToRem;
         border: pxToRem(1) solid var(--pallete-grey-10);
         padding: pxToRem(18);
         height: 100%;
-        padding:pxToRem(19) pxToRem(19) pxToRem(34);
+        padding: pxToRem(19) pxToRem(19) pxToRem(34);
         min-height: pxToRem(386);
         margin-left: auto;
         margin-right: auto;
         width: 100%;
       }
- 
+      @include tablet {
+        max-width: pxToRem(244);
+        border: pxToRem(1) solid var(--pallete-grey-10);
+        padding: pxToRem(18);
+        height: 100%;
+        padding: pxToRem(19) pxToRem(19) pxToRem(34);
+        min-height: pxToRem(386);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+
       @include desktop {
-        // min-height: 552pxToRem;
         border: pxToRem(1) solid var(--pallete-grey-10);
         min-height: pxToRem(386);
         margin-left: auto;
@@ -90,24 +251,20 @@
         max-width: pxToRem(370);
         width: 100%;
       }
- 
-      @include media(641,740){
-        // min-height: 443pxToRem;
+
+      @include media(641, 740) {
         height: 100%;
-     }
-      @include media($desktop,1118){
-        // min-height: 653pxToRem;
+      }
+      @include media($desktop, 1118) {
         height: 100%;
-     }
+      }
       &__wrapper {
-        @include media(0,$tablet){
-        border-bottom: pxToRem(2) solid var(--pallete-grey-10);
-        margin: pxToRem(0) pxToRem(0) pxToRem(25);
-        // margin: 21pxToRem;
-        text-align: center;
+        @include media(0, $tablet) {
+          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+          margin: pxToRem(0) pxToRem(0) pxToRem(25);
+          text-align: center;
         }
-        @include media($tablet,$desktop) {
-          // margin: 19pxToRem;
+        @include media($tablet, $desktop) {
           border-bottom: pxToRem(2) solid var(--pallete-grey-10);
           margin: pxToRem(0) pxToRem(0) pxToRem(26);
           text-align: center;
@@ -115,53 +272,45 @@
         @include desktop {
           border-bottom: pxToRem(2) solid var(--pallete-grey-10);
           margin: pxToRem(0) pxToRem(0) pxToRem(39) pxToRem(0);
-          // margin: 32pxToRem;
           text-align: center;
         }
       }
-      &__header{
-        @include media(0,$desktop){
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(15);
-        letter-spacing: 0.02em;
-        margin-block-end: 0em;
-        margin-block-start: 0em;
-        margin-bottom:pxToRem(25);
+      &__header {
+        @include media(0, $desktop) {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: pxToRem(10);
+          line-height: pxToRem(15);
+          letter-spacing: 0.02em;
+          margin-block-end: 0em;
+          margin-block-start: 0em;
+          margin-bottom: pxToRem(25);
         }
-        @include desktop{
+        @include desktop {
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
           font-size: pxToRem(15);
           line-height: pxToRem(22);
-          margin-bottom:pxToRem(42);
+          margin-bottom: pxToRem(42);
           letter-spacing: 0.02em;
           margin-block-end: 0em;
           margin-block-start: 0em;
-          
         }
       }
 
       &__price {
-        @include media(0,$desktop){
-        display: flex;
+        @include media(0, $desktop) {
+          display: flex;
 
-        align-items: baseline;
-        justify-content: center;
-        position: relative;
-        // margin-top: 22pxToRem;
-        gap: pxToRem(5);
-        // margin-right: 17pxToRem;
-        max-width: pxToRem(320);
-        }
-        @include tablet {
-          // margin-top: 21pxToRem;
+          align-items: baseline;
+          justify-content: center;
+          position: relative;
+          gap: pxToRem(5);
+          max-width: pxToRem(320);
         }
         @include desktop {
-          // margin-top: 43pxToRem;
           gap: pxToRem(10);
           max-width: pxToRem(320);
           display: flex;
@@ -173,24 +322,21 @@
         .grivna::before {
           content: "₴";
         }
-        .hint__bottom{
-         
-        }
-        
 
         .price {
-          @include media(0,$desktop){
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(20);
-          line-height: pxToRem(29);
-          letter-spacing: 0.02em;
-          color: var(--pallete-grey-900);
-          // padding-right: 12pxToRem;
-          // padding-top: 7pxToRem;
-          // margin-top: 4pxToRem;
-          // margin-right: 15pxToRem;
+          @include media(0, $desktop) {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: pxToRem(20);
+            line-height: pxToRem(29);
+            letter-spacing: 0.02em;
+            @include light-theme {
+              color: var(--pallete-grey-900);
+            }
+            @include dark-theme {
+              color: var(--pallete-common-white);
+            }
           }
           @include desktop {
             font-family: Montserrat;
@@ -199,27 +345,17 @@
             font-size: pxToRem(30);
             line-height: pxToRem(44);
             letter-spacing: 0.02em;
-          color: var(--pallete-grey-900);
-            // margin-top: 10pxToRem;
-            // margin-right: 0pxToRem;
+            @include light-theme {
+              color: var(--pallete-grey-900);
+            }
+            @include dark-theme {
+              color: var(--pallete-common-white);
+            }
           }
         }
       }
       .hint__bottom {
-        @include media(0,$tablet){
-        display: block;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: pxToRem(10);
-        line-height: pxToRem(19);
-        letter-spacing: 0.02em;
-        color: var(--pallete-grey-10);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        margin-bottom: pxToRem(22);
-        }
-        @include media($tablet,$desktop){
+        @include media(0, $tablet) {
           display: block;
           font-family: Montserrat;
           font-style: normal;
@@ -227,84 +363,115 @@
           font-size: pxToRem(10);
           line-height: pxToRem(19);
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color: #585858;
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          margin-bottom: pxToRem(22);
+        }
+        @include media($tablet, $desktop) {
+          display: block;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: pxToRem(10);
+          line-height: pxToRem(19);
+          letter-spacing: 0.02em;
+          // color: var(--pallete-grey-10);
+          color: #585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
           margin-bottom: pxToRem(20);
         }
         @include desktop {
-
           display: block;
           font-family: Montserrat;
           font-style: normal;
           font-weight: normal;
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color: #585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
           font-size: pxToRem(12);
           line-height: pxToRem(22);
           margin-bottom: pxToRem(40);
-     
         }
       }
       .hint {
-        @include media(0,$desktop){
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        font-size: pxToRem(10);
-        line-height: pxToRem(15);
-        letter-spacing: 0.02em;
-        color: var(--pallete-grey-10);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
+        @include media(0, $desktop) {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: pxToRem(10);
+          line-height: pxToRem(15);
+          letter-spacing: 0.02em;
+          // color: var(--pallete-grey-10);
+          color: #585858;
+          margin-block-start: 0em;
+          margin-block-end: 0em;
         }
         @include desktop {
           font-family: Montserrat;
           font-style: normal;
           font-weight: bold;
-          font-size:pxToRem(15);
+          font-size: pxToRem(15);
           line-height: pxToRem(22);
           letter-spacing: 0.02em;
-          color: var(--pallete-grey-10);
+          // color: var(--pallete-grey-10);
+          color: #585858;
           margin-block-start: 0em;
           margin-block-end: 0em;
         }
       }
       .button {
-        @include media(0,$tablet){
+        @include media(0, $tablet) {
           margin-bottom: pxToRem(29);
           border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-primary-main);
           background-color: transparent;
         }
-        @include media($tablet,$desktop){
-          // margin-bottom: 29pxToRem;
+        @include media($tablet, $desktop) {
           border: pxToRem(1) solid var(--pallete-primary-main);
           color: var(--pallete-primary-main);
           background-color: transparent;
           margin-bottom: pxToRem(30);
-          
         }
         @include desktop {
-          border: pxToRem(1) solid var(--pallete-grey-900);
-          color: var(--pallete-grey-900);
-          background-color: transparent;
+          @include light-theme {
+            border: pxToRem(1) solid var(--pallete-grey-900);
+            color: var(--pallete-grey-900);
+            background-color: transparent;
+          }
+          @include dark-theme {
+            border: pxToRem(1) solid var(--pallete-common-white);
+            color: var(--pallete-common-white);
+            background-color: transparent;
+          }
           padding: pxToRem(12);
           margin-bottom: pxToRem(40);
         }
-      }
-      &__button {
-        @include media(0,$tablet){
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        // padding-top: 21pxToRem;
-        margin-top: pxToRem(20);
-        margin-bottom: pxToRem(30);
+        &:hover {
+          border: pxToRem(1) solid var(--pallete-primary-main);
+          color: var(--pallete-common-white);
+          background-color: var(--pallete-primary-main);
+          // @include dark-theme{
+          // color:var(--pallete-common-white);
+          // background-color:#2d2b88;
+          // border:pxToRem(1) solid #2d2b88;
+          //   }
         }
-        @include media($tablet,$desktop) {
+      }
+
+      &__button {
+        @include media(0, $tablet) {
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-top: pxToRem(20);
+          margin-bottom: pxToRem(30);
+        }
+        @include media($tablet, $desktop) {
           text-align: center;
           justify-content: center;
           align-items: center;
@@ -312,67 +479,55 @@
           margin-top: pxToRem(19);
         }
         @include desktop {
-          // padding-top: 36pxToRem;
           text-align: center;
           justify-content: center;
           align-items: center;
           margin-bottom: pxToRem(40);
           margin-top: pxToRem(40);
         }
-      
       }
       .line {
-        @include media(0,$desktop){
-        width: pxToRem(206);
-        margin-top: pxToRem(31);
+        @include media(0, $desktop) {
+          width: pxToRem(206);
+          margin-top: pxToRem(31);
         }
         @include desktop {
           width: pxToRem(306);
           margin-top: pxToRem(41);
         }
       }
- 
-   
+
       &__benefits {
         .benefits__list {
-          // padding: 1pxToRem 7pxToRem;
-          @include media(0,$tablet){
-          padding-right: pxToRem(0);
-          display: grid;
-          row-gap: pxToRem(9); 
-          }
-          @include media($tablet,$desktop) {
-            // padding: 0pxToRem 13pxToRem;
+          @include media(0, $tablet) {
             padding-right: pxToRem(0);
             display: grid;
-            row-gap: pxToRem(9); 
+            row-gap: pxToRem(9);
+          }
+          @include media($tablet, $desktop) {
+            padding-right: pxToRem(0);
+            display: grid;
+            row-gap: pxToRem(9);
           }
           @include desktop {
-            // padding: 0pxToRem 0 0pxToRem 11pxToRem;
             padding-right: pxToRem(0);
             display: grid;
-            row-gap: pxToRem(9); 
-         
+            row-gap: pxToRem(9);
           }
-        
         }
 
         .benefits {
-          @include media(0,$tablet){
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: pxToRem(10);
-          line-height: pxToRem(19);
-          letter-spacing: 0.02em;
-          // padding-left: 41pxToRem;
-          // margin-block-end: 9pxToRem;
-          // margin-block-start: 4pxToRem;
-          padding-left: pxToRem(24);
+          @include media(0, $tablet) {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: pxToRem(10);
+            line-height: pxToRem(19);
+            letter-spacing: 0.02em;
+
+            padding-left: pxToRem(24);
           }
-          @include media($tablet,$desktop) {
-            // margin-block-end: 10pxToRem;
-            // margin-block-start: 8pxToRem;
+          @include media($tablet, $desktop) {
             font-family: Montserrat;
             font-style: normal;
             font-weight: normal;
@@ -388,35 +543,25 @@
             font-size: pxToRem(15);
             line-height: pxToRem(28);
             letter-spacing: 0.02em;
-            // margin-block-start: 8pxToRem;
-
-            // margin-block-end: 9pxToRem;
             padding-left: pxToRem(32);
           }
-          // &::marker {
-          //   content: url(../../../uploads/check.svg);
-
-          //   position: absolute;
-          //   @include desktop {
-          //   }
-          // }
           &::before {
-            @include media(0,$desktop){
-            content: "";
-            width: pxToRem(10);
-            height: pxToRem(6);
-            display: block;
-            transform: rotate(-45deg);
-            border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
-            border-left: pxToRem(2) solid var(--pallete-secondary-main);
-            margin-left: pxToRem(-23);
-            margin-top: pxToRem(4);
-            position: absolute;
+            @include media(0, $desktop) {
+              content: "";
+              width: pxToRem(10);
+              height: pxToRem(6);
+              display: block;
+              transform: rotate(-45deg);
+              border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+              border-left: pxToRem(2) solid var(--pallete-secondary-main);
+              margin-left: pxToRem(-23);
+              margin-top: pxToRem(4);
+              position: absolute;
             }
             @include desktop {
               content: "";
               display: block;
-              height:pxToRem(9);
+              height: pxToRem(9);
               transform: rotate(-45deg);
               margin-left: pxToRem(-31);
               margin-top: pxToRem(9);
@@ -427,24 +572,23 @@
             }
           }
         }
-        .benefit__bold{
-          @include media(0,$desktop){
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(10);
-          line-height: pxToRem(19);
-          letter-spacing: 0.02em;
+        .benefit__bold {
+          @include media(0, $desktop) {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: pxToRem(10);
+            line-height: pxToRem(19);
+            letter-spacing: 0.02em;
           }
-          @include desktop{
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(15);
-          line-height: pxToRem(28);
-          letter-spacing: 0.02em;
+          @include desktop {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: pxToRem(15);
+            line-height: pxToRem(28);
+            letter-spacing: 0.02em;
           }
-        
         }
       }
     }
@@ -454,41 +598,28 @@
         opacity: 1;
       }
     }
-    // .currency{
-    //   font-family: Montserrat;
-    //   font-style: normal;
-    //   font-weight: bold;
-    //   font-size: 20pxToRem;
-    //   line-height: 145%;
-    //   letter-spacing: 0.02em;
-    //   opacity: 0;
-    //   @include desktop{
-    //     font-family: Montserrat;
-    //     font-size: 30pxToRem;
-    //     font-style: normal;
-    //     font-weight: 700;
-    //     letter-spacing: .02em;
-    //     line-height: 145%;
-    //     margin-top: 10pxToRem;
-    //     opacity: 0;
-    //   }
-    // }
 
     .hover {
       border: pxToRem(1) solid var(--pallete-primary-main);
       position: relative;
       background-color: var(--pallete-common-white-20);
-   
+      @include light-theme {
+        background-color: var(--pallete-common-white-20);
+      }
+      @include dark-theme {
+        background-color: var(--pallete-grey-900);
+      }
+
       &::before {
-        @include media(0,$desktop){
-        content: "";
-        width: pxToRem(17);
-        height: pxToRem(26);
-        background-color: var(--pallete-primary-main);
-        display: inline-block;
-        position: absolute;
-        right: pxToRem(18);
-        top: 0;
+        @include media(0, $desktop) {
+          content: "";
+          width: pxToRem(17);
+          height: pxToRem(26);
+          background-color: var(--pallete-primary-main);
+          display: inline-block;
+          position: absolute;
+          right: pxToRem(18);
+          top: 0;
         }
         @include desktop {
           content: "";
@@ -496,22 +627,22 @@
           height: pxToRem(43);
           right: pxToRem(31);
           background-color: var(--pallete-primary-main);
-        display: inline-block;
-        position: absolute;
-        top: 0;
+          display: inline-block;
+          position: absolute;
+          top: 0;
         }
       }
       &::after {
-        @include media(0,$desktop){
-        background-color: inherit;
-        content: "";
-        display: inline-block;
-        height: pxToRem(14);
-        position: absolute;
-        right: pxToRem(20);
-        top: pxToRem(19);
-        transform: rotate(45deg);
-        width: pxToRem(14);
+        @include media(0, $desktop) {
+          background-color: inherit;
+          content: "";
+          display: inline-block;
+          height: pxToRem(13.5);
+          position: absolute;
+          right: pxToRem(20);
+          top: pxToRem(19);
+          transform: rotate(45deg);
+          width: pxToRem(13.5);
         }
         @include desktop {
           background-color: inherit;
@@ -521,7 +652,7 @@
           height: pxToRem(20);
           width: pxToRem(20);
           top: pxToRem(33);
-          right: pxToRem(34);
+          right: pxToRem(34.5);
           transform: rotate(45deg);
         }
       }
@@ -532,8 +663,185 @@
           border: pxToRem(1) solid var(--pallete-primary-main);
           background-color: var(--pallete-primary-main);
           color: var(--pallete-common-white);
+          //   @include dark-theme{
+          //     color:var(--pallete-common-white);
+          //     background-color:#2d2b88;
+          //     border:pxToRem(1) solid #2d2b88;
+          //       }
         }
       }
     }
+    // &:hover{
+    //   .hover::before {
+    //     @include media(0,$desktop){
+    //     content: "";
+    //     width: pxToRem(17);
+    //     height: pxToRem(26);
+    //     background-color: var(--pallete-primary-main);
+    //     display: inline-block;
+    //     position: absolute;
+    //     right: pxToRem(18);
+    //     top: 0;
+    //     animation: bookmark__mobileAnimation-Hover 1s ease ,bookmark__mobileAnimation-HoverDown 0.2s 1s;
+    //     }
+    //     @include desktop {
+    //       content: "";
+    //       width: pxToRem(27);
+    //       height: pxToRem(43);
+    //       right: pxToRem(31);
+    //       background-color: var(--pallete-primary-main);
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 0;
+    //     // animation-direction:alternate;
+    //     animation: bookmark__animation-Hover 1s ease ,bookmark__animation-HoverDown 0.2s 1s;
+    //     }
+    //   }
+    //   .hover::after {
+    //     @include media(0,$desktop){
+    //     background-color: inherit;
+    //     content: "";
+    //     display: inline-block;
+    //     height: pxToRem(14);
+    //     position: absolute;
+    //     right: pxToRem(20);
+    //     top: pxToRem(19);
+    //     transform: rotate(45deg);
+    //     width: pxToRem(14);
+    //     animation-direction:alternate;
+    //     animation: bookmarkTip__mobileAnimation-Hover 1s ease,bookmarkTip__mobileAnimation-HoverDown 0.2s 1s;
+    //     }
+    //     @include desktop {
+    //       background-color: inherit;
+    //       content: "";
+    //       display: inline-block;
+    //       position: absolute;
+    //       height: pxToRem(20);
+    //       width: pxToRem(20);
+    //       top: pxToRem(33);
+    //       right: pxToRem(34.5);
+    //       transform: rotate(45deg);
+    //        animation-direction:alternate;
+    //        animation: bookmarkTip__animation-Hover 1s ease,bookmarkTip__animation-HoverDown 0.2s 1s;
+    //     }
+    //   }
+    // }
+    // .hover:not(:hover){
+    //   .hover::before {
+    //     @include media(0,$desktop){
+    //     content: "";
+    //     width: pxToRem(17);
+    //     height: pxToRem(26);
+    //     background-color: var(--pallete-primary-main);
+    //     display: inline-block;
+    //     position: absolute;
+    //     right: pxToRem(18);
+    //     top: 0;
+    //     animation: bookmark__mobileAnimation-notHover 4s forwards;
+    //     }
+    //     @include desktop {
+    //       content: "";
+    //       width: pxToRem(27);
+    //       height: pxToRem(43);
+    //       right: pxToRem(31);
+    //       background-color: var(--pallete-primary-main);
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 0;
+    //     // animation-direction:alternate;
+    //     animation: bookmark__animation-notHover 4s forwards;
+    //     }
+    //   }
+    //   .hover::after {
+    //     @include media(0,$desktop){
+    //     background-color: inherit;
+    //     content: "";
+    //     display: inline-block;
+    //     height: pxToRem(14);
+    //     position: absolute;
+    //     right: pxToRem(20);
+    //     top: pxToRem(19);
+    //     transform: rotate(45deg);
+    //     width: pxToRem(14);
+    //     animation-direction:alternate;
+    //     animation: bookmarkTip__mobileAnimation-notHover 4s forwards;
+    //     }
+    //     @include desktop {
+    //       background-color: inherit;
+    //       content: "";
+    //       display: inline-block;
+    //       position: absolute;
+    //       height: pxToRem(20);
+    //       width: pxToRem(20);
+    //       top: pxToRem(33);
+    //       right: pxToRem(34.5);
+    //       transform: rotate(45deg);
+    //        animation-direction:alternate;
+    //        animation: bookmarkTip__animation-notHover 4s forwards;
+    //     }
+    //   }
+    // }
+    // div[class="pack"]:first-child {
+    //   @include tablet{
+    //   border-right: 0;
+    //   }
+    // }
+    .hover{
+      @include tablet{
+      position: relative;
+      z-index: 1000!important;
+      margin-left: -1px;
+      }
+    }
+    div[class="pack"]:last-child {
+      margin-top: -1px;
+      @include tablet{
+      margin-left: -2px;
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+      }
+    }
+    // .hover +.pack{
+    //   @include tablet{
+    //     margin-left: -2px;
+    //     position: relative;
+    //     z-index: 1;
+    //   }
+    // }
+    div:nth-child(1n){
+      @include tablet{
+      position: relative;
+      // z-index: 1000;
+      margin-left: 0px;
+      }
+    }
+    div:nth-child(3n+2){
+      margin-top: -1px;
+      @include tablet{
+      margin-left: -1px;
+      position: relative;
+      z-index: 10;
+      }
+    }
+    div:nth-child(3n){
+      margin-top: -1px;
+      @include tablet{
+      margin-left: -2px;
+      position: relative;
+      z-index: 1;
+      }
+    }
+    div:nth-child(n+4){
+      margin-top: -1px;
+      @include tablet{
+      margin-top: -1px;
+      }
+    }
+    // .hover+.pack+.pack{
+    //   @include tablet{
+    //   border-right: 0;
+    //   }
+    // }
   }
 }

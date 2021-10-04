@@ -43,7 +43,11 @@ audio {
   max-width: 100%;
   height: auto;
 }
-
+img{
+  @include dark-theme{
+    filter: brightness(0.8);
+  }
+}
 label,
 button,
 input,
@@ -203,6 +207,16 @@ strong {
     background-color: transparent;
     border: pxToRem(1) solid var(--pallete-primary-main);
   }
+  // @include dark-theme{
+  //   border: #2d2b88;
+  //   color: var(--pallete-common-white);
+  //   background-color: #2d2b88;
+  //   &:hover {
+  //     color:#2d2b88;
+  //     background-color: transparent;
+  //     border:pxToRem(1) solid #2d2b88;
+  //   }
+  // }
   @include desktop {
     // min-width: 171pxToRem;
     // min-height: 41pxToRem;
@@ -213,6 +227,9 @@ strong {
     height: pxToRem(41);
 
   }
+//   &:hover{
+//   box-shadow: 0 0 10px 0 #2d2b88 inset, 0 0 10px 2px #2d2b88;
+// }
 }
 h1 {
 
@@ -224,7 +241,12 @@ h1 {
   letter-spacing: 0.02em;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  
+  @include light-theme{
+  color: var(--pallete-grey-900);
+  }
+  @include dark-theme{
+    color: var(--pallete-common-white);
+  }
     @include tablet {
       font-size: pxToRem(20);
       max-width: pxToRem(241);
@@ -250,6 +272,12 @@ h2 {
   line-height: pxToRem(19);
   font-size: pxToRem(15);
   line-height: pxToRem(22);
+  @include light-theme{
+    color: var(--pallete-grey-900);
+    }
+    @include dark-theme{
+      color: var(--pallete-common-white);
+    }
   @include tablet {
     font-size: pxToRem(20);
     line-height: pxToRem(29);
@@ -270,10 +298,32 @@ p {
     letter-spacing: 0.02em;
     font-size: pxToRem(13);
     line-height: pxToRem(24);
+    @include light-theme{
+      color: var(--pallete-grey-900);
+      }
+      @include dark-theme{
+        color: var(--pallete-common-white);
+      }
     @include tablet {
       font-size: pxToRem(15);
       line-height: pxToRem(28);
   
+    }
+}
+a{
+  @include light-theme{
+    color: var(--pallete-grey-900);
+    }
+    @include dark-theme{
+      color: var(--pallete-common-white);
+    }
+}
+li{
+  @include light-theme{
+    color: var(--pallete-grey-900);
+    }
+    @include dark-theme{
+      color: var(--pallete-common-white);
     }
 }
 

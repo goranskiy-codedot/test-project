@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Разрабатываем креативы для соц. сетей, контекстной рекламы, а также для мобильных игр и приложений!"/>
     <title><%=title%></title>
-    <link rel="stylesheet" href="css/main.min.css" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="preload" as="style" href="css/main.min.css"/>
+    <link rel="stylesheet" href="./css/main.min.css"/>
     <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Bold.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Medium.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="../../fonts/Montserrat/Montserrat-Regular.woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
   </head>
   <body id="body">
-    <div class="page-wrapper">
+    <div class="page-wrapper" id="animation-loading">
       <header class="header">
       <div class="container">
         <div class="header__menu" id="header">
@@ -23,18 +24,19 @@
         </div> 
         <div class="menu__navbar" id="navbar">
 
-          <ul class="navbar__navigationContainer">
-            <nav class="container__items">
+           <nav class="navbar__navigationContainer">
+      <ul class="container__items">
             <li class="navbar__item"><a href="#">Портфолио</a></li>
             <li class="navbar__item"><a href="#">Услуги и цены</a></li>
             <li class="navbar__item"><a href="#">Мы</a></li>
             <li class="navbar__item"><a href="#">Контакты</a></li>
-          </nav>
+          </ul>
+           </nav>
             <div class="navbar__contactsContainer">
          <a href="#" class="contactsContainer__tel">+38 (097) 757 51 51</a>
             <button class="contactsContainer__button button">Обсудить проект</button>
           </div> 
-          </ul> 
+      
           
         </div> 
      

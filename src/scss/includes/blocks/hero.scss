@@ -1,3 +1,31 @@
+#animation-loading:target{
+  .content__buttons{
+  opacity: 0;
+  animation: appearance 1s ease-in-out forwards;  
+  animation-delay: 2.25s;
+  }
+  }
+  #animation-loading:target{
+    .picture__container{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2.5s;
+    }
+    }
+    #animation-loading:target{
+      h1{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay:1.75s;
+      }
+      }
+      #animation-loading:target{
+        p{
+        opacity: 0;
+        animation: appearance 1s ease-in-out forwards;  
+        animation-delay: 2s;
+        }
+        }
 .hero {
   @include media(0,$tablet){
   padding-bottom: pxToRem(22);
@@ -22,20 +50,11 @@
   }
 
   &__wrapper {
-    // margin-top: 24pxToRem;
     display: flex;
     width: 100%;
-
-    // @include tablet {
-    //   // margin-top: 27pxToRem;
-    // }
-
-    // @include desktop {
-    //   // margin-top: 64pxToRem;
-    // }
   }
 
-  &__content {
+  .content {
     @include media(0,$tablet){
     display: block;
     width: 100%;
@@ -46,7 +65,7 @@
   }
 
 
-  .hero__image {
+  .picture {
     @include media(0,$tablet){
     width: 0%;
     }
@@ -56,10 +75,9 @@
     }
   }
 
-  .image__container {
+  .picture__container {
     @include media(0,$tablet){
     display: none;
-    //  transition:2s  ease-in-out ;
     }
     @include media($tablet,$desktop) {
       display: flex;
@@ -69,6 +87,11 @@
       height: auto;
       max-height: pxToRem(289);
       max-width: pxToRem(357);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.5s;
+      }
     }
     @include desktop {
       display: flex;
@@ -78,58 +101,145 @@
       height: auto;
       max-height: pxToRem(416);
       max-width: pxToRem(451);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.5s;
+      }
     }
 
     .image {
       height: auto;
       object-fit: contain;
       width: 100%;
+      animation: hero-image__animation 2s forwards;
+      animation-iteration-count: infinite;
+  
     }
   }
 
-  &__content {
+  .content {
     h1{
       @include media(0,$tablet){
       margin-bottom: pxToRem(26);
-      // margin-top: 10pxToRem;  
+      white-space: nowrap;
+      overflow: hidden;
+      gap: pxToRem(10);
+      display: flex;
       }
       @include media($tablet,$desktop){
         margin-bottom: pxToRem(36);
         margin-top: pxToRem(36);
+        white-space: nowrap;
+        overflow: hidden;
+        gap: pxToRem(10);
+        display: flex;
       }
       @include desktop-extra{
         margin-bottom: pxToRem(31);
         margin-top:pxToRem(68);
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: pxToRem(450);
+        gap: pxToRem(10); 
+        display: flex;
       }
       @include media($desktop, 952) {
         font-size: pxToRem(29);
+        margin-bottom: pxToRem(36);
+        margin-top: pxToRem(36);
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: pxToRem(450);
+        gap: pxToRem(10);
+        display: flex;
       }
+      @include media(952,$desktop-extra){
+        margin-bottom: pxToRem(31);
+        margin-top: pxToRem(68);
+        white-space: nowrap;
+        overflow: hidden;
+        width: 19ch;
+        max-width: pxToRem(450);
+        position: relative;
+        display: flex;
+        gap: pxToRem(10);
+      }
+      span{
+        opacity: 1;
+        // position: absolute;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 19ch;
+        // &:nth-child(1){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 1.5s ;
+        // } &:nth-child(2){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 6.5s;
+        // } &:nth-child(3){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 11.5s;
+        // } &:nth-child(4){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 16.5s;
+        // } &:nth-child(5){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 21.5s;
+        // } &:nth-child(6){
+        //   animation:hero-header__typingDynamicAnimation 5s steps(38, end) infinite 26.5s;
+        // }
+    }
+      animation: hero-header__typingAnimation 3s steps(38, end),hero-header__eraseAnimation 7s infinite steps(38, end) 4s;
+      // animation: hero-header__typingAnimation 3s steps(38, end),
+      // hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
+      
+      // &::after{
+      //   content: "Креатива";
+      //   // animation: hero-header__eraseAnimation 3.5s steps(10, end);
+      //   // animation-delay: 8.5s;
+      //   animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
+      // }
     }
   }
   p {
     @include media(0,$tablet){
     margin-bottom: pxToRem(25);
+    #animation-loading:target{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2s;
+    }
     }
     @include media($tablet,$desktop){
       max-width: pxToRem(374);
       margin-bottom: pxToRem(33);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2s;
+      }
     }
     @include desktop {
       max-width: pxToRem(380);
       width: 100%;
       margin-bottom: pxToRem(54);
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2s;
+      }
     }
   }
   
 
   .content__buttons {
-    // margin-top: 32pxToRem;
     @include media(0,$desktop){
     display: flex;
     gap: pxToRem(20);
     align-items: center;
     max-width: pxToRem(380);
     flex-wrap: wrap;
+    #animation-loading:target{
+    opacity: 0;
+    animation: appearance 1s ease-in-out forwards;  
+    animation-delay: 2.25s;
+    }
     }
 
     @include media($desktop,952) {
@@ -138,25 +248,41 @@
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
     @include media(952,$desktop-extra){
       display: flex;
-      gap: pxToRem(5);
+      gap: 20px;
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
     @include desktop-extra {
       display: flex;
-      gap: pxToRem(5);
+      gap: 20px;
       align-items: center;
       max-width: pxToRem(380);
       flex-wrap: wrap;
+      #animation-loading:target{
+      opacity: 0;
+      animation: appearance 1s ease-in-out forwards;  
+      animation-delay: 2.25s;
+      }
     }
 
 
 
     .price__button {
+      @include light-theme{
       background-color: transparent;
       border: pxToRem(1) solid var(--pallete-primary-main);
       color: var(--pallete-primary-main);
@@ -165,7 +291,18 @@
         background-color: var(--pallete-primary-main);
         border: pxToRem(1) solid var(--pallete-primary-main);
       }
-
+    }
+      @include dark-theme{
+        border: pxToRem(1) solid var(--pallete-primary-main);
+        color: var(--pallete-primary-main);
+        background-color:transparent;
+        &:hover {
+          color: var(--pallete-common-white);
+        background-color: var(--pallete-primary-main);
+        border: pxToRem(1) solid var(--pallete-primary-main);
+        
+      }
     }
   }
+}
 }

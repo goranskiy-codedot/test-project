@@ -23,6 +23,17 @@
     // color: transparent !important;
   }
 }
+@mixin light-theme() {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin dark-theme() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
 @mixin placeholder-style($font-family, $font-style, $font-weight, $font-size, $line-height) {
   &::-moz-placeholder {
     font-family: $font-family !important;
