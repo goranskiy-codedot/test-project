@@ -80,9 +80,9 @@ html[dir="rtl"]{
       padding: pxToRem(0) pxToRem(35);
     }
   }
-  &__header {
 
-    &__logo {
+
+    .footer__logo {
       @include media(0,$tablet){
       width: max-content;
       z-index: 1001;
@@ -106,7 +106,7 @@ html[dir="rtl"]{
         padding-left: pxToRem(0);
         margin-top: pxToRem(0);
       }
-      .footer__logo {
+      .logo {
         @include media(0,$tablet){
         display: block;
         z-index: 1001;
@@ -142,7 +142,7 @@ html[dir="rtl"]{
           height: pxToRem(65);
         }
       }
-    }
+    
   }
   .footer__wrapper {
     @include media(0,$tablet){

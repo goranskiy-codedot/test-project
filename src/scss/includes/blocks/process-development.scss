@@ -47,7 +47,7 @@ html[dir="rtl"]{
               animation-delay: 3.4s;
               }
               }
-.processDevelopment {
+.process-development {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(55);
     padding-top: pxToRem(55);
@@ -109,7 +109,7 @@ html[dir="rtl"]{
     }
   }
 
-  &__stepsContainer {
+  &__stages-container {
     @include media(0, $tablet) {
       display: flex;
       overflow-y: hidden;
@@ -119,7 +119,7 @@ html[dir="rtl"]{
       margin-right: pxToRem(-25);
       margin-bottom: pxToRem(13);
     }
-    .stepsContainer__stages {
+    .process-development__stages {
       @include media(0, $tablet) {
         display: flex;
         padding: pxToRem(0) pxToRem(93);
@@ -200,10 +200,86 @@ html[dir="rtl"]{
       }
     }
    .stage:hover{
+    &:nth-child(1){
     .stage__ellipse{
-      transform: scale(1.5);
+      @include media(0,$tablet){
+        transform: scale(1.8);
+        transition: .5s;
+      }
+      @include media($tablet,$desktop){
+        transition: .5s;
+        left: pxToRem(19);
+        top:pxToRem(40);  
+        transform: scale(1.8);
+      }
+      @include desktop{
+        transform: scale(2.2);
+        transition: .5s;
+        left: pxToRem(19);
+        top:pxToRem(40);  
+        }
+    }
+  }
+    &:nth-child(2){
+      .stage__ellipse{
+      @include media(0,$tablet){
+        transform: scale(1.8);
+        transition: .5s;
+      }
+      @include media($tablet,$desktop){
+        top:pxToRem(15);  
+        left: pxToRem(30);
+        transition: .5s;
+        transform: scale(1.8);
+      }
+     
+        @include desktop{
+          top:pxToRem(15);  
+          left: pxToRem(30);
+          transition: .5s;
+          transform: scale(2.2);
+        }
+      }
+    }
+    &:nth-child(3){
+      
+      .stage__ellipse{
+        @include media(0,$tablet){
+          transform: scale(1.8);
+          transition: .5s;
+        }
+        @include media($tablet,$desktop){
+          left: pxToRem(40);
+          top:pxToRem(50);
+          transition: .5s;
+          transform: scale(1.8);
+        }
+        @include desktop{
+      left: pxToRem(40);
+      top:pxToRem(50);
       transition: .5s;
-      left: pxToRem(17)!important;
+      transform: scale(2.2);
+        }
+      }
+    }
+    &:nth-child(4){
+      .stage__ellipse{
+        @include media(0,$tablet){
+          transform: scale(1.8);
+          transition: .5s;
+        }
+        @include media($tablet,$desktop)
+        {
+          transform: scale(1.8);
+          transition: .5s;
+          left: pxToRem(30);
+        }
+        @include desktop{
+      transform: scale(2.2);
+      transition: .5s;
+      left: pxToRem(30);
+        }
+      }
     }
   }
   .stage:not(:hover){
@@ -443,7 +519,7 @@ html[dir="rtl"]{
       }
     }
   }
-  .processDevelopment__stepsContainer::-webkit-scrollbar {
+  .process-development__stages-container::-webkit-scrollbar {
     width: 0;
   }
 
@@ -465,7 +541,7 @@ html[dir="rtl"]{
       line-height: pxToRem(28);
     }
   }
-  .processDevelopment__slider {
+  .process-development__slider {
     @include media(0, $tablet) {
       display: flex;
 
@@ -491,7 +567,7 @@ html[dir="rtl"]{
       display: none;
     }
     justify-content: space-between;
-    .button-left {
+    .button_left {
       float: left;
       &::before {
         content: "";
@@ -508,13 +584,13 @@ html[dir="rtl"]{
         width: pxToRem(14);
       }
       &:hover{
-        .button-left::before{
+        .button_left::before{
           content: "";
         border-right: pxToRem(5) solid var(--pallete-primary-main);
         }
     }
     }
-    .button-right {
+    .button_right {
       float: right;
       &::before {
         content: "";
@@ -531,7 +607,7 @@ html[dir="rtl"]{
 
       }
       &:hover{
-        .button-right::before{
+        .button_right::before{
           content: "";
         border-left: pxToRem(5) solid var(--pallete-primary-main);
         }

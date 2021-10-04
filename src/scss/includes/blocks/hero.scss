@@ -6,7 +6,7 @@
   }
   }
   #animation-loading:target{
-    .image__container{
+    .picture__container{
     opacity: 0;
     animation: appearance 1s ease-in-out forwards;  
     animation-delay: 2.5s;
@@ -54,7 +54,7 @@
     width: 100%;
   }
 
-  &__content {
+  .content {
     @include media(0,$tablet){
     display: block;
     width: 100%;
@@ -65,7 +65,7 @@
   }
 
 
-  .hero__image {
+  .picture {
     @include media(0,$tablet){
     width: 0%;
     }
@@ -75,7 +75,7 @@
     }
   }
 
-  .image__container {
+  .picture__container {
     @include media(0,$tablet){
     display: none;
     }
@@ -118,7 +118,7 @@
     }
   }
 
-  &__content {
+  .content {
     h1{
       @include media(0,$tablet){
       margin-bottom: pxToRem(26);

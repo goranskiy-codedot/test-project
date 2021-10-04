@@ -74,11 +74,11 @@
   padding-bottom: pxToRem(28);
 }
 @include media($tablet,$desktop) {
-    padding-bottom: pxToRemToRem(36);
-    padding-top: pxToRemToRem(36);
+    padding-bottom: pxToRem(36);
+    padding-top: pxToRem(36);
   }
   @include desktop {
-    padding-bottom: pxToRemToRem(69);
-    padding-top: pxToRemToRem(69);
+    padding-bottom: pxToRem(69);
+    padding-top: pxToRem(69);
   }
 }
