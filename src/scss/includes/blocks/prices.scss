@@ -68,7 +68,7 @@ html[dir="rtl"] {
     padding-bottom: pxToRem(68);
     padding-top: pxToRem(72);
   }
-  h2 {
+  &__title {
     @include media(0, $tablet) {
       text-align: center;
       width: 100%;
@@ -85,7 +85,7 @@ html[dir="rtl"] {
       margin-bottom: pxToRem(65);
     }
   }
-  .prices {
+  &__prices {
     @include media(0, $tablet) {
       margin: 0 auto;
       padding-right: 0;
@@ -663,129 +663,9 @@ html[dir="rtl"] {
           border: pxToRem(1) solid var(--pallete-primary-main);
           background-color: var(--pallete-primary-main);
           color: var(--pallete-common-white);
-          //   @include dark-theme{
-          //     color:var(--pallete-common-white);
-          //     background-color:#2d2b88;
-          //     border:pxToRem(1) solid #2d2b88;
-          //       }
         }
       }
     }
-    // &:hover{
-    //   .hover::before {
-    //     @include media(0,$desktop){
-    //     content: "";
-    //     width: pxToRem(17);
-    //     height: pxToRem(26);
-    //     background-color: var(--pallete-primary-main);
-    //     display: inline-block;
-    //     position: absolute;
-    //     right: pxToRem(18);
-    //     top: 0;
-    //     animation: bookmark__mobileAnimation-Hover 1s ease ,bookmark__mobileAnimation-HoverDown 0.2s 1s;
-    //     }
-    //     @include desktop {
-    //       content: "";
-    //       width: pxToRem(27);
-    //       height: pxToRem(43);
-    //       right: pxToRem(31);
-    //       background-color: var(--pallete-primary-main);
-    //     display: inline-block;
-    //     position: absolute;
-    //     top: 0;
-    //     // animation-direction:alternate;
-    //     animation: bookmark__animation-Hover 1s ease ,bookmark__animation-HoverDown 0.2s 1s;
-    //     }
-    //   }
-    //   .hover::after {
-    //     @include media(0,$desktop){
-    //     background-color: inherit;
-    //     content: "";
-    //     display: inline-block;
-    //     height: pxToRem(14);
-    //     position: absolute;
-    //     right: pxToRem(20);
-    //     top: pxToRem(19);
-    //     transform: rotate(45deg);
-    //     width: pxToRem(14);
-    //     animation-direction:alternate;
-    //     animation: bookmarkTip__mobileAnimation-Hover 1s ease,bookmarkTip__mobileAnimation-HoverDown 0.2s 1s;
-    //     }
-    //     @include desktop {
-    //       background-color: inherit;
-    //       content: "";
-    //       display: inline-block;
-    //       position: absolute;
-    //       height: pxToRem(20);
-    //       width: pxToRem(20);
-    //       top: pxToRem(33);
-    //       right: pxToRem(34.5);
-    //       transform: rotate(45deg);
-    //        animation-direction:alternate;
-    //        animation: bookmarkTip__animation-Hover 1s ease,bookmarkTip__animation-HoverDown 0.2s 1s;
-    //     }
-    //   }
-    // }
-    // .hover:not(:hover){
-    //   .hover::before {
-    //     @include media(0,$desktop){
-    //     content: "";
-    //     width: pxToRem(17);
-    //     height: pxToRem(26);
-    //     background-color: var(--pallete-primary-main);
-    //     display: inline-block;
-    //     position: absolute;
-    //     right: pxToRem(18);
-    //     top: 0;
-    //     animation: bookmark__mobileAnimation-notHover 4s forwards;
-    //     }
-    //     @include desktop {
-    //       content: "";
-    //       width: pxToRem(27);
-    //       height: pxToRem(43);
-    //       right: pxToRem(31);
-    //       background-color: var(--pallete-primary-main);
-    //     display: inline-block;
-    //     position: absolute;
-    //     top: 0;
-    //     // animation-direction:alternate;
-    //     animation: bookmark__animation-notHover 4s forwards;
-    //     }
-    //   }
-    //   .hover::after {
-    //     @include media(0,$desktop){
-    //     background-color: inherit;
-    //     content: "";
-    //     display: inline-block;
-    //     height: pxToRem(14);
-    //     position: absolute;
-    //     right: pxToRem(20);
-    //     top: pxToRem(19);
-    //     transform: rotate(45deg);
-    //     width: pxToRem(14);
-    //     animation-direction:alternate;
-    //     animation: bookmarkTip__mobileAnimation-notHover 4s forwards;
-    //     }
-    //     @include desktop {
-    //       background-color: inherit;
-    //       content: "";
-    //       display: inline-block;
-    //       position: absolute;
-    //       height: pxToRem(20);
-    //       width: pxToRem(20);
-    //       top: pxToRem(33);
-    //       right: pxToRem(34.5);
-    //       transform: rotate(45deg);
-    //        animation-direction:alternate;
-    //        animation: bookmarkTip__animation-notHover 4s forwards;
-    //     }
-    //   }
-    // }
-    // div[class="pack"]:first-child {
-    //   @include tablet{
-    //   border-right: 0;
-    //   }
-    // }
     .hover {
       @include tablet {
         position: relative;
@@ -814,6 +694,7 @@ html[dir="rtl"] {
         position: relative;
         // z-index: 1000;
         margin-left: 0px;
+        margin-top: 0;
       }
     }
     div:nth-child(3n + 2) {
@@ -822,6 +703,7 @@ html[dir="rtl"] {
         margin-left: -1px;
         position: relative;
         z-index: 10;
+        margin-top: 0;
       }
     }
     div:nth-child(3n) {
@@ -830,6 +712,7 @@ html[dir="rtl"] {
         margin-left: -2px;
         position: relative;
         z-index: 1;
+        margin-top: 0;
       }
     }
     div:nth-child(n + 4) {
