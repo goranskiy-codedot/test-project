@@ -55,6 +55,7 @@ html[dir="rtl"] {
     }
   }
 }
+
 .pricesSection {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(66);
@@ -89,7 +90,6 @@ html[dir="rtl"] {
     @include media(0, $tablet) {
       margin: 0 auto;
       padding-right: 0;
-
       justify-content: center;
     }
     @include tablet {
@@ -218,387 +218,11 @@ html[dir="rtl"] {
         }
       }
     }
-    .pack {
-      @include media(0, $tablet) {
-        max-width: pxToRem(244);
-        border: pxToRem(1) solid var(--pallete-grey-10);
-        padding: pxToRem(18);
-        height: 100%;
-        padding: pxToRem(19) pxToRem(19) pxToRem(34);
-        min-height: pxToRem(386);
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-      }
-      @include tablet {
-        max-width: pxToRem(244);
-        border: pxToRem(1) solid var(--pallete-grey-10);
-        padding: pxToRem(18);
-        height: 100%;
-        padding: pxToRem(19) pxToRem(19) pxToRem(34);
-        min-height: pxToRem(386);
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-      }
-
-      @include desktop {
-        border: pxToRem(1) solid var(--pallete-grey-10);
-        min-height: pxToRem(386);
-        margin-left: auto;
-        margin-right: auto;
-        padding: pxToRem(34) pxToRem(32) pxToRem(48);
-        max-width: pxToRem(370);
-        width: 100%;
-      }
-
-      @include media(641, 740) {
-        height: 100%;
-      }
-      @include media($desktop, 1118) {
-        height: 100%;
-      }
-      &__wrapper {
-        @include media(0, $tablet) {
-          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
-          margin: pxToRem(0) pxToRem(0) pxToRem(25);
-          text-align: center;
-        }
-        @include media($tablet, $desktop) {
-          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
-          margin: pxToRem(0) pxToRem(0) pxToRem(26);
-          text-align: center;
-        }
-        @include desktop {
-          border-bottom: pxToRem(2) solid var(--pallete-grey-10);
-          margin: pxToRem(0) pxToRem(0) pxToRem(39) pxToRem(0);
-          text-align: center;
-        }
-      }
-      &__header {
-        @include media(0, $desktop) {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(10);
-          line-height: pxToRem(15);
-          letter-spacing: 0.02em;
-          margin-block-end: 0em;
-          margin-block-start: 0em;
-          margin-bottom: pxToRem(25);
-        }
-        @include desktop {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(15);
-          line-height: pxToRem(22);
-          margin-bottom: pxToRem(42);
-          letter-spacing: 0.02em;
-          margin-block-end: 0em;
-          margin-block-start: 0em;
-        }
-      }
-
-      &__price {
-        @include media(0, $desktop) {
-          display: flex;
-
-          align-items: baseline;
-          justify-content: center;
-          position: relative;
-          gap: pxToRem(5);
-          max-width: pxToRem(320);
-        }
-        @include desktop {
-          gap: pxToRem(10);
-          max-width: pxToRem(320);
-          display: flex;
-
-          align-items: baseline;
-          justify-content: center;
-          position: relative;
-        }
-        .grivna::before {
-          content: "₴";
-        }
-
-        .price {
-          @include media(0, $desktop) {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: pxToRem(20);
-            line-height: pxToRem(29);
-            letter-spacing: 0.02em;
-            @include light-theme {
-              color: var(--pallete-grey-900);
-            }
-            @include dark-theme {
-              color: var(--pallete-common-white);
-            }
-          }
-          @include desktop {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: pxToRem(30);
-            line-height: pxToRem(44);
-            letter-spacing: 0.02em;
-            @include light-theme {
-              color: var(--pallete-grey-900);
-            }
-            @include dark-theme {
-              color: var(--pallete-common-white);
-            }
-          }
-        }
-      }
-      .hint__bottom {
-        @include media(0, $tablet) {
-          display: block;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: pxToRem(10);
-          line-height: pxToRem(19);
-          letter-spacing: 0.02em;
-          // color: var(--pallete-grey-10);
-          color: #585858;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          margin-bottom: pxToRem(22);
-        }
-        @include media($tablet, $desktop) {
-          display: block;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          font-size: pxToRem(10);
-          line-height: pxToRem(19);
-          letter-spacing: 0.02em;
-          // color: var(--pallete-grey-10);
-          color: #585858;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          margin-bottom: pxToRem(20);
-        }
-        @include desktop {
-          display: block;
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: normal;
-          letter-spacing: 0.02em;
-          // color: var(--pallete-grey-10);
-          color: #585858;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-          font-size: pxToRem(12);
-          line-height: pxToRem(22);
-          margin-bottom: pxToRem(40);
-        }
-      }
-      .hint {
-        @include media(0, $desktop) {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(10);
-          line-height: pxToRem(15);
-          letter-spacing: 0.02em;
-          // color: var(--pallete-grey-10);
-          color: #585858;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-        }
-        @include desktop {
-          font-family: Montserrat;
-          font-style: normal;
-          font-weight: bold;
-          font-size: pxToRem(15);
-          line-height: pxToRem(22);
-          letter-spacing: 0.02em;
-          // color: var(--pallete-grey-10);
-          color: #585858;
-          margin-block-start: 0em;
-          margin-block-end: 0em;
-        }
-      }
-      .button {
-        @include media(0, $tablet) {
-          margin-bottom: pxToRem(29);
-          border: pxToRem(1) solid var(--pallete-primary-main);
-          color: var(--pallete-primary-main);
-          background-color: transparent;
-        }
-        @include media($tablet, $desktop) {
-          border: pxToRem(1) solid var(--pallete-primary-main);
-          color: var(--pallete-primary-main);
-          background-color: transparent;
-          margin-bottom: pxToRem(30);
-        }
-        @include desktop {
-          @include light-theme {
-            border: pxToRem(1) solid var(--pallete-grey-900);
-            color: var(--pallete-grey-900);
-            background-color: transparent;
-          }
-          @include dark-theme {
-            border: pxToRem(1) solid var(--pallete-common-white);
-            color: var(--pallete-common-white);
-            background-color: transparent;
-          }
-          padding: pxToRem(12);
-          margin-bottom: pxToRem(40);
-        }
-        &:hover {
-          border: pxToRem(1) solid var(--pallete-primary-main);
-          color: var(--pallete-common-white);
-          background-color: var(--pallete-primary-main);
-          // @include dark-theme{
-          // color:var(--pallete-common-white);
-          // background-color:#2d2b88;
-          // border:pxToRem(1) solid #2d2b88;
-          //   }
-        }
-      }
-
-      &__button {
-        @include media(0, $tablet) {
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-          margin-top: pxToRem(20);
-          margin-bottom: pxToRem(30);
-        }
-        @include media($tablet, $desktop) {
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: pxToRem(30);
-          margin-top: pxToRem(19);
-        }
-        @include desktop {
-          text-align: center;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: pxToRem(40);
-          margin-top: pxToRem(40);
-        }
-      }
-      .line {
-        @include media(0, $desktop) {
-          width: pxToRem(206);
-          margin-top: pxToRem(31);
-        }
-        @include desktop {
-          width: pxToRem(306);
-          margin-top: pxToRem(41);
-        }
-      }
-
-      &__benefits {
-        .benefits__list {
-          @include media(0, $tablet) {
-            padding-right: pxToRem(0);
-            display: grid;
-            row-gap: pxToRem(9);
-          }
-          @include media($tablet, $desktop) {
-            padding-right: pxToRem(0);
-            display: grid;
-            row-gap: pxToRem(9);
-          }
-          @include desktop {
-            padding-right: pxToRem(0);
-            display: grid;
-            row-gap: pxToRem(9);
-          }
-        }
-
-        .benefits {
-          @include media(0, $tablet) {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: pxToRem(10);
-            line-height: pxToRem(19);
-            letter-spacing: 0.02em;
-
-            padding-left: pxToRem(24);
-          }
-          @include media($tablet, $desktop) {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: pxToRem(10);
-            line-height: pxToRem(19);
-            letter-spacing: 0.02em;
-            padding-left: pxToRem(21);
-          }
-          @include desktop {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: normal;
-            font-size: pxToRem(15);
-            line-height: pxToRem(28);
-            letter-spacing: 0.02em;
-            padding-left: pxToRem(32);
-          }
-          &::before {
-            @include media(0, $desktop) {
-              content: "";
-              width: pxToRem(10);
-              height: pxToRem(6);
-              display: block;
-              transform: rotate(-45deg);
-              border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
-              border-left: pxToRem(2) solid var(--pallete-secondary-main);
-              margin-left: pxToRem(-23);
-              margin-top: pxToRem(4);
-              position: absolute;
-            }
-            @include desktop {
-              content: "";
-              display: block;
-              height: pxToRem(9);
-              transform: rotate(-45deg);
-              margin-left: pxToRem(-31);
-              margin-top: pxToRem(9);
-              border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
-              border-left: pxToRem(2) solid var(--pallete-secondary-main);
-              width: pxToRem(14);
-              position: absolute;
-            }
-          }
-        }
-        .benefit__bold {
-          @include media(0, $desktop) {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: pxToRem(10);
-            line-height: pxToRem(19);
-            letter-spacing: 0.02em;
-          }
-          @include desktop {
-            font-family: Montserrat;
-            font-style: normal;
-            font-weight: bold;
-            font-size: pxToRem(15);
-            line-height: pxToRem(28);
-            letter-spacing: 0.02em;
-          }
-        }
-      }
-    }
-
     .grivna {
       .currency {
         opacity: 1;
       }
     }
-
     .hover {
       border: pxToRem(1) solid var(--pallete-primary-main);
       position: relative;
@@ -609,7 +233,6 @@ html[dir="rtl"] {
       @include dark-theme {
         background-color: var(--pallete-grey-900);
       }
-
       &::before {
         @include media(0, $desktop) {
           content: "";
@@ -726,5 +349,370 @@ html[dir="rtl"] {
     //   border-right: 0;
     //   }
     // }
+  }
+}
+
+.pack {
+  @include media(0, $tablet) {
+    max-width: pxToRem(244);
+    border: pxToRem(1) solid var(--pallete-grey-10);
+    padding: pxToRem(18);
+    height: 100%;
+    padding: pxToRem(19) pxToRem(19) pxToRem(34);
+    min-height: pxToRem(386);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  @include tablet {
+    max-width: pxToRem(244);
+    border: pxToRem(1) solid var(--pallete-grey-10);
+    padding: pxToRem(18);
+    height: 100%;
+    padding: pxToRem(19) pxToRem(19) pxToRem(34);
+    min-height: pxToRem(386);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  @include desktop {
+    border: pxToRem(1) solid var(--pallete-grey-10);
+    min-height: pxToRem(386);
+    margin-left: auto;
+    margin-right: auto;
+    padding: pxToRem(34) pxToRem(32) pxToRem(48);
+    max-width: pxToRem(370);
+    width: 100%;
+  }
+  @include media(641, 740) {
+    height: 100%;
+  }
+  @include media($desktop, 1118) {
+    height: 100%;
+  }
+  &__wrapper {
+    @include media(0, $tablet) {
+      border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+      margin: pxToRem(0) pxToRem(0) pxToRem(25);
+      text-align: center;
+    }
+    @include media($tablet, $desktop) {
+      border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+      margin: pxToRem(0) pxToRem(0) pxToRem(26);
+      text-align: center;
+    }
+    @include desktop {
+      border-bottom: pxToRem(2) solid var(--pallete-grey-10);
+      margin: pxToRem(0) pxToRem(0) pxToRem(39) pxToRem(0);
+      text-align: center;
+    }
+  }
+  &__header {
+    @include media(0, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(15);
+      letter-spacing: 0.02em;
+      margin-block-end: 0em;
+      margin-block-start: 0em;
+      margin-bottom: pxToRem(25);
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(15);
+      line-height: pxToRem(22);
+      margin-bottom: pxToRem(42);
+      letter-spacing: 0.02em;
+      margin-block-end: 0em;
+      margin-block-start: 0em;
+    }
+  }
+  &__price {
+    @include media(0, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(20);
+      line-height: pxToRem(29);
+      letter-spacing: 0.02em;
+      @include light-theme {
+        color: var(--pallete-grey-900);
+      }
+      @include dark-theme {
+        color: var(--pallete-common-white);
+      }
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(30);
+      line-height: pxToRem(44);
+      letter-spacing: 0.02em;
+      @include light-theme {
+        color: var(--pallete-grey-900);
+      }
+      @include dark-theme {
+        color: var(--pallete-common-white);
+      }
+    }
+  }
+  &__price-container {
+    @include media(0, $desktop) {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      position: relative;
+      gap: pxToRem(5);
+      max-width: pxToRem(320);
+    }
+    @include desktop {
+      gap: pxToRem(10);
+      max-width: pxToRem(320);
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      position: relative;
+    }
+    .grivna::before {
+      content: "₴";
+    }
+  }
+  &__hint-bottom {
+    @include media(0, $tablet) {
+      display: block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      // color: var(--pallete-grey-10);
+      color: #585858;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      margin-bottom: pxToRem(22);
+    }
+    @include media($tablet, $desktop) {
+      display: block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      // color: var(--pallete-grey-10);
+      color: #585858;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      margin-bottom: pxToRem(20);
+    }
+    @include desktop {
+      display: block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+      // color: var(--pallete-grey-10);
+      color: #585858;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      font-size: pxToRem(12);
+      line-height: pxToRem(22);
+      margin-bottom: pxToRem(40);
+    }
+  }
+  &__hint {
+    @include media(0, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(10);
+      line-height: pxToRem(15);
+      letter-spacing: 0.02em;
+      // color: var(--pallete-grey-10);
+      color: #585858;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: pxToRem(15);
+      line-height: pxToRem(22);
+      letter-spacing: 0.02em;
+      // color: var(--pallete-grey-10);
+      color: #585858;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+  }
+  &__button {
+    @include media(0, $tablet) {
+      margin-bottom: pxToRem(29);
+      border: pxToRem(1) solid var(--pallete-primary-main);
+      color: var(--pallete-primary-main);
+      background-color: transparent;
+    }
+    @include media($tablet, $desktop) {
+      border: pxToRem(1) solid var(--pallete-primary-main);
+      color: var(--pallete-primary-main);
+      background-color: transparent;
+      margin-bottom: pxToRem(30);
+    }
+    @include desktop {
+      @include light-theme {
+        border: pxToRem(1) solid var(--pallete-grey-900);
+        color: var(--pallete-grey-900);
+        background-color: transparent;
+      }
+      @include dark-theme {
+        border: pxToRem(1) solid var(--pallete-common-white);
+        color: var(--pallete-common-white);
+        background-color: transparent;
+      }
+      padding: pxToRem(12);
+      margin-bottom: pxToRem(40);
+    }
+    &:hover {
+      border: pxToRem(1) solid var(--pallete-primary-main);
+      color: var(--pallete-common-white);
+      background-color: var(--pallete-primary-main);
+      // @include dark-theme{
+      // color:var(--pallete-common-white);
+      // background-color:#2d2b88;
+      // border:pxToRem(1) solid #2d2b88;
+      //   }
+    }
+  }
+  //   &__button {
+  //     @include media(0, $tablet) {
+  //       text-align: center;
+  //       justify-content: center;
+  //       align-items: center;
+  //       margin-top: pxToRem(20);
+  //       margin-bottom: pxToRem(30);
+  //     }
+  //     @include media($tablet, $desktop) {
+  //       text-align: center;
+  //       justify-content: center;
+  //       align-items: center;
+  //       margin-bottom: pxToRem(30);
+  //       margin-top: pxToRem(19);
+  //     }
+  //     @include desktop {
+  //       text-align: center;
+  //       justify-content: center;
+  //       align-items: center;
+  //       margin-bottom: pxToRem(40);
+  //       margin-top: pxToRem(40);
+  //     }
+  // }
+  // .line {
+  //   @include media(0, $desktop) {
+  //     width: pxToRem(206);
+  //     margin-top: pxToRem(31);
+  //   }
+  //   @include desktop {
+  //     width: pxToRem(306);
+  //     margin-top: pxToRem(41);
+  //   }
+  // }
+  &__benefits-list {
+    @include media(0, $tablet) {
+      padding-right: pxToRem(0);
+      display: grid;
+      row-gap: pxToRem(9);
+    }
+    @include media($tablet, $desktop) {
+      padding-right: pxToRem(0);
+      display: grid;
+      row-gap: pxToRem(9);
+    }
+    @include desktop {
+      padding-right: pxToRem(0);
+      display: grid;
+      row-gap: pxToRem(9);
+    }
+  }
+  &__benefit {
+    @include media(0, $tablet) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      padding-left: pxToRem(24);
+    }
+    @include media($tablet, $desktop) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(10);
+      line-height: pxToRem(19);
+      letter-spacing: 0.02em;
+      padding-left: pxToRem(21);
+    }
+    @include desktop {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(15);
+      line-height: pxToRem(28);
+      letter-spacing: 0.02em;
+      padding-left: pxToRem(32);
+    }
+    &::before {
+      @include media(0, $desktop) {
+        content: "";
+        width: pxToRem(10);
+        height: pxToRem(6);
+        display: block;
+        transform: rotate(-45deg);
+        border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+        border-left: pxToRem(2) solid var(--pallete-secondary-main);
+        margin-left: pxToRem(-23);
+        margin-top: pxToRem(4);
+        position: absolute;
+      }
+      @include desktop {
+        content: "";
+        display: block;
+        height: pxToRem(9);
+        transform: rotate(-45deg);
+        margin-left: pxToRem(-31);
+        margin-top: pxToRem(9);
+        border-bottom: pxToRem(2) solid var(--pallete-secondary-main);
+        border-left: pxToRem(2) solid var(--pallete-secondary-main);
+        width: pxToRem(14);
+        position: absolute;
+      }
+    }
+  }
+  &__benefits {
+    .benefit__bold {
+      @include media(0, $desktop) {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: pxToRem(10);
+        line-height: pxToRem(19);
+        letter-spacing: 0.02em;
+      }
+      @include desktop {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: pxToRem(15);
+        line-height: pxToRem(28);
+        letter-spacing: 0.02em;
+      }
+    }
   }
 }

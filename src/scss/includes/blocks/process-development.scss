@@ -1,5 +1,6 @@
 html[dir="rtl"] {
 }
+
 #animation-loading:target {
   h2 {
     opacity: 0;
@@ -7,6 +8,7 @@ html[dir="rtl"] {
     animation-delay: 2.75s;
   }
 }
+
 #animation-loading:target {
   .stage:nth-child(1),
   .stage:nth-child(5n) {
@@ -15,6 +17,7 @@ html[dir="rtl"] {
     animation-delay: 3s;
   }
 }
+
 #animation-loading:target {
   .stage:nth-child(2),
   .stage:nth-child(6n) {
@@ -23,6 +26,7 @@ html[dir="rtl"] {
     animation-delay: 3.1s;
   }
 }
+
 #animation-loading:target {
   .stage:nth-child(3),
   .stage:nth-child(7n) {
@@ -31,6 +35,7 @@ html[dir="rtl"] {
     animation-delay: 3.2s;
   }
 }
+
 #animation-loading:target {
   .stage:nth-child(4),
   .stage:nth-child(8n) {
@@ -39,6 +44,7 @@ html[dir="rtl"] {
     animation-delay: 3.3s;
   }
 }
+
 #animation-loading:target {
   .processDevelopment__slider {
     opacity: 0;
@@ -46,51 +52,51 @@ html[dir="rtl"] {
     animation-delay: 3.4s;
   }
 }
+
 .process-development {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(55);
     padding-top: pxToRem(55);
   }
+
   @include media($tablet, $desktop) {
     padding-bottom: pxToRem(55);
     padding-top: pxToRem(96);
   }
+
   @include desktop {
     padding-bottom: pxToRem(12);
     padding-top: pxToRem(52);
+  }
+
+  @media print{
+   .processDevelopment__slider{
+     display: none;
+   }
   }
   .container {
     @include media($tablet, $desktop) {
       padding: pxToRem(0) pxToRem(19);
     }
+
     @include desktop {
       padding: pxToRem(0) pxToRem(35);
     }
   }
-
   &__title {
     @include media(0, $tablet) {
       width: 64%;
       font-size: pxToRem(13);
       line-height: pxToRem(19);
       margin-bottom: pxToRem(18);
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 2.75s;
-      }
     }
+
     @include media($tablet, $desktop) {
       font-size: pxToRem(20);
       width: 100%;
       max-width: none;
       line-height: pxToRem(29);
       margin-bottom: pxToRem(39);
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 2.75s;
-      }
     }
 
     @include desktop {
@@ -100,14 +106,8 @@ html[dir="rtl"] {
       line-height: pxToRem(44);
       margin-bottom: pxToRem(49);
       margin-bottom: pxToRem(29);
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 2.75s;
-      }
     }
   }
-
   &__stages {
     @include media(0, $tablet) {
       display: flex;
@@ -116,6 +116,7 @@ html[dir="rtl"] {
       padding-top: pxToRem(10);
       padding-bottom: pxToRem(10);
     }
+
     @include media($tablet, $desktop) {
       display: flex;
       padding: pxToRem(0) pxToRem(30);
@@ -123,6 +124,7 @@ html[dir="rtl"] {
       padding-top: pxToRem(10);
       padding-bottom: pxToRem(10);
     }
+
     @include desktop {
       display: flex;
       padding: pxToRem(0) pxToRem(93);
@@ -136,7 +138,6 @@ html[dir="rtl"] {
       }
     }
   }
-
   &__stages-container {
     @include media(0, $tablet) {
       display: flex;
@@ -147,7 +148,6 @@ html[dir="rtl"] {
       margin-right: pxToRem(-25);
       margin-bottom: pxToRem(13);
     }
-    
 
     @include media($tablet, $desktop) {
       display: flex;
@@ -176,9 +176,11 @@ html[dir="rtl"] {
         display: flex;
         position: absolute;
         z-index: -1;
+
         @include light-theme {
           background: var(--pallete-common-white-10);
         }
+        
         @include dark-theme {
           background: var(--pallete-primary-main);
           opacity: 0.1;
@@ -191,9 +193,11 @@ html[dir="rtl"] {
         display: flex;
         position: absolute;
         z-index: -1;
+
         @include light-theme {
           background: var(--pallete-common-white-10);
         }
+
         @include dark-theme {
           background: var(--pallete-primary-main);
           opacity: 0.1;
@@ -208,12 +212,14 @@ html[dir="rtl"] {
           transform: scale(1.8);
           transition: 0.5s;
         }
+
         @include media($tablet, $desktop) {
           transition: 0.5s;
           left: pxToRem(19);
           top: pxToRem(40);
           transform: scale(1.8);
         }
+
         @include desktop {
           transform: scale(2.2);
           transition: 0.5s;
@@ -228,6 +234,7 @@ html[dir="rtl"] {
           transform: scale(1.8);
           transition: 0.5s;
         }
+
         @include media($tablet, $desktop) {
           top: pxToRem(15);
           left: pxToRem(30);
@@ -249,12 +256,14 @@ html[dir="rtl"] {
           transform: scale(1.8);
           transition: 0.5s;
         }
+
         @include media($tablet, $desktop) {
           left: pxToRem(40);
           top: pxToRem(50);
           transition: 0.5s;
           transform: scale(1.8);
         }
+
         @include desktop {
           left: pxToRem(40);
           top: pxToRem(50);
@@ -269,11 +278,13 @@ html[dir="rtl"] {
           transform: scale(1.8);
           transition: 0.5s;
         }
+
         @include media($tablet, $desktop) {
           transform: scale(1.8);
           transition: 0.5s;
           left: pxToRem(30);
         }
+
         @include desktop {
           transform: scale(2.2);
           transition: 0.5s;
@@ -289,47 +300,35 @@ html[dir="rtl"] {
       left: pxToRem(47);
     }
   }
-
   &__stage:nth-child(1),
   &__stage:nth-child(5n) {
     @include media(0, $tablet) {
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3s;
-      }
     }
+
     @include media($tablet, $desktop) {
       margin-top: pxToRem(9);
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3s;
-      }
     }
+
     @include desktop {
       margin-top: pxToRem(14);
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3s;
-      }
     }
     .stage__ellipse {
       @include media(0, $tablet) {
         left: pxToRem(35);
         top: pxToRem(26);
       }
+
       @include media($tablet, $desktop) {
         left: pxToRem(33);
         top: pxToRem(25);
       }
+
       @include desktop {
         width: pxToRem(113);
         height: pxToRem(113);
@@ -338,7 +337,6 @@ html[dir="rtl"] {
       }
     }
   }
-
   &__stage:nth-child(2),
   &__stage:nth-child(6n) {
     @include media(0, $tablet) {
@@ -351,6 +349,7 @@ html[dir="rtl"] {
       position: relative;
       z-index: 1;
     }
+
     @include desktop {
       margin-top: pxToRem(71);
       position: relative;
@@ -361,10 +360,12 @@ html[dir="rtl"] {
         left: pxToRem(35);
         top: pxToRem(24);
       }
+
       @include media($tablet, $desktop) {
         left: pxToRem(33);
         top: pxToRem(30);
       }
+
       @include desktop {
         width: pxToRem(113);
         height: pxToRem(113);
@@ -373,6 +374,7 @@ html[dir="rtl"] {
       }
     }
     .text {
+
       @include desktop {
         font-family: Montserrat;
         font-style: normal;
@@ -381,6 +383,7 @@ html[dir="rtl"] {
         line-height: pxToRem(28);
         letter-spacing: 0.02em;
       }
+
       &:nth-child(3) {
         width: pxToRem(218);
       }
@@ -397,6 +400,7 @@ html[dir="rtl"] {
       position: relative;
       z-index: 1;
     }
+
     @include desktop {
       position: relative;
       z-index: 1;
@@ -407,10 +411,12 @@ html[dir="rtl"] {
         left: pxToRem(35);
         top: pxToRem(24);
       }
+
       @include media($tablet, $desktop) {
         left: pxToRem(34);
         top: pxToRem(31);
       }
+
       @include desktop {
         width: pxToRem(113);
         height: pxToRem(113);
@@ -424,42 +430,32 @@ html[dir="rtl"] {
     @include media(0, $tablet) {
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3.3s;
-      }
     }
 
     @include media($tablet, $desktop) {
       margin-top: pxToRem(10);
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3.3s;
-      }
     }
+
     @include desktop {
       margin-top: pxToRem(37);
       position: relative;
       z-index: 1;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3.3s;
-      }
     }
+
     .stage__ellipse {
+
       @include media(0, $tablet) {
         left: pxToRem(35);
         top: pxToRem(24);
       }
+
       @include media($tablet, $desktop) {
         left: pxToRem(33);
         top: pxToRem(25);
       }
+
       @include desktop {
         width: pxToRem(113);
         height: pxToRem(113);
@@ -468,8 +464,8 @@ html[dir="rtl"] {
       }
     }
   }
-
   &__stage-number {
+
     @include media(0, $desktop) {
       font-family: Montserrat;
       font-style: normal;
@@ -486,6 +482,7 @@ html[dir="rtl"] {
       z-index: 1;
       margin-bottom: pxToRem(10);
     }
+
     @include desktop {
       font-family: Montserrat;
       font-style: normal;
@@ -503,6 +500,7 @@ html[dir="rtl"] {
       line-height: pxToRem(102);
     }
   }
+
   &__stages-container::-webkit-scrollbar {
     width: 0;
   }
@@ -513,11 +511,13 @@ html[dir="rtl"] {
       z-index: 1;
       line-height: pxToRem(28);
     }
+
     @include media($tablet, $desktop) {
       width: pxToRem(210);
       z-index: 1;
       line-height: pxToRem(28);
     }
+
     @include desktop {
       padding-top: pxToRem(0);
       width: pxToRem(210);
@@ -525,32 +525,25 @@ html[dir="rtl"] {
       line-height: pxToRem(28);
     }
   }
+
   &__slider {
+
     @include media(0, $tablet) {
       display: flex;
-
       width: 100%;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3.4s;
-      }
     }
+
     @include media($tablet, 1279) {
       margin-top: pxToRem(25);
       display: flex;
-
       width: 100%;
-      #animation-loading:target {
-        opacity: 0;
-        animation: appearance 1s ease-in-out forwards;
-        animation-delay: 3.4s;
-      }
     }
+
     @include desktop-extra {
       display: none;
     }
     justify-content: space-between;
+
     .button_left {
       float: left;
       &::before {
@@ -574,6 +567,7 @@ html[dir="rtl"] {
         }
       }
     }
+
     .button_right {
       float: right;
       &::before {
@@ -596,13 +590,13 @@ html[dir="rtl"] {
         }
       }
     }
+
     .slider__button {
       background-color: transparent;
       border-radius: 50%;
       width: pxToRem(38);
       height: pxToRem(38);
       border: pxToRem(1) solid var(--pallete-grey-10);
-
       &:hover {
         color: var(--pallete-primary-main);
         border: pxToRem(1) solid var(--pallete-primary-main);
@@ -614,17 +608,16 @@ html[dir="rtl"] {
         }
       }
     }
-
     .slider__scrollbar {
       @include media(0, $tablet) {
         display: flex;
-
         width: 100%;
         max-width: pxToRem(194);
         align-items: center;
         padding-right: pxToRem(15);
         padding-left: pxToRem(15);
       }
+
       @include media($tablet, $desktop) {
         max-width: pxToRem(754);
         width: 100%;
@@ -633,6 +626,7 @@ html[dir="rtl"] {
         align-items: center;
         display: flex;
       }
+
       @include desktop {
         max-width: pxToRem(1034);
         padding-right: pxToRem(27);
@@ -641,12 +635,13 @@ html[dir="rtl"] {
         display: flex;
         width: 100%;
       }
-
+      
       .scrollbar__track {
         width: 50%;
         height: pxToRem(2);
         background-color: var(--pallete-grey-10);
       }
+
       .scrollbar__thumb {
         width: 50%;
         height: pxToRem(2);

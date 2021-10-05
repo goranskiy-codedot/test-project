@@ -14,6 +14,7 @@
     top: -5px;
   }
 }
+
 @keyframes line_3_anim {
   0% {
     transform: translateY(0);
@@ -26,6 +27,7 @@
     background-color: var(--pallete-common-white);
   }
 }
+
 @keyframes line_2_anim {
   0% {
     transform: translateX(0);
@@ -65,6 +67,7 @@
     top: -6px;
   }
 }
+
 @keyframes line_3_anim_closing {
   0% {
     transform: translateY(-2 * 3px) rotate(45deg);
@@ -82,6 +85,7 @@
     }
   }
 }
+
 @keyframes line_2_anim_closing {
   0% {
     transform: translateX(0);
@@ -113,7 +117,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -144,6 +147,7 @@
     width: 100%;
   }
 }
+
 @keyframes hero-header__eraseAnimation {
   0% {
     width: 100%;
@@ -177,6 +181,7 @@
     right: pxToRem(35);
   }
 }
+
 @keyframes bookmark__animation-HoverDown {
   from {
     height: pxToRem(86);
@@ -190,6 +195,7 @@
     width: pxToRem(27);
   }
 }
+
 @keyframes bookmarkTip__animation-Hover {
   from {
     top: 33px;
@@ -206,6 +212,7 @@
     right: pxToRem(35);
   }
 }
+
 @keyframes bookmarkTip__animation-HoverDown {
   from {
     top: 76px;
@@ -219,6 +226,7 @@
     top: 33px;
   }
 }
+
 @keyframes bookmark__mobileAnimation-Hover {
   from {
     height: pxToRem(26);
@@ -233,6 +241,7 @@
     right: pxToRem(20);
   }
 }
+
 @keyframes bookmark__mobileAnimation-HoverDown {
   from {
     height: pxToRem(52);
@@ -246,6 +255,7 @@
     width: pxToRem(17);
   }
 }
+
 @keyframes bookmarkTip__mobileAnimation-Hover {
   from {
     top: pxToRem(19);
@@ -265,6 +275,7 @@
     right: pxToRem(18.2);
   }
 }
+
 @keyframes bookmarkTip__mobileAnimation-HoverDown {
   from {
     top: pxToRem(45);
