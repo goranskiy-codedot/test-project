@@ -1,4 +1,8 @@
 .benefits {
+    
+    @media print{
+        page-break-after: always;
+      }
     .container {
         @include media($tablet, $desktop) {
             padding: pxToRem(0) pxToRem(19);
@@ -82,4 +86,8 @@
         padding-bottom: pxToRem(69);
         padding-top: pxToRem(69);
     }
+
+    @media print{
+        page-break-after: always;
+      }
 }

@@ -69,6 +69,11 @@ html[dir="rtl"] {
     padding-bottom: pxToRem(40);
     padding-top: pxToRem(69);
   }
+   @media print {
+     margin-top: 400px;
+   }
+
+
 
 
   .container {
@@ -83,6 +88,8 @@ html[dir="rtl"] {
     @include desktop {
       padding: pxToRem(0) pxToRem(35);
     }
+
+    
   }
 
 
@@ -328,6 +335,9 @@ html[dir="rtl"] {
     display: flex;
     gap: pxToRem(13);
     height: pxToRem(39);
+    @media print{
+      page-break-inside: avoid;
+    }
 
     @include desktop {
       top: pxToRem(85);
@@ -362,6 +372,7 @@ html[dir="rtl"] {
   }
 
   &__legal {
+
     @include tablet {
       display: flex;
       flex-flow: row-reverse;

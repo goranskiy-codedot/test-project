@@ -37,6 +37,10 @@ html[dir="rtl"] {
   @include desktop {
     padding-top: pxToRem(68);
   }
+
+  @media print{
+    page-break-before: always;
+  }
   .container {
     @include desktop {
       display: flex;

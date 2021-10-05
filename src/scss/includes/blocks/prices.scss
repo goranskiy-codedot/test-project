@@ -69,6 +69,20 @@ html[dir="rtl"] {
     padding-bottom: pxToRem(68);
     padding-top: pxToRem(72);
   }
+
+  @media print{
+    .pricesSection__prices{
+      padding-left: pxToRem(0);
+      padding-right: pxToRem(0);
+      display: grid;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin: 0 auto;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 32%);
+    }
+  }
   &__title {
     @include media(0, $tablet) {
       text-align: center;

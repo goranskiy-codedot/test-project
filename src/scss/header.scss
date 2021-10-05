@@ -167,6 +167,11 @@ html[dir="rtl"] {
 }
 
 .header {
+  @media print {
+    .header__menu-burgerMenu{
+      display: none;
+    }
+  }
   .container {
     @include media(0, $tablet) {
       padding: pxToRem(0);
