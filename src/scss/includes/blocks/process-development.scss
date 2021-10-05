@@ -70,9 +70,22 @@ html[dir="rtl"] {
   }
 
   @media print{
-   .processDevelopment__slider{
-     display: none;
-   }
+    .process-development__slider{
+      display: none;
+    }
+    .process-development__stages{
+      display: block;
+      padding: pxToRem(0) pxToRem(93);
+      overflow-x: overlay;
+      overflow-y: hidden;
+      gap: pxToRem(45);
+      padding-top: pxToRem(20);
+      padding-bottom: pxToRem(40);
+      &::-webkit-scrollbar {
+        width: pxToRem(0);
+      }
+    
+    }
   }
   .container {
     @include media($tablet, $desktop) {
