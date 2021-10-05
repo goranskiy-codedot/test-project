@@ -5,6 +5,7 @@
     animation-delay: 2.25s;
   }
 }
+
 #animation-loading:target {
   .picture__container {
     opacity: 0;
@@ -12,6 +13,7 @@
     animation-delay: 2.5s;
   }
 }
+
 #animation-loading:target {
   h1 {
     opacity: 0;
@@ -19,6 +21,7 @@
     animation-delay: 1.75s;
   }
 }
+
 #animation-loading:target {
   p {
     opacity: 0;
@@ -26,6 +29,7 @@
     animation-delay: 2s;
   }
 }
+
 .hero {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(22);
@@ -43,17 +47,14 @@
     @include media($tablet, $desktop) {
       padding: pxToRem(0) pxToRem(19);
     }
-
     @include desktop {
       padding: pxToRem(0) pxToRem(35);
     }
   }
-
   &__wrapper {
     display: flex;
     width: 100%;
   }
-
   &-content {
     @include media(0, $tablet) {
       display: block;
@@ -63,7 +64,6 @@
       width: 50%;
     }
   }
-
   &-picture {
     @include media(0, $tablet) {
       width: 0%;
@@ -73,7 +73,6 @@
       overflow: hidden;
     }
   }
-
   &-picture__container {
     @include media(0, $tablet) {
       display: none;
@@ -106,8 +105,6 @@
         animation-delay: 2.5s;
       }
     }
-
-
   }
   &__image {
     height: auto;
@@ -186,7 +183,6 @@
       hero-header__eraseAnimation 7s infinite steps(38, end) 4s;
     // animation: hero-header__typingAnimation 3s steps(38, end),
     // hero-header__eraseAnimation 3s infinite steps(38, end) 4.5s;
-
     // &::after{
     //   content: "Креатива";
     //   // animation: hero-header__eraseAnimation 3.5s steps(10, end);
@@ -194,7 +190,6 @@
     //   animation: hero-header__afterAnimation 15s steps(38, end) infinite 4.5s  alternate;
     // }
   }
-
   &__subtitle {
     @include media(0, $tablet) {
       margin-bottom: pxToRem(25);
@@ -224,7 +219,6 @@
       }
     }
   }
-
   &-content__buttons {
     @include media(0, $desktop) {
       display: flex;
@@ -238,7 +232,6 @@
         animation-delay: 2.25s;
       }
     }
-
     @include media($desktop, 952) {
       display: flex;
       gap: pxToRem(5);
@@ -275,7 +268,6 @@
         animation-delay: 2.25s;
       }
     }
-
     .price__button {
       @include light-theme {
         background-color: transparent;

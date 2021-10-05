@@ -5,6 +5,7 @@
     animation-delay: 3.4s;
   }
 }
+
 .examples {
   @include media(0, $tablet) {
     padding-bottom: pxToRem(17);
@@ -26,7 +27,6 @@
       padding: pxToRem(0) pxToRem(35);
     }
   }
-
   &__title {
     @include media(0, $tablet) {
       margin-bottom: pxToRem(33);
@@ -53,7 +53,6 @@
       animation-delay: 3.5s;
     }
   }
-
   &__images {
     @include media(0, $tablet) {
       object-fit: cover;
@@ -73,7 +72,6 @@
     }
     @include media($tablet, $desktop) {
       object-fit: cover;
-
       width: 100%;
       align-items: center;
       justify-content: center;
@@ -91,7 +89,6 @@
     @include desktop {
       padding-left: pxToRem(85);
       padding-right: pxToRem(85);
-
       align-items: initial;
       justify-content: initial;
       text-align: initial;
@@ -107,7 +104,6 @@
         filter: brightness(0.5);
       }
     }
-
     .container {
       @include media(0, $desktop) {
         padding: 0 0;
@@ -122,7 +118,6 @@
       }
     }
   }
-
   &__image-container:nth-child(1n),
   &__image-container:nth-child(3n + 1) {
     @include desktop {
@@ -134,7 +129,6 @@
       overflow: hidden;
     }
   }
-
   &__image-container:nth-child(2n),
   &__image-container:nth-child(3n + 2) {
     @include desktop {
@@ -147,7 +141,6 @@
       overflow: hidden;
     }
   }
-
   &__image-container:nth-child(3n),
   &__image-container:nth-child(3n + 3) {
     @include desktop {
@@ -160,7 +153,6 @@
       overflow: hidden;
     }
   }
-
   &__image {
     @include media(0, $tablet) {
       width: 100% !important;
@@ -186,7 +178,6 @@
       transform: scale(1.05);
     }
   }
-
   &__button {
     margin-left: auto;
     margin-right: auto;
